@@ -1,0 +1,128 @@
+%%%%%%% units
+\newcommand{\kg}{\ensuremath{\mbox{kg}}\xspace}
+\newcommand{\eV}{\ensuremath{\mbox{e\kern-0.1em V}}\xspace}
+\newcommand{\GeV}{\ensuremath{\mbox{Ge\kern-0.1em V}}\xspace}
+\newcommand{\MeV}{\ensuremath{\mbox{Me\kern-0.1em V}}\xspace}
+\newcommand{\GeVc}{\ensuremath{\mbox{Ge\kern-0.1em V}\kern-0.1em/\kern-0.05em c}\xspace}
+\newcommand{\GeVcc}{\ensuremath{\mbox{Ge\kern-0.1em V}\kern-0.1em/\kern-0.05em c^2}\xspace}
+\newcommand{\AGeV}{\ensuremath{A\,\mbox{Ge\kern-0.1em V}}\xspace}
+\newcommand{\AGeVc}{\ensuremath{A\,\mbox{Ge\kern-0.1em V}\kern-0.1em/\kern-0.05em c}\xspace}
+\newcommand{\MeVc}{\ensuremath{\mbox{Me\kern-0.1em V}\kern-0.1em/\kern-0.05em c}\xspace}
+\newcommand{\MeVcc}{\ensuremath{\mbox{Me\kern-0.1em V}\kern-0.1em/\kern-0.05em c^2}\xspace}
+\newcommand{\T}{\ensuremath{\mbox{T}}\xspace}
+\newcommand{\cmsq}{\ensuremath{\mbox{cm}^2}\xspace}
+\newcommand{\msq}{\ensuremath{\mbox{m}^2}\xspace}
+\newcommand{\cm}{\ensuremath{\mbox{cm}}\xspace}
+\newcommand{\mm}{\ensuremath{\mbox{mm}}\xspace}
+\newcommand{\mb}{\ensuremath{\mbox{mb}}\xspace}
+\newcommand{\micron}{\ensuremath{\mu\mbox{m}}\xspace}
+\newcommand{\mrad}{\ensuremath{\mbox{mrad}}\xspace}
+\newcommand{\ns}{\ensuremath{\mbox{ns}}\xspace}
+\newcommand{\m}{\ensuremath{\mbox{m}}\xspace}
+\newcommand{\s}{\ensuremath{\mbox{s}}\xspace}
+\newcommand{\ms}{\ensuremath{\mbox{ms}}\xspace}
+\newcommand{\ps}{\ensuremath{\mbox{ps}}\xspace}
+\newcommand{\pT}{\ensuremath{p_\text{T}}\xspace}
+\newcommand{\pL}{\ensuremath{p_\text{L}}\xspace}
+\newcommand{\xF}{\ensuremath{x_\text{F}}\xspace}
+\newcommand{\xpF}{\ensuremath{x'_\text{F}}\xspace}
+\newcommand{\minv}{\ensuremath{m_\text{inv}}\xspace}
+
+%%%%%%%%%%%%% some software programs and generators
+%----- NA61 software
+\def\Offline{\mbox{$\overline{\text%
+{Off}}$\hspace{.05em}\raisebox{.4ex}{\underline{line}}}\xspace}
+\def\SHOE{\mbox{SHO\hspace{-1.34ex}\raisebox{0.2ex}{\color{green}\textasteriskcentered}\hspace{0.25ex}E}\xspace}
+\def\DSHACK{\mbox{DS\hspace{0.15ex}$\hbar$ACK}\xspace}
+\def\SHINE{\mbox{\textsc{S\hspace{.05em}\raisebox{.4ex}{\underline{hine}}}}\xspace}
+%----- event generators
+\def\Glissando{\textsc{Glissando}\xspace}
+\newcommand{\FlukaLong}{{\scshape Fluka\,2008}\xspace}
+\newcommand{\FlukaEleven}{{\scshape Fluka\,2011}\xspace}
+\newcommand{\Fluka}{{\scshape Fluka}\xspace}
+\newcommand{\UrqmdLong}{{\scshape U}r{\scshape qmd\,1.3.1}\xspace}
+\newcommand{\Urqmd}{{\scshape U}r{\scshape qmd}\xspace}
+\newcommand{\GheishaLong}{{\scshape Gheisha\,2002}\xspace}
+\newcommand{\GheishaOld}{{\scshape Gheisha\,600}\xspace}
+\newcommand{\Gheisha}{{\scshape Gheisha}\xspace}
+\newcommand{\Corsika}{{\scshape Corsika}\xspace}
+\newcommand{\Venus}{{\scshape Venus}\xspace}
+\newcommand{\VenusLong}{{\scshape Venus\,4.12}\xspace}
+\newcommand{\GiBUU}{{\scshape GiBUU}\xspace}
+\newcommand{\GiBUULong}{{\scshape GiBUU\,1.6}\xspace}
+\newcommand{\FlukaNewLong}{{\scshape Fluka\,2011.2\_17}\xspace}
+\newcommand{\Root}{{\scshape Root}\xspace}
+\newcommand{\Geant}{{\scshape Geant}\xspace}
+\newcommand{\GeantThree}{{\scshape Geant3}\xspace}
+\newcommand{\GeantFour}{{\scshape Geant4}\xspace}
+\newcommand{\QGSJet}{{\scshape QGSJet}\xspace}
+\newcommand{\DPMJet}{{\scshape DPMJet}\xspace}
+\newcommand{\Epos}{{\scshape Epos}\xspace}
+\newcommand{\EposLong}{{\scshape Epos\,1.99}\xspace}
+\newcommand{\QGSJetLong}{{\scshape QGSJet\,II-04}\xspace}
+\newcommand{\QGSJetOldLong}{{\scshape QGSJet\,II-03}\xspace}
+\newcommand{\DPMJetLong}{{\scshape DPMJet\,3.06}\xspace}
+\newcommand{\SibyllLong}{{\scshape Sibyll\,2.1}\xspace}
+\newcommand{\SibyllNewLong}{{\scshape Sibyll\,2.3}\xspace}
+\newcommand{\EposLHCLong}{{\scshape Epos\,LHC}\xspace}
+\newcommand{\Hsd}{{\scshape Hsd}\xspace}
+\newcommand{\Ampt}{{\scshape Ampt}\xspace}
+
+%%%%%%%%%%%%%%%%%%%%%%%% misc
+\def\red#1{{\color{red}#1}}
+\def\avg#1{\langle{#1}\rangle}
+\def\sci#1#2{#1{\times}10^{#2}}
+\newcommand{\Fi}[1]{Fig.~\ref{#1}}
+\newcommand{\NASixtyOne}{NA61\slash SHINE\xspace}%this seems to work properly to me. aa
+\newcommand{\NAFortyNine}{NA49\xspace}%this seems to work properly to me. aa
+\newcommand{\CernVM}{\textsc{Cern\-\kern-0.05emVM}\xspace}
+
+%%%%%%%%%%%%%%%%%%%%%%%% RAUL
+
+\newcommand{\E}[1]{$10^{#1}$ \eV\xspace}
+
+\def \nmu{$N_{\mu}$\xspace}
+\def \pions{$\pi^\pm$\xspace}
+\def \kaons{K$^\pm$\xspace}
+\def \proton{p\xspace}
+\def \antiproton{$\bar{\text{p}}$\xspace}
+\def \protons{p($\bar{\text{p}}$)\xspace}
+\def \lamb{$\Lambda$\xspace}
+\def \antilamb{$\bar{\Lambda}$\xspace}
+\def \lambs{$\Lambda(\bar{\Lambda})$\xspace}
+\def \kzeros{K$_{S}^{0}$\xspace}
+\def \pipi{$\pi^+\pi^-$\xspace}
+\def \vzero{$V^0$\xspace}
+\def \vzeros{$V^0$'s\xspace}
+\def \minv{$m_\text{inv}$\xspace}
+
+
+\newcommand{\eps}{\ensuremath{\mbox{$\varepsilon$}}\xspace}
+\newcommand{\meaneps}{\ensuremath{\mbox{$\langle\varepsilon\rangle$}}\xspace}
+\newcommand{\meanepsbb}{\ensuremath{\mbox{$\langle\varepsilon\rangle^\text{BB}$}}\xspace}
+\newcommand{\dedx}{\ensuremath{\mbox{\text{d}$E$/\text{d}$x$}}\xspace}
+\newcommand{\ncl}{\ensuremath{\mbox{$n_{\text{cl}}$}}\xspace}
+\newcommand{\chisq}{\ensuremath{\mbox{$\chi^2$}}\xspace}
+\newcommand{\redchisq}{\ensuremath{\mbox{$\chi^2/$ndf}}\xspace}
+
+\newcommand{\ipart}{\ensuremath{i}\xspace}
+\newcommand{\npart}{\ensuremath{I}\xspace}
+\newcommand{\ich}{\ensuremath{j}\xspace}
+\newcommand{\ieps}{\ensuremath{k}\xspace}
+\newcommand{\neps}{\ensuremath{K}\xspace}
+%\newcommand{\p}{\ensuremath{p}\xspace}
+\newcommand{\iz}{\ensuremath{l}\xspace}
+\newcommand{\iq}{\ensuremath{m}\xspace}
+\newcommand{\gen}{\text{gen}\xspace}
+\newcommand{\sel}{\text{sel}\xspace}
+\newcommand{\cmc}{\ensuremath{\mbox{$C_\text{MC}$}}\xspace}
+
+\newcommand{\impact}{\ensuremath{\mbox{$b_r$}}\xspace}
+\newcommand{\impactmax}{\ensuremath{\mbox{$b_r^\text{max}$}}\xspace}
+\newcommand{\decaydist}{\ensuremath{\mbox{$L_\text{decay}$}}\xspace}
+\newcommand{\decaydistmin}{\ensuremath{\mbox{$L_\text{decay}^\text{min}$}}\xspace}
+
+
+
+  
+  

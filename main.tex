@@ -1,0 +1,339 @@
+%\documentclass[12pt,openright,twoside,a4paper,chapter=TITLE,english]{USPSC}
+\documentclass[12pt,openright,twoside,a4paper,english,sumario=tradicional]{USPSC}
+
+% ---
+% Pacotes básicos - Fundamentais 
+% ---
+\usepackage[T1]{fontenc}		% Seleção de códigos de fonte.
+\usepackage[utf8]{inputenc}		% Codificação do documento (conversão automática dos acentos)
+\usepackage{lmodern}			% Usa a fonte Latin Modern
+\usepackage{lastpage}			% Usado pela Ficha catalográfica
+\usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
+\usepackage{color}				% Controle das cores
+\usepackage{graphicx}			% Inclusão de gráficos
+\usepackage{float} 				% Fixa tabelas e figuras no local exato
+\usepackage{chemfig,chemmacros} % Para escrever reações químicas
+\usepackage{microtype} 			% para melhorias de justificação
+\usepackage{pdfpages}
+\usepackage{makeidx}            % para gerar índice remissimo
+
+\usepackage[num,overcite,abnt-emphasize=bf, abnt-thesis-year=both, abnt-repeated-author-omit=yes, abnt-last-names=abnt, abnt-etal-cite,abnt-etal-list=0, abnt-etal-text=default, abnt-and-type=e, iso-abbreviation=standard]{abntex2cite}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}  %Comando para inserção de símbolos em nota de rodapé
+
+\renewcommand{\footnotesize}{\small} %Comando para diminuir a fonte das notas de rodapé
+
+\usepackage{cite}	
+\usepackage{lipsum}				% para geração de dummy text
+
+% pacotes de tabelas
+\usepackage{multicol}	% Suporte a mesclagens em colunas
+\usepackage{multirow}	% Suporte a mesclagens em linhas
+\usepackage{longtable}	% Tabelas com várias páginas
+\usepackage{threeparttablex}    % notas no longtable
+\usepackage{array}
+
+%---
+% Configurações para o pacote chemfig
+%\chemsetup[chemformula]{format=\sffamily}
+\renewcommand*\printatom[1]{\ensuremath{\mathsf{#1}}}
+\setatomsep{2em}
+\setdoublesep{.6ex}
+\setbondstyle{semithick}
+%---
+% Configurando o ambiente para utilizar os recursos de frases pre-prontas do mhchem
+\newenvironment{rslist}%
+{%
+	\begin{labeling}% environment from KOMA-script
+		{\rsnumber{R39/23/24/25}}% R39/23/24/25 is longest label
+	}{%
+\end{labeling}%
+}%
+% Definição de comando para utilizar os recursos de frases pre-prontas do mhchem
+\newcommand{\rs}[2][]{\item[{\rsnumber[#1]{#2}}] \rsphrase{bb}}
+% ---
+
+% ---
+% DADOS INICIAIS - Define sigla com título, área de concentração e opção do Programa 
+% Consulte a tabela referente aos Programas, áreas e opções de sua unidade contante do
+% arquivo USPSC-Siglas estabelecidas para os Programas de Pós-Graduação por Unidade.xlsx 
+% ou nos APÊNDICES A-G
+\siglaunidade{IFSC} 
+\programa{DFA}
+\definecolor{blue}{RGB}{41,5,195}
+
+% informações do PDF
+\makeatletter
+\hypersetup{
+	%pagebackref=true,
+	pdftitle={\@title}, 
+	pdfauthor={\@author},
+	pdfsubject={\imprimirpreambulo},
+	pdfcreator={LaTeX with abnTeX2},
+	pdfkeywords={abnt}{latex}{abntex}{USPSC}{trabalho acadêmico}, 
+	colorlinks=true,       		% false: boxed links; true: colored links
+	linkcolor=blue,          	% color of internal links
+	citecolor=blue,        		% color of links to bibliography
+	filecolor=magenta,      		% color of file links
+	urlcolor=blue,
+	bookmarksdepth=4
+}
+\makeatother
+% --- 
+% --- 
+% Espaçamentos entre linhas e parágrafos 
+% --- 
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+
+%%%%%%%%%%%%% RAUL %%%%%%%%%%%%%
+\usepackage{cleveref}
+\crefname{appendix}{App.}{Apps.}
+\crefname{section}{Sec.}{Secs.}
+\crefname{paragraph}{Sec.}{Secs.}
+\crefname{table}{Tab.}{Tabs.}
+\crefname{figure}{Fig.}{Figs.}
+\crefname{equation}{Eq.}{Eqs.}
+\crefname{item}{item}{items}
+\usepackage{xspace}
+
+\include{abbreviations}
+
+\include{bib_aliases}
+
+
+\newcommand{\warning}[1]{\textcolor{red}{\textbf{(#1)}}}
+\newcommand{\note}[1]{\textcolor{blue}{\textbf{(#1)}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+% ---
+% compila o sumário e índice
+\makeindex
+% ---
+
+% ----
+% Início do documento
+% ----
+\begin{document}
+
+% Seleciona o idioma do documento (conforme pacotes do babel)
+\selectlanguage{english}
+
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing 
+
+% --- Formatação dos Títulos
+\renewcommand{\ABNTEXchapterfontsize}{\fontsize{12}{12}\bfseries}
+\renewcommand{\ABNTEXsectionfontsize}{\fontsize{12}{12}\bfseries}
+\renewcommand{\ABNTEXsubsectionfontsize}{\fontsize{12}{12}\normalfont}
+\renewcommand{\ABNTEXsubsubsectionfontsize}{\fontsize{12}{12}\normalfont}
+\renewcommand{\ABNTEXsubsubsubsectionfontsize}{\fontsize{12}{12}\normalfont}
+
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+% ---
+% Capa
+% ---
+\imprimircapa
+% ---
+% Folha de rosto
+% (o * indica impressão em anverso (frente) e verso )
+% ---
+\imprimirfolhaderosto*
+%\imprimirfolhaderosto
+% ---
+% ---
+% Inserir a ficha catalográfica em pdf
+% ---
+% A biblioteca da sua Unidade lhe fornecerá um PDF com a ficha
+% catalográfica definitiva. 
+% Quando estiver com o documento, salve-o como PDF no diretório
+% do seu projeto como fichacatalografica.pdf e iclua o arquivo
+% utilizando o comando abaixo:
+%\includepdf{USPSC-Tese-pre-textual/fichacatalografica.pdf} 
+% Se você optar por elaborar a ficha catalográfica, deverá 
+% incluir uma % antes da linha % antes
+% do comando \include{USPSC-Tese-pre-textual/USPSC-fichacatalografica} 
+% e retirar o % do comando abaixo
+%\include{USPSC-Tese-pre-textual/USPSC-fichacatalografica}
+% As informações que compõem a ficha catalográfica estão 
+% definidos no arquivo USPSC-pre-textual-UUUU.tex
+% ---
+
+
+% ---
+% Inserir folha de aprovação
+% ---
+\includepdf{folhadeaprovacao.pdf}
+
+\includepdf{PaginaEmBranco.pdf}
+
+% ---
+% Dedicatória
+% ---
+%\include{USPSC-Dedicatoria}
+% ---
+
+% ---
+% Agradecimentos
+% ---
+\include{acknowledgments}
+% ---
+
+% ---
+% Epígrafe
+% ---
+\begin{epigrafe}
+    \vspace*{\fill}
+	\begin{flushright}
+		\textit{``O estudo, a busca da verdade e da beleza são domínios \\
+		em que nos é consentido sermos crianças por toda a vida.''\\
+		Albert Einstein}
+	\end{flushright}
+\end{epigrafe}
+% ---
+
+% A T E N Ç Ã O
+% Se o idioma do texto for em inglês, o abstract deve preceder o resumo
+% resumo em português
+%
+% Resumo
+% ---
+\include{abstract}
+% ---
+
+% Abstract
+% ---
+\include{resumo}
+% ---
+
+% ---
+% inserir lista de figurass
+% ---
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+% ---
+
+% ---
+% inserir lista de tabelas
+% ---
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
+% ---
+
+% ---
+% inserir lista de quadros
+% ---
+%\pdfbookmark[0]{\listofquadroname}{loq}
+%\listofquadro*
+%\cleardoublepage
+% ---
+
+% ---
+% inserir lista de abreviaturas e siglas
+% ---
+%\begin{siglas}
+%    \item[ABNT] Associação Brasileira de Normas Técnicas
+%    \item[abnTeX] ABsurdas Normas para TeX
+%	\item[EESC] Escola de Engenharia de São Carlos
+%	\item[IAU] Instituto de Arquitetura e Urbanismo
+%	\item[IBGE] Instituto Brasileiro de Geografia e Estatística
+%	\item[ICMC] Instituto de Ciências Matemáticas e de Computação
+%	\item[IFSC] Instituto de Física de São Carlos
+%	\item[IQSC] Instituto de Química de São Carlos
+%	\item[PDF] Portable Document Format
+%	\item[TCC] Trabalho de Conclusão de Curso
+%	\item[USP] Universidade de São Paulo
+%	\item[USPSC] Campus USP de São Carlos
+%\end{siglas}
+% ---
+
+% ---
+% inserir lista de símbolos
+% ---
+%\begin{simbolos}
+%  \item[$ \Gamma $] Letra grega Gama
+%  \item[$ \Lambda $] Lambda
+%  \item[$ \zeta $] Letra grega minúscula zeta
+%  \item[$ \in $] Pertence
+%\end{simbolos}
+% ---
+% ---
+% inserir o sumario
+% ---
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+% ---
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
+
+\include{introduction}
+
+\include{showers}
+
+\include{auger}
+
+\include{shine}
+
+\include{interpetration}
+
+\include{observable}
+
+\include{hadron}
+
+\include{conclusions}
+
+
+% ----------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% ----------------------------------------------------------
+\postextual
+% ----------------------------------------------------------
+
+% -----------------------------------------------------------
+% Referências bibliográficas
+% ----------------------------------------------------------
+\bibliography{lib}
+
+
+% ----------------------------------------------------------
+% Glossário
+% ----------------------------------------------------------
+%
+% Consulte o manual da classe abntex2 para orientações sobre o glossário.
+%
+%\glossary
+
+% ----------------------------------------------------------
+% Apêndices
+% ----------------------------------------------------------
+%\include{USPSC-Apendices}
+
+% ----------------------------------------------------------
+% Anexos
+% ----------------------------------------------------------
+%\include{USPSC-Anexos}
+
+%---------------------------------------------------------------------
+% INDICE REMISSIVO
+%--------------------------------------------------------------------
+%\include{USPSC-IndicesRemissivos}
+
+%---------------------------------------------------------------------
+
+\end{document}
