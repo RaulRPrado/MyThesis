@@ -104,14 +104,16 @@
 %\usepackage{enumerate}
 \usepackage{enumitem}
 \usepackage{amsmath}
+\usepackage{rviewport}
 
 \include{abbreviations}
 
 \include{bib_aliases}
 
-
 \newcommand{\warning}[1]{\textcolor{red}{\textbf{(#1)}}}
 \newcommand{\note}[1]{\textcolor{blue}{\textbf{(#1)}}}
+
+\graphicspath{{./figures/}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -136,9 +138,9 @@
 % --- Formatação dos Títulos
 \renewcommand{\ABNTEXchapterfontsize}{\fontsize{12}{12}\bfseries}
 \renewcommand{\ABNTEXsectionfontsize}{\fontsize{12}{12}\bfseries}
-\renewcommand{\ABNTEXsubsectionfontsize}{\fontsize{12}{12}\normalfont}
-\renewcommand{\ABNTEXsubsubsectionfontsize}{\fontsize{12}{12}\normalfont}
-\renewcommand{\ABNTEXsubsubsubsectionfontsize}{\fontsize{12}{12}\normalfont}
+\renewcommand{\ABNTEXsubsectionfontsize}{\fontsize{12}{12}\bfseries}
+\renewcommand{\ABNTEXsubsubsectionfontsize}{\fontsize{12}{12}\bfseries}
+\renewcommand{\ABNTEXsubsubsubsectionfontsize}{\fontsize{12}{12}\bfseries}%\normalfont
 
 
 % ----------------------------------------------------------

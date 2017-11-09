@@ -3,10 +3,11 @@
 
 \note{Introduction}
 
+\note{Make it clear what was previously done}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Dataset and simulations}
 \label{sec:hadron:data}
-
 
 \note{DONE}
 
@@ -23,8 +24,8 @@ The definition of T1 is
 $\text{S1}\wedge\text{S2}\wedge\overline{\text{V0}}\wedge\overline{\text{V1}}\wedge\overline{\text{V1}'}$
 and T2 is
 $\text{T1}\wedge\overline{\text{S4}}$.
-While the T1
-assures that a beam particle reached the target position,
+While the T1 assures that a beam particle
+reached the target position,
 the T2 is supose to eliminate events in which a beam particle
 crossed the target without interacting. Because of the position of
 the S4 detector, it can also be reached 
@@ -56,147 +57,216 @@ Both the data and the simulations were reconstructed by the standard
 \NASixtyOne reconstruction chain~\cite{Abgrall:2011ae}. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Upstream and event selections}
-\label{sec:hadron:selections}
+\section{Event selection}
+\label{sec:hadron:event}
 
+\note{DONE}
 
+The first step of the event selection is the upstream cuts,
+which are based on the information from the beam detectors.  
+The upstream cuts are:
+\begin{enumerate}[label=(\roman*)]
+\item CEDAR cut  to identify the beam particle type and then remove
+  the contributions from non-pion particles.
+\item WFA cut  that uses the time information from the S1 detector
+  to exclude events in which a second beam particle was detected
+  with a time difference shorter than 2 $\mu$s.
+\item BPD cut that uses the information from the three BPD detectors
+  to assure a good quality measurements of the beam position at the
+  target plan. These measurements are important to contraint the
+  main vertex position during the event reconstruction.
+\end{enumerate}
+More details about the upstream cuts can be found in Ref.~\cite{MartinThesis}.
+\note{more refs}
+Since the beam detectors are not implemented in the simulations,
+the upstream cuts are applyied only to the data.
 
-The upstream and event selection applied in this analysis
-are described in Ref.~\cite{\RhoPaper}. It is important
-to mention the cut on the vertex position of
-the main vertex. For this analysis, the events
-in which the fitted Z position of the main vertex
-is more than 17 cm distant from the nominal target
-position (-580 cm) were removed. The motivation for that
-is to reduce the number of out of target interactions.
+The second step is the event cuts, which are applyied both to data
+and simulations. The three event cuts are:
+\begin{enumerate}[label=(\roman*)]
+\item Trigger cut  that selects events which are
+  defined as T2 trigger type (see~\cref{sec:hadron:data}
+  for the trigger definitions).
+\item Main vertex cut to remove events in which the main vertex
+  is not fitted during the event reconstruction.
+\item Vertex Z cut  to remove events in which the z coordenate of the fitted
+  main vertex is farer than 17 cm from the main vertex position measured
+  by the BPD detectors. This cut is meant to reduce the constribution from
+  out-of-target interactions. 
+\end{enumerate}
+In~\cref{tab:hadron:stat} we show the number of available events
+after the event selection for the data and simulation sets.
 
-In~\cref{tab:hadron:stat} we show the number of events available
-for each data and simulation set after the event selection.
+\warning{include target removed in the table}
 
 \begin{table}
   \begin{center}
-    \begin{tabular}{|r|c|c|} \hline
-      & 158 GeV/c & 350 GeV/c \\ \hline
-      Data        & 3.46 M     & 3.04 M \\
-      \EposLong   & 3.71 M     & 3.12 M \\
-      \DPMJetLong & 3.92 M     & 3.47 M \\
-      \QGSJetLong & 3.71 M     & 3.06 M \\ \hline
+    \begin{tabular}{|l|c|c|} \hline
+                  & 158 GeV/c       & 350 GeV/c \\ \hline
+      Data        & 3.46 $10^6$     & 3.04 $10^6$ \\
+      \EposLong   & 3.71 $10^6$     & 3.12 $10^6$ \\
+      \DPMJetLong & 3.92 $10^6$     & 3.47 $10^6$ \\
+      \QGSJetLong & 3.71 $10^6$     & 3.06 $10^6$ \\ \hline
     \end{tabular}
     \caption{}
     \label{tab:hadron:stat}
   \end{center}
 \end{table}
 
-In addition to the standard dataset, a set of data were
-recorded with the carbon target removed. This dataset
-is used to estimate the contribution of the interactions
-which do not occur in the target. The two dataset
-will be refereed as target inserted and target removed along
-the text.
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Track selection}
 \label{sec:hadron:trackselection}
 
-\warning{rewrite}
+\note{DONE}
 
-The following section criteria were applied to assure
-the selection of well reconstructed tracks:
+\note{define labels indentified spectra and \vzero analysis}
+
+The following selection criteria were applyied to the measured tracks
+for the identified spectra analysis:
 \begin{enumerate}[label=(\roman*)]
-\item The fitted track has to be inside the geometrical acceptance of the detector.
-\item The total number of cluster on the track should be greater than or equal to 25.
-\item The sum of clusters on both VTPCs has to be greater than or equal to 12, or
-  the number of cluster on the GTPC has to be greater than of equal to 6.
-\item The distance between the track extrapolated to the interaction plane and the
-  interaction point (impact parameter) should be smaller than 4 cm in the both horizontal
-  and vertical plane.
+\item The reconstructed track must be contained in the detector acceptance,
+  that is basically defined as regions in ($\phi$,\p,\pT) phase space
+  in which the selection efficiency is larger than 90\%. A second effect
+  that is also accounted in the definition of the acceptance is the tracks that
+  hit directly the S4 detector and are not removed by the T2 trigger selection.
+  While the selection efficiency contribution is estimated with Monte Carlo simulation,
+  the directly hits on S4 are removed based on the measured tracks.
+  The full description of the acceptance selection can be found in Ref.\cite{MartinThesis}.
+\item The total number of clusters on the track must be greater than or equal to 25.
+\item The sum of clusters on both VTPCs must be greater than or equal to 12, or
+  the number of cluster on the GTPC must be greater than of equal to 6.
+\item The distance between the extrapolated track to the interaction plane and the
+  interaction point, that is called impact parameter, must be smaller than 4 cm
+  in the both horizontal and vertical plane.
 \end{enumerate}
-
+\note{some explanations on the idea of the acceptance cut}
+More details about the track selection
+can be found in Ref.~\cite{MartinThesis}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\vzero selection}
 \label{sec:hadron:vzeroselection}
 
-The following criteria were applied to select the \vzeros:
-\begin{enumerate}
-\item The found vertex has to be identified as a \vzero type vertex
-\item The number of daughter tracks has to be equal to 2
-\item Both daughter tracks have to be opposite charges
+\note{DONE}
+
+The \vzero selection criteria used for the \vzero analysis
+is the following:
+\begin{enumerate}[label=(\roman*)]
+\item The selected vertex must be identified as a \vzero type vertex.
+\item The number of daughter tracks of the vertex must be equal to 2.
+\item Both daughter tracks must be of opposite charges.
 \item The total number of cluster has to be greater than 30 for both tracks
 \item At least one track has to have more than 15 clusters in the VTPCs
 \end{enumerate}
+These selection criteria are standard ones in \NASixtyOne analysis.
+Further cuts on the \vzeros will be applyied at the signal extraction
+step (see~\cref{sec:hadron:signal:cuts}).
+
+Since it is not possible to define the detector acceptance for
+the \vzeros analogously to what is done for the tracks, the possible
+discrepancies between data and simulations on the bourders of the acceptance
+will be accounted on the systematic uncertainties (see~\cref{sec:hadron:spec:syst}).
+Because these tracks on the bourders have small number of clusters,
+the systematic uncertanty will be estimatede by changing the minimum number
+of clusters on both tracks from 30 to 20. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Phase space binning}
 
-\warning{rewrite}
+\note{DONE}
 
-For the present analysis, the phase space were divided
-in bins of \p and \pT. In~\cref{}
-we show the (\p,\pT) configuration used in this analysis.
+Both identified spectra and \vzero analysis were done
+by splitting the data in bins in a 2-dimensional
+phase space of the \pp and \pT variables. For the
+identified spectra analysis only one phase space
+binning configuration is defined. The intervals in \pp
+are nearly uniform in $\log p$, with small adjustments in a way
+that moves the crossing points of the energy deposit function
+of different particles closer to the center of the bins.
+Since some of these bins in the crossing regions
+will be removed from the analysis (see~\cref{sec:hadron:dedx:sde}),
+this strategy has shown effective to reduce the number of
+removed bins. The average width of the \pp intervals is
+$\Delta\log\pp=0.1$. Concerning the \pT intervals, the bin width
+increases with \pT, being the width of the shorter and the longer one
+$\Delta \pT=0.1$ and  $\Delta\pT=0.5$, respectively.  
+In~\cref{fig:hadron:binning:dedx} we show the binning configuration
+for the identified spectra analysis.
 
-The phase space was split in bins of \p and \pT.
-In~\cref{} we show the binning configuration, which
-is the same for \lamb and \antilamb but is different
-for \kzeros.
+
+%%%%%%%%%%%%%% BINNING DEDX %%%%%%%%%%%%%%%
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[clip, rviewport=0 0 1 1,width=0.5\textwidth]{DedxBinning}
+  \caption{}
+  \label{fig:hadron:binning:dedx}
+\end{figure}
+
+Since the \vzero analysis is done independently for the three target particles,
+the phase space binning is not required to be unique. Because of statistics,
+the number of bins defined for the \lamb and \antilamb is the same and
+for \kzeros is larger than for the former ones.
+In~\cref{fig:hadron:binning:vzero} we show the two
+binning configuration for the \vzero analysis.
+
+%%%%%%%%%%%%%% BINNING V0 %%%%%%%%%%%%%%%
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[clip, rviewport=0 0 1 1,width=0.8\textwidth]{V0Binning}
+  \caption{}
+  \label{fig:hadron:binning:vzero}
+\end{figure}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{\dedx analysis}
+\section{Particle identification for the identified spectra}
 
-\warning{rewrite}
+\note{DONE}
 
-In this section we present the analysis and the results
-of the spectra of \pions, \kaons and \protons.
-The analysis is done in track basis and it starts
-with the track selection that is shown in~\cref{sec:app:proj:dedx:selection}.
-Second step, after splitting the measured tracks in bins of the phase
-space, is to perform the particle identification analysis
-aiming to determine the number of tracks which correspond
-to each particle type. This is done here by using the
-energy deposited by the tracks in the TPCs, the \dedx,
-which is briefly explored in~\cref{sec:app:proj:dedx:meas}.
+In this section we present the particle identification
+analysis for the identified spectra of \pions, \kaons and \protons.
+This step is done in a track basis through the \dedx measurements,
+being the aim here to determine the fraction of tracks which
+correspond to each particle type on every phase space bin.
+A brief overview of the \dedx measurements is first given
+in~\cref{sec:hadron:dedx:meas}.
 
-
-The particle identification (\cref{sec:app:proj:dedx:pid})
-is done statistically by fitting
+The \dedx measurements only allow the particle identification
+to be done statistically by fitting
 the \dedx distributions with a combination of particle
 types. Because of the complicated dependence of the \dedx
-on the particle momentum and properties of the measured track
-(like number of clusters), the \dedx fit turns to be
-a complex step, requiring the development of a suitable
-\dedx model and an efficient \dedx fit strategy.
-In addition to that, the overlapping of the \dedx distributions
-of different particles in certain regions of momentum
-makes the \dedx fit even more complicated for these
-regions of the phase space.
-Because of these difficulties, the particle identification
-step turns to be the most challenging one and several
-original ideas were proposed and applied to overcome them. 
+distributions on the particle momentum,
+features of the measured track (e.g. number of clusters) and
+detector properties (e.g. resolution and calibration),
+the \dedx fit turns to be very challenging. The first
+requirement to perform this step is the development
+of a appropriate \dedx model,
+which is shown in~\cref{sec:hadron:dedx:model}.
 
-
-The following steps are the Monte Carlo correction (\cref{sec:app:proj:dedx:correction})
-and the computation of the spectra (\cref{sec:app:proj:dedx:spectra}).
-Finally the derived spectra are shown in~\cref{sec:app:proj:dedx:results}. 
-
-In general, the \dedx measurements can provide a very precise
-particle identification in a statistical basis. For a given
-momentum interval, the \dedx distributions originated by
-different charged particles can be well separated by their
-mean value and shape. Applying a proper model to describe
-the \dedx distribution, it is possible to perform a fitting
-of the measured distributions and determine the fractions of
-tracks associated to each particle. This procedure can only fail
-for a restricted region of momentum in which the average of
-the energy deposit function of two particles are too close to
-each other. In the next section, the particle
-identification procedure will be described. 
+Having in hands the \dedx model, the measured \dedx
+distributions can be fitted to determine the particle
+fractions. However, the usual large number of
+model parameters, added to the
+overlap of the \dedx distributions
+of different particles in certain regions of momentum,
+can make the this fit very hard to perform.
+Our fit strategy to overcome these difficulties is shown
+in~\cref{sec:hadron:dedx:fit}. A new tool
+developed in this work to evaluate the fit performance
+and estimated bias and statistical uncertainties of the fit
+is presented in~\cref{sec:hadron:dedx:sde}. 
+Finally, in~\cref{sec:hadron:dedx:results} we show the results
+of the particle identification analysis.
 
 
 %%%---------------------------------%%%%
 \subsection{\dedx measurements}
+\label{sec:hadron:dedx:meas}
+
+\cite{Alt:2005zq}
+
+\cite{BlumBook}
 
 \warning{rewrite}
 
@@ -209,7 +279,7 @@ detailed procedure, which has been very well established by the \NAFortyNine and
 experiment along the last decades. Since the detailed description of this procedure
 is out of the scope of this text, only the general idea and the most important aspects
 will be presented in the next paragraphs. More complete and detailed approaches
-can be found in Refs.\cite{GaborVeresThesis}.
+can be found in Refs.\cite{LeeuwenThesis,GaborVeresThesis}.
 
 Several processes can contribute to the energy loss of charged particle due to
 its interaction with atoms of the gas in the TPCs, being the emission of
@@ -245,6 +315,7 @@ of the clusters~\cite{GaborVeresThesis}.
 
 %%%---------------------------------%%%%
 \subsection{\dedx model}
+\label{sec:hadron:dedx:model}
 
 \warning{rewrite}
 
@@ -352,6 +423,17 @@ to the measured \eps distributions.
 
 %%%---------------------------------%%%%
 \subsection{\dedx fit strategy}
+\label{sec:hadron:dedx:fit}
+
+
+%%%---------------------------------%%%%
+\subsection{Simulated data ensembles, cuts and corrections}
+\label{sec:hadron:dedx:sde}
+
+
+%%%---------------------------------%%%%
+\subsection{Particle identification results}
+\label{sec:hadron:dedx:results}
 
 
 
@@ -363,7 +445,8 @@ to the measured \eps distributions.
 \subsection{Signal extraction}
 
 
-
+\subsubsection{\vzero cuts}
+\label{sec:hadron:signal:cuts}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Corrections}
@@ -379,7 +462,7 @@ to the measured \eps distributions.
 
 %%%---------------------------------%%%%
 \subsection{Systematic uncertainties}
-
+\label{sec:hadron:spec:syst}
 
 
 

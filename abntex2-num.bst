@@ -275,8 +275,8 @@ FUNCTION {bbl.no.publisher} {"[s.n.]"}
 FUNCTION {bbl.number} { iso.abbreviation {"no."} {"n."} if$ }
 FUNCTION {bbl.nr} { "n." }
 FUNCTION {bbl.of} { "de" }
-FUNCTION {bbl.phd} { "Doutorado" }
-FUNCTION {bbl.phdthesis} { "Tese" }
+FUNCTION {bbl.phd} { "PhD" }
+FUNCTION {bbl.phdthesis} { "Thesis" }
 FUNCTION {bbl.pages}
   {pagename empty$
     { "p." }
