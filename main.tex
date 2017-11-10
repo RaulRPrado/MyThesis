@@ -12,19 +12,16 @@
 \usepackage{color}				% Controle das cores
 \usepackage{graphicx}			% Inclusão de gráficos
 \usepackage{float} 				% Fixa tabelas e figuras no local exato
-\usepackage{chemfig,chemmacros} % Para escrever reações químicas
 \usepackage{microtype} 			% para melhorias de justificação
 \usepackage{pdfpages}
-\usepackage{makeidx}            % para gerar índice remissimo
+%\usepackage{makeidx}            % para gerar índice remissimo
 
 \usepackage[num,overcite,abnt-emphasize=bf, abnt-thesis-year=both, abnt-repeated-author-omit=yes, abnt-last-names=abnt, abnt-etal-cite,abnt-etal-list=0, abnt-etal-text=default, abnt-and-type=e, iso-abbreviation=standard]{abntex2cite}
 
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}  %Comando para inserção de símbolos em nota de rodapé
-
 \renewcommand{\footnotesize}{\small} %Comando para diminuir a fonte das notas de rodapé
 
 \usepackage{cite}	
-\usepackage{lipsum}				% para geração de dummy text
 
 % pacotes de tabelas
 \usepackage{multicol}	% Suporte a mesclagens em colunas
@@ -32,26 +29,6 @@
 \usepackage{longtable}	% Tabelas com várias páginas
 \usepackage{threeparttablex}    % notas no longtable
 \usepackage{array}
-
-%---
-% Configurações para o pacote chemfig
-%\chemsetup[chemformula]{format=\sffamily}
-\renewcommand*\printatom[1]{\ensuremath{\mathsf{#1}}}
-\setatomsep{2em}
-\setdoublesep{.6ex}
-\setbondstyle{semithick}
-%---
-% Configurando o ambiente para utilizar os recursos de frases pre-prontas do mhchem
-\newenvironment{rslist}%
-{%
-	\begin{labeling}% environment from KOMA-script
-		{\rsnumber{R39/23/24/25}}% R39/23/24/25 is longest label
-	}{%
-\end{labeling}%
-}%
-% Definição de comando para utilizar os recursos de frases pre-prontas do mhchem
-\newcommand{\rs}[2][]{\item[{\rsnumber[#1]{#2}}] \rsphrase{bb}}
-% ---
 
 % ---
 % DADOS INICIAIS - Define sigla com título, área de concentração e opção do Programa 
@@ -92,6 +69,11 @@
 
 
 %%%%%%%%%%%%% RAUL %%%%%%%%%%%%%
+\usepackage{xspace}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{rviewport}
+\usepackage{comment}
 \usepackage{cleveref}
 \crefname{appendix}{App.}{Apps.}
 \crefname{section}{Sec.}{Secs.}
@@ -100,11 +82,6 @@
 \crefname{figure}{Fig.}{Figs.}
 \crefname{equation}{Eq.}{Eqs.}
 \crefname{item}{item}{items}
-\usepackage{xspace}
-%\usepackage{enumerate}
-\usepackage{enumitem}
-\usepackage{amsmath}
-\usepackage{rviewport}
 
 \include{abbreviations}
 
@@ -300,6 +277,8 @@
 \include{observable}
 
 \include{hadron}
+
+\include{figures_hadron}
 
 \include{conclusions}
 
