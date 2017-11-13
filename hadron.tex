@@ -257,10 +257,15 @@ can make the this fit very hard to perform.
 Our fit strategy to overcome these difficulties is shown
 in~\cref{sec:hadron:dedx:fit}. A new tool
 developed in this work to evaluate the fit performance
-and estimated bias and statistical uncertainties of the fit
-is presented in~\cref{sec:hadron:dedx:sde}. 
+and estimate bias and statistical uncertainties of the fit
+is presented in~\cref{sec:hadron:dedx:sde}. This
+tool is called Simulated Data Emsembles and
+it is also used to define cuts on the problematic
+phase space bins and to compute correction factors.
 Finally, in~\cref{sec:hadron:dedx:fitresults} we show the results
-of the particle identification analysis.
+of the particle identification analysis, which include
+the particle fractions of \pions, \kaons and \protons
+after applying the cuts and corrections.
 
 
 %%%---------------------------------%%%%
@@ -431,7 +436,7 @@ to the measured \eps distributions.
 \subsection{\dedx fit strategy}
 \label{sec:hadron:dedx:fit}
 
-\warning{rewrite}
+\note{DONE}
 
 The fitting procedure is performed by means of a binned maximum-likelihood method.
 In the general case 10 particle fractions (5 particle types and 2 charges) and
@@ -632,6 +637,8 @@ analytically.
 \subsection{\dedx fit results}
 \label{sec:hadron:dedx:fitresults}
 
+\note{DONE}
+
 Examples of the fitted \dedx distributions are shown
 in~\cref{fig:hadron:dedx:fit:dist158,fig:hadron:dedx:fit:dist350}.
 Although the fit was performed by the maximum likelihood method,
@@ -772,34 +779,391 @@ The fractions from the target removed dataset are shown in~\cref{sec:hadron:dedx
 
 
 
+The Simulated Data Ensembles (SDEs) are large sets of
+simulations that reproduce the most relevant
+features of the data and are fitted by following
+exactly the same fit strategy described in~\cref{sec:hadron:dedx:fit}.
+By analysing the fit results of the SDEs, we can evaluate the fit
+performance in a statistical basis and then estimate the biases
+and statistical uncertainties on the particle fractions. 
+
+The construction of one individual simulation set of a SDE starts
+by creating a new simulated tracks that reproduce the
+properties of the data tracks. This means that the number of
+tracks contained in a phase space bin, as well as its \pp, \pT and
+\ncl distributions, is identical in the simulation and in the data.
+The second step is to associate a particle type to each simulated track.
+To do that we sample randomly one of the five possible types
+by assigning them weights that are derived from the particle fractions
+obtained from the \dedx fit of the data.
+To avoid the statistical fluctuations on the fitted fractions,
+a smoothing process was performed in which a 2-dimensional
+forth-degree polynomial function was fitted to the fractions.
+The fitted function is given by
+\begin{equation}
+  f(\pp,\pT) = \sum_{n=0}^{n<4} \sum_{m=0}^{m<4} a_{nm} (\log\pp)^n \pT^m,
+  \label{eq:hadron:dedx:pol}
+\end{equation}
+where $a_{nm}$ are free parameters to be fitted.
+The fit was performed by using a traditional $\chi^2$ method.
+In~\cref{fig:hadron:dedx:fit:fakeyield} we show few examples
+of the \pT projection of the fractions and the fitted
+polynomial function. 
+
+
+%%%%%%%%%% FAKE YIELD %%%%%%%%%%%%%%
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[clip, rviewport=0 0 1 1,width=0.4\textwidth]{dedx/fake_yield_example_158}
+  \includegraphics[clip, rviewport=0 0 1 1,width=0.4\textwidth]{dedx/fake_yield_example_two_158}
+
+  \vspace{0.5cm}
+  
+  \includegraphics[clip, rviewport=0 0 1 1,width=0.4\textwidth]{dedx/fake_yield_example_350}
+  \includegraphics[clip, rviewport=0 0 1 1,width=0.4\textwidth]{dedx/fake_yield_example_two_350}
+
+  \caption{Examples of the parametrization of the particle fractions to be used to create the Simulated Data Ensembles. The plots on the top and on the bottom are for the 158 and 350 \GeVc dataset, respectively.}
+  \label{fig:hadron:dedx:fit:fakeyield}
+\end{figure}
+
+
+After sampling a particle type, the \dedx associated to each
+track is sampled by following the \dedx model.
+The model parameters are set as the ones obtained by the \dedx fit
+of the data that are shown in~\cref{sec:hadron:dedx:fitresults}.
+A set of $\approx 1000$ simulated sets, for each beam energy,
+were created by following the description above and
+fitted afterwards. As the result, we obtain the distributions
+of the fitted fractions for each particle and phase space bin.
+
+First we can evaluate the relative standard deviation,
+defined as $\sigma_r = \sigma_Y/\langle Y\rangle$, where
+$\sigma_Y$ is the standard deviation of the fraction $Y$
+and $\langle Y \rangle$ is its average value.
+In~\cref{fig:hadron:dedx:fit:fake:relsig158r} we show
+one example of $\sigma_r$ for the RST and 158 \GeVc case.
+The remaining cases are shown
+in~\cref{fig:hadron:dedx:fit:fake:relsig158w,fig:hadron:dedx:fit:fake:relsig350r,fig:hadron:dedx:fit:fake:relsig350w}. Only \pions, \kaons and \protons are shown
+because these are the particles of interested of this analysis.
+Second, we can evaluate the relative bias, defined as
+$\delta_r = \langle \Delta Y/ Y \rangle$, where $\Delta Y$
+is the difference between the fitted and the true fraction,
+being the true fraction computed while the particle types
+of each track are sampled.
+In~\cref{fig:hadron:dedx:fit:fake:reldev158r} we show examples
+of $\delta_r$ for RST and 158 \GeVc case, while the remaning
+cases are shown
+in~\cref{fig:hadron:dedx:fit:fake:reldev158w,fig:hadron:dedx:fit:fake:reldev350r,fig:hadron:dedx:fit:fake:reldev350w}.
+
+%%%%%%%%%% FAKE REL SIG %%%%%%%%%%%%%%
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/fake_rel_sig_158_fl0_v0_c0_p1}
+  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/fake_rel_sig_158_fl0_v0_c1_p1}
+
+  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/fake_rel_sig_158_fl0_v0_c0_p2}
+  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/fake_rel_sig_158_fl0_v0_c1_p2}
+
+  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/fake_rel_sig_158_fl0_v0_c0_p3}
+  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/fake_rel_sig_158_fl0_v0_c1_p3}
+
+
+  \caption{Relative standard deviation of the particle fractions obtained with SDEs for RST and 158 \GeVc dataset.}
+  \label{fig:hadron:dedx:fit:fake:relsig158r}
+\end{figure}
+
+
+%%%%%%%%%% FAKE REL DEV %%%%%%%%%%%%%%
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/fake_rel_dev_158_fl0_v0_c0_p1}
+  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/fake_rel_dev_158_fl0_v0_c1_p1}
+
+  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/fake_rel_dev_158_fl0_v0_c0_p2}
+  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/fake_rel_dev_158_fl0_v0_c1_p2}
+
+  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/fake_rel_dev_158_fl0_v0_c0_p3}
+  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/fake_rel_dev_158_fl0_v0_c1_p3}
+
+
+  \caption{Average relative bias of the particle fractions obtained with SDEs for RST and 158 \GeVc dataset.}
+  \label{fig:hadron:dedx:fit:fake:reldev158r}
+\end{figure}
+
+From the $\sigma_r$ one can clearly see
+that for few \pp bins, mainly between 1 and 10 \GeVc,
+the fitted fractions present a very large relative
+standard deviation in comparison to the remaning phase space regions.
+This is because of the proximity between the mean of the
+\dedx distribution of two particle types that cause
+a partial degeneracy between their fractions. The result
+of the \dedx fit at these phase space bins are evidently not
+suitable and because of that they will be removed from our analysis.
+To this aim, the bins with $\sigma_r$ larger than 0.15 for \pions,
+and 0.25 for \kaons and \protons were removed. 
+
+From the $\delta_r$ we can observe that there are regions
+of the phase space which presents a significant relative
+bias on the fractions.
+These regions are mainly the low statistic and the high \pp
+bins. In the latter case, the fraction are biased because
+the \dedx distributions of all particle types
+approach to each other following the relativistic rise
+behavior of the deposit energy function.
+Attempts were made to eliminate this bias
+by changing the fit strategy, however, we found no effective solution.
+Therefore, we have decided for a correction procedure based on
+the $\delta_r$ obtained from the SDEs.
+The multiplicative correction factors is called $c$ and is shown
+in~\cref{fig:hadron:dedx:fit:fake:cor158r} for the RST and 158 \GeVc case,
+while the remaning cases are shown
+in~\cref{fig:hadron:dedx:fit:fake:cor158w,fig:hadron:dedx:fit:fake:cor350r,fig:hadron:dedx:fit:fake:cor350w}.
+The phase space bins removed the criteria described above are shown
+as white bins.
+
+Besides the cuts and corrections, the SDEs can also
+be used to compute the statistical uncertainties of the particle fractions.
+This was one by computing the standard deviation of
+fractions obtained from the SDEs.
+
+
+%The fit performance can be studied by means of the
+%pull distributions of the particle fractions.
+%In~\cref{}
+
+\note{pull distributions?}
+
+\note{discussions here}
+
+%%%%%%%%%% COR %%%%%%%%%%%%%%
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/cor_158_v0_c0_p1}
+  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/cor_158_v0_c1_p1}
+
+  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/cor_158_v0_c0_p2}
+  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/cor_158_v0_c1_p2}
+
+  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/cor_158_v0_c0_p3}
+  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/cor_158_v0_c1_p3}
+
+  \caption{Correction factor for RST and 158 \GeVc dataset.}
+  \label{fig:hadron:dedx:fit:fake:cor158r}
+\end{figure}
+
 
 %%%---------------------------------%%%%
 \subsection{Particle identification results}
 \label{sec:hadron:dedx:results}
 
+After applying the cuts and corrections discussed
+in~\cref{sec:hadron:dedx:sde} we obtain the final
+particle fractions to be used to compute the spectra.
+In~\cref{fig:hadron:dedx:fit:final158r} we show examples
+of the final fractions for RST and 158 \GeVc dataset,
+while the remaning cases are shown 
+in~\cref{fig:hadron:dedx:fit:final158w,fig:hadron:dedx:fit:final350r,fig:hadron:dedx:fit:final350w}.
+Only the three particle types of interested are shown: $\pi$, $K$ and $p$.
+Each plot shows the fractions as a function of \pp for one \pT bin.
+The equivalent plots for the target removed dataset are shown
+in~\cref{fig:hadron:dedx:fit:out158r,fig:hadron:dedx:fit:out158w,fig:hadron:dedx:fit:out350r,fig:hadron:dedx:fit:out350w}.
+
+%%%%%%%%%% FRACTION %%%%%%%%%%%%%%
+\begin{figure}
+  \centering
+  \includegraphics[clip, rviewport=0 0 1 1,width=1.00\textwidth]{dedx/fraction_pt_158_fl2_v0}
+  \caption{Particle fractions obtained from the \dedx fit of the RST and 158 \GeVc dataset, with target inserted.}
+  \label{fig:hadron:dedx:fit:final158r}
+\end{figure}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\vzero analysis}
+\label{sec:hadron:vzero}
 
 
 %%%---------------------------------%%%%
 \subsection{Signal extraction}
+\label{sec:hadron:vzero:signal}
 
 
 \subsubsection{\vzero cuts}
-\label{sec:hadron:signal:cuts}
+\label{sec:hadron:vzero:signal:cuts}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Corrections}
+\section{Monte Carlo corrections}
+\label{sec:hadron:correction}
+
+
+The measured number of events, tracks and \vzeros
+particles in a given phase space bin are naturally biased by
+detector effects. To determine the final spectra,
+these effects must be corrected, and that
+is done by applying a correction factor obtained
+from Monte Carlo simulations. This factor is called here \cmc.
+For a given phase space bin, \cmc is basically the ratio
+between the generated and measured spectra and it
+is written as
+\begin{equation}
+  \cmc = \left( \frac{n^\gen}{N^\gen} \right) / \left( \frac{n^\sel}{N^\sel} \right).
+  \label{eq:hadron:correction:cmc}
+\end{equation}
+where $N$ refers to number of events and $n$ can be either the number of
+tracks, for the identified spectra analysis, or the number
+of \vzeros, for the \vzero analysis.
+The indexes \gen and \sel refer to generated and selected quantities and,
+while the first is obtained directly from the Monte Carlo generators,
+the second is obtained by the detector simulations, in which the
+reconstruction algorithm and selection are exactly the same
+as the one applied to data.
+For the sake of clearness, the \cmc can be split in the
+event and track or \vzero contributions, which will be refereed as
+$\alpha$ and $\beta$. In this way, \cmc becomes
+\begin{equation}
+  \cmc = \left( \frac{N^\sel}{N^\gen} \right) / \left( \frac{n^\sel}{n^\gen} \right) = \alpha / \beta.
+  \label{eq:hadron:correction:cmc:2}
+\end{equation}
+The $\alpha$ factor is common to all the datasets,
+while the $\beta$ is different for each phase space bin. 
+
+The \cmc was determined here by 
+the three simulation sets, generated with different hadronic
+interaction models (see~\cref{sec:hadron:data}).
+The $\alpha$ factor obtained is summarized
+in~\cref{tab:hadron:alpha}, where we show the values for each simulation
+set and their average value, which will be used in this work. 
+The observed differences in the $\alpha$ factor due
+to the hadronic interaction models are expected mainly
+because of the large discrepancy between the particle
+multiplicities. As an illustration, we can take the \DPMJetLong
+case, in which the average multiplicity is
+fairly larger than the others and consequently the
+$\alpha$ is also significantly larger. 
+This relation is caused mainly by two effects. First,
+the interaction trigger probability is larger on average
+because the larger number of particles crossing the detector.
+Second, the cut on the Z position of the main vertex
+tends to remove less events since, with more detected particles,
+the fit of main vertex tends to be more precise.
+The model dependence of the $\alpha$ will be accounted
+on the systematic uncertainties in~\cref{sec:hadron:spec:syst}.
+
+\begin{table}
+  \begin{center}
+    \begin{tabular}{|r|c|c|} \hline
+      & 158 GeV/c & 350 GeV/c \\ \hline
+      \EposLong   & 0.875     & 0.744 \\
+      \DPMJetLong & 0.949     & 0.848 \\
+      \QGSJetLong & 0.868     & 0.721 \\ \hline
+      Average     & 0.897     & 0.771 \\ \hline
+    \end{tabular}
+    \caption{}
+    \label{tab:hadron:alpha}
+  \end{center}
+\end{table}
+
+The $\beta$ factor for \pions, \kaons and \protons
+is computed by the ratio of the generated and
+measured number of tracks. 
+In~\cref{fig:hadron:correction:beta:dedx158,fig:hadron:correction:beta:dedx350}
+we show the $\beta$ for these particles.
+For the \vzero particles, \lambs and \kzeros, the $\beta$
+is computed as the ratio between the \vzero particles generated and
+measured in a given phase space bin.
+In~\cref{fig:hadron:correction:beta:vzero158,fig:hadron:correction:beta:vzero350}
+we show the $\beta$ for these particles.
+It is important to note that the $\beta$ factor
+for the \vzero particle includes the effect
+of the \vzero cuts, presented in~\cref{sec:hadron:signal:cuts}.
+
+
+%%%%%%%%%% BETA %%%%%%%%%%%%%%%%
+\begin{figure}
+  \centering
+  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/fac_158_All_beta_c0_p1}
+  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/fac_158_All_beta_c1_p1}
+
+  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/fac_158_All_beta_c0_p2}
+  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/fac_158_All_beta_c1_p2}
+
+  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/fac_158_All_beta_c0_p3}
+  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/fac_158_All_beta_c1_p3}
+
+  \caption{$\beta$ correction factor for the 158 \GeVc dataset.}
+  \label{fig:hadron:correction:beta:dedx158}
+\end{figure}
+
+%%%%%%%%%%% BETA %%%%%%%%%%%%%%%%%%
+\begin{figure}
+  \centering
+  \includegraphics[clip, rviewport=0 0 1 1,width=0.95\textwidth]{vzero/beta158}
+  
+  \caption{$\beta$ correction factor for the 158 \GeVc dataset.}
+  \label{fig:hadron:correction:beta:vzero158}
+\end{figure}
+
+The geometrical acceptance of the detector
+is the dominant contribution to the $\beta$ factor
+for both identified spectra and \vzero cases.
+Smaller effects, but still significant, are related
+to the event selection, track reconstruction efficiency, 
+bin migration and feed-down from re-interactions and weak decays.
+Apart from the feed-down from weak decays,
+the model dependence due to all these effects is very small.
+In particular the model dependence of the event selection
+contribution can reach few percents. This differences
+will be taken into account in the systematic uncertainty estimation.
+See~\cref{sec:hadron:spec:syst} for more details.
+On the other hand, the feed-down contribution from weak decays
+is the only one that can present a large model
+dependence, reaching up to YYY\%.  
+Given that the feed-down contribution itself
+can reach up to 20\% of the total $\beta$
+correction, we must give it more attention.
+
+
+Concerning the charged particles, \pions and \protons
+are strongly fed by the decay of \lambs and \kzeros,
+with a small contribution from other particles.
+In~\cref{} we show all the particles that decay in
+\pions, \kaons and \protons within their relative abudance(?),
+obtained with the model \EposLong.
+The \kaons in turn are weakly fed only by YYY, and YYY.
+Since the \lambs and \kzeros production is very different
+among the hadronic interaction models, the model dependence
+on the $\beta$ correction for \pions and \protons would
+naturally be very large. To avoid that, in this work the
+measured spectra of \lambs and \kzeros will be used
+to correct the feed-down contribution from these particles.
+The description of the procedure adopted by us is given
+in~\cref{sec:hadron:correction:fd}.
+
+
+Concerning the \lambs and \kzeros,
+the particles that contribute to the feed-down
+are shown in~\cref{} for the hadronic model \EposLong.
+In this case the model differences are still
+large and they will be accounted for in the systematic
+uncertainties (see~\cref{sec:hadron:spec:syst}). 
+
+
+
+%%%---------------------------------%%%%
+\subsection{Feed-down}
+\label{sec:hadron:correction:fd}
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Spectra}
+\label{sec:hadron:spec}
 
 
 %%%---------------------------------%%%%
 \subsection{Statistical uncertainties}
+\label{sec:hadron:spec:stat}
 
 
 %%%---------------------------------%%%%
