@@ -261,14 +261,14 @@ FUNCTION {bbl.ldots} %#0 use nothing, #1 use \ldots, #2 use $\ldots$, 3# use {..
    abnt.ldots.type #3 = {"{...}"}    'skip$ if$}
   {""} %for #0 use nothing
 if$}
-FUNCTION {bbl.master}  { "Mestrado" }
+FUNCTION {bbl.master}  { "Masters" }
 FUNCTION {bbl.missing.year}
 {abnt.missing.year
   {"[s.d.]"} %#1
   {""}       %#0
  if$}
 FUNCTION {bbl.monography} { "Monografia" }
-FUNCTION {bbl.mthesis} { "Disserta\c{c}\~{a}o" }
+FUNCTION {bbl.mthesis} { "Thesis" }
 FUNCTION {bbl.no.address} {"[S.l.]"}
 FUNCTION {bbl.no.address.no.publisher} {"[S.l.: s.n.]"}
 FUNCTION {bbl.no.publisher} {"[s.n.]"}

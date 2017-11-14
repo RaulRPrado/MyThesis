@@ -5,6 +5,19 @@
 
 \note{Make it clear what was previously done}
 
+The measured spectra of \pions and \protons are strongly affected
+by the decay products of \lambs and \kzeros . By correcting
+this effect using Monte Carlo simulations, a large systematic
+uncertainty due to the model dependencies arises. The significance
+of this effect can be seen in~\cref{fig:dedx:int:158,fig:dedx:int:350}
+by comparing the size of the
+systematic uncertainty on the \protons spectra with the ones on the
+\kaons spectra, where no contribution from weak decays is present.
+Avoiding this large systematic contribution by measuring the
+spectra of \lambs and \kzeros is the main motivation of the
+analysis presented in this section. 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Dataset and simulations}
 \label{sec:hadron:data}
@@ -163,7 +176,7 @@ is the following:
 \end{enumerate}
 These selection criteria are standard ones in \NASixtyOne analysis.
 Further cuts on the \vzeros will be applied at the signal extraction
-step (see~\cref{sec:hadron:signal:cuts}).
+step (see~\cref{sec:hadron:vzero:signal:cuts}).
 
 Since it is not possible to define the detector acceptance for
 the \vzeros analogously to what is done for the tracks, the possible
@@ -244,8 +257,8 @@ features of the measured track (e.g. number of clusters) and
 detector properties (e.g. resolution and calibration),
 the \dedx fit turns to be very challenging. The first
 requirement to perform this step is the development
-of a appropriate \dedx model,
-which is shown in~\cref{sec:hadron:dedx:model}.
+of an appropriate \dedx model,
+which is described in~\cref{sec:hadron:dedx:model}.
 
 Having in hands the \dedx model, the measured \dedx
 distributions can be fitted to determine the particle
@@ -264,8 +277,7 @@ it is also used to define cuts on the problematic
 phase space bins and to compute correction factors.
 Finally, in~\cref{sec:hadron:dedx:fitresults} we show the results
 of the particle identification analysis, which include
-the particle fractions of \pions, \kaons and \protons
-after applying the cuts and corrections.
+the particle fractions of \pions, \kaons and \protons.
 
 
 %%%---------------------------------%%%%
@@ -981,14 +993,230 @@ in~\cref{fig:hadron:dedx:fit:out158r,fig:hadron:dedx:fit:out158w,fig:hadron:dedx
 \section{\vzero analysis}
 \label{sec:hadron:vzero}
 
+In this section we describe the part of our analysis
+focused on the \lambs and \kzeros particles.
+Neutral weakly decaying particles with average decay length ($c\tau$)
+of order of few or tens of centimeters can be detected by \NASixtyOne
+experiment through their charged decay products. This kind of
+particles are called \vzero particles because of the shape of
+the decay ($V$) and its neutral charge ($^0$). Although the \vzero
+particle itself does not create a track in the TPCs, the products
+of its decay do, allowing us to reconstruct the position of the
+decay vertex and, by using the properties of the daughter tracks,
+identify the original \vzero. Therefore, the detector acceptance
+depends strongly on geometrical factors because both daughter particles
+must create tracks on the TPCs and they must be well reconstructed. 
+In~\cref{tab:hadron:vzero:part} we list the three \vzero particles of interested
+of the present work together with the properties of their decay channel
+which is used here (daughter particles and branching ratio). 
+
+
+\begin{table}
+  \begin{center}
+    \begin{tabular}{|c|c|c|} \hline
+      \vzero particle  & decay products       & BR     \\ \hline
+      \lamb            & \proton+$\pi^-$      & 63.9$\%$ \\ 
+      \antilamb        & $\pi^+$+\antiproton  & 63.9$\%$  \\
+      \kzeros          & $\pi^+$+$\pi^-$      & 69.2$\%$  \\ \hline
+    \end{tabular}
+    \caption{}
+    \label{tab:hadron:vzero:part}
+  \end{center}
+\end{table}
+
+
+The description of the standard algorithms applied by \NASixtyOne experiment
+to find and reconstruct the \vzeros can be found in
+Refs.~\cite{BarnaThesis,TobiaszThesis},
+while the particular \vzero selection applied to our
+analysis was described in~\cref{sec:hadron:vzeroselection}.
+The identification of the \vzero particles is done by means of
+its invariant mass, which is given by
+\begin{equation}
+  m_\text{inv} = \sqrt{m_+^2 + m_-^2 + 2(E_+E_--\vec{p}_+\vec{p}_-)},
+\end{equation}
+where the indexes $+$ and $-$ refer to the positively
+and negatively charged daughter particles.
+Because of the large combinatorial background, which means that
+many tracks can be randomly combined and reconstructed as \vzero
+particles, a signal extraction step is needed. This is usually done
+by fitting the measured invariant mass distribution with a signal
+and a background model. The signal extraction procedure is presented
+in~\cref{sec:hadron:vzero:signal} and its results are shown
+in~\cref{sec:hadron:vzero:results}.
+
 
 %%%---------------------------------%%%%
-\subsection{Signal extraction}
+\subsection{Signal extraction strategy}
 \label{sec:hadron:vzero:signal}
 
 
-\subsubsection{\vzero cuts}
+The signal extraction is done by fitting the \minv distribution
+with a model that includes the signal and the background contributions.
+Traditionally in \NASixtyOne analyzes the signal
+is modelled by analytical functions like Breit-Wigner
+or Gaussian functions~\cite{Abgrall:2015hmv,Aduszkiewicz:2015dmr}. 
+However, because of difficulties in describing
+the \kzeros signal, we have decided to use here
+Monte Carlo templates instead. More than that, it was found
+that for few \kzeros phase space bins,
+the signal description is very poor
+with only one single template and therefore a double template approach
+was preferred.
+The simulations used to build the templates were described
+in~\cref{sec:hadron:data} and they include most of the expected
+detector effects. It was observed that the choice of the
+hadronic interaction model has an insignificant impact
+on the shape of the templates.
+For the background description we have decided
+for the standard approach, using generic polynomial functions.
+
+
+
+The fit is performed by a likelihood method assuming Poissonian
+distributions for the entries of the \minv distribution.
+The log-likelihood to be maximized is analogous to the one shown
+in~\cref{eq:hadron:dedx:fit:l0}, however the notation is
+simpler because the only index is the one
+that refers to the \minv bin. This index will be represented by \imass,
+the total number of \minv bin by \nmass and the value of \minv in the center
+of the bin by $m_\imass$. Also, the expected value of the particle mass
+is represented by $m_0$.
+Thus, being $n$ and $\nu$ the observed and expected number, respectively,
+the log-likelihood function is given by
+\begin{equation}
+  l_0 = 2\ln L = 2\sum_{\imass=1}^{\nmass} \left(\nu_{\imass} - n_{\imass}\ln\nu_{\imass}\right). 
+  \label{eq:hadron:vzero:fit:l0}
+\end{equation}
+The expected number $\nu_\imass$ is given by the sum of the signal
+and background contribution as
+\begin{equation}
+  \nu_\imass = T_\imass + f^\text{BG}_\imass, 
+  \label{eq:hadron:vzero:fit:nu}
+\end{equation}
+where $T_\imass$ comes from the templates and
+\begin{equation}
+  f^\text{BG}_\imass = p_0 + p_1(m_\imass-m_0)+p_2(m_\imass-m_0)^2.
+  \label{eq:hadron:vzero:fit:bg}
+\end{equation}
+
+
+The contribution of one template evaluated at a given
+mass $m$ is represented by $t[m]$. The templates contain
+the same number of bins \nmass and $t[m]$ is computed
+by a linear interpolation of the two bins
+in which their centers are the closest to $m$.
+To allow the templates to shift, we added the
+shift parameters $\delta m$'s. In the end,
+the template term $T_\imass$ computed by
+\begin{equation}
+  T_\imass = S_\text{fit}\left(\alpha t^0[m_\imass+\Delta m^0]+ (1-\alpha)t^1[m_\imass+\Delta m^1]\right),
+  \label{eq:hadron:vzero:fit:t}
+\end{equation}
+where $S_\text{fit}$, $\alpha$, $\Delta m^0$ and $\Delta m^1$ are
+free parameters to be fitted.
+Since the templates are normalized, $S_\text{fit}$ gives
+directly the amount of signal in the distribution.
+
+By combining the~\cref{eq:hadron:vzero:fit:nu,eq:hadron:vzero:fit:bg,eq:hadron:vzero:fit:t}
+with~\cref{eq:hadron:vzero:fit:l0} we have the log-likelihood function $l_0$
+with 7 free parameters, being $p_0$, $p_1$ and $p_2$
+for the background and $S_\text{fit}$, $\alpha$, $\Delta m^0$ and $\Delta m^1$
+for the signal.
+
+Similarly to what was done for the \dedx fit,
+here we also include Gaussian contraints to make the
+fit more stable. The parameters to be contrained are
+the mass shifts, $\Delta m^0$ and $\Delta m^1$, and the fraction
+$\alpha$. In the former case the intentional is to avoid
+solutions of the fit in which the template shifts are too large.
+It is expected shifts of order of few \MeVc only and it was observed
+that without the contraints there could be solutions with
+larger shift than this, which is physically meaningless.
+The contraint on the $\alpha$ parameter is important
+for cases in which the signal is well described by one
+template only and consequently $\alpha$ becomes
+degenerated. The contraint term is given by
+\begin{equation}
+  c = \left(\frac{\Delta m^0}{0.001}\right)^2+\left(\frac{\Delta m^1}{0.003}\right)^2
+  +\left(\frac{\alpha}{0.2}\right)^2,
+  \label{eq:hadron:vzero:fit:c}
+\end{equation}
+where the $\Delta m^0$ and $\Delta m^1$ is given in \GeVc units.
+Finally, the final log-likelihood to be maximized is given by
+\begin{equation}
+  l = l_0 +c,
+  \label{eq:hadron:vzero:fit:l}
+\end{equation}
+where $l_0$ and $c$ are given by~\cref{eq:hadron:vzero:fit:l}
+and~\cref{eq:hadron:vzero:fit:c}, respectively.
+
+The maximization of $l$ was done by means of the
+MINUIT package~\cref{James:1975dr}. The width
+of the \minv bins was 1.5 and 3.0 \MeVcc for
+\lambs and \kzeros, respectively, and the mass range
+was $[1.095 \GeVcc, 1.160 \GeVcc]$ and $[0.42 \GeVcc, 0.580 \GeVcc]$  
+again for \lambs and \kzeros, respectively.
+For each beam energy dataset, the templates were filled
+with the three simulation sets, generated by different
+hadronic interaction models.
+
+As results of the fit, we obtain the estimated signal
+$S_\text{fit}$, and the average background $B_\text{fit}$, which is the integral
+of the background function over all the mass range of the fit.
+To avoid possible bias due to misdescription of the signal
+by the templates, the final signal is not taken as $S_\text{fit}$.
+Instead, we compute it as $S = N - B_\text{fit}$,
+where $N$ is the total number of entries in the measured \minv distribution.
+We assume by doing this that the background estimation is more precise
+than the signal one.
+The statistical uncertainty on $S$ is given by $\sigma_S = \sqrt{N+\sigma_{B_\text{fit}}^2}$,
+where Poissonian fluctuations are assumed for $N$ and $\sigma_{B_\text{fit}}$
+is obtained as a result of the fit.
+
+To determine suitable starting parameters for the fit,
+a preliminary phase is performed by means of a $\chi^2$
+fit. In this case, the signal model is simplified and
+only one template is used without allowing it to shift.
+In this way the whole model turns to be linear on the fitting
+parameters and the $\chi^2$ minimization can be done annalytically.
+The results of the $\chi^2$ fit
+is then used to compute the respective parameters
+to start the final fit.
+
+Because the number of selected \vzeros is substantially smaller
+at the target removed dataset, a special strategy for the signal
+extraction is required. First, the phase space binning was
+changed so all the original \pT bins are merged
+in one unique bin for each \pp bin. Second, the \minv fit is performed
+by means of an analytic minimization of the $\chi^2$
+in which only one template is considered, without allowing
+its position to shift. Although it is known that this fitting
+procedure can produce biased results, it is acceptable in this
+context because the statistical uncertainties due to the low
+statistics is surely much larger than the bias.
+After obtaining $S$ from the \minv fit, the target removed
+signal for each original \pp and \pT bin is obtained by assuming
+the same \pT dependence observed in the target inserted dataset.
+
+
+%%%---------------------------------%%%%
+\subsection{\vzero cuts}
 \label{sec:hadron:vzero:signal:cuts}
+
+
+%%%---------------------------------%%%%
+\subsection{Signal extraction results}
+\label{sec:hadron:vzero:results}
+
+In~\cref{fig:vzero:signal:dist:158:in,fig:vzero:signal:dist:350:in}
+we show examples of the fitted \minv distributions.
+
+In~\cref{fig:vzero:signal:dist:158:out,fig:vzero:signal:dist:350:out}
+we show examples of the target removed \minv fitted
+distributions.
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
