@@ -63,6 +63,195 @@ in Ref.\cite{\RaulICRC}.
 \section{\NASixtyOne experiment}
 \label{sec:hadron:na61}
 
+\note{DONE}
+
+\warning{more references}
+
+The \NASixtyOne~\cite{\NASixtyOnePaper} is a fixed target experiment located in the
+North Area of the CERN SPS. Its proposal was accepted in 2006,
+a pilot run took place in 2007 and the first physics run in 2009.
+Most of its detector components were inherited from the
+\NAFortyNine experiment~\cite{\NAFortyNinePaper},
+which was shut down in 2003.
+
+The physics programme of \NASixtyOne is very rich, including
+heavy ion, neutrino and cosmic ray physics.
+All these different fields have in commom the need for
+precise hadron production measurements, which can be
+provided by \NASixtyOne experiment. The main goals of the
+heavy ion programme is the study of the properties of the
+onset of deconfinement (discovered by \NAFortyNine~\cite{}) and
+the search for the critical point of strongly interacting matter~\cite{}.
+Concerning the neutrino physics programme, the hadron production
+spectra in hadron-nucleus collisions measured by \NASixtyOne are
+required to improve the neutrino flux predictions for the T2K experiment~\cite{\T2KPaper}.
+Finally, the goal of the cosmic rays physics programme is to study
+the properties of the $\pi$-C interactions, which is of highly value
+for the better understanding of the extensive air shower physics and,
+in particular, the muon production (see~\cref{sec:showers} for more details).
+
+
+Its large acceptance is the main experimental feature of the
+\NASixtyOne detector. A set of five Time Projection Chambers (TPCs)
+can provide a high efficiency charged particle tracking.
+A magnetic field partially covering the TPCs allows the reconstruction
+of the particle momenta and charge while the energy loss measurements by the
+TPCs allows for the particle identification. In~\cref{fig:hadron:na61:beam}
+we show the configuration of the beam detectors as set for the $\pi^-$-C data taken
+and in~\cref{fig:hadron:na61:setup} we show the configuration
+of the main part of the \NASixtyOne detector. 
+The coordenate system used in all \NASixtyOne analysis
+is also shown in~\cref{fig:hadron:na61:setup}. The axis defined
+by the beam direction is represented by the z coordenate,
+while the x-y plane is the perpendicular to this direction.
+
+
+A brief description of the beam and the detector
+components relevant for the present analysis follows
+in the next sections. Some important components,
+like the Time-of-Flight detectors,
+are not described here for the sake of briefity.
+A detailed description of the experiment is given
+in Ref.~\cite{\NASixtyOnePaper}.
+
+%%%%%%%%%%%%%% BEAM %%%%%%%%%%%%%%%
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[clip, rviewport=0 0 1 1,width=0.95\textwidth]{det/Beam}
+  \caption{}
+  \label{fig:hadron:na61:beam}
+\end{figure}
+
+
+
+%%%%%%%%%%%%%% NA61 SETUP %%%%%%%%%%%%%%%
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[clip, rviewport=0 0 1 1,width=0.95\textwidth]{det/na61}
+  \caption{}
+  \label{fig:hadron:na61:setup}
+\end{figure}
+
+%%%---------------------------------%%%
+\subsection{Beam}
+\label{sec:hadron:na61:beam}
+
+The CERN SPS is able to provide to the North Area experiments
+primary proton or ion beams of maximum energy of 450 \GeV/u. 
+To generate the $\pi^-$ secondary beam, a primary proton
+beam of 400 \GeVc from SPS is first collided against
+a 10 cm long beryllium target. This collision occur
+about 500 m upstream the \NASixtyOne detector.
+
+The secondary charged particles produced are then tranported
+through the H2 beamline. During the transportation,
+a number of collimators and magnets are responsible for
+selecting the momentum of the beam particles as well as
+controlling their intensity and trajectory. For the data
+analyzed in this work, the $\pi^-$ beam was generated
+with two beam momenta, 158 and 350 \GeVc.
+
+
+%%%---------------------------------%%%
+\subsection{Beam detectors and trigger system}
+\label{sec:hadron:na61:trigger}
+
+The beam detectors and the components of the trigger system are shown
+in~\cref{fig:hadron:na61:beam}. Most of them are placed upstream of
+the target, being the S4 the only exception. A set of three plastic
+scintillation counters are labelled as S1, S2 and S4. The components
+V0, V1 and V1$^p$ are called veto detectors and they are also scintillation
+counters but with a role in the beam trajectory. These veto detectors
+are used in the trigger system in anti-coincidence so the beam particles
+that pass away from the expected beam trajectory are removed.
+
+Two trigger modes defined based on the scintillation counter measurements
+are relevant for this work. The first one is the \emph{beam trigger},
+denoted in this text as T1 and defined as 
+$\text{S1}\wedge\text{S2}\wedge\overline{\text{V0}}\wedge\overline{\text{V1}}\wedge\overline{\text{V1}^p}$,
+which means that S1 and S2 are considered in coincidence and V0, V1 and V1$^p$ in anti-coincidence.
+The second relevant trigger is the \emph{interaction trigger}, denoted as T2
+and defined as 
+$\text{T1}\wedge\overline{\text{S4}}$.
+The S4 detector in anti-coincidence removes events in which a beam
+particle crossed the target without interacting. Evidently,
+a small fraction of the inelastic interactions can produce
+a high energy particle that reaches S4 and in these cases, the
+event is not accepted. The consequent biased is taken into
+account on the Monte Carlo correction step (see~\cref{sec:hadron:correction}).
+
+The three Beam Position Detectors, indicated as BPD in~\cref{fig:hadron:na61:beam},
+are proportional chambers that are able to measure the tranversal position
+of the beam particles. Two important functions of the BPDs are to constrain
+the tranversal position of the interaction vertex and to define the
+incident angle of the beam particle on the target. Besides that,
+the information about the spread of the beam particles on the
+tranverse plane is used as a offline cut to assure the
+selection of good quality events (see~\cref{sec:hadron:event}).
+
+A further beam detector is the CEDAR, that is also shown
+in~\cref{fig:hadron:na61:beam}. It is a Cherenkov detector
+and its functionality is to identify the beam particle.
+After the secondary beam particles are selected and
+transported to the \NASixtyOne detector, the purity of the
+$\pi^-$ beam is about 95\% and 100\% for the 158 and 350 \GeVc
+case, respectively. The CEDAR information is also used as
+an offline cut to assure that the interacting particle
+is indeed a $\pi^-$.
+
+
+
+%%%---------------------------------%%%
+\subsection{Time projection chambers}
+\label{sec:hadron:na61:tpc}
+
+In~\cref{fig:hadron:na61:setup} one can see the
+position of the five TPCs, which form the main part
+of the \NASixtyOne detector. 
+Two of them are the vertex TPCs, called
+VTPC-1 and VTPC-2. Placed in between VTPC-1 and VTPC-2
+there is the GAP-VTPC (or only GTPC). The two remain ones
+are the left and right components of the main TPCs, which
+are called MTPC-L and MTPC-R. 
+
+The VTPC-1 and VTPC-2 are located inside two superconducting
+dipole magnet. The produced magnetic field
+is responsible for bending the particle trajectories,
+which allows us to measure the sign of the particle charge
+as well as the its momentum. To optimize the geometrical
+acceptance, the intensity of the magnetic field is set
+depending on the beam energy. For the $\pi^-$-C data taken
+at 158 and 350 \GeVc, the magnetic field was set to 1.5 and 1.1 T
+in te first and second magnets, respectively.
+
+All the TPCs are filled with a gas mixture of Ar/CO$_2$ in the proportion
+of 90/10 for the VTPCs and GPTC and 95/5 for the MTPCs.
+The particle tracking is possible by collecting the electrons
+freed by the ionization of the gas atoms because of the passage
+of the charged particle.
+These electrons are drifted along the y direction under the influence
+of the an eletric field and collected by a set of readout pads on the top
+of the TPCs. The electrons collected in the pads are group in time
+to form the so called clusters. While the position of the pads
+gives the x and z coordenates of the cluster position, the y
+coordenate is reconstructed by its drifting time. By combining the
+position of many clusters measured along the TPCs, we can reconstruct
+the trajectory of the charged particles. The combination of the clusters
+associated to one particle is called track.
+
+Besides the particle tracking, the TPCs can also measure its
+ionization energy loss. These measurements are done by combining
+the total charge of all the clusters that compose a track and
+a unique value of \dedx is defined for each particle.
+The \dedx measurements allow the main particle
+identification procedure applied in \NASixtyOne analysis
+and we give more details about that in~\cref{sec:hadron:dedx:meas}.
+A technical description of the TPCs of the \NASixtyOne can be found
+in Refs.~\cite{AntoniAThesis,\NASixtyOnePaper}.
+
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Dataset and simulations}
@@ -1664,7 +1853,7 @@ is relatively very small.
 \subsection{Systematic uncertainties}
 \label{sec:hadron:spec:syst}
 
-\warning{DO IT}
+\warning{dedx fit systematics}
 
 The sources of systematic uncertainties will be listed
 separetely for charged hadrons and \vzero analysis.
@@ -1742,25 +1931,72 @@ spectra of the \vzero particles are:
 
 \end{itemize}
 
-
-In the next section, both statical and systematic uncertainties
-are shown separetely for the particle spectra.
+In~\cref{sec:hadron:results}, both statistical and systematic uncertainties
+are shown separately for the particle spectra.
 
 %%%---------------------------------%%%%
 \subsection{Integration over \pT}
 \label{sec:hadron:spec:int}
 
 
+The single differential spectra $\text{d}n/\text{d}\p$ can be obtained
+by integrating the double differential spectra,
+given by~\cref{eq:hadron:spec}, over \pT. Since the measured
+spectra do not cover all the \pT range, an extrapolation is needed
+to perform the integration. This was done by fitting
+the double differential as a function of the \pT for each \pp bin
+and then using the integral of the fitted function to
+extrapolate the measured spectra.  
+In this work, we have decided to use a function
+defined by a Gaussian function convoluted to
+an exponential one. 
+The \pT integrated spectra is than computed by sum over
+all the \pT bins in which the measured spectra is available
+and add to the result the integral of the fitted function
+over the remain \pT range. The final \pT integrated spectra results
+were limited to the \pp bins in which the fraction of the extrapolation
+is smaller than 5\% of the total. This was done to avoid large systematic
+uncertainties due to the choice of the function used for the extrapolation.
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results}
+\label{sec:hadron:results}
 
 \warning{DO IT}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Summary and conclusions}
 
 \warning{DO IT}
 
-\subsection{Implications on muon production in extensive air showers}
+In this chapter we have presented the
+analysis of the hadron production in $\pi^-$-C interactions
+measured by \NASixtyOne experiment. 
+The spectra of \pions, \kaons and \protons were obtained by
+means of a particle identification method based on the
+\dedx measurements and the \lambs and \kzeros by means
+of the \minv spectra analysis.
+
+
+
+
+
+The results obtained here will greatly impact the understanding
+of the muon production in air showers.
+Our measurements will surely have a important role
+on the tuning of the next generations of the hadronic
+interaction models. In terms of number of muons,
+a direct prediction can be done by looking
+to the \antiproton spectra
+in~\cref{fig:hadron:results:dedx:int:158,fig:hadron:results:proj:dedx:int:158}.
+Some of the current models, like \EposLong and \SibyllNewLong, \warning{???}
+show to be nearly compatible with our measured spectra.
+This mean that the excess of measured muons 
+relative to simulations is likely not caused
+by an overall underestimation of the (anti)baryons
+production by the models.  
+
 
 
