@@ -69,6 +69,8 @@
 
 
 %%%%%%%%%%%%% RAUL %%%%%%%%%%%%%
+\usepackage{subfig}
+\usepackage{overpic}
 \usepackage{xspace}
 \usepackage{enumitem}
 \usepackage{amsmath}
@@ -83,6 +85,8 @@
 \crefname{figure}{Fig.}{Figs.}
 \crefname{equation}{Eq.}{Eqs.}
 \crefname{item}{item}{items}
+
+\def\Put(#1,#2)#3{\leavevmode\makebox(0,0){\put(#1,#2){#3}}}
 
 \include{abbreviations}
 
