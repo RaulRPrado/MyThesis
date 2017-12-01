@@ -1,105 +1,349 @@
 \clearpage
 
-%%%%%%%%%%% DIST %%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% DIST %%%%%%%%%%%%%%%%%%
 \begin{figure}
   \centering
-  \includegraphics[clip, rviewport=0 0 1 1,width=0.4\textwidth]{dedx/dist_350_v0_c0_x13_y3}
-  \includegraphics[clip, rviewport=0 0 1 1,width=0.4\textwidth]{dedx/dist_350_v0_c1_x13_y3}
+
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.4\textwidth]{dedx/dist_350_v0_c0_x13_y3}
+    \put(16,85){(a)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.4\textwidth]{dedx/dist_350_v0_c1_x13_y3}
+    \put(16,85){(b)}
+  \end{overpic}
 
   \vspace{0.5cm}
   
-  \includegraphics[clip, rviewport=0 0 1 1,width=0.4\textwidth]{dedx/dist_350_v1_c0_x29_y5}
-  \includegraphics[clip, rviewport=0 0 1 1,width=0.4\textwidth]{dedx/dist_350_v1_c1_x29_y5}
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.4\textwidth]{dedx/dist_350_v1_c0_x29_y5}
+    \put(16,85){(c)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.4\textwidth]{dedx/dist_350_v1_c1_x29_y5}
+    \put(16,85){(d)}
+  \end{overpic}
   
-  \caption{Examples of the fitted \dedx distributions from the 350 \GeVc dataset.}
+  \caption{Examples of the fitted \dedx distributions from the 350 \GeVc dataset.
+    On the top, the distributions of the (a) negatively and (b) positively charged
+    tracks are shown for one phase space bin of the RST subset. On the bottom,
+    the distributions of the (c) negatively and (d) positively charged
+    tracks are shown for a different phase space bin of the WST subset.
+    The values of the $\langle\pp\rangle$ and $\langle\pT\rangle$ for
+    each phase space bin is indicated on the top of each plot.
+    The black dots show the observed number of tracks, while the colored
+    distributions are the results of the \dedx fit or each particle type. 
+    On the bottom of each plot, we show the residual of the fit, defined
+    as the difference between the observed and the expected number of tracks
+    from the result of the fit, divided by the uncertainty of the observed number.}
   \label{fig:hadron:dedx:fit:dist350}
 \end{figure}
 
-%%%%%%%%%% CAL %%%%%%%%%%%%%%
+
+
+%%%%%%%%%% CHI SQ %%%%%%%%%%%%%%
 \begin{figure}
   \centering
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_158_v1_m0}
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_158_v1_m1}
 
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_158_v1_m2}
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_158_v1_m3}
+  \begin{overpic}[clip, rviewport=0 0 1 0.945,width=0.4\textwidth]{dedx/chisq_350_v0}
+    \put(18,58){(a)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 0.945,width=0.4\textwidth]{dedx/chisq_350_v0}
+    \put(18,58){(b)}
+  \end{overpic}
 
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_158_v1_m4}
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_158_v1_m5}
-  \caption{Calibration constants obtained from the fit of the WST dataset at 158 \GeVc.}
+  \caption{\redchisq of the \dedx fit for the 350 \GeVc data set.
+    The RST and WST are shown in (a) and (b), respectively.}
+  \label{fig:hadron:dedx:fit:chi350}
+\end{figure}
+
+%%%%%%%%%% CAL %%%%%%%%%%%%%%
+\begin{figure}[!ht]
+  \centering
+
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_158_v1_m0}
+    \put(18,58){(a)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_158_v1_m1}
+    \put(18,58){(b)}
+  \end{overpic}
+
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_158_v1_m2}
+    \put(18,58){(c)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_158_v1_m3}
+    \put(18,58){(d)}
+  \end{overpic}
+
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_158_v1_m4}
+    \put(18,58){(e)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_158_v1_m5}
+    \put(18,58){(f)}
+  \end{overpic}
+
+  \caption{Calibration constants obtained from the \dedx fit of the WST and 158 \GeVc data set.}
   \label{fig:hadron:dedx:fit:cal158w}
 \end{figure}
 
 %%%%%%%%%% CAL %%%%%%%%%%%%%%
-\begin{figure}
+\begin{figure}[!ht]
   \centering
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_350_v0_m0}
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_350_v0_m1}
 
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_350_v0_m2}
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_350_v0_m3}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_350_v0_m0}
+    \put(18,58){(a)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_350_v0_m1}
+    \put(18,58){(b)}
+  \end{overpic}
 
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_350_v0_m4}
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_350_v0_m5}
-  \caption{Calibration constants obtained from the fit of the RST dataset at 350 \GeVc.}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_350_v0_m2}
+    \put(18,58){(c)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_350_v0_m3}
+    \put(18,58){(d)}
+  \end{overpic}
+
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_350_v0_m4}
+    \put(18,58){(e)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_350_v0_m5}
+    \put(18,58){(f)}
+  \end{overpic}
+
+  \caption{Calibration constants obtained from the \dedx fit of the RST and 350 \GeVc data set.}
   \label{fig:hadron:dedx:fit:cal350r}
 \end{figure}
 
+
 %%%%%%%%%% CAL %%%%%%%%%%%%%%
-\begin{figure}
+\begin{figure}[!ht]
   \centering
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_350_v1_m0}
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_350_v1_m1}
 
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_350_v1_m2}
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_350_v1_m3}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_350_v1_m0}
+    \put(18,58){(a)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_350_v1_m1}
+    \put(18,58){(b)}
+  \end{overpic}
 
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_350_v1_m4}
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_350_v1_m5}
-  \caption{Calibration constants obtained from the fit of the WST dataset at 350 \GeVc.}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_350_v1_m2}
+    \put(18,58){(c)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_350_v1_m3}
+    \put(18,58){(d)}
+  \end{overpic}
+
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_350_v1_m4}
+    \put(18,58){(e)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_350_v1_m5}
+    \put(18,58){(f)}
+  \end{overpic}
+
+  \caption{Calibration constants obtained from the \dedx fit of the WST and 350 \GeVc data set.}
   \label{fig:hadron:dedx:fit:cal350w}
 \end{figure}
 
 \clearpage
 
 %%%%%%%%%% SHAPE %%%%%%%%%%%%%%
-\begin{figure}
+\begin{figure}[!ht]
   \centering
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_158_v1_m6}
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_158_v1_m7}
 
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_158_v1_m9}
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_158_v1_m10}
-  \caption{Shape parameters obtained from the fit of the WST dataset at 158 \GeVc.}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_158_v1_m6}
+    \put(18,58){(a)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_158_v1_m7}
+    \put(18,58){(b)}
+  \end{overpic}
+
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_158_v1_m9}
+    \put(18,58){(c)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_158_v1_m10}
+    \put(18,58){(d)}
+  \end{overpic}
+
+  \caption{Shape parameters obtained from the \dedx fit of the WST and 158 \GeVc data set.}
   \label{fig:hadron:dedx:fit:shape158w}
 \end{figure}
 
 %%%%%%%%%% SHAPE %%%%%%%%%%%%%%
-\begin{figure}
+\begin{figure}[!ht]
   \centering
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_350_v0_m6}
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_350_v0_m7}
 
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_350_v0_m9}
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_350_v0_m10}
-  \caption{Shape parameters obtained from the fit of the RST dataset at 350 \GeVc.}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_350_v0_m6}
+    \put(18,58){(a)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_350_v0_m7}
+    \put(18,58){(b)}
+  \end{overpic}
+
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_350_v0_m9}
+    \put(18,58){(c)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_350_v0_m10}
+    \put(18,58){(d)}
+  \end{overpic}
+
+  \caption{Shape parameters obtained from the \dedx fit of the RST and 350 \GeVc data set.}
   \label{fig:hadron:dedx:fit:shape350r}
 \end{figure}
 
 %%%%%%%%%% SHAPE %%%%%%%%%%%%%%
-\begin{figure}
+\begin{figure}[!ht]
   \centering
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_350_v1_m6}
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_350_v1_m7}
 
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_350_v1_m9}
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_350_v1_m10}
-  \caption{Shape parameters obtained from the fit of the WST dataset at 350 \GeVc.}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_350_v1_m6}
+    \put(18,58){(a)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_350_v1_m7}
+    \put(18,58){(b)}
+  \end{overpic}
+
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_350_v1_m9}
+    \put(18,58){(c)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_350_v1_m10}
+    \put(18,58){(d)}
+  \end{overpic}
+
+  \caption{Shape parameters obtained from the \dedx fit of the WST and 350 \GeVc data set.}
   \label{fig:hadron:dedx:fit:shape350w}
 \end{figure}
 
+
 \clearpage
 
+
+
+%%%%%%%%%% FRACTIONS %%%%%%%%%%%%%%
+\begin{figure}
+  \centering
+
+  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v1_c0_p0}
+    \put(18,49){(a)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v1_c1_p0}
+    \put(18,49){(b)}
+  \end{overpic}
+
+  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v1_c0_p1}
+    \put(18,49){(c)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v1_c1_p1}
+    \put(18,49){(d)}
+  \end{overpic}
+
+   \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v1_c0_p2}
+    \put(18,49){(e)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v1_c1_p2}
+    \put(18,49){(f)}
+  \end{overpic}
+
+   \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v1_c0_p3}
+    \put(18,49){(g)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v1_c1_p3}
+    \put(18,49){(h)}
+  \end{overpic}
+
+   \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v1_c0_p4}
+    \put(18,58){(i)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v1_c1_p4}
+    \put(18,58){(j)}
+  \end{overpic}
+  
+  \caption{Particle fractions obtained from the \dedx fit of the WST and 158 \GeVc data set.}
+  \label{fig:hadron:dedx:fit:frac158w}
+\end{figure}
+
+
+%%%%%%%%%% FRACTIONS %%%%%%%%%%%%%%
+\begin{figure}
+  \centering
+
+  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_350_fl0_v0_c0_p0}
+    \put(18,49){(a)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_350_fl0_v0_c1_p0}
+    \put(18,49){(b)}
+  \end{overpic}
+
+  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_350_fl0_v0_c0_p1}
+    \put(18,49){(c)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_350_fl0_v0_c1_p1}
+    \put(18,49){(d)}
+  \end{overpic}
+
+   \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_350_fl0_v0_c0_p2}
+    \put(18,49){(e)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_350_fl0_v0_c1_p2}
+    \put(18,49){(f)}
+  \end{overpic}
+
+   \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_350_fl0_v0_c0_p3}
+    \put(18,49){(g)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_350_fl0_v0_c1_p3}
+    \put(18,49){(h)}
+  \end{overpic}
+
+   \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/fraction_350_fl0_v0_c0_p4}
+    \put(18,58){(i)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/fraction_350_fl0_v0_c1_p4}
+    \put(18,58){(j)}
+  \end{overpic}
+  
+  \caption{Particle fractions obtained from the \dedx fit of the RST and 350 \GeVc data set.}
+  \label{fig:hadron:dedx:fit:frac350r}
+\end{figure}
+
+
+%%%%%%%%%% FRACTIONS %%%%%%%%%%%%%%
+\begin{figure}
+  \centering
+
+  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_350_fl0_v1_c0_p0}
+    \put(18,49){(a)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_350_fl0_v1_c1_p0}
+    \put(18,49){(b)}
+  \end{overpic}
+
+  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_350_fl0_v1_c0_p1}
+    \put(18,49){(c)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_350_fl0_v1_c1_p1}
+    \put(18,49){(d)}
+  \end{overpic}
+
+   \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_350_fl0_v1_c0_p2}
+    \put(18,49){(e)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_350_fl0_v1_c1_p2}
+    \put(18,49){(f)}
+  \end{overpic}
+
+   \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_350_fl0_v1_c0_p3}
+    \put(18,49){(g)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_350_fl0_v1_c1_p3}
+    \put(18,49){(h)}
+  \end{overpic}
+
+   \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/fraction_350_fl0_v1_c0_p4}
+    \put(18,58){(i)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/fraction_350_fl0_v1_c1_p4}
+    \put(18,58){(j)}
+  \end{overpic}
+  
+  \caption{Particle fractions obtained from the \dedx fit of the WST and 350 \GeVc data set.}
+  \label{fig:hadron:dedx:fit:frac350w}
+\end{figure}
 
 %%%%%%%%%% FRACTIONS %%%%%%%%%%%%%%
 \begin{figure}

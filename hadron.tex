@@ -604,44 +604,50 @@ and the \dedx fit presented in~\cref{sec:hadron:dedx:model,sec:hadron:dedx:fit}.
 \subsection{\dedx model}
 \label{sec:hadron:dedx:model}
 
-\note{TO REVIEW}
+\note{DONE}
 
-To perform the particle identification by fitting the
-measured \dedx, a model to describe the \dedx distributions
+To perform the \dedx fit , a model to describe the \dedx distributions
 of different particle types as a function of their
-momenta \pp is required. While experiments like
+momenta is required. While experiments like
 ALICE~\cite{\AlicePaper} and CMS~\cite{\CMSPaper} opt
 for modeling the \dedx distributions
 with templates~\cite{CorralesMorales:2017zty,Chatrchyan:2012qb},
 the \NAFortyNine and \NASixtyOne experiments traditionally adopt
-an analytic model, which will also be adopt by us.
+an analytic model, which will also be adopted by us.
 Although the model chosen for our analysis is based on previous
 studies from \NAFortyNine and \NASixtyOne
 collaborations~\cite{LeeuwenThesis,GaborVeresThesis},
-it contains particular features that were found
+it contains particular features that we have found
 to be the most suitable for the present analysis. 
 
-First, the notation adopted in this text has to be presented
-for clarification. The particle types are indexed by
-\ipart that can be one of the five options
-considered here, $\ipart=e, \pi, K, p, d$. The charges are indexed by
-\ich, being that $\ich = +$ or $-$. In addition, the number of
-cluster measured in a track is represented by \ncl and the \dedx
+For clarification, we first present the notation
+adopted along this text. The particle types are represented by the index
+\ipart, which can be one of the five particles $\ipart=e$, $\pi$, K, p or d.
+The positive and negative charges are indexed by
+\ich, so that $\ich = +$ or $-$. In addition, \ncl is used to
+represent the number of cluster of a track and the \dedx
 is replaced by \eps for shortening.
 
-Because the \dedx is obtained by averaging the measured charge
-over a certain number of cluster, it is natural to assume 
-the shape of the \eps distribution depends on the \ncl.
-To be more precise, the \eps resolution should be 
-larger for smaller \ncl and vice-versa. 
-Additionally, the mean of the distribution is expected  
-to change with the momentum of the particle \pp and the particle type
+The first element of our \dedx model is the probability density
+function of \eps for a given particle type and charge, which is called
+here $f_{\ipart,\ich}(\eps)$.
+Because \eps is obtained by averaging the measured charge
+over a certain number of clusters, it is natural to assume 
+that the shape of $f_{\ipart,\ich}(\eps)$ depends on \ncl.
+To be more precise, the width of $f_{\ipart,\ich}(\eps)$
+(or the \eps resolution) should decrease
+with increasing \ncl, and vice-versa. 
+Furthermore, the mean of $f_{\ipart,\ich}(\eps)$ is expected  
+to evolve with the particle momentum \pp
 by following a Bethe-Bloch-like function.
+Given its \ncl and \pp dependences, $f$ can
+be taken as a conditional probability function,
+so it can be written as $f_{\ipart,\ich}(\eps|\pp,\ncl)$.
 
-The \eps distribution shape for a given \ncl and \pp
-can be well described by an asymmetric Gaussian function.
-Thus, the conditional probability density function $f(\eps|\pp,\ncl)$ for a 
-\ipart and \ich is written as
+It has been verified that $f_{\ipart,\ich}(\eps|\pp,\ncl)$
+can be well represented by an asymmetric
+Gaussian function~\cite{GaborVeresThesis}. 
+Thus, we can write
 \begin{equation}
   f_{\ipart,\ich}(\eps|\pp,\ncl) = \frac{1}{\sqrt{2\pi}\sigma_{\ipart,\ich}} \;
   \exp\left[-\frac{1}{2}\left(\frac{\eps-\mu_{\ipart,\ich}}{\delta \; \sigma_{\ipart,\ich}}\right)^2\right],
@@ -656,8 +662,8 @@ with
   \end{cases}
   \label{eq:hadron:dedx:model:asymm}
 \end{equation}
-where $\mu$ is the mode of the distribution, $\sigma$ is the resolution
-and $d$ is the asymmetry parameter. The \pp and \ncl dependence is implicit
+where $\mu$ is the mode of the distribution, $\sigma$ is its resolution
+and $d$ is the asymmetry parameter. The \pp and \ncl dependence are implicit
 on the parameters $\mu$ and $\sigma$, as will be explained next.
 The mode $\mu$ is related to the mean of \eps (\meaneps) by
 \begin{equation}
@@ -666,23 +672,23 @@ The mode $\mu$ is related to the mean of \eps (\meaneps) by
   \label{eq:hadron:dedx:model:mu}
 \end{equation}
 
-The evolution of \meaneps with \pp is expected to follow
-a Bethe-Bloch-like function. In this model, a reference
-\meaneps(\pp) curve was defined by a data-based
-parametrization using a generic function that is a
-variation of the Bethe-Bloch one. The reference value
-of \meaneps for a given \pp is denoted by \meanepsbb.
-To account for deviations from the reference \meaneps,
+The Bethe-Bloch parametrizations shown as colored curves
+in~\cref{fig:hadron:dedx:bb} give the \meaneps as a
+function of \pp for a given particle type.
+In this model, this parametrization is used for reference
+and the value of \meaneps from the parametrization
+is denoted by \meanepsbb.
+To account for deviations from \meanepsbb,
 our model includes a set of parameters called
 \textit{calibration constants}, which are denoted by $X$.
 These parameters act as logarithmic shifts of the \meaneps
 around \meanepsbb and they can in principle be applied
 to each particle and charge separately. However, to reduce the complexity
-of the model, it is assumed here one global calibration constant
+of the model, we assume one global calibration constant
 for each charge that follows the \meaneps of the $\pi$ distribution
 and individual calibration constants for the other particle types,
-which are common for both charges. In the end, the \meaneps for a
-given \ipart and \ich is given by
+which are common for both charges. The \meaneps for a
+given \ipart and \ich is then given by
 \begin{equation}
   \meaneps_{\ipart,\ich} =
   \begin{cases}
@@ -691,35 +697,41 @@ given \ipart and \ich is given by
   \end{cases}
   \label{eq:hadron:dedx:model:cal}
 \end{equation}
-In total the model accounts for 6 calibration constants:
+In total, the model includes 6 calibration constants:
 $X_{\pi}^{+}$, $X_{\pi}^{-}$, $X_{e}$, $X_{K}$, $X_{p}$ and $X_{d}$.
+The \meaneps from~\cref{eq:hadron:dedx:model:cal} is used
+in~\cref{eq:hadron:dedx:model:mu} to compute $\mu_{\ipart,\ich}$,
+which is in turn used in~\cref{eq:hadron:dedx:model:pdf}
+to compute $f_{\ipart,\ich}(\eps|\pp,\ncl)$.
 
-The \ncl dependence of the $\sigma$ is assumed to be of the form
-$\sigma \sim 1/\sqrt{\ncl}$. $\sigma$ is also assumed to depend
-on the \meaneps by a power law relation. Besides that,
-the normalization parameter is called
-$\sigma_0$ and it is defined separately for each charge ($\sigma_0^{\ich}$).
-The final expression for the $\sigma$ is,
+The last ingredient of~\cref{eq:hadron:dedx:model:pdf}
+to be described is the resolution $\sigma_{\ipart,\ich}$. 
+Its \ncl dependence is assumed to be of the form
+$\sigma \sim 1/\sqrt{\ncl}$. Besides that $\sigma_{\ipart,\ich}$
+is also assumed to depend on the \meaneps by a power law relation.
+The overall scale of $\sigma_{\ipart,\ich}$ is given by its normalization
+parameter $\sigma_0$, which is actually defined separately for each charge ($\sigma_0^{\ich}$).
+The final expression for the resolution is,
 \begin{equation}
   \sigma_{\ipart,\ich} = \frac{\sigma_0^{\ich}}{\sqrt{\ncl}} \meaneps_{\ipart,\ich}^{\alpha},
   \label{eq:hadron:dedx:model:sigma}
 \end{equation}
-in which 3 more parameters are included: $\sigma_0^+$, $\sigma_0^-$ and $\alpha$. 
+in which 3 more parameters are included to the model: $\sigma_0^+$, $\sigma_0^-$ and $\alpha$. 
 
-By combining
-the~\cref{eq:hadron:dedx:model:asymm,eq:hadron:dedx:model:mu,eq:hadron:dedx:model:cal,eq:hadron:dedx:model:sigma}
+By combining~\cref{eq:hadron:dedx:model:asymm,eq:hadron:dedx:model:mu,eq:hadron:dedx:model:cal,eq:hadron:dedx:model:sigma}
 with the~\cref{eq:hadron:dedx:model:pdf}, we obtain the probability density
-function of \eps for each particle \ipart and charge \ich. Besides the 6 calibration constants,
-the model includes 4 \textit{shape parameters}: $\sigma_0^+$, $\sigma_0^-$, $\alpha$ and $d$.
-Altogether there are 10 parameters that can be set free to fit the model
-to the measured \eps distributions.
+function of \eps for each particle \ipart and charge \ich.
+Apart from the 6 calibration constants,
+the model also includes a set of 4 \textit{shape parameters}: $\sigma_0^+$, $\sigma_0^-$, $\alpha$ and $d$.
+Altogether, there are 10 parameters that can be used as free parameters
+to perform the fit of the \eps distributions.
 
 
 %%%---------------------------------%%%%
 \subsection{\dedx fit strategy}
 \label{sec:hadron:dedx:fit}
 
-\note{TO REVIEW}
+\note{DONE}
 
 The fitting procedure is performed by means of a binned maximum-likelihood method.
 In the general case 10 particle fractions (5 particle types and 2 charges) and
@@ -729,72 +741,75 @@ in which one or more particle fraction are fixed to zero will be described later
 The \eps data is first divided in bins of $\log_{10}$\eps of width $\Delta\log_{10}$\eps$=0.01$.
 The index \ieps will be used to indicate these $\log_{10}$\eps bins.
 By using the standard Poissonian probability distribution function in which
-$n_{\ich\ieps}$ and $\nu_{\ich\ieps}$ are the observed and expected
+$n_{\ich,\ieps}$ and $\nu_{\ich,\ieps}$ are the observed and expected
 number of tracks in a given bin \ieps and charge index \ich,
-the log-likelihood function to be maximized is written as
+the log-likelihood is then written as
 \begin{equation}
-  l_0 = 2\ln L = 2\sum_{\ich=+,-}\;\sum_{\ieps=1}^{\neps} \left(\nu_{\ich\ieps} - n_{\ich\ieps}\ln\nu_{\ich\ieps}\right), 
+  l_0 = 2\ln L = 2\sum_{\ich=+,-}\;\sum_{\ieps=1}^{\neps} \left(\nu_{\ich,\ieps} - n_{\ich,\ieps}\ln\nu_{\ich,\ieps}\right), 
   \label{eq:hadron:dedx:fit:l0}
 \end{equation}
 where \neps is the number of $\log_{10}$\eps bins and the constant terms were neglected.
 
-The expected number of tracks is computed by using
-the \eps model. Since $f_{\ipart\ich}(\eps|\pp,\ncl)$ depends on \pp and \ncl,
-it has to be convoluted to the \pp and \ncl distributions
+The expected number of tracks $\nu_{\ich,\ieps}$ is computed by using
+the \eps model. Since $f_{\ipart,\ich}(\eps|\pp,\ncl)$ depends on \pp and \ncl,
+the model has to be convoluted with the \pp and \ncl distributions
 of the measured tracks.
 To do that, the measured tracks are first split in
 bins of the variables $q = \log_{10}\pp$ and $z = 1/\sqrt{\ncl}$.
 These variables were chosen to provide a better sampling
 of the data along the bins. The distributions of the
-original variables, \pp and \ncl, contain under-sampled
+original variables, \pp and \ncl, contain undersampled
 tails which are not suitable for the convolution procedure.
 
-Being \iq and \iz the indexes for $q$ and $z$, the
-number of measured tracks in one ($q$,$z$) bin is denoted
-by $N_{\iq\iz}$ and the center of the bins are denoted
+Being \iq and \iz respectively the indexes for the
+bins of the variables $q$ and $z$, the
+number of measured tracks in one ($q$,$z$) bin,
+for a given charge \ich, is denoted
+by $N_{\ich,\iq,\iz}$ and the center of the bins are denoted
 by $\hat{q}_{\iq}$ and $\hat{z}_{\iz}$. In the next step, the partial
-cumulative distribution function in one \ieps bin for each \ipart, \ich,
-relative to one ($q$,$z$) bin is computed as
+cumulative distribution function in one \ieps bin relative to
+one ($q$,$z$) bin is computed as
 \begin{equation}
-  F_{\ipart\ieps\iq\iz} = \int f_{\ipart\ich}(\eps|\hat{q}_{\iq},\hat{z}_{\iz}) d\eps,
+  F_{\ipart,\ich,\ieps,\iq,\iz} = \int_{\ieps\text{th bin}} f_{\ipart,\ich}(\eps|\hat{q}_{\iq},\hat{z}_{\iz}) d\eps,
 \end{equation}
 where the limits of the integral are given by the $\log_{10}\eps$
-limits of the {\ieps}th bin. Note that the variables $q$ and $z$
-were used to evaluate the $f$,
-instead of the original \pp and \ncl variables.
+limits of the {\ieps}th bin. Note that,
+instead of the original \pp and \ncl variables,
+the variables $q$ and $z$ were used to evaluate $f$.
 
-The total cumulative distributions $C_{\ipart\ich}$ is computed by summing
-the contributions of all ($q$,$z$) bins weighted by its respective
+The total cumulative distributions $C_{\ipart,\ich}$ is computed by summing
+the contributions of all ($q$,$z$) bins, weighted by its respective
 number of measured tracks, as
 \begin{equation}
-  C_{\ipart\ich} = \sum_{\iq=1}^{\nq} \sum_{\iz=1}^{\nz} N_{\iq\iz} F_{\ipart\ieps\iq\iz},
+  C_{\ipart,\ich} = \sum_{\iq=1}^{\nq} \sum_{\iz=1}^{\nz} N_{\ich,\iq,\iz} F_{\ipart,\ich,\ieps,\iq,\iz},
 \end{equation}
 where \nq and \nz are the number of \iq and \iz bins, respectively.
 The number of mathematical operations in this step
-can become very large depending on how large are \nq and \nz,
-As a consequence the computing time can be unpraticably long.
+can become very large depending on how large are \nq and \nz.
+As a consequence, the computing time can be unpraticably long.
 On the other hand,
-too small number of bins can imply in a undesirable loss of precision
-in the results of the fit. Therefore, \nq and \nz were defined
-as being approximately the minimum values so there is no negative cost
-for the results, which are 5 and 15, respectively.
+too small number of bins can imply in an undesirable loss of precision
+in the results of the fit. In this works,
+it was found that $\nq = 5$ and $\nz = 15$ are suitable choices.
 The limits of the $q$ and $z$ binning were defined automatically
 by using the smallest and the largest values found on data.
 
 Finally, the expected number of tracks in one \ieps bin of charge \ich
 is computed by summing the contributions of all particle types
-in which each one is weighted by its respective fraction $Y_{\ipart\ich}$,
+weighted by its respective fraction $Y_{\ipart,\ich}$,
 \begin{equation}
-  \nu_{\ich\ieps} = \sum_{\ipart=e,\pi,K,p,d} Y_{\ipart\ich} C_{\ipart\ich}.
+  \nu_{\ich,\ieps} = \sum_{\ipart=e,\pi,K,p,d} Y_{\ipart,\ich} C_{\ipart,\ich}.
   \label{eq:hadron:dedx:fit:exp}
 \end{equation}
-This expression is then combined to the one in~\cref{eq:hadron:dedx:fit:l0}
+This expression is then combined to~\cref{eq:hadron:dedx:fit:l0}
 to determine $l_0$.
 
-In addition to $l_0$, the final log-likelihood function
-to be maximized, $l$,
-will also include terms from Gaussian constraints for the model
-parameters. These are quadratic terms of the
+In addition to $l_0$, the final log-likelihood function, $l$,
+will also include terms of Gaussian constraints for the model
+parameters~\cite{Karbach:2012vg}. These are, by definition, Gaussian probabilities
+functions that multiplies the likelihood function. 
+In terms of the log-lkelihood functions, these contraints
+turn into quadratic terms of the
 form $\left[(b-b_c)/\sigma_b\right]^2$ added to $l$,
 where $b$ can be one of the model parameters and 
 $b_c$ and $\sigma_b$ are its
@@ -805,7 +820,7 @@ can be eventually very low for a number of phase space bins.
 In these cases, the lack of statistics combined to
 the large number of free parameters can make the fit
 impracticable if the constraints are not applied.
-Furthermore, the constraints are also important
+Furthermore, the constraints are also important,
 even for bins with large statistics,
 in which the proximity of the position of \eps distributions
 for two particles can create a partial degeneracy
@@ -814,17 +829,17 @@ and consequently
 generate large instabilities in the fitting procedure.
 
 The $b_c$ and $\sigma_b$ were
-estimated by performing the fit without adding
-the Gaussian constraints and evaluating
-the mean and standard deviation of the fitted parameters
-with the phase space bins in which the fit converged properly.
+estimated by performing the fit without including
+the Gaussian constraints and then evaluating
+the mean and standard deviation of the fitted model parameters
+using the phase space bins in which the fit converged properly.
 By construction the mean value of the calibration constants
 are zero. An additional term was included to constrain the
 difference between global calibration constants for both
-charges ($X_{\pi}^+$ and $X_{\pi}^-$) to avoid solutions
+charges ($X_{\pi}^+$ and $X_{\pi}^-$) aiming to avoid solutions
 in which one of the charges is largely shifted
 with relation to the other.
-The sum of all model parameters constrain terms are given by,
+The sum of the constraints on the model parameters are given by,
 \begin{multline}
   c_m = \left(\frac{X_{\pi}^+}{0.01}\right)^2+\left(\frac{X_{\pi}^-}{0.01}\right)^2+
   \left(\frac{X_{e}}{0.005}\right)^2+\left(\frac{X_{K}}{0.005}\right)^2+
@@ -835,17 +850,17 @@ The sum of all model parameters constrain terms are given by,
 \end{multline}
 
 Because of the very low fraction of deuterons,
-the deuteron fractions ($Y_{d,+}$ and $Y_{d,-}$)
+their fractions ($Y_{d,+}$ and $Y_{d,-}$)
 may not be well determined by the fit. As a consequence, we
 observed that for a number of phase space bins the fitted deuteron
-fraction does not make physical sense and then the fractions
-of other particles turns to be biased. To avoid this problem,
+fractions do not make physical sense, which leads to a bias
+on the other particle fractions. To avoid this problem,
 the parameters $Y_{d,+}$ and $Y_{d,-}$ were also
 constrained. Their mean value is set
 to zero and their standard deviation to 0.02.
-Since the fraction for deuterons is not expected
-to be much larger than 0.01 in any case, the constraint
-is assumed not to bias the fit, being important
+Since the fraction for deuterons is always expected
+to be smaller than 0.01, the constraints
+are assumed not to bias the fit, being important
 only to forbid non-physical results. The term added
 is given by
 \begin{equation}
@@ -854,7 +869,7 @@ is given by
 \end{equation}
 
 The final log-likelihood function to be maximized is then
-computed as
+given by
 \begin{equation}
   l = l_0+c_m+c_d,
   \label{eq:hadron:dedx:fit:l}
@@ -886,13 +901,13 @@ fractions obtained in the second phase.
 To simplify the fit and reduce the uncertainties on the
 fraction of particle of interest (\pions, \kaons and \protons),
 the fractions of deuterons and electrons were fixed to zero
-for bins with momentum above a certain limit. These limits were
+for phase space bins with momentum above a certain limit. These limits were
 defined based on their asymptotic behavior observed by performing
 the fit setting all fractions free and the values are 3 and 70 \GeVc
 for deuterons and electrons, respectively. 
 
-The sub-sets of tracks defined as RST and WST were fitted
-separatly (see~\cref{sec:hadron:trackselection} for the definitions).
+The RST and WST subsets were fitted
+separatly (see~\cref{sec:hadron:dedx:track} for the definitions).
 This is motivated by the fact that, for the same phase space
 interval, these two types of tracks are detected by
 different parts of the TPCs. Since the model parameters,
@@ -901,19 +916,18 @@ detector features, it is expected that the solutions
 of RST and WST present differences on the fitted
 parameters.
 
-Since the number of tracks measured with the target removed is much
-smaller than with target inserted, the
-fitting procedure described above is not suitable for the
-target removed dataset. The complexity of the model
+Since the number of tracks measured with the target removed is
+too small, the fitting procedure described above is not suitable for the
+this dataset. The complexity of the model
 (or the large number of free parameters) combined with
 the poor statistics would strongly reduce the precision of
 the results, or even prevent the convergence of the maximization
 algorithm. To overcome this problem, the particle fractions
 from the target removed data were obtained by means of
-a $\chi^2$ minimization, in which all the model parameters
+$\chi^2$ minimization, in which all the model parameters
 were fixed to the value obtained from the target inserted
 dataset fit. Since the model prediction is linear on
-the particle fraction, the minimization was performed
+the particle fraction, the minimization could be performed
 analytically. 
 
 %%%---------------------------------%%%%
@@ -926,7 +940,7 @@ Examples of the fitted \dedx distributions are shown
 in~\cref{fig:hadron:dedx:fit:dist158,fig:hadron:dedx:fit:dist350}.
 Although the fit was performed by the maximum likelihood method,
 the \redchisq can still be used to evaluate the goodness of fit.
-In~\cref{fig:hadron:dedx:fit:chi},
+In~\cref{fig:hadron:dedx:fit:chi158,fig:hadron:dedx:fit:chi350},
 we show the \redchisq distributions.
 One can see that the \redchisq follow the expected trend,
 with average value around 1 and few bins with \redchisq$\sim2-2.5$.
@@ -936,15 +950,35 @@ provides a good description of the data.
 %%%%%%%%%%% DIST %%%%%%%%%%%%%%%%%%
 \begin{figure}
   \centering
-  \includegraphics[clip, rviewport=0 0 1 1,width=0.4\textwidth]{dedx/dist_158_v0_c0_x13_y3}
-  \includegraphics[clip, rviewport=0 0 1 1,width=0.4\textwidth]{dedx/dist_158_v0_c1_x13_y3}
+
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.4\textwidth]{dedx/dist_158_v0_c0_x13_y3}
+    \put(16,85){(a)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.4\textwidth]{dedx/dist_158_v0_c1_x13_y3}
+    \put(16,85){(b)}
+  \end{overpic}
 
   \vspace{0.5cm}
   
-  \includegraphics[clip, rviewport=0 0 1 1,width=0.4\textwidth]{dedx/dist_158_v1_c0_x29_y5}
-  \includegraphics[clip, rviewport=0 0 1 1,width=0.4\textwidth]{dedx/dist_158_v1_c1_x29_y5}
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.4\textwidth]{dedx/dist_158_v1_c0_x29_y5}
+    \put(16,85){(c)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.4\textwidth]{dedx/dist_158_v1_c1_x29_y5}
+    \put(16,85){(d)}
+  \end{overpic}
   
-  \caption{Examples of the fitted \dedx distributions from the 158 \GeVc dataset.}
+  \caption{Examples of the fitted \dedx distributions from the 158 \GeVc dataset.
+    On the top, the distributions of the (a) negatively and (b) positively charged
+    tracks are shown for one phase space bin of the RST subset. On the bottom,
+    the distributions of the (c) negatively and (d) positively charged
+    tracks are shown for a different phase space bin of the WST subset.
+    The values of the $\langle\pp\rangle$ and $\langle\pT\rangle$ for
+    each phase space bin is indicated on the top of each plot.
+    The black dots show the observed number of tracks, while the colored
+    distributions are the results of the \dedx fit or each particle type. 
+    On the bottom of each plot, we show the residual of the fit, defined
+    as the difference between the observed and the expected number of tracks
+    from the result of the fit, divided by the uncertainty of the observed number.}
   \label{fig:hadron:dedx:fit:dist158}
 \end{figure}
 
@@ -952,53 +986,68 @@ provides a good description of the data.
 %%%%%%%%%% CHI SQ %%%%%%%%%%%%%%
 \begin{figure}
   \centering
-  \includegraphics[clip, rviewport=0 0 1 1,width=0.4\textwidth]{dedx/chisq_158_v0}
-  \includegraphics[clip, rviewport=0 0 1 1,width=0.4\textwidth]{dedx/chisq_158_v1}
 
-  \vspace{0.5cm}
+  \begin{overpic}[clip, rviewport=0 0 1 0.945,width=0.4\textwidth]{dedx/chisq_158_v0}
+    \put(18,58){(a)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 0.945,width=0.4\textwidth]{dedx/chisq_158_v0}
+    \put(18,58){(b)}
+  \end{overpic}
 
-  \includegraphics[clip, rviewport=0 0 1 1,width=0.4\textwidth]{dedx/chisq_350_v0}
-  \includegraphics[clip, rviewport=0 0 1 1,width=0.4\textwidth]{dedx/chisq_350_v1}
- 
-  \caption{\redchisq of the \dedx fit from the 350 \GeVc dataset.}
-  \label{fig:hadron:dedx:fit:chi}
+  \caption{\redchisq of the \dedx fit for the 158 \GeVc data set.
+    The RST and WST are shown in (a) and (b), respectively.}
+  \label{fig:hadron:dedx:fit:chi158}
 \end{figure}
 
 Examples of the calibration constants obtained by the fit of the
-RST and 158 \GeVc dataset are shown in~\cref{fig:hadron:dedx:fit:cal158r}.
+RST and 158 \GeVc data set are shown in~\cref{fig:hadron:dedx:fit:cal158r}.
 The remaining cases are shown
 in~\cref{fig:hadron:dedx:fit:cal158w,fig:hadron:dedx:fit:cal350r,fig:hadron:dedx:fit:cal350w}.
-As expected, in general they exhibit small deviation
-from zero. Besides that, we can see
-that they show a systematic dependence with the phase space region,
+As expected, in general they exhibit small deviations
+from zero. Furthermore, we can observed
+a systematic dependence with the phase space region,
 in particular with \pT. This dependence makes evident that there is indeed
 small differences on the \dedx calibration in different regions of the TPCs.
-Therefore we conclude that a single Bethe-Bloch parametrization,
-without the calibration constants, would not provide
-a suitable description of the \dedx data. Furthermore,
-the RST and WST results also exhibit different behavior,
+Therefore we can conclude that a single Bethe-Bloch parametrization,
+would not provide a suitable description of the \dedx data,
+thus justifying the cinlusion of the calibration constants.
+Addionally, the RST and WST results are different,
 which proves the necessity of performing the \dedx
-fit separately for both datasets.
+fit separately for both data sets.
 
 %%%%%%%%%% CAL %%%%%%%%%%%%%%
 \begin{figure}[!ht]
   \centering
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_158_v0_m0}
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_158_v0_m1}
 
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_158_v0_m2}
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_158_v0_m3}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_158_v0_m0}
+    \put(18,58){(a)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_158_v0_m1}
+    \put(18,58){(b)}
+  \end{overpic}
 
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_158_v0_m4}
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_158_v0_m5}
-  \caption{Calibration constants obtained from the fit of the RST dataset at 158 \GeVc.}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_158_v0_m2}
+    \put(18,58){(c)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_158_v0_m3}
+    \put(18,58){(d)}
+  \end{overpic}
+
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_158_v0_m4}
+    \put(18,58){(e)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_158_v0_m5}
+    \put(18,58){(f)}
+  \end{overpic}
+
+  \caption{Calibration constants obtained from the \dedx fit of the RST and 158 \GeVc data set.}
   \label{fig:hadron:dedx:fit:cal158r}
 \end{figure}
 
 
-Examples of the shape parameters for the RST and 158 \GeVc dataset
-are shown in~\cref{fig:hadron:dedx:fit:shape158r}. 
-The remaining cases are shown
+Examples of the shape parameters for the RST and 158 \GeVc data set
+are shown in~\cref{fig:hadron:dedx:fit:shape158r} and  
+the remaining cases are shown
 in~\cref{fig:hadron:dedx:fit:shape158w,fig:hadron:dedx:fit:shape350r,fig:hadron:dedx:fit:shape350w}. 
 The parameters $\sigma_0^+$ and $\sigma_0^-$ present
 only a weak phase space dependence, exhibiting values centered at
@@ -1009,49 +1058,90 @@ stands out from the average behavior. In this region, the asymmetry
 parameter $d$ assumes negative values and the exponent $\alpha$ 
 assume values smaller than the average.
 Since the source of this behavior is not well understood,
-a contribution to the systematic uncertainties will be estimated.
-See~\cref{sec:hadron:spec:syst} for the details.
+a contribution to the systematic uncertainties due to that
+will be estimated. For that, the \dedx fit was repeated
+with the parameters $\alpha$ and $d$ fixed to their
+average values, one at a time, and the differences
+on the particles fractions were taken as the systematic uncertainty.
+See~\cref{sec:hadron:spec:syst} for more the details.
 
 %%%%%%%%%% SHAPE %%%%%%%%%%%%%%
 \begin{figure}[!ht]
   \centering
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_158_v0_m6}
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_158_v0_m7}
 
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_158_v0_m9}
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/model_158_v0_m10}
-  \caption{Shape parameters obtained from the fit of the RST dataset at 158 \GeVc.}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_158_v0_m6}
+    \put(18,58){(a)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_158_v0_m7}
+    \put(18,58){(b)}
+  \end{overpic}
+
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_158_v0_m9}
+    \put(18,58){(c)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.49\textwidth]{dedx/model_158_v0_m10}
+    \put(18,58){(d)}
+  \end{overpic}
+
+  \caption{Shape parameters obtained from the \dedx fit of the RST and 158 \GeVc data set.}
   \label{fig:hadron:dedx:fit:shape158r}
 \end{figure}
 
 Examples of the particle fractions for RST and 158 \GeVc
 with target inserted
-are shown in~\cref{fig:hadron:dedx:fit:frac158r}.
-The remaining cases are shown
+are shown in~\cref{fig:hadron:dedx:fit:frac158r}
+and the remaining cases are shown
 in~\cref{fig:hadron:dedx:fit:frac158w,fig:hadron:dedx:fit:frac350r,fig:hadron:dedx:fit:frac350w}.
+From the fraction of the particle types $\pi$, K and p, it is clear that
+there are few \pp bins, between 1 and 5 \GeVc, in which the fitted fractions
+stand out from the overall behavior. This happen because the overlap between
+the \dedx distribution of two particle types are too large, creating
+a degeneracy between their fractions in the fit. Since the particle fractions
+of these \pp bins are clearly not realiable, a special strategy had to be
+developed to approach this problem. In the next section we describe our strategy.
 The fractions from the target removed dataset are shown in~\cref{sec:hadron:dedx:results}.
 
 
 %%%%%%%%%% FRACTIONS %%%%%%%%%%%%%%
 \begin{figure}
   \centering
-  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v0_c0_p0}
-  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v0_c1_p0}
 
-  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v0_c0_p1}
-  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v0_c1_p1}
+  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v0_c0_p0}
+    \put(18,49){(a)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v0_c1_p0}
+    \put(18,49){(b)}
+  \end{overpic}
 
-  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v0_c0_p2}
-  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v0_c1_p2}
+  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v0_c0_p1}
+    \put(18,49){(c)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v0_c1_p1}
+    \put(18,49){(d)}
+  \end{overpic}
 
+   \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v0_c0_p2}
+    \put(18,49){(e)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v0_c1_p2}
+    \put(18,49){(f)}
+  \end{overpic}
 
-  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v0_c0_p3}
-  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v0_c1_p3}
+   \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v0_c0_p3}
+    \put(18,49){(g)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v0_c1_p3}
+    \put(18,49){(h)}
+  \end{overpic}
 
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v0_c0_p4}
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v0_c1_p4}
-
-  \caption{Particle fractions obtained from the fit of the RST dataset at 158 \GeVc.}
+   \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v0_c0_p4}
+    \put(18,58){(i)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v0_c1_p4}
+    \put(18,58){(j)}
+  \end{overpic}
+  
+  \caption{Particle fractions obtained from the \dedx fit of the RST and 158 \GeVc data set.}
   \label{fig:hadron:dedx:fit:frac158r}
 \end{figure}
 
@@ -1059,7 +1149,6 @@ The fractions from the target removed dataset are shown in~\cref{sec:hadron:dedx
 %%%---------------------------------%%%%
 \subsection{Simulated data ensembles, cuts and corrections}
 \label{sec:hadron:dedx:sde}
-
 
 
 The Simulated Data Ensembles (SDEs) are large sets of
