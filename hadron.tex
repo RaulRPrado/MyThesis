@@ -1106,38 +1106,38 @@ The fractions from the target removed dataset are shown in~\cref{sec:hadron:dedx
 \begin{figure}
   \centering
 
-  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v0_c0_p0}
+  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.45\textwidth]{dedx/fraction_158_fl0_v0_c0_p0}
     \put(18,49){(a)}
   \end{overpic}
-  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v0_c1_p0}
+  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.45\textwidth]{dedx/fraction_158_fl0_v0_c1_p0}
     \put(18,49){(b)}
   \end{overpic}
 
-  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v0_c0_p1}
+  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.45\textwidth]{dedx/fraction_158_fl0_v0_c0_p1}
     \put(18,49){(c)}
   \end{overpic}
-  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v0_c1_p1}
+  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.45\textwidth]{dedx/fraction_158_fl0_v0_c1_p1}
     \put(18,49){(d)}
   \end{overpic}
 
-   \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v0_c0_p2}
+   \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.45\textwidth]{dedx/fraction_158_fl0_v0_c0_p2}
     \put(18,49){(e)}
   \end{overpic}
-  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v0_c1_p2}
+  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.45\textwidth]{dedx/fraction_158_fl0_v0_c1_p2}
     \put(18,49){(f)}
   \end{overpic}
 
-   \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v0_c0_p3}
+   \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.45\textwidth]{dedx/fraction_158_fl0_v0_c0_p3}
     \put(18,49){(g)}
   \end{overpic}
-  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v0_c1_p3}
+  \begin{overpic}[clip, rviewport=0 0.125 1 0.94,width=0.45\textwidth]{dedx/fraction_158_fl0_v0_c1_p3}
     \put(18,49){(h)}
   \end{overpic}
 
-   \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v0_c0_p4}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.45\textwidth]{dedx/fraction_158_fl0_v0_c0_p4}
     \put(18,58){(i)}
   \end{overpic}
-  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/fraction_158_fl0_v0_c1_p4}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.45\textwidth]{dedx/fraction_158_fl0_v0_c1_p4}
     \put(18,58){(j)}
   \end{overpic}
   
@@ -1156,13 +1156,13 @@ simulations that reproduce the most relevant
 features of the data and are fitted by following
 exactly the same fit strategy described in~\cref{sec:hadron:dedx:fit}.
 By analysing the fit results of the SDEs, we can evaluate the fit
-performance in a statistical basis and then estimate the biases
-and statistical uncertainties on the particle fractions. 
+performance in a statistical basis and then estimate biases
+and statistical uncertainties of the particle fractions. 
 
 The construction of one individual simulation set of a SDE starts
-by creating a new simulated tracks that reproduce the
-properties of the data tracks. This means that the number of
-tracks contained in a phase space bin, as well as its \pp, \pT and
+by creating a new simulated track for each data track reproducing
+its properties like \pp, \pT and \ncl. This means that the number of
+tracks contained in a phase space bin, as well as their \pp, \pT and
 \ncl distributions, is identical in the simulation and in the data.
 The second step is to associate a particle type to each simulated track.
 To do that we sample randomly one of the five possible types
@@ -1179,68 +1179,88 @@ The fitted function is given by
 where $a_{nm}$ are free parameters to be fitted.
 The fit was performed by using a traditional $\chi^2$ method.
 In~\cref{fig:hadron:dedx:fit:fakeyield} we show few examples
-of the \pT projection of the fractions and the fitted
+of the \pT projections of the fractions and the fitted
 polynomial function. 
 
 
 %%%%%%%%%% FAKE YIELD %%%%%%%%%%%%%%
 \begin{figure}[!ht]
   \centering
-  \includegraphics[clip, rviewport=0 0 1 1,width=0.4\textwidth]{dedx/fake_yield_example_158}
-  \includegraphics[clip, rviewport=0 0 1 1,width=0.4\textwidth]{dedx/fake_yield_example_two_158}
 
-  \vspace{0.5cm}
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.45\textwidth]{dedx/fake_yield_example_158}
+    \put(18,58){(a)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.45\textwidth]{dedx/fake_yield_example_two_158}
+    \put(18,58){(b)}
+  \end{overpic}
   
-  \includegraphics[clip, rviewport=0 0 1 1,width=0.4\textwidth]{dedx/fake_yield_example_350}
-  \includegraphics[clip, rviewport=0 0 1 1,width=0.4\textwidth]{dedx/fake_yield_example_two_350}
+  \vspace{0.25cm}
 
-  \caption{Examples of the parametrization of the particle fractions to be used to create the Simulated Data Ensembles. The plots on the top and on the bottom are for the 158 and 350 \GeVc dataset, respectively.}
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.45\textwidth]{dedx/fake_yield_example_350}
+    \put(18,58){(c)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.45\textwidth]{dedx/fake_yield_example_two_350}
+    \put(18,58){(d)}
+  \end{overpic}
+
+  \caption{Examples of the parametrization of the particle fractions to be used to create the Simulated Data Ensembles. The plots in (a) and (b) refer to the 158 \GeVc data set and in (c) and (d) to the 350 \GeVc one. The particle type, the RST/WST subset and the $\langle\pT\rangle$ are indicated on the top of each plot. The black dots show the particle fractions obtained from the \dedx fit and the red curves show the result of the fit of the~\cref{eq:hadron:dedx:pol} to these fractions.}
   \label{fig:hadron:dedx:fit:fakeyield}
 \end{figure}
-
 
 After sampling a particle type, the \dedx associated to each
 track is sampled by following the \dedx model.
 The model parameters are set as the ones obtained by the \dedx fit
-of the data that are shown in~\cref{sec:hadron:dedx:fitresults}.
+of the data, which are shown in~\cref{sec:hadron:dedx:fitresults}.
 A set of $\approx 1000$ simulated sets, for each beam energy,
 were created by following the description above and
 fitted afterwards. As the result, we obtain the distributions
-of the fitted fractions for each particle and phase space bin.
+of the fitted particle fractions for each phase space bin.
 
-First we can evaluate the relative standard deviation,
-defined as $\sigma_r = \sigma_Y/\langle Y\rangle$, where
+From the SDEs results, we can first evaluate the relative standard deviation
+of the fractions, defined as $\sigma_r = \sigma_Y/\langle Y\rangle$, where
 $\sigma_Y$ is the standard deviation of the fraction $Y$
 and $\langle Y \rangle$ is its average value.
 In~\cref{fig:hadron:dedx:fit:fake:relsig158r} we show
 one example of $\sigma_r$ for the RST and 158 \GeVc case.
 The remaining cases are shown
 in~\cref{fig:hadron:dedx:fit:fake:relsig158w,fig:hadron:dedx:fit:fake:relsig350r,fig:hadron:dedx:fit:fake:relsig350w}. Only \pions, \kaons and \protons are shown
-because these are the particles of interested of this analysis.
+because these are the particles of interest in this analysis.
 Second, we can evaluate the relative bias, defined as
 $\delta_r = \langle \Delta Y/ Y \rangle$, where $\Delta Y$
 is the difference between the fitted and the true fraction,
-being the true fraction computed while the particle types
-of each track are sampled.
+being the former computed at the moment the particle types
+of the simulated tracks are sampled.
 In~\cref{fig:hadron:dedx:fit:fake:reldev158r} we show examples
-of $\delta_r$ for RST and 158 \GeVc case, while the remaning
+of $\delta_r$ for the RST and 158 \GeVc case, while the remaning
 cases are shown
 in~\cref{fig:hadron:dedx:fit:fake:reldev158w,fig:hadron:dedx:fit:fake:reldev350r,fig:hadron:dedx:fit:fake:reldev350w}.
 
 %%%%%%%%%% FAKE REL SIG %%%%%%%%%%%%%%
 \begin{figure}[!ht]
   \centering
-  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/fake_rel_sig_158_fl0_v0_c0_p1}
-  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/fake_rel_sig_158_fl0_v0_c1_p1}
+  
+  \begin{overpic}[clip, rviewport=0 0.145 1 0.94,width=0.45\textwidth]{dedx/fake_rel_sig_158_fl0_v0_c0_p1}
+    \put(18,48){(a)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0.145 1 0.94,width=0.45\textwidth]{dedx/fake_rel_sig_158_fl0_v0_c1_p1}
+    \put(18,48){(b)}
+  \end{overpic}
 
-  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/fake_rel_sig_158_fl0_v0_c0_p2}
-  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/fake_rel_sig_158_fl0_v0_c1_p2}
+  \begin{overpic}[clip, rviewport=0 0.145 1 0.94,width=0.45\textwidth]{dedx/fake_rel_sig_158_fl0_v0_c0_p2}
+    \put(18,48){(c)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0.145 1 0.94,width=0.45\textwidth]{dedx/fake_rel_sig_158_fl0_v0_c1_p2}
+    \put(18,48){(d)}
+  \end{overpic}
 
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/fake_rel_sig_158_fl0_v0_c0_p3}
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/fake_rel_sig_158_fl0_v0_c1_p3}
-
-
-  \caption{Relative standard deviation of the particle fractions obtained with SDEs for RST and 158 \GeVc dataset.}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.45\textwidth]{dedx/fake_rel_sig_158_fl0_v0_c0_p3}
+    \put(18,58){(e)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.45\textwidth]{dedx/fake_rel_sig_158_fl0_v0_c1_p3}
+    \put(18,58){(f)}
+  \end{overpic}
+  
+  \caption{Relative standard deviation ($\sigma_r$, see the definition in the text) of the particle fractions obtained with the SDEs for the RST and 158 \GeVc case. The $\pi^+$ case is shown in (a), $\pi^-$ in (b), K$^+$ in (c), K$^-$ in (d), p$^+$ in (e) and p$^-$ in (f).}
   \label{fig:hadron:dedx:fit:fake:relsig158r}
 \end{figure}
 
@@ -1248,19 +1268,32 @@ in~\cref{fig:hadron:dedx:fit:fake:reldev158w,fig:hadron:dedx:fit:fake:reldev350r
 %%%%%%%%%% FAKE REL DEV %%%%%%%%%%%%%%
 \begin{figure}[!ht]
   \centering
-  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/fake_rel_dev_158_fl0_v0_c0_p1}
-  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/fake_rel_dev_158_fl0_v0_c1_p1}
+  
+  \begin{overpic}[clip, rviewport=0 0.145 1 0.94,width=0.45\textwidth]{dedx/fake_rel_dev_158_fl0_v0_c0_p1}
+    \put(18,48){(a)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0.145 1 0.94,width=0.45\textwidth]{dedx/fake_rel_dev_158_fl0_v0_c1_p1}
+    \put(18,48){(b)}
+  \end{overpic}
 
-  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/fake_rel_dev_158_fl0_v0_c0_p2}
-  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/fake_rel_dev_158_fl0_v0_c1_p2}
+  \begin{overpic}[clip, rviewport=0 0.145 1 0.94,width=0.45\textwidth]{dedx/fake_rel_dev_158_fl0_v0_c0_p2}
+    \put(18,48){(c)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0.145 1 0.94,width=0.45\textwidth]{dedx/fake_rel_dev_158_fl0_v0_c1_p2}
+    \put(18,48){(d)}
+  \end{overpic}
 
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/fake_rel_dev_158_fl0_v0_c0_p3}
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/fake_rel_dev_158_fl0_v0_c1_p3}
-
-
-  \caption{Average relative bias of the particle fractions obtained with SDEs for RST and 158 \GeVc dataset.}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.45\textwidth]{dedx/fake_rel_dev_158_fl0_v0_c0_p3}
+    \put(18,58){(e)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.45\textwidth]{dedx/fake_rel_dev_158_fl0_v0_c1_p3}
+    \put(18,58){(f)}
+  \end{overpic}
+  
+  \caption{Average relative bias ($\delta_r$, see the definition in the text) of the particle fractions obtained with the SDEs for the RST and 158 \GeVc case. The $\pi^+$ case is shown in (a), $\pi^-$ in (b), K$^+$ in (c), K$^-$ in (d), p$^+$ in (e) and p$^-$ in (f).}
   \label{fig:hadron:dedx:fit:fake:reldev158r}
 \end{figure}
+
 
 From the $\sigma_r$ one can clearly see
 that for few \pp bins, mainly between 1 and 10 \GeVc,
@@ -1270,7 +1303,7 @@ This is because of the proximity between the mean of the
 \dedx distribution of two particle types that cause
 a partial degeneracy between their fractions. The result
 of the \dedx fit at these phase space bins are evidently not
-suitable and because of that they will be removed from our analysis.
+suitable and, because of that, they will be removed from our analysis.
 To this aim, the bins with $\sigma_r$ larger than 0.15 for \pions,
 and 0.25 for \kaons and \protons were removed. 
 
@@ -1286,40 +1319,49 @@ Attempts were made to eliminate this bias
 by changing the fit strategy, however, we found no effective solution.
 Therefore, we have decided for a correction procedure based on
 the $\delta_r$ obtained from the SDEs.
-The multiplicative correction factors is called $c$ and is shown
+A multiplicative correction factors, called $c$, was computed
+and we show it 
 in~\cref{fig:hadron:dedx:fit:fake:cor158r} for the RST and 158 \GeVc case,
 while the remaning cases are shown
 in~\cref{fig:hadron:dedx:fit:fake:cor158w,fig:hadron:dedx:fit:fake:cor350r,fig:hadron:dedx:fit:fake:cor350w}.
-The phase space bins removed the criteria described above are shown
+The phase space bins removed because of the large $\sigma_r$ are shown
 as white bins.
 
 Besides the cuts and corrections, the SDEs can also
-be used to compute the statistical uncertainties of the particle fractions.
-This was one by computing the standard deviation of
+be used to compute the estimate the statistical uncertainties
+of the particle fractions.
+This was done by computing the standard deviation of
 fractions obtained from the SDEs.
-
-
-%The fit performance can be studied by means of the
-%pull distributions of the particle fractions.
-%In~\cref{}
-
-\note{pull distributions?}
-
-\note{discussions here}
+It is decided to use these values of standard deviation
+of the final statistical uncertainties of the fractions,
+instead of the the ones resulting from the fit procedure.
 
 %%%%%%%%%% COR %%%%%%%%%%%%%%
 \begin{figure}[!ht]
   \centering
-  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/cor_158_v0_c0_p1}
-  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/cor_158_v0_c1_p1}
 
-  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/cor_158_v0_c0_p2}
-  \includegraphics[clip, rviewport=0 0.13 1 0.94,width=0.4\textwidth]{dedx/cor_158_v0_c1_p2}
+  \begin{overpic}[clip, rviewport=0 0.145 1 0.94,width=0.45\textwidth]{dedx/cor_158_v0_c0_p1}
+    \put(18,48){(a)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0.145 1 0.94,width=0.45\textwidth]{dedx/cor_158_v0_c0_p1}
+    \put(18,48){(b)}
+  \end{overpic}
 
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/cor_158_v0_c0_p3}
-  \includegraphics[clip, rviewport=0 0 1 0.94,width=0.4\textwidth]{dedx/cor_158_v0_c1_p3}
+  \begin{overpic}[clip, rviewport=0 0.145 1 0.94,width=0.45\textwidth]{dedx/cor_158_v0_c0_p2}
+    \put(18,48){(c)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0.145 1 0.94,width=0.45\textwidth]{dedx/cor_158_v0_c0_p2}
+    \put(18,48){(d)}
+  \end{overpic}
 
-  \caption{Correction factor for RST and 158 \GeVc dataset.}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.45\textwidth]{dedx/cor_158_v0_c0_p3}
+    \put(18,58){(e)}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 0.94,width=0.45\textwidth]{dedx/cor_158_v0_c0_p3}
+    \put(18,58){(f)}
+  \end{overpic}
+  
+  \caption{Correction factors ($c$, see the definition in the text) for the RST and 158 \GeVc case. The $\pi^+$ case is shown in (a), $\pi^-$ in (b), K$^+$ in (c), K$^-$ in (d), p$^+$ in (e) and p$^-$ in (f).}
   \label{fig:hadron:dedx:fit:fake:cor158r}
 \end{figure}
 
@@ -1335,7 +1377,7 @@ In~\cref{fig:hadron:dedx:fit:final158r} we show examples
 of the final fractions for RST and 158 \GeVc dataset,
 while the remaning cases are shown 
 in~\cref{fig:hadron:dedx:fit:final158w,fig:hadron:dedx:fit:final350r,fig:hadron:dedx:fit:final350w}.
-Only the three particle types of interested are shown: $\pi$, $K$ and $p$.
+Only the three particle types of interest are shown: $\pi$, $K$ and $p$.
 Each plot shows the fractions as a function of \pp for one \pT bin.
 The equivalent plots for the target removed dataset are shown
 in~\cref{fig:hadron:dedx:fit:out158r,fig:hadron:dedx:fit:out158w,fig:hadron:dedx:fit:out350r,fig:hadron:dedx:fit:out350w}.
@@ -1348,6 +1390,7 @@ in~\cref{fig:hadron:dedx:fit:out158r,fig:hadron:dedx:fit:out158w,fig:hadron:dedx
   \label{fig:hadron:dedx:fit:final158r}
 \end{figure}
 
+\clearpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\vzero analysis}
@@ -1366,7 +1409,7 @@ decay vertex and, by using the properties of the daughter tracks,
 identify the original \vzero. Therefore, the detector acceptance
 depends strongly on geometrical factors because both daughter particles
 must create tracks on the TPCs and they must be well reconstructed. 
-In~\cref{tab:hadron:vzero:part} we list the three \vzero particles of interested
+In~\cref{tab:hadron:vzero:part} we list the three \vzero particles of interest
 of the present work together with the properties of their decay channel
 which is used here (daughter particles and branching ratio). 
 
