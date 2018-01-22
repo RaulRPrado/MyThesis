@@ -70,10 +70,13 @@
 
 %%%%%%%%%%%%% RAUL %%%%%%%%%%%%%
 \usepackage{subfig}
+\usepackage{mathtools}
+\usepackage{notoccite}
 \usepackage{overpic}
 \usepackage{xspace}
 \usepackage{enumitem}
 \usepackage{amsmath}
+\numberwithin{figure}{chapter}
 \usepackage{rviewport}
 \usepackage{comment}
 \usepackage{cleveref}
@@ -285,10 +288,9 @@
 
 \include{hadron}
 
-\include{figures_hadron}
+%\include{figures_hadron}
 
 \include{conclusions}
-
 
 % ----------------------------------------------------------
 % ELEMENTOS PÓS-TEXTUAIS
@@ -301,6 +303,9 @@
 % ----------------------------------------------------------
 \bibliography{lib}
 
+\appendix
+\chapter{Figures}
+\include{figures_hadron}
 
 % ----------------------------------------------------------
 % Glossário
