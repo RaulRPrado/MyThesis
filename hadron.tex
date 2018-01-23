@@ -1,23 +1,7 @@
 \chapter[Hadron production in pion-carbon interactions]{Hadron production in pion-carbon interactions}
 \label{sec:hadron}
 
-\warning{to redo figures on the results section}
-
-\warning{to make all the tenses consistent:
-  things shown in this text->PRESENT,
-  things done in the analysis->PAST }
-
-\warning{include figure to explain \vzero}
-
-\warning{explain the \vzero type vertex}
-
-\warning{errors on target removed fraction!}
-
-\warning{noise rejection on the \dedx plot}
-
 \warning{\dedx fit systematics}
-
-\warning{beam energy/momentum consistency}
 
 In this chapter we present the analysis of hadron production
 in $\pi^-$-C interactions measured by the \NASixtyOne experiment
@@ -26,7 +10,7 @@ importance of $\pi^{\pm}$-air interactions for the air
 shower development and particularly for the muon production.
 The carbon target was selected here because of its similarity with
 air nuclei in terms of nuclear mass and because its experimental
-advantages with respect to nitrogen or oxigen targets.
+advantages with respect to nitrogen or oxygen targets.
 
 
 Our goal is to measure the production spectra of
@@ -63,7 +47,7 @@ through the measurements of the deposit energy of the particles.
 On the other hand, the analysis of the latter group of particles
 will be labeled by \emph{\vzero analysis},
 being the signal extraction based on \minv spectra the
-most challenging step. Although the two analyzes
+most challenging step. Although the two analyses
 were in practice done separately, the analysis steps
 that are conceptually the same will be presented here only once.
 
@@ -79,8 +63,22 @@ in collaboration with Dr. Michael Unger.
 A preliminary stage of the present analysis was published
 in Ref.\cite{\RaulICRC}. 
 
+The \NASixtyOne experiment is first described in~\cref{sec:hadron:na61}
+and the data and simulations used for this analysis in~\cref{sec:hadron:na61}. 
+In~\cref{sec:hadron:event} and~\cref{sec:hadron:binning}
+we present the event selection and the phase space binning, respectively. 
+The particle identification step for the charged hadron analysis and
+the \vzero analysis are presented in~\cref{sec:hadron:dedx} and~\cref{sec:hadron:vzero},
+respectively. In~\cref{sec:hadron:correction} we describe the Monte Carlo correction step,
+in~\cref{sec:hadron:spec} we describe the derivation of the particle spectra and
+finally in~\cref{sec:hadron:results} we show the results. We summarize and conclude
+in~\cref{sec:hadron:conclusions}. 
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{\NASixtyOne experiment}
+\section{\boldmath \NASixtyOne experiment}
 \label{sec:hadron:na61}
 
 The \NASixtyOne~\cite{\NASixtyOnePaper} is a fixed target experiment located in the
@@ -148,7 +146,7 @@ in Ref.~\cite{\NASixtyOnePaper}.
 \end{figure}
 
 %%%---------------------------------%%%
-\subsection{Beam}
+\subsection{\boldmath Beam}
 \label{sec:hadron:na61:beam}
 
 The CERN SPS is able to provide to the North Area experiments
@@ -167,7 +165,7 @@ with two beam momenta, 158 and 350 \GeVc.
 
 
 %%%---------------------------------%%%
-\subsection{Beam detectors and trigger system}
+\subsection{\boldmath Beam detectors and trigger system}
 \label{sec:hadron:na61:trigger}
 
 The beam detectors and the components of the trigger system are shown
@@ -215,7 +213,7 @@ is indeed a $\pi^-$.
 
 
 %%%---------------------------------%%%
-\subsection{Time projection chambers}
+\subsection{\boldmath Time projection chambers}
 \label{sec:hadron:na61:tpc}
 
 In~\cref{fig:hadron:na61:setup} one can see the
@@ -257,7 +255,7 @@ ionization energy loss. These measurements are done by combining
 the total charge of all the clusters that compose a track and
 a unique value of \dedx is defined for each particle.
 The \dedx measurements allow the main particle
-identification procedure applied in \NASixtyOne analyzes
+identification procedure applied in \NASixtyOne analyses
 (more details about that are given in~\cref{sec:hadron:dedx:meas}).
 A technical description of the TPCs of the \NASixtyOne can be found
 in Refs.~\cite{AntoniAThesis,\NASixtyOnePaper}.
@@ -267,7 +265,7 @@ in Refs.~\cite{AntoniAThesis,\NASixtyOnePaper}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Data and simulation sets}
+\section{\boldmath Data and simulation sets}
 \label{sec:hadron:data}
 
 The $\pi^-$+C data were collected by \NASixtyOne in 2009 at two beam momenta:
@@ -283,7 +281,7 @@ The calibration of the $\pi^-$+C data followed the standard
 \NASixtyOne procedure, described in Ref.~\cite{Abgrall:2008zz}.
 
 
-The Monte Carlo simulation sets used in the present analyzes
+The Monte Carlo simulation sets used in the present analyses
 were produced by the \NASixtyOne Collaboration.
 They were created by first generating the primary interactions
 using hadronic interaction models and then by passing
@@ -298,7 +296,7 @@ by the standard \NASixtyOne reconstruction chain~\cite{Abgrall:2011ae}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Event selection}
+\section{\boldmath Event selection}
 \label{sec:hadron:event}
 
 
@@ -308,12 +306,12 @@ of the beam detectors and, since these detectors are not
 implemented in the Monte Carlo simulations, these cuts were applied
 only to the data. The upstream cuts are:
 \begin{enumerate}[label=(\roman*)]
-\item the CEDAR cut to identify the beam particle type and then remove
+\item the \emph{CEDAR cut} to identify the beam particle type and then remove
   the contributions from non-pion particles;
-\item the WFA cut that uses the time information from the S1 detector
+\item the \emph{WFA cut} that uses the time information from the S1 detector
   to exclude events in which a second beam particle was detected
   within a time interval shorter than 2 $\mu$s;
-\item the BPD cut that uses the information from the three BPD detectors
+\item the \emph{BPD cut} that uses the information from the three BPD detectors
   to assure a good quality measurements of the beam position at the
   target plan.
 \end{enumerate}
@@ -321,15 +319,16 @@ More details about the upstream cuts can be found in Ref.~\cite{MartinThesis}.
 
 The event cuts that were applied to both data and simulations are:
 \begin{enumerate}[label=(\roman*)]
-\item the trigger cut to select events of the T2 type
+\item the \emph{trigger cut} to select events of the T2 type
   (see~\cref{sec:hadron:na61:trigger} for the trigger definitions);
-\item the main vertex cut to remove events in which the main vertex
+\item the \emph{main vertex cut} to remove events in which the main vertex
   was not properly fitted in the event reconstruction; 
-\item the main vertex z-position cut to remove events in which the z coordinate of the fitted
+\item the \emph{main vertex z-position cut} (or only \emph{vertex z cut})
+  to remove events in which the z coordinate of the fitted
   main vertex is farer than 17 cm from the main vertex position measured
   by the BPD detectors. \label{item:hadron:vtx}
 \end{enumerate}
-The main vertex z-position cut (\cref{item:hadron:vtx})
+The vertex z cut (\cref{item:hadron:vtx})
 was applied to reduce the contribution of interactions
 that occur out of the target. Because of the resolution
 on the fitted main vertex z position, a small fraction
@@ -356,22 +355,22 @@ the event selection for the data and simulation sets.
 \end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Phase space binning}
+\section{\boldmath Phase space binning}
 \label{sec:hadron:binning}
 
-Both charged hadron and \vzero analyzes were performed
+Both charged hadron and \vzero analyses were performed
 by splitting the data into 2-dimensional phase space bins
 of the \pp and \pT variables. For the
-charged hadron analysis an unique phase space
+charged hadron analysis a unique phase space
 binning was defined. The \pp intervals 
-are nearly uniform in $\log p$. Only small adjustments
+are nearly uniform in \logp. Only small adjustments
 were done to move the crossing points of the energy deposit function
 of different particles closer to the center of the bins.
 Since some of these bins in the crossing regions
 will be removed from the analysis (see~\cref{sec:hadron:dedx:sde}),
 this strategy has shown effective to reduce the number of
-removed bins. The average width of the \pp intervals is
-$\Delta\log\pp=0.1$. Concerning the \pT intervals, the bin width
+removed bins. The average width of the \logp intervals is
+$\Delta\logp=0.1$. Concerning the \pT intervals, the bin width
 increases with \pT, being the width of the shorter and the longer ones
 $\Delta \pT=0.1$ and  $\Delta\pT=0.5$, respectively.  
 In~\cref{fig:hadron:binning:dedx} we show the
@@ -392,7 +391,7 @@ the phase space binning is not required to be unique.
 However, because the statistics is similar for \lamb and \antilamb,
 the same binning was define for these two particles.
 For either \lambs or \kzeros the \pp intervals vary from
-$\Delta\log\pp=0.2$ to $0.3$. Concerning the \pT intervals,
+$\Delta\logp=0.2$ to $0.3$. Concerning the \pT intervals,
 the widths vary from $\Delta\pT = 0.2$ to $0.8$.
 In~\cref{fig:hadron:binning:vzero} we show the 
 binning used for the \vzero analysis.
@@ -410,7 +409,7 @@ binning used for the \vzero analysis.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Particle identification for the charged hadron analysis}
+\section{\boldmath Particle identification for the charged hadron analysis}
 \label{sec:hadron:dedx}
 
 In this section we present the particle identification
@@ -430,8 +429,8 @@ distributions on the particle momentum,
 track properties (e.g. number of clusters) and
 detector properties (e.g. resolution and calibration),
 the \dedx fit turns to be a very challenging step.
-The first requirement to perform it is the development
-of an appropriate \dedx model, described in~\cref{sec:hadron:dedx:model}.
+The first requirement to perform is the development
+of an appropriate \dedx model. This step is described in~\cref{sec:hadron:dedx:model}.
 
 Having in hands the \dedx model, the measured \dedx
 distributions can be fitted to determine the particle
@@ -444,18 +443,18 @@ Our fit strategy developed to overcome these difficulties is shown
 in~\cref{sec:hadron:dedx:fit} and the results
 of the fit in~\cref{sec:hadron:dedx:fitresults}. A new tool
 developed in this work to evaluate the fit performance
-and estimate bias and statistical uncertainties of the fit
+and estimate biases and statistical uncertainties of the fit
 is presented in~\cref{sec:hadron:dedx:sde}. This
-tool is called Simulated Data Ensembles and
+tool is called \emph{Simulated Data Ensembles} and
 it is also used to define cuts on problematic
 phase space bins and to compute correction factors.
-Finally, in~\cref{sec:hadron:dedx:results} we show the results
+Finally, in~\cref{sec:hadron:dedx:results}, we show the results
 of the particle identification analysis, including
 the particle fractions of \pions, \kaons and \protonpm.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Track selection}
+\subsection{\boldmath \boldmath Track selection}
 \label{sec:hadron:dedx:selection}
 
 A set of selection criteria were
@@ -468,19 +467,21 @@ The list of selection criteria is the following.
   Monte Carlo simulations are used to define regions of the ($\phi$, \pp, \pT)
   phase space in which the selection efficiency is larger than 90\%. Second,
   the measured tracks are used to define regions of the same phase space in
-  which the tracks hit directly the S4 detector~\cite{MartinThesis}. \label{item:track:acc} 
+  which the tracks hit directly the S4 detector. The final acceptance is then defined
+  by the ($\phi$, \pp, \pT) bins which do not satisfy any one of
+  these two criteria~\cite{MartinThesis}. \label{item:track:acc} 
 \item The total number of clusters on the track must be greater than or equal to 25.
 \item The sum of clusters on both VTPCs must be greater than or equal to 12, or
   the number of cluster on the GTPC must be greater than of equal to 6.
 \item The distance between the extrapolated track to the interaction plane and the
-  interaction point must be smaller than 4 cm on the both horizontal and vertical plane.
+  interaction point must be smaller than 4 cm on both horizontal and vertical plane.
 \end{enumerate}
 
 The acceptance selection (\cref{item:track:acc}) is important because
 it was observed that the Monte Carlo simulations cannot describe
 accurately the detector efficiency in the phase space regions
-in which this efficiency is relatively low (<90\%). Since the detector
-acceptance is the dominant effect to be corrected at the Monte Carlo
+in which this efficiency is relatively low (<90\%)~\cite{MartinThesis}.
+Since the detector acceptance is the dominant effect to be corrected at the Monte Carlo
 correction step, this discrepancy between data and simulations
 could significantly bias the resultant spectra if the acceptance selection
 was not applied.
@@ -491,7 +492,8 @@ The former group is defined as the tracks that bend away from the
 beam axis, while the latter as the tracks that bend towards the beam axis.
 Given the track $\phi$ angle and its charge $q$, the two groups
 can be defined by the sign of the product $q \times \cos(\phi)$, where
-RST have positive sign and WST have negative ones.
+RST have positive sign ($q \times \cos(\phi)>0$)
+and WST have negative ones ($q \times \cos(\phi)<0$).
 The distinction between the two track topology is motivated by the
 fact that a right and a wrong side track, with the same \pp and
 \pT, cross different regions of the detector, 
@@ -505,13 +507,13 @@ RST and WST definitions.
 \begin{figure}[!ht]
   \centering
   \includegraphics[clip, rviewport=0 0 1 1,width=0.95\textwidth]{track_topologies}
-  \caption{\warning{DO IT} \cite{MartinThesis}}
+  \caption{Illustration of the RST and WST definitions (see text for details)~\cite{MartinThesis}.}
   \label{fig:hadron:track:topologies}
 \end{figure}
 
 
 %%%---------------------------------%%%%
-\subsection{\dedx measurements}
+\subsection{\boldmath \boldmath \dedx measurements}
 \label{sec:hadron:dedx:meas}
 
 The \dedx is defined as the energy lost by the
@@ -556,7 +558,7 @@ It is important to point out that, although the \dedx associated to
 a track is proportional to the energy lost by the particle,
 these two quantities are not exactly the same. This
 means that the measured \meandedx as a function of \pp
-does not follow the expected Bethe-Bloch function, but it does
+does not follow the theoretical Bethe-Bloch function, but it does
 behave in a very similar way. Because of this similarity,
 the functional form of the Bethe-Bloch function
 is used here to parametrize the \meandedx evolution
@@ -595,7 +597,7 @@ and the \dedx fit presented in~\cref{sec:hadron:dedx:model,sec:hadron:dedx:fit}.
 
 
 %%%---------------------------------%%%%
-\subsection{\dedx model}
+\subsection{\boldmath \dedx model}
 \label{sec:hadron:dedx:model}
 
 To perform the \dedx fit , a model to describe the \dedx distributions
@@ -618,9 +620,9 @@ adopted along this text. The particle types are represented by the index
 The positive and negative charges are indexed by
 \ich, so that $\ich = +$ or $-$. In addition, \ncl is used to
 represent the number of cluster of a track and the \dedx
-is replaced by \eps for shortening.
+is replaced by \eps, for shortening.
 
-The first element of our \dedx model is the probability density
+The first element of our model is the probability density
 function of \eps for a given particle type and charge, which is called
 here $f_{\ipart,\ich}(\eps)$.
 Because \eps is obtained by averaging the measured charge
@@ -655,7 +657,7 @@ with
   \label{eq:hadron:dedx:model:asymm}
 \end{equation}
 where $\mu$ is the mode of the distribution, $\sigma$ is its resolution
-and $d$ is the asymmetry parameter. The \pp and \ncl dependence are implicit
+and $d$ is the asymmetry parameter. The \pp and \ncl dependencies are implicit
 on the parameters $\mu$ and $\sigma$, as will be explained next.
 The mode $\mu$ is related to the mean of \eps (\meaneps) by
 \begin{equation}
@@ -672,12 +674,12 @@ and the value of \meaneps from the parametrization
 is denoted by \meanepsbb.
 To account for deviations from \meanepsbb,
 our model includes a set of parameters called
-\textit{calibration constants}, which are denoted by $X$.
+\textit{calibration constants}, which are denoted by the symbol $X$.
 These parameters act as logarithmic shifts of the \meaneps
 around \meanepsbb and they can in principle be applied
 to each particle and charge separately. However, to reduce the complexity
 of the model, we assume one global calibration constant
-for each charge that follows the \meaneps of the $\pi$ distribution
+for each charge, that follows the \meaneps of the $\pi$ distribution,
 and individual calibration constants for the other particle types,
 which are common for both charges. The \meaneps for a
 given \ipart and \ich is then given by
@@ -690,7 +692,7 @@ given \ipart and \ich is then given by
   \label{eq:hadron:dedx:model:cal}
 \end{equation}
 In total, the model includes 6 calibration constants:
-$X_{\pi}^{+}$, $X_{\pi}^{-}$, $X_{e}$, $X_{K}$, $X_{p}$ and $X_{d}$.
+$X_{\pi}^{+}$, $X_{\pi}^{-}$, $X_\text{e}$, $X_\text{K}$, $X_\text{p}$ and $X_\text{d}$.
 The \meaneps from~\cref{eq:hadron:dedx:model:cal} is used
 in~\cref{eq:hadron:dedx:model:mu} to compute $\mu_{\ipart,\ich}$,
 which is in turn used in~\cref{eq:hadron:dedx:model:pdf}
@@ -699,7 +701,7 @@ to compute $f_{\ipart,\ich}(\eps|\pp,\ncl)$.
 The last ingredient of~\cref{eq:hadron:dedx:model:pdf}
 to be described is the resolution $\sigma_{\ipart,\ich}$. 
 Its \ncl dependence is assumed to be of the form
-$\sigma \sim 1/\sqrt{\ncl}$. Besides that $\sigma_{\ipart,\ich}$
+$\sigma \sim 1/\sqrt{\ncl}$. Besides that, $\sigma_{\ipart,\ich}$
 is also assumed to depend on the \meaneps by a power law relation.
 The overall scale of $\sigma_{\ipart,\ich}$ is given by its normalization
 parameter $\sigma_0$, which is actually defined separately for each charge ($\sigma_0^{\ich}$).
@@ -720,13 +722,13 @@ to perform the fit of the \eps distributions.
 
 
 %%%---------------------------------%%%%
-\subsection{\dedx fit strategy}
+\subsection{\boldmath \dedx fit strategy}
 \label{sec:hadron:dedx:fit}
 
 The fitting procedure is performed by means of a binned maximum-likelihood method.
-In the general case 10 particle fractions (5 particle types and 2 charges) and
+In the general case, 10 particle fractions (5 particle types and 2 charges) and
 10 model parameters are taken as free parameters of the fit. Special cases
-in which one or more particle fraction are fixed to zero will be described later.
+in which one or more particle fractions are fixed to zero will be described later.
 
 The \eps data is first divided in bins of $\log_{10}$\eps of width $\Delta\log_{10}$\eps$=0.01$.
 The index \ieps will be used to indicate these $\log_{10}$\eps bins.
@@ -735,19 +737,19 @@ $n_{\ich,\ieps}$ and $\nu_{\ich,\ieps}$ are the observed and expected
 number of tracks in a given bin \ieps and charge index \ich,
 the log-likelihood is then written as
 \begin{equation}
-  l_0 = 2\ln L = 2\sum_{\ich=+,-}\;\sum_{\ieps=1}^{\neps} \left(\nu_{\ich,\ieps} - n_{\ich,\ieps}\ln\nu_{\ich,\ieps}\right), 
+  l_0 = 2\ln \mathcal{L} = 2\sum_{\ich=+,-}\;\sum_{\ieps=1}^{\neps} \left(\nu_{\ich,\ieps} - n_{\ich,\ieps}\ln\nu_{\ich,\ieps}\right), 
   \label{eq:hadron:dedx:fit:l0}
 \end{equation}
-where \neps is the number of $\log_{10}$\eps bins and the constant terms were neglected.
+where $\mathcal{L}$ is the likelihood function, \neps is the number of $\log_{10}$\eps bins and the constant terms were neglected.
 
 The expected number of tracks $\nu_{\ich,\ieps}$ is computed by using
 the \eps model. Since $f_{\ipart,\ich}(\eps|\pp,\ncl)$ depends on \pp and \ncl,
-the model has to be convoluted with the \pp and \ncl distributions
+it has to be convoluted with the \pp and \ncl distributions
 of the measured tracks.
 To do that, the measured tracks are first split in
-bins of the variables $q = \log_{10}\pp$ and $z = 1/\sqrt{\ncl}$.
+bins of the variables $q = \logp$ and $z = 1/\sqrt{\ncl}$.
 These variables were chosen to provide a better sampling
-of the data along the bins. The distributions of the
+of the data along their bins. The distributions of the
 original variables, \pp and \ncl, contain undersampled
 tails which are not suitable for the convolution procedure.
 
@@ -760,12 +762,12 @@ by $\hat{q}_{\iq}$ and $\hat{z}_{\iz}$. In the next step, the partial
 cumulative distribution function in one \ieps bin relative to
 one ($q$,$z$) bin is computed as
 \begin{equation}
-  F_{\ipart,\ich,\ieps,\iq,\iz} = \int_{\ieps\text{th bin}} f_{\ipart,\ich}(\eps|\hat{q}_{\iq},\hat{z}_{\iz}) d\eps,
+  F_{\ipart,\ich,\ieps,\iq,\iz} = \int_{\ieps^\text{th}\; \text{bin}} f_{\ipart,\ich}(\eps|\hat{q}_{\iq},\hat{z}_{\iz}) d\eps,
 \end{equation}
 where the limits of the integral are given by the $\log_{10}\eps$
 limits of the {\ieps}th bin. Note that,
 instead of the original \pp and \ncl variables,
-the variables $q$ and $z$ were used to evaluate $f$.
+the variables $q$ and $z$ are used to evaluate $f$.
 
 The total cumulative distributions $C_{\ipart,\ich}$ is computed by summing
 the contributions of all ($q$,$z$) bins, weighted by its respective
@@ -788,7 +790,7 @@ Finally, the expected number of tracks in one \ieps bin of charge \ich
 is computed by summing the contributions of all particle types
 weighted by its respective fraction $Y_{\ipart,\ich}$,
 \begin{equation}
-  \nu_{\ich,\ieps} = \sum_{\ipart=e,\pi,K,p,d} Y_{\ipart,\ich} C_{\ipart,\ich}.
+  \nu_{\ich,\ieps} = \sum_{\ipart=\text{e},\pi,\text{K},\text{p},\text{d}} Y_{\ipart,\ich} C_{\ipart,\ich}.
   \label{eq:hadron:dedx:fit:exp}
 \end{equation}
 This expression is then combined to~\cref{eq:hadron:dedx:fit:l0}
@@ -797,7 +799,7 @@ to determine $l_0$.
 In addition to $l_0$, the final log-likelihood function, $l$,
 will also include terms of Gaussian constraints for the model
 parameters~\cite{Karbach:2012vg}. These are, by definition, Gaussian probabilities
-functions that multiplies the likelihood function. 
+functions multiplying the original likelihood function $\mathcal{L}$. 
 In terms of the log-likelihood functions, these constraints
 turn into quadratic terms of the
 form $\left[(b-b_c)/\sigma_b\right]^2$ added to $l$,
@@ -831,37 +833,38 @@ in which one of the charges is largely shifted
 with relation to the other.
 The sum of the constraints on the model parameters are given by,
 \begin{multline}
-  c_m = \left(\frac{X_{\pi}^+}{0.01}\right)^2+\left(\frac{X_{\pi}^-}{0.01}\right)^2+
-  \left(\frac{X_{e}}{0.005}\right)^2+\left(\frac{X_{K}}{0.005}\right)^2+
-  \left(\frac{X_{p}}{0.005}\right)^2+\left(\frac{X_{\pi}^+-X_{\pi}^-}{0.01}\right)^2+\\
+  c_\text{m} = \left(\frac{X_{\pi}^+}{0.01}\right)^2+\left(\frac{X_{\pi}^-}{0.01}\right)^2+
+  \left(\frac{X_\text{e}}{0.005}\right)^2+\left(\frac{X_\text{K}}{0.005}\right)^2+
+  \left(\frac{X_\text{p}}{0.005}\right)^2+\left(\frac{X_{\pi}^+-X_{\pi}^-}{0.01}\right)^2+\\
   \left(\frac{\sigma_0^+-0.4}{0.2}\right)^2+\left(\frac{\sigma_0^--0.4}{0.2}\right)^2+
   \left(\frac{\alpha-0.75}{0.1}\right)^2+\left(\frac{d-0.05}{0.03}\right)^2
   \label{eq:hadron:dedx:fit:cm}
 \end{multline}
 
 Because of the very low fraction of deuterons,
-their fractions ($Y_{d,+}$ and $Y_{d,-}$)
+their fractions ($Y_\text{d,+}$ and $Y_\text{d,-}$)
 may not be well determined by the fit. As a consequence, we
 observed that for a number of phase space bins the fitted deuteron
 fractions do not make physical sense, which leads to a bias
 on the other particle fractions. To avoid this problem,
-the parameters $Y_{d,+}$ and $Y_{d,-}$ were also
+the parameters $Y_\text{d,+}$ and $Y_\text{d,-}$ were also
 constrained. Their mean value is set
 to zero and their standard deviation to 0.02.
 Since the fraction for deuterons is always expected
 to be smaller than 0.01, the constraints
 are assumed not to bias the fit, being important
-only to forbid non-physical results. The term added
-is given by
+only to forbid non-physical results
+in which $Y_\text{d,+}$ or $Y_\text{d,-}$ is much larger than this value.
+The term added is given by
 \begin{equation}
-  c_d = \left(\frac{Y_{d,+}}{0.02}\right)^2+\left(\frac{Y_{d,-}}{0.02}\right)^2.
+  c_\text{d} = \left(\frac{Y_\text{d,+}}{0.02}\right)^2+\left(\frac{Y_\text{d,-}}{0.02}\right)^2.
   \label{eq:hadron:dedx:fit:cd}
 \end{equation}
 
 The final log-likelihood function to be maximized is then
 given by
 \begin{equation}
-  l = l_0+c_m+c_d,
+  l = l_0+c_\text{m}+c_\text{d},
   \label{eq:hadron:dedx:fit:l}
 \end{equation}
 where $l_0$, $c_m$ and $c_d$ are given
@@ -921,7 +924,7 @@ the particle fraction, the minimization could be performed
 analytically. 
 
 %%%---------------------------------%%%%
-\subsection{\dedx fit results}
+\subsection{\boldmath \dedx fit results}
 \label{sec:hadron:dedx:fitresults}
 
 Examples of the fitted \dedx distributions are shown
@@ -992,13 +995,13 @@ RST and 158 \GeVc data set are shown in~\cref{fig:hadron:dedx:fit:cal158r}.
 The remaining cases are shown
 in~\cref{fig:hadron:dedx:fit:cal158w,fig:hadron:dedx:fit:cal350r,fig:hadron:dedx:fit:cal350w}.
 As expected, in general they exhibit small deviations
-from zero. Furthermore, we can observed
+from zero. Furthermore, we can observe
 a systematic dependence with the phase space region,
 in particular with \pT. This dependence makes evident that there is indeed
 small differences on the \dedx calibration in different regions of the TPCs.
-Therefore we can conclude that a single Bethe-Bloch parametrization,
+Therefore we can conclude that a single Bethe-Bloch parametrization
 would not provide a suitable description of the \dedx data,
-thus justifying the cinlusion of the calibration constants.
+which justify the inclusion of the calibration constants.
 Additionally, the RST and WST results are different,
 which proves the necessity of performing the \dedx
 fit separately for both data sets.
@@ -1082,8 +1085,8 @@ and the remaining cases are shown
 in~\cref{fig:hadron:dedx:fit:frac158w,fig:hadron:dedx:fit:frac350r,fig:hadron:dedx:fit:frac350w}.
 From the fraction of the particle types $\pi$, K and p, it is clear that
 there are few \pp bins, between 1 and 5 \GeVc, in which the fitted fractions
-stand out from the overall behavior. This happen because the overlap between
-the \dedx distribution of two particle types are too large, creating
+stand out from the overall behavior. This happen because of the overlap between
+the \dedx distributions of two particle types can be too large, creating
 a degeneracy between their fractions in the fit. Since the particle fractions
 of these \pp bins are clearly not reliable, a special strategy had to be
 developed to approach this problem. In the next section we describe our strategy.
@@ -1135,7 +1138,7 @@ The fractions from the target removed data set are shown in~\cref{sec:hadron:ded
 
 
 %%%---------------------------------%%%%
-\subsection{Simulated data ensembles, cuts and corrections}
+\subsection{\boldmath Simulated data ensembles, cuts and corrections}
 \label{sec:hadron:dedx:sde}
 
 The Simulated Data Ensembles (SDEs) are large sets of
@@ -1160,7 +1163,7 @@ a smoothing process was performed in which a 2-dimensional
 forth-degree polynomial function was fitted to the fractions.
 The fitted function is given by
 \begin{equation}
-  f(\pp,\pT) = \sum_{n=0}^{n<4} \sum_{m=0}^{m<4} a_{nm} (\log\pp)^n \pT^m,
+  f(\pp,\pT) = \sum_{n=0}^{n<4} \sum_{m=0}^{m<4} a_{nm} (\logp)^n \pT^m,
   \label{eq:hadron:dedx:pol}
 \end{equation}
 where $a_{nm}$ are free parameters to be fitted.
@@ -1198,27 +1201,27 @@ After sampling a particle type, the \dedx associated to each
 track is sampled by following the \dedx model.
 The model parameters are set as the ones obtained by the \dedx fit
 of the data, which are shown in~\cref{sec:hadron:dedx:fitresults}.
-A set of $\approx 1000$ simulated sets, for each beam energy,
-were created by following the description above and
+A set of approximately 1000 simulation sets, for each beam momentum,
+was created by following the description above and
 fitted afterwards. As the result, we obtain the distributions
 of the fitted particle fractions for each phase space bin.
 
 From the SDEs results, we can first evaluate the relative standard deviation
-of the fractions, defined as $\sigma_r = \sigma_Y/\langle Y\rangle$, where
+of the fractions, defined as $\sigma_\text{r} = \sigma_Y/\langle Y\rangle$, where
 $\sigma_Y$ is the standard deviation of the fraction $Y$
 and $\langle Y \rangle$ is its average value.
 In~\cref{fig:hadron:dedx:fit:fake:relsig158r} we show
-one example of $\sigma_r$ for the RST and 158 \GeVc case.
+one example of $\sigma_\text{r}$ for the RST and 158 \GeVc case.
 The remaining cases are shown
 in~\cref{fig:hadron:dedx:fit:fake:relsig158w,fig:hadron:dedx:fit:fake:relsig350r,fig:hadron:dedx:fit:fake:relsig350w}. Only \pions, \kaons and \protonpm are shown
-because these are the particles of interest in this analysis.
+because these are the particles of interest of this analysis.
 Second, we can evaluate the relative bias, defined as
-$\delta_r = \langle \Delta Y/ Y \rangle$, where $\Delta Y$
+$\delta_\text{r} = \langle \Delta Y/ Y \rangle$, where $\Delta Y$
 is the difference between the fitted and the true fraction,
 being the former computed at the moment the particle types
 of the simulated tracks are sampled.
 In~\cref{fig:hadron:dedx:fit:fake:reldev158r} we show examples
-of $\delta_r$ for the RST and 158 \GeVc case, while the remaining
+of $\delta_\text{r}$ for the RST and 158 \GeVc case, while the remaining
 cases are shown
 in~\cref{fig:hadron:dedx:fit:fake:reldev158w,fig:hadron:dedx:fit:fake:reldev350r,fig:hadron:dedx:fit:fake:reldev350w}.
 
@@ -1247,7 +1250,7 @@ in~\cref{fig:hadron:dedx:fit:fake:reldev158w,fig:hadron:dedx:fit:fake:reldev350r
     \put(18,58){(f)}
   \end{overpic}
   
-  \caption{Relative standard deviation ($\sigma_r$, see the definition in the text) of the particle fractions obtained with the SDEs for the RST and 158 \GeVc case. The $\pi^+$ case is shown in (a), $\pi^-$ in (b), K$^+$ in (c), K$^-$ in (d), p$^+$ in (e) and p$^-$ in (f).}
+  \caption{Relative standard deviation ($\sigma_\text{r}$, see the definition in the text) of the particle fractions obtained with the SDEs for the RST and 158 \GeVc case. The $\pi^+$ case is shown in (a), $\pi^-$ in (b), K$^+$ in (c), K$^-$ in (d), p$^+$ in (e) and p$^-$ in (f).}
   \label{fig:hadron:dedx:fit:fake:relsig158r}
 \end{figure}
 
@@ -1277,12 +1280,12 @@ in~\cref{fig:hadron:dedx:fit:fake:reldev158w,fig:hadron:dedx:fit:fake:reldev350r
     \put(18,58){(f)}
   \end{overpic}
   
-  \caption{Average relative bias ($\delta_r$, see the definition in the text) of the particle fractions obtained with the SDEs for the RST and 158 \GeVc case. The $\pi^+$ case is shown in (a), $\pi^-$ in (b), K$^+$ in (c), K$^-$ in (d), p$^+$ in (e) and p$^-$ in (f).}
+  \caption{Average relative bias ($\delta_\text{r}$, see the definition in the text) of the particle fractions obtained with the SDEs for the RST and 158 \GeVc case. The $\pi^+$ case is shown in (a), $\pi^-$ in (b), K$^+$ in (c), K$^-$ in (d), p$^+$ in (e) and p$^-$ in (f).}
   \label{fig:hadron:dedx:fit:fake:reldev158r}
 \end{figure}
 
 
-From the $\sigma_r$ one can clearly see
+From the $\sigma_\text{r}$ one can clearly see
 that for few \pp bins, mainly between 1 and 10 \GeVc,
 the fitted fractions present a very large relative
 standard deviation in comparison to the remaining phase space regions.
@@ -1290,11 +1293,11 @@ This is because of the proximity between the mean of the
 \dedx distribution of two particle types that cause
 a partial degeneracy between their fractions. The result
 of the \dedx fit at these phase space bins are evidently not
-suitable and, because of that, they will be removed from our analysis.
-To this aim, the bins with $\sigma_r$ larger than 0.15 for \pions,
+suitable and, because of that, they were removed from our analysis.
+To this aim, the bins with $\sigma_\text{r}$ larger than 0.15 for \pions,
 and 0.25 for \kaons and \protonpm were removed. 
 
-From the $\delta_r$ we can observe that there are regions
+From the $\delta_\text{r}$ we can observe that there are regions
 of the phase space which presents a significant relative
 bias on the fractions.
 These regions are mainly the low statistic and the high \pp
@@ -1305,13 +1308,13 @@ behavior of the deposit energy function.
 Attempts were made to eliminate this bias
 by changing the fit strategy, however, we found no effective solution.
 Therefore, we have decided for a correction procedure based on
-the $\delta_r$ obtained from the SDEs.
+the $\delta_\text{r}$ obtained from the SDEs.
 A multiplicative correction factors, called $c$, was computed
 and we show it 
 in~\cref{fig:hadron:dedx:fit:fake:cor158r} for the RST and 158 \GeVc case,
 while the remaining cases are shown
 in~\cref{fig:hadron:dedx:fit:fake:cor158w,fig:hadron:dedx:fit:fake:cor350r,fig:hadron:dedx:fit:fake:cor350w}.
-The phase space bins removed because of the large $\sigma_r$ are shown
+The phase space bins removed because of the large $\sigma_\text{r}$ are shown
 as white bins.
 
 Besides the cuts and corrections, the SDEs can also
@@ -1320,7 +1323,7 @@ of the particle fractions.
 This was done by computing the standard deviation of
 fractions obtained from the SDEs.
 It is decided to use these values of standard deviation
-of the final statistical uncertainties of the fractions,
+as the final statistical uncertainties of the fractions,
 instead of the the ones resulting from the fit procedure.
 
 %%%%%%%%%% COR %%%%%%%%%%%%%%
@@ -1354,7 +1357,7 @@ instead of the the ones resulting from the fit procedure.
 
 
 %%%---------------------------------%%%%
-\subsection{Particle identification results}
+\subsection{\boldmath Particle identification results}
 \label{sec:hadron:dedx:results}
 
 After applying the cuts and corrections discussed
@@ -1364,7 +1367,7 @@ In~\cref{fig:hadron:dedx:fit:final158r} we show examples
 of the particle fractions for the RST and 158 \GeVc data set,
 while the remaining cases are shown 
 in~\cref{fig:hadron:dedx:fit:final158w,fig:hadron:dedx:fit:final350r,fig:hadron:dedx:fit:final350w}.
-Only the three particle types of interest are shown: $\pi$, $K$ and $p$.
+Only the three particle types of interest are shown: $\pi$, $\text{K}$ and $\text{p}$.
 Each plot shows the fractions as a function of \pp for one \pT bin.
 The equivalent plots for the target removed data set are shown
 in~\cref{fig:hadron:dedx:fit:out158r,fig:hadron:dedx:fit:out158w,fig:hadron:dedx:fit:out350r,fig:hadron:dedx:fit:out350w}.
@@ -1384,7 +1387,7 @@ in~\cref{fig:hadron:dedx:fit:out158r,fig:hadron:dedx:fit:out158w,fig:hadron:dedx
 \clearpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{\vzero analysis}
+\section{\boldmath \vzero analysis}
 \label{sec:hadron:vzero}
 
 In this section we describe the part of our analysis
@@ -1392,11 +1395,11 @@ focused on the identification of \lamb, \antilamb and \kzeros,
 which are also called here \vzero particles.
 Neutral weakly decaying particles with average decay length ($c\tau$)
 of order of few or tens of centimeters can be detected by \NASixtyOne
-experiment through their charged decay products. This kind of
-particles are called \vzero particles because of the $V$-shape of
+experiment through their charged decay products. This type of
+particle is called \vzero particles because of the $V$-shape of
 the decay and their neutral charge. Although the \vzero
 particle itself does not create a track in the TPCs, the products
-of its decay do, allowing us to reconstruct the position of the
+of its decay may do, allowing us to reconstruct the position of the
 decay vertex and, by using the properties of the daughter tracks,
 identify the mother \vzero. Therefore, the detector acceptance
 depends strongly on geometrical factors because both daughter particles
@@ -1443,7 +1446,7 @@ the signal extraction results in~\cref{sec:hadron:vzero:results}.
 \end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{\vzero selection}
+\subsection{\boldmath \vzero selection}
 \label{sec:hadron:vzero:selection}
 
 
@@ -1456,7 +1459,7 @@ The \vzero selection criteria are the following.
 \item At least one track has to have more than 15 clusters in the VTPCs
 \end{enumerate}
 These selection criteria are standard ones
-in \NASixtyOne analyzes~\cite{Aduszkiewicz:2015dmr,Abgrall:2015hmv}.
+in \NASixtyOne analyses~\cite{Aduszkiewicz:2015dmr,Abgrall:2015hmv}.
 Besides the above selection, two further \vzero cuts will be applied
 to the \vzero candidates before the signal extraction. Since
 these cuts were optimized to improve the signal extraction and they might
@@ -1475,21 +1478,21 @@ the systematic uncertainty will be estimated by varying the minimum number
 of clusters on both tracks from 30 to 20. 
 
 %%%---------------------------------%%%%
-\subsection{Signal extraction strategy}
+\subsection{\boldmath Signal extraction strategy}
 \label{sec:hadron:vzero:signal}
 
 The signal extraction is done by fitting the \minv distribution
 with a model that includes the signal and the background contributions.
-Traditionally in \NASixtyOne analyzes the signal
+Traditionally in \NASixtyOne analyses the signal
 is modeled by analytic functions like Breit-Wigner
 or Gaussian functions~\cite{Abgrall:2015hmv,Aduszkiewicz:2015dmr}. 
-However, because of difficulties in describing
+However, because of difficulties in describing properly
 the \kzeros signal, we have decided to use here
 Monte Carlo templates instead. Moreover, it was found
 that for few \kzeros phase space bins,
 the signal description is very poor
 when using only one single template.
-As a solution a double template approach
+As a solution, a double template approach
 was preferred.
 The simulations used to build the templates were described
 in~\cref{sec:hadron:data} and they include most of the expected
@@ -1519,7 +1522,7 @@ is represented by $m_0$.
 Thus, being $n$ and $\nu$ the observed and expected number of entries,
 respectively, the log-likelihood function is given by
 \begin{equation}
-  l_0 = 2\ln L = 2\sum_{\imass=1}^{\nmass} \left(\nu_{\imass} - n_{\imass}\ln\nu_{\imass}\right). 
+  l_0 = 2\ln \mathcal{L} = 2\sum_{\imass=1}^{\nmass} \left(\nu_{\imass} - n_{\imass}\ln\nu_{\imass}\right). 
   \label{eq:hadron:vzero:fit:l0}
 \end{equation}
 The expected number $\nu_\imass$ is given by the sum of the signal
@@ -1539,7 +1542,7 @@ mass $m$ is represented by $t[m]$. The templates contain
 the same number of bins as the data distribution (\nmass)
 and $t[m]$ is computed by a linear interpolation of the two bins
 with closest centers to $m$.
-To allow for the shifting of the templates, an offset parameter $\delta m$'s
+To allow for the shifting of the templates, an offset parameter $\delta m$
 was added. In the end,
 after summing the contributions of the two templates,
 $T_\imass$ is computed as
@@ -1567,7 +1570,7 @@ $\alpha$. In the former case the intention is to avoid
 solutions of the fit in which the templates largely shift.
 It is expected offsets of order of few \MeVc only and it was observed
 that, without the constraints, there could be solutions with
-offsets much larger than this, which is physically unacceptable.
+offsets much larger than this, which are physically unacceptable.
 The constraint on the $\alpha$ parameter is important
 for cases in which the signal is well described by one
 template only and consequently $\alpha$ becomes
@@ -1577,7 +1580,7 @@ degenerated. The constraint term is given by
   +\left(\frac{\alpha}{0.2}\right)^2,
   \label{eq:hadron:vzero:fit:c}
 \end{equation}
-where the $\delta m^0$ and $\delta m^1$ is given in \GeVc units.
+where the $\delta m^0$ and $\delta m^1$ is given in \GeVcc units.
 Finally, the log-likelihood to be maximized is given by
 \begin{equation}
   l = l_0 +c,
@@ -1590,9 +1593,9 @@ The maximization of $l$ was done by using the
 MINUIT package~\cite{James:1975dr}. The width
 of the \minv bins was 1.5 and 3.0 \MeVcc for
 \lambs and \kzeros, respectively, and the mass range
-was $[1.095 \GeVcc, 1.160 \GeVcc]$ and $[0.42 \GeVcc, 0.580 \GeVcc]$  
+was $[1.095\;\GeVcc, 1.160\;\GeVcc]$ and $[0.42\;\GeVcc, 0.580\;\GeVcc]$  
 again for \lambs and \kzeros, respectively.
-For each beam energy data set, the templates were filled
+For each beam momentum data set, the templates were filled
 with the three simulation sets, generated by different
 hadronic interaction models.
 
@@ -1637,7 +1640,7 @@ observed in the target inserted one.
 
 
 %%%---------------------------------%%%%
-\subsection{\vzero cuts}
+\subsection{\boldmath \vzero cuts}
 \label{sec:hadron:vzero:cuts}
 
 The \vzero cuts were applied to the \minv data to reduce
@@ -1656,7 +1659,7 @@ obtained from simulations for all the phase space bins.
 We can observe that the \impact parameter of signal \vzeros
 are more concentrated at small values while the background ones
 show a longer tale. Because of that, an upper cut on \impact
-was defined to increase the signal to background ratio.
+was defined to increase the signal-to-background ratio.
 This cut value is called \impactmax and it was chosen to be 2 cm. The efficiency of this cut
 was observed to be larger than 90\% for all the phase space bins.
 
@@ -1682,7 +1685,7 @@ are formed by the combination of tracks that are actually
 produced in the main vertex, the background \decaydist
 distribution tends to be more concentrated at small values.
 Therefore, an lower cut was imposed to \decaydist to increase
-the signal to background ratio. The value of the cut is called
+the signal-to-background ratio. The value of the cut is called
 \decaydistmin.
 Because of the physical dependence of the \decaydist on
 the momentum of the particle, \decaydistmin was defined
@@ -1701,10 +1704,10 @@ The \decaydistopt found for all the phase space bins
 are shown in~\cref{fig:hadron:vzero:cuts:decaydist:158,fig:hadron:vzero:cuts:decaydist:350}
 as a function of the \vzero momentum and 
 the average over the \pT bins are shown as red markers.
-A fit of a linear function of $\log \pp$ to the average \decaydistopt
+A fit of a linear function of \logp to the average \decaydistopt
 is shown as a red curve. This function shows to describe
 in first order the momentum dependence of \decaydistopt,
-and, because of that, we have decided to use it to define the \decaydistmin.
+and because of that, we have decided to use it to define the \decaydistmin.
 
 %%%%%%%%%%% DECAY DIST CUT EXAMPLE %%%%%%%%%%%%
 \begin{figure}
@@ -1741,7 +1744,7 @@ The signal loss due to these cuts were taken into account
 at the Monte Carlo correction step, described in~\cref{sec:hadron:correction}.
 
 %%%---------------------------------%%%%
-\subsection{Signal extraction results}
+\subsection{\boldmath Signal extraction results}
 \label{sec:hadron:vzero:results}
 
 Examples of the fitted \minv distributions are shown
@@ -1873,7 +1876,7 @@ in~\cref{fig:hadron:vzero:signal:extracted:158,fig:hadron:vzero:signal:extracted
 \clearpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Monte Carlo corrections}
+\section{\boldmath Monte Carlo corrections}
 \label{sec:hadron:correction}
 
 The measured number of events, tracks and \vzero
@@ -1892,7 +1895,7 @@ is written as
 where $N$ refers to number of events and $n$ can be either the number of
 tracks, for the charged hadron analysis, or the number
 of \vzeros, for the \vzero analysis.
-The indexes \gen and \sel refer respectively to generated and selected quantities and,
+The indexes ``\gen'' and ``\sel'' refer respectively to generated and selected quantities and,
 while the former is obtained directly from the Monte Carlo generators,
 the latter is obtained from the detector simulations, in which the
 reconstruction algorithm and selection criteria are exactly the same
@@ -1906,7 +1909,7 @@ $\alpha$ and $\beta$. In this way, \cmc becomes
 \end{equation}
 The $\alpha$ factor is a property of the data set
 as a whole and, therefore, it is the same for
-both charged hadron and \vzero analyzes.
+both charged hadron and \vzero analyses.
 On the other hand, the $\beta$ is a property of the
 phase space bin and it depends on the particle type
 (\pions, \kaons or \protonpm for the charged hadron analysis
@@ -1928,9 +1931,9 @@ $\alpha$ is also significantly larger.
 This relation is caused mainly by two effects. First,
 the interaction trigger probability is larger on average
 because of the larger number of particles crossing the detector.
-Second, the cut on the Z position of the main vertex
+Second, the vertex z cut (see~\cref{sec:hadron:event})
 tends to remove less events since, with more detected particles,
-the fit of main vertex tends to be more precise.
+the fit of the main vertex tends to be more precise.
 The model dependence of the $\alpha$ will be accounted
 on the systematic uncertainties in~\cref{sec:hadron:spec:syst}.
 
@@ -2028,7 +2031,7 @@ The model dependence of the $\beta$ factor is only significant (> 1\%) for the
 contributions of the event selection and feed-down from weak decays.
 Concerning the event selection, the differences between the three models
 can reach up 10\% for few phase space bins, in which the contribution
-of both the T2 selection and the cut on the main vertex Z position are accounted for.
+of both the T2 selection and the vertex z cut are accounted for.
 These differences will be taken into account on the systematic uncertainties
 of the spectra (see~\cref{sec:hadron:spec:syst}).
 The model dependencies of the $\beta$ contributions due to feed-down
@@ -2036,7 +2039,7 @@ from weak decays will be approached in next section.
 
 
 %%%---------------------------------%%%%
-\subsection{Feed-down from weak decays}
+\subsection{\boldmath Feed-down from weak decays}
 \label{sec:hadron:correction:fd}
 
 For the charged hadrons, the contribution of weak decays
@@ -2049,7 +2052,7 @@ of \lambs.
 Since the \lambs and \kzeros production varies substantially 
 among the hadronic interaction models, the model dependence
 on the $\beta$ correction for \pions and \protonpm would
-is very large, which would also imply in large
+be very large, which would also imply in large
 systematic uncertainties. To avoid that, the
 measured spectra of \lambs and \kzeros will be used here
 to correct the feed-down contribution from these particles.
@@ -2060,12 +2063,12 @@ the decay of \lambs and \kzeros. This weight
 is determined by the ratio between the
 measured and the generated spectra of these particles
 for a given model. To also account for \lambs and \kzeros
-which were produced by the decay of other weakly decaying
+which were themselves produced by the decay of other weakly decaying
 particles, the ratio is computed by using the uncorrected
 spectra, which means basically the number of particles
 in a certain bin divided by the number of events. 
 In~\cref{fig:hadron:correction:beta:ratio} we show examples of the ratios
-for the three \vzero particles, the model \EposLong and beam energy of 158 \GeVc. 
+for the three \vzero particles for the model \EposLong and beam momentum of 158 \GeVc. 
 A parametrization of the ratio as a function of \pp and \pT
 was performed by using a log-normal function of \pp
 in which its parameters are interpolated as a function of \pT
@@ -2109,13 +2112,13 @@ uncertainties of the spectra (see~\cref{sec:hadron:spec:syst}).
 Concerning the feed-down from weak decays on the \vzero particle
 spectra, the effect is null for \kzeros and can reach up to 25\%
 for \lambs, in which the decaying particles are mostly $\Xi^{\pm}$, $\Xi^0$,
-$\Sigma^0$ (and their anti-particles). The model dependencies are also
+$\Omega^\pm$ (and their anti-particles). The model dependencies are also
 significant in this case and it will be account for
 on the systematic uncertainties of the spectra (see~\cref{sec:hadron:spec:syst}).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Spectra}
+\section{\boldmath Spectra}
 \label{sec:hadron:spec}
 
 The final double-differential spectra for each
@@ -2139,7 +2142,7 @@ where:
 \item $n$ is the number of measured particles inside the phase space bin.
   For the charged hadrons (\pions, \kaons and \protonpm),
   $n$ has to be computed by combining the results of the \dedx fit of
-  the RST and WST data sets. This was done by first
+  the RST and WST data sets. This was done by first computing
   the number of measured particles in each data set,
   which is given by the particle fraction obtained
   from the \dedx fit multiplied by the total
@@ -2159,7 +2162,7 @@ where:
   for the 158 and 350 \GeVc data sets, respectively. 
   This procedure to subtract
   the target removed contribution follow the standard approach
-  of \NASixtyOne analyzes. More details can be found in Ref.~\cite{AntoniMThesis}.
+  of \NASixtyOne analyses. More details can be found in Ref.~\cite{AntoniMThesis}.
   
 \end{itemize}
 
@@ -2170,7 +2173,7 @@ and in~\cref{sec:hadron:spec:int} we describe the procedure to
 integrate the double-differential spectra over \pT.
 
 %%%---------------------------------%%%%
-\subsection{Statistical uncertainties}
+\subsection{\boldmath Statistical uncertainties}
 \label{sec:hadron:spec:stat}
 
 The dominant contribution to the statistical uncertainties
@@ -2180,17 +2183,17 @@ for the \vzero particles.
 Since the number of target removed tracks is substantially
 smaller than the target inserted ones,  
 the statistical uncertainties on $n^\text{R}$ was neglected.
-The contribution of the \cmc, because of the limited number of
-simulated events, was taken into account, however, it
+The contribution of the \cmc because of the limited number of
+simulated events was taken into account, however, it
 is relatively very small. 
 
 
 %%%---------------------------------%%%%
-\subsection{Systematic uncertainties}
+\subsection{\boldmath Systematic uncertainties}
 \label{sec:hadron:spec:syst}
 
 The sources of systematic uncertainties will be listed
-separately for charged hadrons and \vzero analyzes.
+separately for charged hadrons and \vzero analyses.
 First, the list of systematic uncertainties accounted for in
 the spectra of the charged hadrons is the following.
 \begin{itemize}
@@ -2208,7 +2211,7 @@ the spectra of the charged hadrons is the following.
   and the average one were used to define the relative systematic uncertainties.
 
 \item The model dependence on the Monte Carlo correction factors due to
-  the cut on the main vertex Z position in the event selection.
+  the vertex z cut in the event selection.
   The procedure here is totally analogous to the one described for the T2 selection.
   
 \item The model dependence on the Monte Carlo correction factor due to
@@ -2241,7 +2244,7 @@ spectra of the \vzero particles is the following.
   for the charged hadron analysis.
   
 \item The model dependence on the Monte Carlo correction factors due to
-  the cut on the main vertex Z position in the event selection.
+  the vertex z cut in the event selection.
   The procedure here is exactly the same described
   for the charged hadron analysis.
   
@@ -2269,7 +2272,7 @@ In~\cref{sec:hadron:results}, both statistical and systematic uncertainties
 are shown separately for the particle spectra.
 
 %%%---------------------------------%%%%
-\subsection{Integration over \pT}
+\subsection{\boldmath Integration over \pT}
 \label{sec:hadron:spec:int}
 
 
@@ -2289,12 +2292,11 @@ the measured spectra over all the available \pT bins
 and adding to it the result the integral of the fitted function
 over the remain \pT range. The final \pT integrated spectra results
 were limited to the \pp bins in which the fraction of the extrapolation
-is smaller than 5\% of the total. This was done to avoid large systematic
-uncertainties due to the choice of the function used for the extrapolation.
+is smaller than 5\% of the total for the charged hadrons and 20\% for the \vzero particles.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Results}
+\section{\boldmath Results}
 \label{sec:hadron:results}
 
 Examples of the double-differential spectra are shown
@@ -2310,9 +2312,9 @@ The statistical and systematic uncertainties are shown
 separately as black lines and gray bands, respectively.
 In red curves we show the fitted functions used to perform
 the extrapolation in \pT (see~\cref{sec:hadron:spec:int}).
-This functions is shown only for \pp bins in which
+These functions are shown only for \pp bins in which
 there are more than 3 measured \pT bins. Otherwise,
-the fit was not possible to be performed.
+it was not possible to perform the fit.
 
 
 %%%%%%%%%% SPEC PT DEDX EXAMPLE %%%%%%%%%%%%%%%%
@@ -2381,7 +2383,8 @@ Again, the statistical and systematic uncertainties
 are shown separately as black lines and gray bands, respectively.
 In colored curves, the predicted spectra by the most
 currently used hadronic interaction models are also shown for comparison. 
-The models shown are \EposLong\cite{\EposPaper},
+The simulated spectra were computed by using the \CRMC software~\cite{CRMC} and
+the models shown are \EposLong\cite{\EposPaper},
 \DPMJetLong\cite{\DPMJetPaper}, \SibyllLong\cite{\SibyllPaper},
 \SibyllNewLong\cite{\NewSibyllPaper},
 \QGSJetLong\cite{\QGSJetPaper} and \EposLHCLong\cite{\EposLHCPaper}.
@@ -2394,14 +2397,14 @@ phase space bins during the particle identification
 step (see~\cref{sec:hadron:dedx:sde}). It was observed
 that the particle fractions obtained from the \dedx fit
 are not reliable for these bins. For the \vzero analysis,
-the main is the lack of statistics, which imply on the
+the main reason is the lack of statistics, which imply on the
 impossibility to perform the signal extraction.
 Besides that, in both charged hadron and \vzero analysis
 the double-differential spectra were limited to phase space
 bin where the relative statistical uncertainty is smaller than
-1.0. 
+0.5. 
 
-The different contributions for the systematic uncertainties
+The different contributions to the systematic uncertainties
 on the \pT integrated spectra can be seen
 in~\cref{fig:hadron:spec:dedx:syst158,fig:hadron:spec:dedx:syst350}
 for the charged hadron and
@@ -2636,7 +2639,8 @@ for the \vzero particles.
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Summary, discussions and conclusions}
+\section{\boldmath Summary, discussions and conclusions}
+\label{sec:hadron:conclusions}
 
 In this chapter we have presented the
 analysis of the hadron production in $\pi^-$-C interactions
@@ -2645,7 +2649,7 @@ The spectra of \pions, \kaons and \protonpm were obtained by
 means of a particle identification method based on the
 \dedx measurements and the \lambs and \kzeros by means
 of the \minv spectra analysis. Two data sets
-were analyzed with beam energies 158 and 350 \GeVc.
+were analyzed with beam momenta 158 and 350 \GeVc.
 
 Our results can be summarized by
 the~\cref{fig:hadron:spec:dedx:int158,fig:hadron:spec:dedx:int350,fig:hadron:spec:vzero:int158,fig:hadron:spec:vzero:int350}, which show the differential spectra $\text{d}n/\text{d}\pp$
@@ -2663,9 +2667,9 @@ As a consequence, the model predictions of the muon related
 air shower observables will surely become more precise.
 
 For now, the implications of our results on the muon
-production in air showers can on be roughly estimated.
+production in air showers can be roughly estimated.
 To do that, we can start by analyzing the \pions production
-in $\pi$-C interactions. Although most of muons are
+in $\pi^{-}$-C interactions. Although most of muons are
 produced by the decay of \pions, we can see in plots
 (a) and (b) from~\cref{fig:hadron:spec:dedx:int158,fig:hadron:spec:dedx:int350}
 that there is a great agreement between data and models,
@@ -2678,8 +2682,8 @@ with the \pions spectra is \DPMJetLong, which overproduce
 
 Concerning the \kaons production, the observed data-model
 discrepancies are very significant. However,
-since only a small fraction of the muons in
-air showers are produced by the decay of \kaons (see YYY),
+since only a small fraction ($<10\%$) of the muons in
+air showers are produced by the decay of \kaons,
 no strong effect on the number of muons is expected
 after the models are tuned by using our \kaons spectra.
 
@@ -2706,12 +2710,12 @@ Because there are models which agrees very well with
 our measured \antiproton spectra, and also
 models which overestimated the \antiproton production,
 we can conclude that the simple hypothesis of the
-underproduction of (anti)baryons cannot solve
+underproduction of (anti)baryons is very unlikely to explain
 the problem of the deficit of muons in air shower
 simulations.
 
 Concerning our measured spectra of \lambs and \kzeros,
-apart from their relevant on the future tuning of the hadronic
+apart from their relevance on the future tuning of the hadronic
 models, it is important to note their whole on the reduction
 of the systematic uncertainties on the charged hadron spectra,
 in particular on the \protons ones.
