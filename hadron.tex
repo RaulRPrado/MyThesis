@@ -23,9 +23,11 @@ In this chapter we present the analysis of hadron production
 in $\pi^-$-C interactions measured by the \NASixtyOne experiment
 at CERN SPS. In~\cref{sec:showers:phen:had} we have stressed the
 importance of $\pi^{\pm}$-air interactions for the air
-shower development and, in particular, for the muon production.
+shower development and particularly for the muon production.
 The carbon target was selected here because of its similarity with
-air nuclei in terms of nuclear mass. 
+air nuclei in terms of nuclear mass and because its experimental
+advantages with respect to nitrogen or oxigen targets.
+
 
 Our goal is to measure the production spectra of
 \pions, \kaons, \protons, \lambs and \kzeros.
@@ -36,17 +38,17 @@ will be surely valuable for the testing of the hadronic
 interaction models and for the tuning of the their next generation.
 Besides that, the \lambs and \kzeros spectra have also an
 important whole on reducing the systematic uncertainties on the
-\protons ones.
+\protons spectra.
 
 The unprecedented $\pi^-$-C data analyzed here were
 taken by the \NASixtyOne detector at two beam momenta,
-158 and 350 \GeVc. Its large acceptance that covers
+158 and 350 \GeVc. The large detector acceptance that covers
 a large region of the forward phase space makes the \NASixtyOne
 the ideal detector for this kind of study. A previous
-analyze of the $\pi^-$-C data with the measurements of
+analysis of the $\pi^-$-C data with the measurements of
 resonance mesons was published in Ref.~\cite{\RhoPaper}.
-In particular, the measured $\rho^0$ spectra
-also have a great impact on air shower physics.
+In particular, the obtained $\rho^0$ spectra is also
+relevant for air shower physics and muon production.
 
 
 The analysis presented in this chapter can be essentially
@@ -72,8 +74,8 @@ Particularly, the event and track selection used here was based on
 previous works of Martin Ruprecht~\cite{MartinThesis} and 
 the \dedx fit strategy was based on previous works of Hans Dembinski.   
 Concerning the \vzero analysis, there was no previous development
-and the whole analysis was done by the author of this thesis,
-in collaboration with Michael Unger. 
+and the whole analysis was done by the author of this thesis
+in collaboration with Dr. Michael Unger. 
 A preliminary stage of the present analysis was published
 in Ref.\cite{\RaulICRC}. 
 
@@ -110,11 +112,11 @@ Its large acceptance is the main experimental feature of the
 can provide a high efficiency charged particle tracking.
 A magnetic field partially covering the TPCs allows the reconstruction
 of the particle momenta and charge while the energy loss measurements by the
-TPCs allows for the particle identification. ON the bottom of~\cref{fig:hadron:na61:setup}
+TPCs allows for the particle identification. At the bottom of~\cref{fig:hadron:na61:setup}
 we show the configuration of the beam detectors as set for the $\pi^-$-C data taken
 and on the top we show the configuration
 of the main part of the \NASixtyOne detector. 
-The coordinate system used in all \NASixtyOne analyzes
+The coordinate system used in all \NASixtyOne analysis
 is also shown in~\cref{fig:hadron:na61:setup}. The axis defined
 by the beam direction is represented by the z coordinate,
 while the x-y plane is the perpendicular to this direction.
@@ -152,10 +154,9 @@ in Ref.~\cite{\NASixtyOnePaper}.
 The CERN SPS is able to provide to the North Area experiments
 primary proton or ion beams of maximum energy of 450 \GeV/u. 
 To generate the $\pi^-$ secondary beam, a primary proton
-beam of 400 \GeVc from SPS is first collided against
+beam of 400 \GeV from SPS is first collided against
 a 10 cm long beryllium target. This collision occur
 about 500 m upstream the \NASixtyOne detector.
-
 The secondary charged particles produced are then transported
 through the H2 beamline. During the transportation,
 a number of collimators and magnets are responsible for
@@ -190,13 +191,13 @@ The S4 detector in anti-coincidence removes events in which a beam
 particle crossed the target without interacting. Evidently,
 a small fraction of the inelastic interactions can produce
 a high energy particle that reaches S4 and in these cases, the
-event is not accepted. The consequent biased is taken into
+event is not accepted. The resultant bias is taken into
 account on the Monte Carlo correction step (see~\cref{sec:hadron:correction}).
 
 The three Beam Position Detectors, indicated as BPD in~\cref{fig:hadron:na61:setup},
-are proportional chambers that are able to measure the traversal's position
+are proportional chambers that are able to measure the traverse position
 of the beam particles. Two important functions of the BPDs are to constrain
-the traversal's position of the interaction vertex and to define the
+the traverse position of the interaction vertex and to define the
 incident angle of the beam particle on the target. Besides that,
 the information about the spread of the beam particles on the
 tranverse plane is used as a offline cut to assure the
@@ -208,10 +209,9 @@ and its functionality is to identify the beam particle.
 After the secondary beam particles are selected and
 transported to the \NASixtyOne detector, the purity of the
 $\pi^-$ beam is about 95\% and 100\% for the 158 and 350 \GeVc
-case, respectively. The CEDAR information is also used as
+case, respectively. The CEDAR information is then used as
 an offline cut to assure that the interacting particle
 is indeed a $\pi^-$.
-
 
 
 %%%---------------------------------%%%
@@ -223,7 +223,7 @@ position of the five TPCs, which form the main part
 of the \NASixtyOne detector. 
 Two of them are the vertex TPCs, called
 VTPC-1 and VTPC-2. Placed in between VTPC-1 and VTPC-2
-there is the GAP-VTPC (or only GTPC). The two remain ones
+there is the GAP-VTPC (or only GTPC). The other ones
 are the left and right components of the main TPCs, which
 are called MTPC-L and MTPC-R. 
 
@@ -231,9 +231,9 @@ The VTPC-1 and VTPC-2 are located inside two superconducting
 dipole magnet. The produced magnetic field
 is responsible for bending the particle trajectories,
 which allows us to measure the sign of the particle charge
-as well as the its momentum. To optimize the geometrical
+as well as its momentum. To optimize the geometrical
 acceptance, the intensity of the magnetic field is set
-depending on the beam energy. For the $\pi^-$-C data taken
+depending on the beam momentum. For the $\pi^-$-C data taken
 at 158 and 350 \GeVc, the magnetic field was set to 1.5 and 1.1 T
 in the first and second magnets, respectively.
 
@@ -243,8 +243,8 @@ The particle tracking is possible by collecting the electrons
 freed by the ionization of the gas atoms because of the passage
 of the charged particle.
 These electrons are drifted along the y direction under the influence
-of the an electric field and collected by a set of readout pads on the top
-of the TPCs. The electrons collected in the pads are group in time
+of an electric field and collected by a set of readout pads on the top
+of the TPCs. The electrons collected in the pads are grouped in time
 to form the so called clusters. While the position of the pads
 gives the x and z coordinates of the cluster position, the y
 coordinate is reconstructed by its drifting time. By combining the
@@ -258,7 +258,7 @@ the total charge of all the clusters that compose a track and
 a unique value of \dedx is defined for each particle.
 The \dedx measurements allow the main particle
 identification procedure applied in \NASixtyOne analyzes
-and we give more details about that in~\cref{sec:hadron:dedx:meas}.
+(more details about that are given in~\cref{sec:hadron:dedx:meas}).
 A technical description of the TPCs of the \NASixtyOne can be found
 in Refs.~\cite{AntoniAThesis,\NASixtyOnePaper}.
 
@@ -270,27 +270,28 @@ in Refs.~\cite{AntoniAThesis,\NASixtyOnePaper}.
 \section{Data and simulation sets}
 \label{sec:hadron:data}
 
-The $\pi^-$+C data were collected by \NASixtyOne in 2009 at two beam energies:
-158 and 350 \GeV. The carbon target consisted of
+The $\pi^-$+C data were collected by \NASixtyOne in 2009 at two beam momenta:
+158 and 350 \GeVc. The carbon target consisted of
 an isotropic graphite plate with 2 cm thickness along the beam axis,
 with density of $\rho = 1.84$ g/cm$^3$. The target position was set to
 80 cm upstream of VTPC-1. To estimate the contribution of 
 interactions that occur with the detector material, about 10\% of the data
 were taken with the target removed. 
-In~\cref{sec:hadron:spec} we describe the procedure used to subtract
-the effect of the out of target interactions from the measured spectra.
+In~\cref{sec:hadron:spec} we describe the procedure applied to subtract
+the effect of the out-of-target interactions from the measured spectra.
 The calibration of the $\pi^-$+C data followed the standard
 \NASixtyOne procedure, described in Ref.~\cite{Abgrall:2008zz}.
 
 
-The Monte Carlo simulation sets used in this analysis
-were created by first generating the primary interactions
+The Monte Carlo simulation sets used in the present analyzes
+were produced by the \NASixtyOne Collaboration.
+They were created by first generating the primary interactions
 using hadronic interaction models and then by passing
 the produced particles through a detailed
 detector simulation based on \GeantThree package~\cite{Brun:1994aa}.
 Three hadronic interaction models were used: \EposLong~\cite{\EposPaper},
 \DPMJetLong~\cite{\DPMJetPaper} and \QGSJetLong~\cite{\QGSJetPaper}.
-For each beam energy and hadronic interaction model,
+For each beam momentum and hadronic interaction model,
 a simulation set was produced with approximately the same number of events
 as in data. Both data and simulations were reconstructed
 by the standard \NASixtyOne reconstruction chain~\cite{Abgrall:2011ae}. 
@@ -302,8 +303,8 @@ by the standard \NASixtyOne reconstruction chain~\cite{Abgrall:2011ae}.
 
 
 The event selection can be divided into upstream
-and event cuts. The upstream cuts are based on the
-beam detector measurements and, since these detectors are not
+and event cuts. The upstream cuts are based on the measurements
+of the beam detectors and, since these detectors are not
 implemented in the Monte Carlo simulations, these cuts were applied
 only to the data. The upstream cuts are:
 \begin{enumerate}[label=(\roman*)]
@@ -491,9 +492,9 @@ beam axis, while the latter as the tracks that bend towards the beam axis.
 Given the track $\phi$ angle and its charge $q$, the two groups
 can be defined by the sign of the product $q \times \cos(\phi)$, where
 RST have positive sign and WST have negative ones.
-The distinction between this two track topology is motivated by the
-fact that a right and a wrong side track with the same \pp and
-\pT cross different regions of the detector, 
+The distinction between the two track topology is motivated by the
+fact that a right and a wrong side track, with the same \pp and
+\pT, cross different regions of the detector, 
 which in turn have important implications on the
 particle identification step based on the \dedx measurements
 (see~\cref{sec:hadron:dedx}). 
@@ -896,7 +897,7 @@ the fit setting all fractions free and the values are 3 and 70 \GeVc
 for deuterons and electrons, respectively. 
 
 The RST and WST subsets were fitted
-separately (see~\cref{sec:hadron:dedx:track} for the definitions).
+separately (see~\cref{sec:hadron:dedx:selection} for the definitions).
 This is motivated by the fact that, for the same phase space
 interval, these two types of tracks are detected by
 different parts of the TPCs. Since the model parameters,
@@ -1689,12 +1690,12 @@ as a function of the \vzero momentum and it was optimized to minimize
 the statistical uncertainty of the extracted signal.
 The optimization was done by first performing the \minv fit
 with many values of \decaydistmin and then evaluating
-$S* = S/\varepsilon$ and its uncertainty $\sigma_{S*}$,
+$S^* = S/\varepsilon$ and its uncertainty $\sigma_{S^*}$,
 where $\varepsilon$ is the efficiency due to the \vzero cuts
 (\impact and \decaydist cut).
 Next, we found the value of \decaydistmin that minimizes the
-relative uncertainty $\sigma_{S*}/S*$, which is denoted by \decaydistopt.
-One example of $\sigma_{S*}/S*$ as a function of \decaydistmin is
+relative uncertainty $\sigma_{S^*}/S^*$, which is denoted by \decaydistopt.
+One example of $\sigma_{S^*}/S^*$ as a function of \decaydistmin is
 shown in~\cref{fig:hadron:vzero:cuts:decaydist:example}, where \decaydistopt is indicated.
 The \decaydistopt found for all the phase space bins
 are shown in~\cref{fig:hadron:vzero:cuts:decaydist:158,fig:hadron:vzero:cuts:decaydist:350}
@@ -1709,7 +1710,7 @@ and, because of that, we have decided to use it to define the \decaydistmin.
 \begin{figure}
   \centering
   \includegraphics[clip, rviewport=0 0 1 1,width=0.65\textwidth]{vzero/cut_opt_350}
-  \caption{Example of the relative uncertainty of the signal ($\sigma_{S*}/S*$)
+  \caption{Example of the relative uncertainty of the signal ($\sigma_{S^*}/S^*$)
     as a function of \decaydistmin, where the \vzero particle is \lamb
     and the beam energy is 158 \GeV. The $\langle\pp\rangle$ and $\langle\pT\rangle$
     of the particular phase space bin is indicated on the plot.}
@@ -1750,8 +1751,8 @@ in~\cref{fig:hadron:vzero:signal:dist:158:out,fig:hadron:vzero:signal:dist:350:o
 for the target removed one.
 The reduced $\chi^2$ of the \minv fit of the target inserted data sets are shown
 in~\cref{fig:hadron:vzero:signal:chi:158,fig:hadron:vzero:signal:chi:350}.
-Since the values of $\chi^2/ndf$ are in all phase space bins around 1
-and very few bins show $\chi^2/ndf \sim 1.5$, we can conclude that the
+Since the values of \redchisq are in all phase space bins around 1
+and very few bins show \redchisq $\sim 1.5$, we can conclude that the
 measured \minv distributions are well described by our \minv model.   
 The extracted signal $S$ for the target inserted and removed data sets are shown
 in~\cref{fig:hadron:vzero:signal:extracted:158,fig:hadron:vzero:signal:extracted:350}.
@@ -1875,7 +1876,7 @@ in~\cref{fig:hadron:vzero:signal:extracted:158,fig:hadron:vzero:signal:extracted
 \section{Monte Carlo corrections}
 \label{sec:hadron:correction}
 
-The measured number of events, tracks and \vzeros
+The measured number of events, tracks and \vzero
 particles in a given phase space bin are naturally biased by
 multiple detector effects. To determine the final spectra,
 these effects must be corrected, and that
@@ -1959,7 +1960,7 @@ In~\cref{fig:hadron:correction:beta:vzero158,fig:hadron:correction:beta:vzero350
 we show the $\beta$ for these \vzero particles.
 It is important to note that the $\beta$ factor
 for the \vzero particle also includes the effect
-of the \vzero cuts, presented in~\cref{sec:hadron:signal:cuts}.
+of the \vzero cuts, presented in~\cref{sec:hadron:vzero:cuts}.
 
 
 %%%%%%%%%% BETA %%%%%%%%%%%%%%%%
@@ -2216,9 +2217,9 @@ the spectra of the charged hadrons is the following.
   Because the feed-down correction was done by using the measured
   \lambs and \kzeros spectra (see~\cref{sec:hadron:correction:fd}),
   this contribution is very small. Similarly to what is done for the previous
-  contributions, the factor $\beta$ due to feed-down was computed isolated ($\beta_{FD}$)
+  contributions, the factor $\beta$ due to feed-down was computed isolated ($\beta_\text{FD}$)
   for all the models. Then, the relative differences on the factor
-  $1/\beta_{FD}$ were used to define the systematic uncertainties.
+  $1/\beta_\text{FD}$ were used to define the systematic uncertainties.
 
 \item The differences on the spectra obtained by using only
   RST and WST data set separately. Since the \dedx fit
