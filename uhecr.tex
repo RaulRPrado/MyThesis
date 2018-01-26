@@ -1,2 +1,254 @@
-\chapter[Ultra-high energy cosmic rays]{Ultra-high energy cosmic rays}
+\chapter{Cosmic rays, air showers and the Pierre Auger Observatory}
 \label{sec:uhecr}
+
+
+\section{Ultra high energy cosmic rays}
+
+\section{Extensive air showers}
+
+
+In this chapter, a brief introduction to Extensive Air Showers (EAS)
+will be given. Althought the physics behind EAS is very rich,
+in this text we will give more focus on the selected topics
+which are intrinsically related to the main topic of this thesis.
+More detailed and extended materials about EAS can be found
+in Refs.~\cite{GaisserBook,GriederBook}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Extensive air shower phenomenology}
+\label{sec:showers:phen}
+
+An EAS start with the collision of the primary cosmic ray particle
+with an atmospheric nucleus. After this first interaction, the secondary
+particle produced also interact with the atmosphere producing more
+particles and so on. This succession of interactions with particle production
+create the cascade of particles that forms the air shower.
+For the sake of clarity, the description of the cascade is tradionally
+done by spliting it into different components: the \emph{electromagnetic},
+the \emph{hadronic} and, eventually, the \emph{muonic component}. It is also traditional
+to describe the EAS development in terms of its longitudinal and lateral profiles.
+The former refers to the shower development along the direction of its axis
+while the latter refers to the distribution of particles
+along a perpendicular direction to shower axis.
+
+
+The first interaction can produce tens or hundreds of
+secondary particles, which are nearly all hadrons
+with only an insignificant contribution of photons and leptons.
+Among the produced hadrons, the dominant contribution is by far from pions ($>60\%$),
+followed by kaons and nucleons at similar proportions ($\sim 10\%$). Other
+types of mesons and baryons together count tipically for less than 5\% of
+the particles~\cite{Calcagni:2017tws}.
+Besides that, a very small fraction of nuclei can be produced
+by the fragmentation of the target nucleus or the primary.
+After the first interaction, the following air shower development is mostly driven
+by the subsequent processes involving the pions. The three types of pions ($\pi^+$, $\pi^-$ and $\pi^0$)
+are produced at similar proportions, which means that about 2/3 of them are charged and
+1/3 is neutral. The charged ones will be responsible to create more
+hadrons and eventually muon and the neutral ones to create photons and
+to fed the electromagnetic component of the shower.
+First we will focus on the latter case.
+
+%%================================%%
+\subsubsection[Electromagnetic component and the \xmax]{\boldmath Electromagnetic component and the \xmax}
+\label{sec:showers:phen:em}
+
+
+Neutral pions can decay via the electromagnetic interaction into two photons ($\pi^0\rightarrow 2\gamma$)
+with a very short decay length ($c\tau_0=25$ nm). Since in the atmosphere this decay length
+is much shorter than the interaction one, nearly all the neutral pions end up decaying into
+photons. The high energy photons produced interact electromagnetically, being the dominant
+process the pair production ($\gamma\rightarrow e^++e^-$). The electrons and positrons
+produced, in turn, also interact electromagnetically, mainly through bremstralung, which
+produces more photons. The succession of these electromagnetic interactions
+will create a self-sustainable cascade of photons, electrons and positrons
+which forms the electromagnetic component of the extensive air shower.
+Since more neutral pions are produced in hadronic interactions of secondary
+particles with atmospheric nuclei (again in the 1/3 proportion wrt the charged pions),
+the same chain of electromagnetic interactions will take place again
+and new lower energy electromagnetic cascades are produced.
+This means that the energy carried by the hadronic particles
+is partially, but constinuously, trasfered to the electromagnetic particles.
+After a few generations of hadronic interactions ($\sim 6$), about 90\% of
+the primary energy is carried by the electromagnetic component.
+
+
+The lenght scale of the bremstralung interaction, responsible to produce photons out of
+electrons, is given by the radiation lenght, $X_0$, that is the average distance needed
+to electrons to lose all but $1/e$ of its energy. In the atmosphere $X_0\approx 37\text{g/cm}^2$.
+On the other hand, the lenght scale of pair production is of the same order
+of $X_0$, only slightly larger ($\approx 1.3 X_0$). Because of the short lenght scale
+given by $X_0$, the electromagnetic shower develops very rapidly, which
+implies a fast increase of the number of particles and a fast decrease of their
+average energy. As lower the particle energies, more relevant the energy losses
+due to ionization become. The critical energy in which the ionization losses
+becomes equivalent to the bremstralung ones is $E_c = 85 \MeV$ in the
+atmosphere. After the average energy of electrons becomes close to $E_c$,
+the number of particles starts to decrease, which creates the peaked shape
+of the longitudinal profile of the electromagnetic component.
+
+In~\cref{} we show the average longitudinal profile of the number
+of electrons ($N_e$) in air showers initiated by protons and iron nuclei.
+It is also shown for comparison the longitudinal profile of the
+deposited energy (\dEdX) in the atmosphere by all the charged particles.
+Because the number of particles in the shower is totally dominated
+by the electromagnetic component, one can see that the shape of the
+$N_e$ and \dEdX profiles are basically the same.
+The depth correspondent to the maximum of both profiles is called
+the shower maximum and it is symbolized by \xmax. In air shower
+experiments, the \dEdX profile can be accessed by telescopes which
+measure the fluorescence light emitted by the interaction of the air shower
+with the atmosphere. The \xmax of the shower can then be easily determined
+from the \dEdX profile.
+
+The dependences of \xmax with the primary energy and with the type
+of the primary particle can be expressed by the relation
+\begin{equation}
+  \langle\xmax\rangle = \lambda_\text{I}(A)+D_{10}\;\log_{10}\frac{E_0}{A},
+  \label{eq:shower:xmax}
+\end{equation}
+where $\lambda_\text{I}$ is the mean free path of the first interaction,
+$E_0$ is the energy of the primary particle and $A$ is its nuclear mass.
+The quantity $D_{10} = \frac{ \text{d} \xmaxmean }{ \text{d} \log_{10}E_0 }$
+is called \emph{elongation rate} and it does not depend on $E_0$ and $A$.
+Although the~\cref{eq:shower:xmax} can be derived by simplistic analtytic models~\cite{Matthews:2005sd},
+it can also be certified by using full Monte Carlo simulations.
+
+In~\cref{} we show the \xmaxmean as a function of the primary energy
+for a set of simulatied air showers. The logaritmic energy dependece is clear,
+as well as the separation between proton and iron initiated showers.
+This dependence of \xmaxmean with the primary mass comes from both terms
+on the right side of~\cref{eq:shower:xmax}, since $\lambda_\text{I}$
+decreases with increasing $A$. The difference between \xmaxmean for
+proton and iron initiated showers is $\sim 100 \text{g/cm}^2$, as can
+be seen in~\cref{}. It is also clear from~\cref{} that the elongation rate
+$D_{10}$ is nearly constant with energy and does not depend on the primary type.
+For using \xmax measurements to infer the primary composition of
+cosmic rays, both the differences on \xmax for different primaries and
+the constancy of $D_{10}$ are important features. More about measurements
+of \xmax will be given in~\cref{}. 
+
+
+%%================================%%
+\subsubsection{Hadronic component and muon production}
+\label{sec:showers:phen:had}
+
+Unlike the neutral pions, the charged ones can only decay weakly,
+with a much longer decay length ($c\tau_0=7.8$ m)
+than the electromagnetic $\pi^0$ decay.  
+At high energies, however, their interaction length
+is much smaller than the decay one. This means that most
+of the charged pions actually interact with atmospheric nuclei
+producing more particles at similar proportions as the ones produced
+in the first interaction. While the neutral pions produced
+fed the electromagnetic shower, as explained above, the charged ones
+can keep interacting and producing more hadrons. The hadrons
+produced by this chain of hadronic interactions compose the
+hadronic component of the shower.
+
+As lower the energy of the charged pions, larger the probability
+that it decays instead of interacting again. The dominant decay channel
+for charged pions is into muons and neutrinos ($\pi^+$ and $\pi^-$)
+and the critical energy in which the probability of decaying is
+equivalent to interacting is 85 \GeV. These decays are responsible
+to produce the great majority of the muons of an air shower.
+The tipical number of interactions of charged pions before
+decaying into muons is 4--8. 
+
+
+Apart from pion decays, a considerably fraction of the muons reaching
+the ground is produced by the decay of charged kaons. In~\cite{} the muon
+production in air showers was studyied in details and it was found
+by using simulations that $\sim 90\%$ of the muons come from the decay
+of charged pions and $\sim 10\%$ of charged kaons. While these particles
+are called \emph{mother}, the particles which interacted hadronically
+with an atmospheric nucleus to produce them is are called \emph{grandmother}.
+Concerning then the properties of the grandmother particles,
+it was found that more than 70\% of them are pions, $\approx 20\%$ are nucleons
+and $\approx 6\%$ are kaons. In~\cref{} the energy distributions of the
+grandmother particles are shown and we can see the contribution from these
+different types of particles. The dominance of pions as gradmother is clear,
+as well as the fact that most of the interactions of the grandmother particles
+occur at energies of order of $\sim 100 \GeV$.
+
+
+Although the interaction of the grandmother particle is very important,
+it has to be noted that the whole chain of hadronic interactions, which are
+mostly pion-air interactions, influence the muon production. This means
+that any shower observable related to the muonic component is sensitive to the
+properties of hadronic interactions which occur along the shower. The particle
+production in these hadronic interactions is particularly important and,
+in the context of this thesis, it is worthwhile to point out the effect of
+(anti)baryon production. Most of the (anti)baryons produced are
+nucleons (\proton, \antiproton, \neutron and \antineutron) and they
+are all produced in similar proportions. Since these particles
+can only interact again, their energy is surely use to fed the
+hadronic component, which means that this energy is partially converted
+in muons production. Because of that, the increase of (anti)baryon
+production in hadron-air interactions has been considered a very important
+mechanism to increase the final number of muons in the shower~\cite{\EposPaper,Drescher:2007hc}.
+\note{spectrum of muons}
+
+
+In~\cref{} we show the average longitudinal profile of
+the number of muons, as well as the muon production,
+for proton and iron initiated showers. The number of muons (\nmu) observed
+at a given atmospheric depth is a tipical quantity of the shower.
+From simplistic analytic models and full Monte Carlo simulations,
+we can see that \nmu relates to the primary energy and mass as
+\begin{equation}
+  \nmumean \approx A^{1-\beta} E_0^\beta,
+\end{equation}
+where $\beta\approx 0.9$. The energy and primary mass dependence
+of \nmumean can be seen in~\cref{}, where we show the \nmumean
+as a function of $\log_{10}E_0$, also for proton and iron
+initiated showers.
+Results of recent measurements of \nmu, as well as other
+observables related to the muonic component will be presented
+in~\cref{sec:shower:observables}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Extensive air shower simulations}
+\label{sec:shower:simulations}
+
+-softwares: CORSIKA, CONEX, etc
+
+%%================================%%
+\subsubsection{Hadronic interaction models}
+
+-low energy
+
+-high energy
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The Pierre Auger Observatory}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Measurements of EAS observables and UHECR composition}
+\label{sec:shower:observables}
+
+
+%%================================%%
+\subsubsection{Shower maximum (\xmax) and UHECR composition}
+
+%%================================%%
+\subsubsection{Number of muons (\nmu) and the muon deficit problem}
+
+%%================================%%
+\subsubsection{Muon production depth (\xmumax)}
+
+%%================================%%
+\subsubsection{Further measurements}
+
+-risetime asymmetry
+
+-delta method
+
+
+
+
+

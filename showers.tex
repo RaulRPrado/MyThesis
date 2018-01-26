@@ -1,4 +1,4 @@
-\chapter[Extensive air showers and UHECR composition]{Extensive air showers and UHECR composition}
+\chapter[Extensive air showers and UHECR composition]{Extensive air showers}
 \label{sec:showers}
 
 
@@ -34,7 +34,8 @@ with only an insignificant contribution of photons and leptons.
 Among the produced hadrons, the dominant contribution is by far from pions ($>60\%$),
 followed by kaons and nucleons at similar proportions ($\sim 10\%$). Other
 types of mesons and baryons together count tipically for less than 5\% of
-the particles. Besides that, a very small fraction of nuclei can be produced
+the particles~\cite{Calcagni:2017tws}.
+Besides that, a very small fraction of nuclei can be produced
 by the fragmentation of the target nucleus or the primary.
 After the first interaction, the following air shower development is mostly driven
 by the subsequent processes involving the pions. The three types of pions ($\pi^+$, $\pi^-$ and $\pi^0$)
@@ -171,27 +172,18 @@ Although the interaction of the grandmother particle is very important,
 it has to be noted that the whole chain of hadronic interactions, which are
 mostly pion-air interactions, influence the muon production. This means
 that any shower observable related to the muonic component is sensitive to the
-properties of hadronic interactions which occur along the shower, in particular
-to the particle production. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-The hadrons themselves do not contribute directly to the shower observables,
-like the longitudinal profile or the particle densities at the ground.
-On the other hand, muons reach the ground in large numbers which makes them
-very important for measurements of particle densities. Besides that,
-recently the longitudinal profile of the muon production has been measured 
-by Pierre Auger (see~\cref{}).
+properties of hadronic interactions which occur along the shower. The particle
+production in these hadronic interactions is particularly important and,
+in the context of this thesis, it is worthwhile to point out the effect of
+(anti)baryon production. Most of the (anti)baryons produced are
+nucleons (\proton, \antiproton, \neutron and \antineutron) and they
+are all produced in similar proportions. Since these particles
+can only interact again, their energy is surely use to fed the
+hadronic component, which means that this energy is partially converted
+in muons production. Because of that, the increase of (anti)baryon
+production in hadron-air interactions has been considered a very important
+mechanism to increase the final number of muons in the shower~\cite{\EposPaper,Drescher:2007hc}.
+\note{spectrum of muons}
 
 
 In~\cref{} we show the average longitudinal profile of
@@ -202,59 +194,22 @@ From simplistic analytic models and full Monte Carlo simulations,
 we can see that \nmu relates to the primary energy and mass as
 \begin{equation}
   \nmumean \approx A^{1-\beta} E_0^\beta,
+  \label{eq:shower:nmu}
 \end{equation}
-where $\beta\approx 0.9$. 
-
-Although 
-
-The muon production in air showers 
-
-
-
-
-and it can be shown that \nmu relates with the primary energy and mass by
-HM and MC blabla. Composition and hadronic interactions.
-
-
-Apart from the main contribution of muons which are produced in pion decay,
-the ...
-energy, phase space ...
-
-
-Another feature of the hadronic interactions which impact on muons production
-is the baryon ...
-
-In summary, 
-
-
-
-
-
-
-
-Nmu, Xmumax   
-
-baryon production
-
-
-
--particle production in p-air and pi-air interactions
-
--subsequent development, number of generations
-
--pions/kaons decay
-
--energy, phase space
-
--baryon production
-
--rho0 production
-
-\cite{Calcagni:2017tws,Drescher:2007hc}
+where $\beta\approx 0.9$. The energy and primary mass dependence
+of \nmumean can be seen in~\cref{}, where we show the \nmumean
+as a function of $\log_{10}E_0$, also for proton and iron
+initiated showers.
+Results of recent measurements of \nmu, as well as other
+observables related to the muonic component will be presented
+in~\cref{sec:shower:observables}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Extensive air shower simulations}
+\label{sec:shower:simulations}
+
+
 
 -softwares: CORSIKA, CONEX, etc
 
@@ -266,17 +221,214 @@ baryon production
 -high energy
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Measurements of EAS observables and UHECR composition}
+\section{Measurements of extensive air shower observables}
+\label{sec:shower:observables}
+
+In this section, a compilation of recent measurements of EAS observables
+will be presented. We start in~\cref{sec:shower:observables:xmax}
+by the \xmax measurements which are the most reliable
+observable to be used to infer composition of cosmic rays. 
+In~\cref{sec:shower:observables:nmu,sec:shower:observables:xmumax}
+we focus on two muonic observables, the \nmu and \xmumax,
+which currently cannot be direct used for composition studies
+due to the inconsistency between the measurements and the predictions
+from Monte Carlo simulations. In~\cref{sec:shower:observables:further}
+we briefly mention further observables which have been measured recently.
 
 
 %%================================%%
-\subsection{Shower maximum (\xmax) and UHECR composition}
+\subsection{Shower maximum and cosmic ray composition}
+\label{sec:shower:observables:xmax}
+
+The \xmax (see~\cref{sec:showers:phen:em}) can be measured directly
+by fluorescence telescopes, which can measure the energy deposited
+by the air shower along the atmosphere. This technique was first sucesfully applied
+by Fly's Eyes experiment~\cite{\FlysEyesPaper},
+posteriorly followed by HiRes~\cite{\HiResPaper} and recently it
+has been used by Telescope Array~\cite{\TAXmaxPaper} and
+Pierre Auger Observatory~\cite{\AugerPaper,\AugerXmaxPRDPaper}.
+Another technique commonly used in the past to measure tha \xmax
+are the non-imaging Cherenkov detectors. From the lateral profile
+of the Cherenkov light measured in surface detectors, it is possible
+to infer the longitudinal position of the shower maximum~\cite{}.
+This method was used by Tunka~\cite{\TunkaPaper,\TunkaXmaxPaper},
+Yakutsk~\cite{\YakutskPaper,\YakutskXmaxPaper} and CASA-BLANCA~\cite{\CasaBlancaXmaxPaper}.
+In~\cref{fig:shower:observables:xmax:all}
+we show a compilation of \xmaxmean measurements from \E{15.0}
+up to the highest energies and
+in~\cref{fig:shower:observables:xmax:uhe} we show the most up to date
+\xmaxmean results of Pierre Auger Observatory~\cite{\AugerXmaxICRC2017Paper} and Telescope Array~\cite{}.
+Besides the \xmaxmean, Pierre Auger Observatory can also measure
+the standard deviation of the \xmax distribution, $\sigma[\xmax]$.
+We also show the $\sigma[\xmax]$ results in~\cref{fig:shower:observables:xmax:uhe}.
+
+%%%%%%%%%%%%%% XMAX ALL %%%%%%%%%%%%%%%
+\begin{figure}[!ht]
+  \centering
+  
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.6\textwidth]{xmax_kampert}
+    \put(18,60){}
+  \end{overpic}
+
+  \caption{\cite{}}
+  \label{fig:shower:observables:xmax:all}
+\end{figure}
+
+%%%%%%%%%%%%%% XMAX UHE %%%%%%%%%%%%%%%
+\begin{figure}[!ht]
+  \centering
+  
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.8\textwidth]{xmax_auger_icrc}
+    \put(18,60){}
+  \end{overpic}
+  
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.4\textwidth]{xmax_kampert}
+    \put(18,60){}
+  \end{overpic}
+
+  \caption{\cite{}}
+  \label{fig:shower:observables:xmax:uhe}
+\end{figure}
+
+
+The colored lines in~\cref{fig:shower:observables:xmax:all}
+show the \xmaxmean predictions from
+Monte Carlo simulations. It is traditional to show lines for
+the lightest primary expected, protons, and for the heaviest, iron nuclei.
+By comparing the \xmax measurements with the Monte Carlo predictions,
+one can obtain information about the average composition of the primary cosmic rays.
+Besides the comparison of the \xmax moments (\xmaxmean and $\sigma[\xmax]$),
+the full \xmax distributions can be compared and the fractions of different
+groups of primaries can be fitted. This procedure has only been applied by Pierre Auger
+Observatory~\cite{Aab:2014aea}.
+
+The composition interpretation of the \xmax measurements
+is only possible because this observable is well described
+by Monte Carlo simulations using hadronic interaction models.
+From~\cref{}, we can first see that the measured \xmaxmean lies
+always in between the predictions for the lightest and the heaviest
+primaries expected. Furthermore, it is important the fact that
+the Monte Carlo predictions with different hadronic interaction models
+do not diverge substantially, which reduces the model depencencies
+on the composition interpretations of the measurements.
+
+
+detector effects->Auger and TA
+
+Another importante feature of the \xmax measurements is
+
+
 
 %%================================%%
-\subsection{Number of muons (\nmu) and the muon deficit problem}
+\subsection{Muon content and the muon deficit problem}
+\label{sec:shower:observables:nmu}
+
+Measurements of the number (or density) of muons at ground can
+be done with several different types of surface detector arrays.
+However, the muon measurements are strongly affected by specific features
+of each experimental setup and, therefore, it is not possible in general
+to compare the \nmu measured by different experiments. The experimental features
+which affect the most the muon measurements are the muon energy threshold,
+the lateral distance interval in which the muons are detected and the observation
+level. 
+
+To be able to detect muons isolately, the detectors are usually shielded so the
+electromagnetic component can be absorbed before reaching being detected. This can
+be done either by placing a layer of a heavy material on the top of the detector
+or by buring it few meters below the ground level. It turns out that low energetic muons
+also end up being shielded, which means that each experiment measures
+muons above a different energy threshold and consequently the measured \nmu
+is also different. The lateral distance range in which the muons are detected is also
+an specific feature of each experiment that affects strongly the \nmu. Since
+the experiments are always made of granular arrays, the distance between the detectors
+usually determine in which lateral distance the \nmu is estimated. Lastly,
+the observation level of the experiment affects the \nmu because of the atmospheric attenuation,
+which affects much strongly the electromagnetic component, but it is still relevant for
+muon detections.
+
+Among the results of measurements of \nmu in air shower experiments,
+we have selected three to present here. The first one are the
+measurements by HiRes/MIA experiments of the density of muons at the ground
+of air showers initiated by cosmic rays of energy approaximately in the range
+between \E{17} and \E{18}. The experimental setup consisted of a set of fluorescence
+telescopes of the HiRes experiment~\cite{\HiResPaper} combined with a detector array of
+MIA~\cite{\MIAPaper}. The surface detectors were formed by scintilator counters
+buried about 3 m below the ground level, which implies in an energy threshold for muons
+of aroud 850 \MeV. As an estimator of the muon content, the density of muons at a lateral
+distance of 600 m could be determined ($\rho_\mu(600)$).
+In~\cref{fig:shower:observables:nmu} we reproduce
+the plot of $\rho_\mu(600)$ as a function of the primary energy as published
+in Ref.~\cite{\HiResMIAMuonPaper}.
+By comparing the measured muon density with predictions from Monte Carlo simulations,
+it was found that the measured $\rho_\mu(600)$ was larger than the predictions for
+the heaviest primaries expected, iron nuclei. This result was clearly inconsistent
+in terms of composition and the conclusion that could be taken is that
+the Monte Carlo simulations are deficient in muon production.
+This was the first manifestation of what is usually called \emph{muon deficit problem}.
+
+%%%%%%%%%%%%%% NMU %%%%%%%%%%%%%%%
+\begin{figure}[!ht]
+  \centering
+  
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.3\textwidth]{hires_mia_muons}
+    \put(18,60){}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 -0.15 1 1,width=0.35\textwidth]{icetop_muons}
+    \put(18,60){}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 -0.05 1 1,width=0.3\textwidth]{has_nmu}
+    \put(18,60){}
+  \end{overpic}
+  
+  \caption{}
+  \label{fig:shower:observables:nmu}
+\end{figure}
+
+The second muon content measurement to be presented was performed
+by IceTop detector~\cite{\IceTopPaper}, part of the IceCube experiment~\cite{\IceCubePaper},
+by using ice-Cherenkov tanks as surface detectors.
+The primary energy range of these measurements goes from \E{15} to \E{17}
+and the density of muons at 600 and 800 m from the shower axis was estimated
+as muon content observable. In~\cref{fig:shower:observables:nmu}
+we reproduce the plot from the Ref.~\cite{\IceTopMuonPaper}
+which shows the $\rho_\mu$ as a function of energy compared to simulation predictions.
+The muon deficit can be again seen at energies around \E{17}. Althought these are still
+preliminary results, it is worthwhile to present it here because it shows that
+the muon deficit problem is existing at relatively low energies (<\E{18}).
+
+
+The third and final measurement of muon content presented here is
+the one performed by Pierre Auger Observatory~\cite{\AugerPaper}.
+Even that its standard surface array
+does not contain muon detectors, the number of muons can be measured by Auger
+in highly inclined showers ($\theta > 60^\circ$). For this type of showers
+the electromagnetic component is almost totally attenuated by the atmosphere
+and the signal at the water-Cherenkov tanks is dominated by muons.
+Unlike the previous measurements, the lateral distance of the detectors selected
+to reconstruct the muon content is high, above YYY m. In~\cref{fig:shower:observables:nmu} we show the
+average number of muons as measured by Auger compared
+to simulations as published in Ref.\cite{\AugerHASMuonPaper}.
+The primary energy range here is above \E{18.6} and the muon deficit is clear
+at the whole energy range. It is important to point out that both models
+which are shown for comparison are recent version updated with LHC results.
+In Ref.~\cite{\AugerTopDownPaper} another Pierre Auger result
+that confirms the muon deficit at energies
+around \E{19}, but not using inclined showers, can be found.
+
+In summary, the muon deficit problem is known for almost two decades
+and at the moment it prevents us to do composition studies based on the
+measurements of the muonic component of air showers. BlaBla
+
+
+
 
 %%================================%%
-\subsection{Muon production depth (\xmumax)}
+\subsection{Muon production depth}
+\label{sec:shower:observables:xmumax}
+
+
+
+
 
 %%================================%%
 \subsection{Further measurements}
