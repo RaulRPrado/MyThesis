@@ -160,11 +160,23 @@ are called \emph{mother}, the particles which interacted hadronically
 with an atmospheric nucleus to produce them is are called \emph{grandmother}.
 Concerning then the properties of the grandmother particles,
 it was found that more than 70\% of them are pions, $\approx 20\%$ are nucleons
-and $\approx 6\%$ are kaons. In~\cref{} the energy distributions of the
+and $\approx 6\%$ are kaons. In~\cref{fig:shower:phen:ioana} the energy distributions of the
 grandmother particles are shown and we can see the contribution from these
-different types of particles. The dominance of pions as gradmother is clear,
+different types of particles~\cite{\IoanaICRC}. The dominance of pions as gradmother is clear,
 as well as the fact that most of the interactions of the grandmother particles
 occur at energies of order of $\sim 100 \GeV$.
+
+%%%%%%%%%%%%%% IOANA PLOT %%%%%%%%%%%%%%%
+\begin{figure}[!ht]
+  \centering
+  
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.5\textwidth]{energyDistAuger}
+    \put(18,60){}
+  \end{overpic}
+  
+  \caption{\cite{\IoanaICRC}}
+  \label{fig:shower:phen:ioana}
+\end{figure}
 
 
 Although the interaction of the grandmother particle is very important,
@@ -289,6 +301,7 @@ similar to \Conex or \Seneca.
 
 %%================================%%
 \subsection{Hadronic interaction models}
+\label{sec:shower:simulations:models}
 
 
 The models used to describe the hadronic interactions at high energies 
@@ -397,11 +410,10 @@ In~\cref{fig:shower:observables:xmax:all}
 we show a compilation of \xmaxmean measurements from \E{15.0}
 up to the highest energies and
 in~\cref{fig:shower:observables:xmax:uhe} we show the most up to date
-\xmaxmean results of Pierre Auger Observatory~\cite{\AugerXmaxICRC2017Paper}
+\xmax results of Pierre Auger Observatory~\cite{\AugerXmaxICRC2017Paper}
 and Telescope Array~\cite{TAComp2017}.
-Besides the \xmaxmean, Pierre Auger Observatory can also measure
-the standard deviation of the \xmax distribution, $\sigma[\xmax]$.
-We also show the $\sigma[\xmax]$ results in~\cref{fig:shower:observables:xmax:uhe}.
+The standard deviation of the \xmax distribution, $\sigma[\xmax]$,
+is also shown altogheter with the \xmaxmean.
 
 %%%%%%%%%%%%%% XMAX ALL %%%%%%%%%%%%%%%
 \begin{figure}[!ht]
@@ -411,7 +423,7 @@ We also show the $\sigma[\xmax]$ results in~\cref{fig:shower:observables:xmax:uh
     \put(18,60){}
   \end{overpic}
 
-  \caption{\cite{}}
+  \caption{\cite{Kampert:2012mx}}
   \label{fig:shower:observables:xmax:all}
 \end{figure}
 
@@ -449,17 +461,42 @@ Observatory~\cite{Aab:2014aea}.
 The composition interpretation of the \xmax measurements
 is only possible because this observable is well described
 by Monte Carlo simulations using hadronic interaction models.
-From~\cref{}, we can first see that the measured \xmaxmean lies
+From~\cref{fig:shower:observables:xmax:all},
+we can first see that the measured \xmaxmean lies
 always in between the predictions for the lightest and the heaviest
 primaries expected. Furthermore, it is important the fact that
 the Monte Carlo predictions with different hadronic interaction models
 do not diverge substantially, which reduces the model depencencies
 on the composition interpretations of the measurements.
 
+Another importante feature of the \xmax analyses is
+that the detector biases can be fully removed and the measured values
+of the \xmaxmean and $\sigma[\xmax]$ can be directly compared to
+the ones from shower simulations, without the requirement of simulating
+the detection proccess. The Pierre Auger Observatory remove most of the
+detector biases by using the so called \emph{fiducial volume cuts},
+which reduces significantly the number of events~\cite{}.
+On the other hand, because of the lack of statistics,
+Telescope Array opt for to not perform any strategy to unbias the measurements.
+Intead, the measured \xmaxmean and $\sigma[\xmax]$ are compared to
+simulation that include all the detector effects. As a consequence,
+the \xmaxmean and $\sigma[\xmax]$ as measured by both experiments cannot
+be compared to each other directly.
 
-detector effects->Auger and TA
-
-Another importante feature of the \xmax measurements is
+From~\cref{fig:shower:observables:xmax:uhe}, the composition interpretation
+of both Auger and Telescope Array \xmax measurements seem to be incompatible.
+The Auger data shows a clear changing of the average composition from a very light
+composition around \E{18.3} to an intermediate one around \E{19.5}. This trending is confirmed
+by the fits of \xmax distributions shown in Ref.\cite{Aab:2014aea}.
+The Telescope Array data, on the other hand, shows a constant composition
+which is dominantly light, between proton and helium nuclei, from \E{18.2}
+up to the highest energies. This apparent inconsistency has been studied
+by a working group formed of members of both collaboration and the most recent
+conclusion is that, taking into account the detector effects intrinsic of the Telescope Array
+mesurements and all the systematic uncertainties, the results from both experiments
+are consistency up to \E{19.0}~\cite{VitorICRC2017}.
+Above this energy is not possible to take any conclusion
+because of the lack of statistics of the Telescope Array measurements. 
 
 
 
@@ -561,19 +598,45 @@ around \E{19}, but not using inclined showers, can be found.
 
 In conclusion, the muon deficit problem is known for almost two decades
 and at the moment it prevents us to do composition studies based on the
-measurements of the muonic component of air showers. YYY
+measurements of the muonic component of air showers. In~\cref{sec:interpretation}
+we present a method to interpret the energy evolution of the moments
+of the number of muons measurements in terms of cosmic rays
+composition, taking into account the muon deficit problem.
 
 
 %%================================%%
 \subsection{Further measurements}
 \label{sec:shower:observables:further}
 
-In this section we briefly mention three further
-observables measured by Pierre Auger Observatory.
-The first one is the longitudinal depth
+In this section we briefly mention four further
+measurements of air shower observables, the first one
+made by KASCADE-Grande experiment~\cite{\KASCADEGrandePaper}
+and the remaining three by the Pierre Auger Observatory.
+
+The KASCADE-Grande experiment can measure both
+number of charged particles and number of muons
+in air showers with primary energy between
+YYY and YYY. In a recent analysis, the
+KASCADE-Grande collaboration has studied the evolution
+of the \nmu with the zenith angle of the shower by using
+a parameter called muon attenuation length ($\Lambda_\mu$). 
+Since the atmospheric attenuation of the muonic component
+depends on the energy of muons, the parameter $\Lambda_\mu$ turns to
+be sensitive to muon energy spectra. Thus, by comparing the measurements
+to Monte Carlo predictions it is possible to test muon production
+properties of the hadronic interaction models. In~\cref{fig:shower:observables:further}
+we reproduce the plot from Ref.~\cite{Apel:2017thr} that compares the measured value of 
+$\Lambda_\mu$ with simulations and what can be seen is that none of
+the currently used models can describe properly the muon attenuation.
+The primary energy range of this analysis is similar to the one of IceTop shown
+in the previous section.
+
+
+The second measurement to be presented is the longitudinal depth
 of the maximum of the muon production profile (\xmumax),
 which can be measured by using the temporal structure of the
-water-Cherenkov detectors in highly inclined showers~\cite{\AugerMPDPaper}.
+water-Cherenkov detectors of Pierre Auger Observatory
+in highly inclined showers~\cite{\AugerMPDPaper}.
 The main results is the energy evolution of \xmumaxmean that is show
 in~\cref{fig:shower:observables:further}.
 Althought the composition interpretation of these measurements
@@ -587,8 +650,7 @@ the pion-air interactions and therefore it can be effectively used to contrain
 hadronic models.
 
 
-
-The second and the third observables are related to the quantity called
+The third and forth observables to be mentioned are related to the quantity called
 rise-time, which is defined as the time difference between the water-Cherenkov detectors
 reach 10 and 50\% of their total signal. This quantity is related to both the
 electromagnetic and muonic component of the shower.
@@ -596,7 +658,7 @@ In Ref.~\cite{\AugerAsymmetryPaper} an analysis of the azimutal asymmetry of the
 was published where a parameter called \emph{rise-time asymmetry} was defined.
 A second analysis was published in Ref.\cite{\AugerDeltaPaper} applied the so called
 \emph{delta method} that uses the rise-time dependence on the lateral distance to define
-a parameter called delta. In~\cref{fig:shower:observables:further}
+a parameter called delta. In~\cref{fig:shower:observables:further} and 
 we show the main results of both analysis.
 The conclusions of from both analysis are similar, being that the composition
 extraced directly from rt and delta are not fully compatible with the one
@@ -613,20 +675,26 @@ only one shower component, but instead, to both electromagnetic and muonic ones.
   \begin{overpic}[clip, rviewport=0 0 1 1,width=0.54\textwidth]{mpd_auger}
     \put(18,60){}
   \end{overpic}
-  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.44\textwidth]{asymmetry_auger}
-    \put(18,60){}
-  \end{overpic}
-
-  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.48\textwidth]{delta_auger}
-    \put(18,60){}
-  \end{overpic}
   \begin{overpic}[clip, rviewport=0 0 1 1,width=0.48\textwidth]{kascade_attenuation}
     \put(18,60){}
   \end{overpic}
+
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.44\textwidth]{asymmetry_auger}
+    \put(18,60){}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.48\textwidth]{delta_auger}
+    \put(18,60){}
+  \end{overpic}
+
   
   \caption{}
   \label{fig:shower:observables:further}
 \end{figure}
+
+
+%%================================%%
+\subsection{Summary}
+\label{sec:shower:observables:summary}
 
 
 In summary, YYY
