@@ -1,7 +1,6 @@
 \chapter[Extensive air showers and UHECR composition]{Extensive air showers}
 \label{sec:showers}
 
-
 In this chapter, a brief introduction to Extensive Air Showers (EAS)
 will be given. Althought the physics behind EAS is very rich,
 in this text we will give more focus on the selected topics
@@ -206,22 +205,163 @@ in~\cref{sec:shower:observables}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Extensive air shower simulations}
+\section{Air shower simulations}
 \label{sec:shower:simulations}
 
+In this section we give a short overview of the air shower simulations,
+including a description of the most used simulation codes, in~\cref{sec:shower:simulations:codes}, and
+an overview of the hadronic interaction models used by them, in~\cref{sec:shower:simulations:models}. 
+Besides the hadronic interaction models, the air shower simulation codes also
+make use of electromagnetic interaction models. The commonly used one is EGYYY.
+Since the electromagnetic proccesses are properly described by QED theory,
+their modelling is not a source of uncertainties on the air shower simulations.
+Because of that, we will only focus here on the hadronic interaction models,
+which, in turn, are the most relevant source of uncertainty.
+More detailed approaches to the topic can be found
+in Refs.~\cite{Knapp:2002vs,Engel:2011zzb,Allen:2013ofa}.
 
 
--softwares: CORSIKA, CONEX, etc
+%%================================%%
+\subsection{Simulation strategy and codes}
+\label{sec:shower:simulations:codes}
+
+
+To simulate an air shower taking into account all the
+relevant aspects is surely a very complex task.
+All the particles produced have to be propagated 3-dimensionally
+thought the atmosphere and their interactions with atmospheric atoms
+have to be properly modelled. The effect of the
+structure of the atmosphere with changing density
+and the earth magnetic field have to be taken into account.
+Besides that, the extremely large number of particles makes
+the computational cost of a shower simulation also very large.
+Therefeore, the full simulation of air showers turns to be
+impossible for pratical purposes and, thus, spetial strategies
+have to be applied by simulation softwares to reduce the complexity
+of the problem.
+
+
+The most complete softwares apply Monte Carlo methods to simulate
+the 3-dimensional propagation of the particles and their interactions
+along the whole shower development.
+This class of software includes \Mooca~\cite{\MoocaPaper},
+\Aires~\cite{\AiresPaper} and \Corsika~\cite{\CorsikaPaper},
+being the latter the one used in this thesis.
+To reduce the computing time, an algorithm called \emph{thinning}
+is usually applied~\cite{}. Intead of following all the particles
+produced, the thinning algorithm selects only a
+number of them to follow and give to these particles
+a weight that corresponds to the number of particles which
+are not being followed anymore.
+
+
+A few parameters is usually needed
+to set up the thinning configuration. As an example, in \Corsika
+the maximum particle energy in which the thinning algorithm is applied is
+set by the YYY parameter, which is actually the fraction of the maximum energy
+with relation to the energy of the primary. The can be set separetely for
+electromagnetic and hadronic particles and tipical values are between $10^{-2}--10^{-7}$.
+As smaller the values of YYY, more precise the simulation will be, but with the cost
+of longer computing time. The maximum weight allowed is also a parameter to be set
+and its tipical values lie between 100-10000~\cite{}. Since the thinning algorithm removes
+the important information of the geometrical spread of the particles, for some analysis
+an \emph{un-thinning} algorithm has to be applied~\cite{Stokes:2011wf}.
+
+A second class of simulation codes makes use of Monte Carlo techniques
+to simulate only the highest energies interactions and, below a certain
+energy threshold, cascade equation are applied~\cite{Bossard:2000jh} to compute the
+number of each type of particle as a function of the amospheric depth.
+This means that the solution of the cascade equation gives only a 1-dimensional
+description of the shower and all the information about the lateral distributions of
+the particles is lost. Since for many applications only the longitudinal profile
+of the shower is needed, this class of software turns to be very usefull.
+The very short computing time required to solve the cascade equations
+makes these softwares very fast. One of the most used code of this kind
+is \Conex~\cite{\ConexPaper},
+which is used in this thesis. The \Seneca code~\cite{\SenecaPaper}  
+also makes use of cascade equations but includes a re-sampling
+algorithm to recover the lateral particle distributions in the final stages
+of the shower. It is worthwhile mentioning that the current
+version of the \Corsika code can also simulate showers in the hybrid mode,
+similar to \Conex or \Seneca.
+
+
 
 %%================================%%
 \subsection{Hadronic interaction models}
 
--low energy
 
--high energy
+The models used to describe the hadronic interactions at high energies 
+are by far the most relevant source of uncertainties on the prediction of
+air shower observables by simulations. Although the strong interactions can be
+sucesfully described by the \emph{quantum cromodynamics} theory (QCD),
+we are still not able to compute the bulk of hadronic particle production processes. 
+
+The hadronic interactions are described by first considering hadrons as constituted
+by point-like particles called \emph{partons}. Then, the interactions between partons
+are treated diferently depending on the transfer momentum: \emph{hard} and \emph{soft}
+proccesses, in which there is a large and small momentum transfer, respectively.
+While the properties of hard proccesses can be properly computed by means of
+perturbative QCD, the soft ones require either lattice calculations~\cite{}
+or phenomenological models to be described. Because of the long processing time
+required by lattice calculations, the phenomenological approach
+is usually applied by hadronic interaction models.
+
+All the currently used hadronic models for high-energy interactions
+are based on Gribov's Reggeon Field Theory~\cite{Gribov1968,Drescher:2000ha}, in which
+parton-parton scattering is described by the exchaging of particles
+called \emph{reggeons} and \emph{pomerons}. Another examples of commom features
+of all models are the applicattion of minijet and string fragmentations models.
+An intrinsic feature of these phenomenological models is the large number of parameters
+that cannot be determined only by the theory, but they have to be tunned instead.
+For that, a large number of accelerator measurements are used. The problem with this
+strategy is that the accelerator measurements cover only a small fraction
+of the energy range and particle production phase space that is relevant
+for describing air showers. 
+
+In particular, three problems can be mentioned.
+First, the highest energies collisions studied in accelerators
+($\sqrt{s} = 13 \TeV$ reached by LHC) is still much lower
+energetic than the interaction of a high energy cosmic ray ($\sqrt{s}\approx 400$ for
+a \E{20} primary proton). Second, there is a lack of measurements
+of particle production at the forward region, which is the most relevant
+to understand particle production in soft interaction and also
+the most relevant for the air shower development. Finally,
+there is a lack of accelerator data concerning some colliding systems
+that are very important for air shower physics,
+e.g. pion-air and kaon-air interactions.
+
+As a consequence of the phenomenological nature of the models
+in combination with the problems with accelerator data listed above,
+the predictions of air shower simulations with different hadronic
+interaction models turn to be dissonant(?). Because of that,
+the commom approach is to compare the air shower measurements to
+simulations with a number of different models and to treat
+the differences between them as a theoretical uncertainty. 
+
+For air shower studies, the most currently used models
+for high energy interactions are
+\QGSJetLong~\cite{\QGSJetPaper}, \EposLong~\cite{\EposPaper},
+\EposLHCLong~\cite{\EposLHCPaper}, \SibyllLong~\cite{\SibyllPaper},
+\SibyllNewLong~\cite{\NewSibyllPaper} and \DPMJetLong~\cite{\DPMJetPaper}.
+Among these, only \QGSJetLong, \EposLHCLong and \SibyllNewLong are updated
+to take into account recent LHC data. 
+
+Below a certain energy threshold ($\sim 100 \GeV$), the hadronic interactions
+in air shower simulations are described by the low energy models, which
+are much simpler than the high energy ones. The particle production, for example,
+is usually modelled by means of parametrizations.
+The most used low energy models are \Urqmd~\cite{\UrqmdPaper},
+\Gheisha~\cite{Gheisha1985} and \Fluka~\cite{\FlukaPaper}.
+A review of these models can be found in Ref.\cite{Heck:2004rq}.
+
+The influence of the low energy models on the number of muons in air
+showers have been shown in Ref.\cite{Maris:2009uc}. In this thesis, we show in~\cref{sec:observable}
+that they are also relevant for the spectrum of the muons at the ground.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Measurements of extensive air shower observables}
+\section{Measurements of air shower observables}
 \label{sec:shower:observables}
 
 In this section, a compilation of recent measurements of EAS observables
@@ -257,7 +397,8 @@ In~\cref{fig:shower:observables:xmax:all}
 we show a compilation of \xmaxmean measurements from \E{15.0}
 up to the highest energies and
 in~\cref{fig:shower:observables:xmax:uhe} we show the most up to date
-\xmaxmean results of Pierre Auger Observatory~\cite{\AugerXmaxICRC2017Paper} and Telescope Array~\cite{}.
+\xmaxmean results of Pierre Auger Observatory~\cite{\AugerXmaxICRC2017Paper}
+and Telescope Array~\cite{TAComp2017}.
 Besides the \xmaxmean, Pierre Auger Observatory can also measure
 the standard deviation of the \xmax distribution, $\sigma[\xmax]$.
 We also show the $\sigma[\xmax]$ results in~\cref{fig:shower:observables:xmax:uhe}.
@@ -266,7 +407,7 @@ We also show the $\sigma[\xmax]$ results in~\cref{fig:shower:observables:xmax:uh
 \begin{figure}[!ht]
   \centering
   
-  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.6\textwidth]{xmax_kampert}
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.7\textwidth]{xmax_kampert}
     \put(18,60){}
   \end{overpic}
 
@@ -282,11 +423,14 @@ We also show the $\sigma[\xmax]$ results in~\cref{fig:shower:observables:xmax:uh
     \put(18,60){}
   \end{overpic}
   
-  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.4\textwidth]{xmax_kampert}
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.4\textwidth]{xmax_mean_ta}
+    \put(18,60){}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.4\textwidth]{xmax_sig_ta}
     \put(18,60){}
   \end{overpic}
 
-  \caption{\cite{}}
+  \caption{\cite{TAComp2017}}
   \label{fig:shower:observables:xmax:uhe}
 \end{figure}
 
@@ -415,29 +559,76 @@ In Ref.~\cite{\AugerTopDownPaper} another Pierre Auger result
 that confirms the muon deficit at energies
 around \E{19}, but not using inclined showers, can be found.
 
-In summary, the muon deficit problem is known for almost two decades
+In conclusion, the muon deficit problem is known for almost two decades
 and at the moment it prevents us to do composition studies based on the
-measurements of the muonic component of air showers. BlaBla
-
-
-
-
-%%================================%%
-\subsection{Muon production depth}
-\label{sec:shower:observables:xmumax}
-
-
-
+measurements of the muonic component of air showers. YYY
 
 
 %%================================%%
 \subsection{Further measurements}
+\label{sec:shower:observables:further}
 
--risetime asymmetry
+In this section we briefly mention three further
+observables measured by Pierre Auger Observatory.
+The first one is the longitudinal depth
+of the maximum of the muon production profile (\xmumax),
+which can be measured by using the temporal structure of the
+water-Cherenkov detectors in highly inclined showers~\cite{\AugerMPDPaper}.
+The main results is the energy evolution of \xmumaxmean that is show
+in~\cref{fig:shower:observables:further}.
+Althought the composition interpretation of these measurements
+depends strongly on the hadronic interaction model, it can be seen that
+for both \QGSJetLong and \EposLHCLong the infered composition would be
+much heavier than the expected from the \xmaxmean measurements. The \EposLHCLong
+case is worst because it implies a composition even heavier than iron nuclei.
+In Refs.~\cite{Ostapchenko:2016bir,Pierog:2015ifw}
+it has been shown that \xmumax is very sensitive to the properties of
+the pion-air interactions and therefore it can be effectively used to contrain
+hadronic models.
 
--delta method
 
 
+The second and the third observables are related to the quantity called
+rise-time, which is defined as the time difference between the water-Cherenkov detectors
+reach 10 and 50\% of their total signal. This quantity is related to both the
+electromagnetic and muonic component of the shower.
+In Ref.~\cite{\AugerAsymmetryPaper} an analysis of the azimutal asymmetry of the rise-time
+was published where a parameter called \emph{rise-time asymmetry} was defined.
+A second analysis was published in Ref.\cite{\AugerDeltaPaper} applied the so called
+\emph{delta method} that uses the rise-time dependence on the lateral distance to define
+a parameter called delta. In~\cref{fig:shower:observables:further}
+we show the main results of both analysis.
+The conclusions of from both analysis are similar, being that the composition
+extraced directly from rt and delta are not fully compatible with the one
+expected from \xmax measurements. However, the inconsistency is not
+as strong as in the case of \nmu and \xmumax. This intermediate behavior can
+be understood by the fact that the rise-time parameter is not sensitive to
+only one shower component, but instead, to both electromagnetic and muonic ones.
 
+
+%%%%%%%%%%%%%% FURTHER %%%%%%%%%%%%%%%
+\begin{figure}[!ht]
+  \centering
+  
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.54\textwidth]{mpd_auger}
+    \put(18,60){}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.44\textwidth]{asymmetry_auger}
+    \put(18,60){}
+  \end{overpic}
+
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.48\textwidth]{delta_auger}
+    \put(18,60){}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.48\textwidth]{kascade_attenuation}
+    \put(18,60){}
+  \end{overpic}
+  
+  \caption{}
+  \label{fig:shower:observables:further}
+\end{figure}
+
+
+In summary, YYY
 
 
