@@ -129,21 +129,87 @@ will be presented in~\cref{sec:uhecr:spectrum}.
 %%================================%%
 \subsection{Acceleration and sources}
 
+The power-law shape of the energy spectrum indicates that
+cosmic rays are not accelerated in thermal processes.
+A stochastic acceleration mechanism was first proposed
+by Fermi, in 1949~\cite{Fermi:1949ee}. The main idea is that
+the multiple collisions of charged particles with moving magnetized regions
+could accelerate them up to high energies. 
+Althought a power law spectrum can be derived from this mechanism,
+the overall acceleration efficiency is too low to explain the observed
+energy density of cosmic rays. The average energy gain is given by $\Delta E/E\sim \beta^2$,
+where $\beta = v/c$ and $v$ is the velocity of magnetic cloud.
+Because of this second power of $\beta$, this mechanism is
+called \emph{second order Fermi mechanism}.
+
+A similar but more efficient mechanism was developed almost
+two decades later~\cite{Axford1977,Krymsky1977,Bell:1978zc,Blandford:1978ky}.
+The main idea now is that charged particles collide with multiple shock waves
+and they gain energy by interacting with irregularities in the magnetic field.
+The average energy gain is $\Delta E/E\sim \beta$ and again the power law energy
+spectrum can be derived. The obtained spectral index is $\gamma=2-2.3$, which means that
+propagation effects have to be responsible to account for the further speepning
+of the observed spectrum.
+This mechanism is called \emph{first order Fermi mechanism} or, alternatively,
+\emph{diffusive shock acceleration}, and it is the basis of most of the models
+that propose possible sources of cosmic rays.
+A detailed approach on the diffusive shock acceleration theory can be found
+in Ref.~\cite{Drury:1983zz} and a review on alternative acceleration
+models in Ref.\cite{}.
+
+The list of astrophysical objects usually considered as possible
+acceleraton sites for cosmic rays includes neutron stars~\cite{Fang:2012rx},
+active galactic nuclei~\cite{}, gamma ray burst~\cite{Vietri1995,Waxman:2004ez}
+and others. A review of the candidates
+for sources of cosmic rays can be found in Ref.~\cite{Torres:2004hk}.
+Indenpendently of the details about the acceleration mechanisms in different
+types of astrophysical enviroments, it is possible to estimate the maximum energy
+that a certain type of object is able to accelerate particles. This was first done
+by Hillas~\cite{Hillas1984} and the idea is simply consider that
+the Larmos radius of the particles must be smaller than the size of the site
+in which the particles are confined to be accelerated. As a reults one obtain that
+\begin{equation}
+  \frac{E_\text{max}}{\E{18}} \approx \frac{\beta Z}{2} \frac{B}{\mu\text{G}}\frac{L}{\text{kpc}},
+\end{equation}
+where $\beta$ is the tipical velocity of the shock waves in units of $c$, $Z$ is the charge
+of the particles, $B$ is the magnectic field and $L$ is the tipical size of the site.
+The graphical illustration of this relation is usually called \emph{Hillas-plot}.
+We show one version of it, focused on the candidate sources of ultra-high energy
+cosmic rays, in~\cref{fig:uhecr:overview:hillas}.
+The diagonal lines show the cases of \E{20} proton and iron nuclei.
+
+%%%%%%%%%%%%%% HILLAS PLOT %%%%%%%%%%%%%%%
+\begin{figure}
+  \centering
+  
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.8\textwidth]{hillas}
+    \put(18,60){}
+  \end{overpic}
+  
+  \caption{\cite{Mollerach:2017idb}}
+  \label{fig:uhecr:overview:hillas}
+\end{figure}
+
+
+Regarding cosmic rays of ultra-high energy, a famous family of models,
+generically called \emph{top-down models}, assume that
+they are not accelerated by astrophysical objects, but intead they are the products
+of the decay of exotic super-massive particles. The origin of these exotic particles
+could be, for example, topological defects from early Universe phase transition
+of even dark matter. As a prediction of nearly all these models, a significant flux of
+ultra-high energy photons should be observed. However, measurements
+of Pierre Auger Observatory have shown that the actual flux is much lower than
+the predictions~\cite{Aglietta:2007yx} and, therefore, the top-down hypothesis can be ruled out.
+A review on the top-down models can be found in Ref.\cite{Olinto2000}.  
+
+
 
 
 %%================================%%
 \subsection{Propagation}
 
 
--spectrum: knee, 2nd knee, ankle and GZK
 
--further: arrival directions, propagation, gamma/neutrinos, ...
-
--Fermi, 1st and 2nd order
-
--Hillas plot
-
--
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Energy spectrum and composition at ultra-high energies}
