@@ -122,7 +122,7 @@ the cosmic ray flux is dominated by a galactic component. The transition
 between this galactic and an extra-galactic component would then occur
 at energies around the second-knee and the ankle.
 The measurements and the models concerning this energy range (above \E{17}),
-which is the range of interest of this thesis,
+the range of interest of this thesis,
 will be presented in~\cref{sec:uhecr:spectrum}.
 
 
@@ -203,10 +203,10 @@ the predictions~\cite{Aglietta:2007yx} and, therefore, the top-down hypothesis c
 A review on the top-down models can be found in Ref.\cite{Olinto2000}.  
 
 
-
-
 %%================================%%
 \subsection{Propagation}
+\label{sec:uhecr:overview:propagation}
+
 
 
 
@@ -215,11 +215,122 @@ A review on the top-down models can be found in Ref.\cite{Olinto2000}.
 \section{Energy spectrum and composition at ultra-high energies}
 \label{sec:uhecr:spectrum}
 
--hypothesis for ankle and GZK
+At the ultra-high energy range, two very evident features can be observed
+in the spectrum: the ankle and the suppression. In~\cref{fig:uhecr:spectrum}
+we show the most up to date spectrum as measured
+by Pierre Auger Observatory~\cite{AugerSpec2017} and Telescope Array~\cite{TASpec2017},
+where both features can be clearly seen. The ankle is a hardening of the spectrum
+at $E\approx 5\times \E{18}$ which was first observed
+in Haverah Park measurements in 1963~\cite{LinsleySpec1963}, and later confirmed
+in measurements by AGASA~\cite{AgasaSpecPaper1995}, HiRes~\cite{\HiResSpecPaper},
+Pierre Auger Observatory~\cite{Abraham:2008ru}
+and Telescope Array~\cite{}. The suppression is an abrupt softning of the flux
+at energies above $4\times \E{19}$ which was measured first by Hires~\cite{\HiResSpecPaper}
+and later confirmed by Pierre Auger Observatory~\cite{Abraham:2008ru} and Telescope Array~\cite{}.
+The fact that the suppression was not observed on the AGASA spectrum~\cite{Takeda:1998ps}
+was a source of intense discussions along years. However,
+it is currently accepted that the AGASA measurements are not trustful because
+of systematical errors in the primary energy estimation~\cite{}.
 
--combined fit
+%%%%%%%%%%%%%% SPEC UHECR %%%%%%%%%%%%%%%
+\begin{figure}
+  \centering
+  
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.8\textwidth]{uhecr_spectrum}
+    \put(18,60){}
+  \end{overpic}
+  
+  \caption{\cite{AugerSpec2017,TASpec2017}.}
+  \label{fig:uhecr:spectrum}
+\end{figure}
 
--composition at the highest energies
+
+The most precise inferences of the composition of cosmic rays
+at this energy range are based on the \xmax measurements
+performed by fluorescence telescopes in the modern experiments.
+In~\cref{sec:shower:observables}, we present a detailed discussion about
+the \xmax measurements, its composition interpretation, as well as
+further measurements of air shower observables that could, in principle,
+be used to infer composition. For now, it is only important to
+point out that the cosmic rays composition
+can be infered by comparing the measured \xmax distributions to
+predictions obtained from air shower simulations. This procedure can be done
+either by comparing only the moments of the \xmax distributions, which
+gives only the average composition, or by comparing the whole distributions,
+which can provide the abundances of individual groups of primaries.
+In all cases, the composition interpretation is dependent on the
+hadronic interaction model used to generate the simulation predictions.
+
+Althought the energy spectrum with its both features can be sucesfully described
+by multiple hypothesis, the composition measurements must be used to further constrain  
+the models. Concerning the ankle, most of the models associate it to
+the transition between the galactic and extra-galactic flux, which
+can take place in energies between the second-knee and the ankle.
+The composition predictions by these models can vary substantially depending
+on the exact position of the transition and on the composition content of
+the extra-galactic component. One historically relevant hypothesis to
+describe the ankle without the galactic-to-extragalactic transition assumption is the
+so called \emph{dip model}~\cite{Berezinsky:2002nc,Berezinsky:2005cq},
+which proposes that the energy losses due to
+pair production along the particle propagation would cause the hardening
+of the spectrum around the ankle energies. It turns out that the success
+of the dip model actually requires a nearly pure proton composition
+around and above the ankle. Althought at the time of the model proposal
+this composition assumption seemed to be fulfilled by the \xmax measurements
+of HiRes experiments~\cite{\HiResXmaxPaper},
+recent measurements of Pierre Auger Observatory
+have proven it wrong~\cite{\AugerXmaxPRLPaper}.
+
+Concerning the suppression, the two currently consided hypothesis
+to explain it are the GZK effect (see~\cref{sec:uhecr:overview:propagation})
+and the limit of the acceleration power by the sources. While the GZK hypothesis
+require a composition dominated by protons at the highest energies, the source limit
+would imply in a rigidity dependent suppression and consequently a increasingly heavier
+composition as the energy increase. Similarly to what happened to the dip model,
+the composition measurements by HiRes supported the GZK hypothesis for many year,
+which was also changed after the Pierre Auger Observatory published its \xmax measurements
+results. 
+
+Many scenarios which propose to explain the ultra-high energy spectrum and composition
+can be found in the
+literature~\cite{Allard:2005cx,Aloisio:2011fv,Biermann:2011wf,Unger:2015laa,Globus:2015xga}.
+Two features are commom to nearly all the recent models that are contrained by the
+Auger \xmax measurements: the exact energy of the galactic-extragactic transition
+(the energy in which both flux become equivalent) is around $1-4 \times \E{18}$
+and the suppression is caused by a riditity dependent cutoff due to the limit
+of the acceleration power of the sources. 
+The absence of the GZK effect and its negative consequences
+(e.g. the absence of correlation with nearby sources due to the deflection of
+heavy nuclei in magnetic fields) have motivated the author of Ref.~\cite{Aloisio:2011fv}
+to call this generic scenario of \emph{disappointing model}.
+
+In a recent analysis done by Pierre Auger Collaboration,
+the measured spectrum and the \xmax distributions were
+jointly fitted by using simulations which account for
+all the propagation effects~\cite{Aab:2016zth}.
+We show in~\cref{fig:uhecr:combined} the results
+of the fit by using the hadronic interaction model \EposLHCLong~\cite{\EposLHCPaper}
+to simulate the \xmax distributions. The hypothesis of the limit of the acceleration power
+by the sources as the source of the suppression is confirmed by the results of this analysis.
+However, the lack of information about the composition given by the \xmax measurements
+at energies above $4\times\E{19}$ is a limiting factor for this analysis, since the
+spectrum is measured up to above \E{20}. Therefore, precise composition measurements
+at the highest energies is a requirement to refine the interpretation
+of the end of the cosmic rays spectrum. 
+
+%%%%%%%%%%%%%% COMBINED FIT %%%%%%%%%%%%%%%
+\begin{figure}
+  \centering
+  
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.9\textwidth]{combined_fit}
+    \put(18,60){}
+  \end{overpic}
+  
+  \caption{\cite{Aab:2016zth}.}
+  \label{fig:uhecr:combined}
+\end{figure}
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
