@@ -9,11 +9,6 @@
 \label{sec:uhecr:overview}
 
 %%================================%%
-%\subsection{History}
-
-%-history: HESS, Auger and UHE
-
-%%================================%%
 \subsection{Energy spectrum}
 
 %%%%%%%%%%%%%% SPEC SWORDY %%%%%%%%%%%%%%%
@@ -364,7 +359,20 @@ corresponds to a vertival atmospheric depth of approximately 880 g/cm$^2$.
 The construct of the observatory started in 2002 and completed in 2008.
 Its hybrid detection system, which combines a large surface detector 
 and a set of fluorescence telescopes, is one of the most important experimental features
-of the Pierre Auger Observatory.  
+of the Pierre Auger Observatory. A detailed overview of the experiment
+can be found in Ref.~\cite{\AugerPaper}.
+
+%%%%%%%%%%%%%% AUGER ARRAY %%%%%%%%%%%%%%%
+\begin{figure}
+  \centering
+  
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.6\textwidth]{auger_array}
+    \put(18,60){}
+  \end{overpic}
+  
+  \caption{}
+  \label{fig:uhecr:auger:array}
+\end{figure}
 
 
 The standard surface detector (SD) is composed by a set of $\sim 1660$
@@ -372,43 +380,190 @@ water-Cherenkov detectors (WCD) which are regularly arranged in a triangular gri
 The nearest neighbor distance of the stations for the standard array,
 which covers the full observatory area, is 1.5 km, while a small area of YYY km$^2$
 called \emph{SD infill} contains stations separated by 750 m.
-In~\cref{} the stations of the SD array
+In~\cref{fig:uhecr:auger:array} the stations of the SD array
 are shown as black dots. Each WCD consists of a cylindrical tank with a diameter of 3.6 m,
 filled with 12 m$^3$ of ultra-high purity water, up to a height of 1.2 m. The particle
 detection is done by collecting the Cherenkov light produced by the passage of charged
 particle throught the water. For that, three photomultiplier tube (PMT) are installed
 on the top of each station and their signal are extracted and digitalised using FADCs
-with a sampling rate of 40 MHz. 
-More details about the surface detector can be found in Ref.\cite{}.
-
-The fluorescence detector (FD) is composed 
-
-
-
--sd and fd
--heat and infill
--aera,amiga 
--basic of reconstruction
--auger prime
+with a sampling rate of 40 MHz. Since the SD operation does not
+require any special enviromental condition, its duty cicle turns to be very
+close to 100\%.
+More details about the SD can be found in Ref.\cite{Allekotte:2007sf}.
 
 
--overview: malargue, dates, collaboration, area, hybrid 
+The fluorescence detector (FD) is composed by 27 telescopes installed in
+4 buildings around the edge of the array. Each of these buildings contains
+a set of six telescopes with a field of view which covers \dg{30} horizontally
+and goes from \dg{1.5} to \dg{30} vertically. The 24 telescopes of this kind
+were part of the original project of the observatory and they are designed to measure
+the fluorescence light emitted by the atmosphere during the development of air showers
+with primary energies above approximately \E{18}. Another set of 3 telescopes
+that can operate with a vertical field of view going from \dg{30} to \dg{60}
+was later installed in one the buildings.
+This enhancement is called HEAT~\cite{Mathes:2011zz} and it is
+designed to extend the lower limit of the fluorescence measurements to approximately \E{17}.
+In~\cref{fig:uhecr:auger:array}
+blue and red lines are used to show the field of view of the standard telescopes
+and the HEAT ones, respectivelly. Because of its sensitivity, the background light has to be avoided
+during the FD operation. This means that moonless nights with proper atmospheric conditions
+are required, implying in a duty cicle of about 13\% for the FD measurements. 
+More details about the FD can be found in Ref.\cite{Abraham:2009pm}.
 
--figures with array and its components, aera, infill, heat
+The SD and FD measurements provide complementary informations 
+which can be combined to achieve a precise reconstruction of the
+properties of the air shower and the primary particle.
+However, because of the limited FD duty cicle, both informations
+are only available to a fraction of the events. Because of that,
+two different event reconstruction modes are defined, the SD and
+the hybrid reconstruction.
 
--surface detectors
+The hybrid reconstruction uses the measurements of the
+fluorescence telescopes with only additional timing information
+from one SD station. From the time structure of the FD signal it is
+possible to reconstruct precisely the geometry of the shower and
+from the amount of light collected it is possible to reconstruct the
+longitudinal profile of the shower. A detailed procedure has to be applied
+at this point to convert the number of photons colected into energy deposit
+in the atmosphere by taking into account the atmospheric attenutation.
+One example of longitudinal profile as measured by Auger is shown
+on the right plot of~\cref{fig:uhecr:auger:rec}.
+After obtained the energy deposit as a function of slanth depth,
+a Gaisser-Hillas function~\cite{GaisserHillas1977} is fitted to that and the result
+is used to determine the shower maximum \xmax and the calorimetric energy,
+which is given by the integral of the fitted function. This calorimetric
+energy is then corrected by the invisible energy due to neutrinos and high energy
+muons and the final FD energy ($E_\text{FD}$) is then obtained.
 
--fluorescence detectors
+%%%%%%%%%%%%%% AUGER REC %%%%%%%%%%%%%%%
+\begin{figure}
+  \centering
+  
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.45\textwidth]{auger_long_profile}
+    \put(18,60){}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.45\textwidth]{auger_lat_dist}
+    \put(18,60){}
+  \end{overpic}
+  
+  \caption{\cite{\AugerXmaxPRDPaper} \cite{\AugerPaper}}
+  \label{fig:uhecr:auger:rec}
+\end{figure}
 
--hybrid reconstruction, energy calibration
 
+The SD reconstruction is based on the size and the times of signals registered
+by the individual stations. The geometry of the shower is first determined
+by fitting the time of the signals assuming a spherical shape for the shower front.
+After obtaining the shower geometry it is possible to evaluate the lateral distribution,
+which is basically the evolution of the station signals with the distance to the
+shower axis. On the left plot of~\cref{fig:uhecr:auger:rec}
+we show one example of the lateral distribution function
+as measured by Auger. A function of the NKG type~\cite{Kamata1958,Greisen1956} is fitted
+and the evaluation of fitted function at a certain distance is defined
+as shower size. For the standard array, with stations at 1500 m distance from each other,
+the signal is evaluated at 1000 m and the shower size is represented by $S(1000)$.
+The determination of the energy of SD reconstructed showers is done
+by means of an energy calibration procedure, in which a set of hybrid reconstructed
+showers are used to relate the shower size estimated from SD to the calorimetric
+energy estimated by FD.
+
+
+The first step of the energy calibration is to correct the $S(1000)$ parameter
+for the atmospheric attenutaion effects. This is done by following the
+Constant Instant Cut (CIC) method~\cite{CIC1961} which, by assuming that the flux
+of cosmic rays above a certain energy is isotropic, correct the zenith angle dependence
+of $S(1000)$ by converting it to a certain reference zenith angle. For the standard array,
+this reference value is \dg{38} and the corrected shower size is represented by $S_{38}$.
+The next step is selecting a sample of high quality hybrid events and use them
+to relate the $S_{38}$ and $E_\text{FD}$. This relation is parametrized by a power law function
+of the type $E_\text{FD} = A (S_{38})^B$ which is fitted to the data.
+In~\cref{fig:uhecr:auger:cal} we show one example of the $S_{38}$ vs $E_\text{FD}$ plot with the fitted
+function. The parameters resulting from the fit are used to determine
+the SD energy from the $S_{38}$ parameter. 
+
+%%%%%%%%%%%%%% AUGER CAL %%%%%%%%%%%%%%%
+\begin{wrapfigure}{r}{0.55\textwidth}
+  \centering
+  \includegraphics[width=0.55\textwidth]{auger_calibration}
+  \caption{\cite{\AugerPaper}}
+  \label{fig:uhecr:auger:cal}
+\end{wrapfigure}
+
+
+More details about the standard event reconstruction
+can be found in Ref.~\cite{\AugerPaper}. Besides the SD and hybrid
+reconstruction, a spectial procedure is applied to highly inclined
+air showers, with zenith angle larger than \dg{60}. Th details about
+this reconstruction can be found in Ref.\cite{Aab:2014gua}.
+
+Apart from the SD and FD, a number of other detectors are currently
+part of the Pierre Auger Observatory.
+The muon detector called AMIGA~\cite{Suarez:2013ecb,Wundheiler:2011zz,Platino:2011zz}
+(Auger Muons and Infill for the Ground Array) and the radio detector
+called AERA (Auger Engineering Radio Array)~\cite{Kelley:2011zz} are already installed
+and operating. Moreover, prototypes of a recently developed muon detector
+named MARTA~\cite{Abreu:2017vsj} will be installed in the near future.
 
 
 %%================================%%
 \subsection{AugerPrime}
 
+An example of the importance of the Auger spectrum
+and mass composition measurements at the highest energies was
+already given in~\cref{sec:uhecr:spectrum},
+where the results of the combined fit were discussed~\cite{Aab:2016zth}. 
+Besides that, further recent analysis by Auger have provided very
+important results concerning the astrophysical origins of
+the ultra-high energy cosmic rays. Two of these results
+are worthwhile mentioning: a large scale dipolar anisotropy
+of $\sim 6\%$ found for energies above $8\times \E{18}$~\cite{Aab:2017tyv}
+and evidences of anisotropy in the arrival directions
+of cosmic rays with $E>E{19}$ which indicates correlation with
+nearby extragalactic sources~\cite{Aab:2018chp}. Even though these recents results
+represent a great progress on the understanding of the nature and origin
+of the highest energies cosmic rays, the main questions remain still
+open.
 
+An important piece of information to be provided experimentally that
+is still missing is the mass composition of cosmic rays above $3 \times \E{19}$.
+Althought the composition can be infered trustfully from \xmax measurements
+(see~\cref{sec:shower:observables:xmax}),
+the low duty cicle of the fluorescence telescopes prevents
+it to be used above the suppression energy.
+Overcoming this issue is the main goal of the upgrade of the Pierre Auger Observatory,
+called AugerPrime~\cite{Aab:2016vlz,Martello:2017pch}.
+Besides elucidating the mass composition at the highest energies,
+the goals of AugerPrime also include searching for a flux contribution of protons up to the highest
+energies and studying the properties of air showers and hadronic multiparticle production.
+The latter one is intrinsically related
+to the muon deficit problem (see~\cref{sec:shower:observables:nmu}),
+which is the main topic of this thesis.
 
+The experimental configuration of AugerPrime consists of four components.
+The first one is the Surface Detector Electronics Upgrade (SDEU), intending to provide
+a large number of improvements to the SD electronics, which includes the increasing of
+analog-to-digital converter sampling rate from 40 MHz to 120 MHz~\cite{Suomijarvi:2017ixb}.
+The second component is the changing
+on the FD operation mode intending to increase its duty cycle up to 20\%.
+The remaining two components are related to the detection of muons with surface detectors and
+they are the Scintilattors Surface Detectors (SSD) and
+Underground Muon Detectors (UMD).
 
+The SSD consists of scientilattor detectors installed on the top of each existing WCD.
+Since the scintilattors and water-Cherenkov tanks respond differently to the muonic and
+electromagnetic component of the shower, the combination of both measurements
+can be used to estimate the muon content~\cite{Gonzalez:2016ora}. 
+The UMD consists of scintilattors buried 1.3 m below the ground, near the SD stations,
+which are able to detect muons isolatelly with an energy threshold around 1 \GeV. The design
+of the UMD will follow the same as the AMIGA detector~\cite{Suarez:2013ecb,Wundheiler:2011zz,Platino:2011zz}
+that has already been developed during the last years. While the SSD will cover the full
+standard array, with over 1600 stations, the UMD will be installed on the smaller area
+of the SD infill.
+
+The precise measurements of the muonic component is surely one of the most relevant
+result to be provided by AugerPrime. As a consequence it is expected a signicant
+improvement on the current understanding of the air shower physics, and in particular
+the muon production. Both analysis presented in~\cref{sec:interpretation,sec:observable}
+consider muon detectors similar to the ones of AugerPrime.
 
 
