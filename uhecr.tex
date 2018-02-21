@@ -1,10 +1,12 @@
 \chapter{Cosmic rays and the Pierre Auger Observatory}
 \label{sec:uhecr}
 
-In this chapter, an overview of cosmic rays physics will be given with focus 
-on the ultra-high energy range, which is the range of interest of this thesis.
-Recent reviews about the topic can be found in Refs.~\cite{Aloisio:2017ooo,Mollerach:2017idb}.
-The Pierre Auger Observatory will also be introduced in~\cref{sec:uhecr:auger}.  
+In this chapter, an overview of cosmic rays physics will be given
+focusing on the UHECRs and the Pierre Auger Observatory will be introduced.
+The goal of this chapter is to present the context and the motivation
+for this thesis. More detailed material about the current status
+of the cosmic ray field can be found
+in Refs.~\cite{Aloisio:2017ooo,Mollerach:2017idb}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -22,7 +24,8 @@ The Pierre Auger Observatory will also be introduced in~\cref{sec:uhecr:auger}.
     \put(18,60){}
   \end{overpic}
   
-  \caption{Compilation of measurements of the cosmic ray energy spectrum~\cite{SwordyPlot2001}.}
+  \caption{Compilation of measurements of the cosmic ray energy spectrum from Ref.~\cite{SwordyPlot2001}.
+  Two of the spectrum features are indicates: the knee and the ankle.}
   \label{fig:uhecr:overview:spec:swordy}
 \end{figure}
 
@@ -51,7 +54,7 @@ while at \E{11} the flux is about one particle/m$^2$/second,
 at \E{19} it drops to only one particle/km$^2$/year.
 As a consequence, different experimental techniques have to be applied to detect
 cosmic ray particles at different energy ranges. Up to \appE{14}, the high flux
-allows us to use small area instruments installed in ballons or satellites
+allows us to use small area instruments installed in balloons or satellites
 to detects the particles before they interact with the Earth's atmosphere.
 Above this energy, the interaction with the atmosphere turns to be
 useful since we can measure the cosmic rays indirectly through the detection of
@@ -74,7 +77,7 @@ the so-called \emph{second-knee}, around \E{17}, where there is a further steepe
 and the index goes to $\gamma\approx 3.3$. The spectrum then becomes harder again
 at the \emph{ankle}, around $5\times\E{18}$, where the index changes to $\gamma\approx 2.6$.
 The final feature occurs at the highest energies, above $4\E{19}$, where the
-value of the spectral index becomes very high ($>4$), caracterizing the so-called
+value of the spectral index becomes very high ($>4$), characterizing the so-called
 \emph{suppression}.
 
 
@@ -83,29 +86,52 @@ value of the spectral index becomes very high ($>4$), caracterizing the so-calle
   \centering
   
   \begin{overpic}[clip, rviewport=0 0 1 1,width=0.8\textwidth]{spectrum_pdg}
-    \put(18,60){}
+    \put(73,48){
+      \begin{tikzpicture}
+        \filldraw[draw=black,color=white] (0,0) rectangle (1.7,0.4);
+      \end{tikzpicture}
+    }
+    \put(55,62){
+      \begin{tikzpicture}
+        \filldraw[draw=black,color=white] (0,0) rectangle (1.7,0.4);
+      \end{tikzpicture}
+    }
+    \put(38,70){
+      \begin{tikzpicture}
+        \filldraw[draw=black,color=white] (0,0) rectangle (1.7,0.4);
+      \end{tikzpicture}
+    }
+    \put(35,71){\small \textbf{1st knee}}
+    \put(52,64){\small \textbf{2nd knee}}
+    \put(71,38){\small \textbf{ankle}}
+    \put(79,49){\small \textbf{suppression}}
   \end{overpic}
   
-  \caption{\cite{\PDGPaper}.}
+  \caption{Compilation of measurements of the cosmic ray energy spectrum from Ref.\cite{\PDGPaper}.
+    The flux is scaled by a factor $E^{2.6}$ and the main features of the spectrum are indicated
+    (see text for details). The references to the data can be found in Ref.~\cite{\PDGPaper}.}
   \label{fig:uhecr:overview:spec:pdg}
 \end{figure}
 
 
-The consistent interpretation of all these spectrum features requires the knowledge
-about the composition of the cosmic rays. Particularly in the energy region compreending
+A consistent interpretation of all these spectrum features requires the knowledge
+of the cosmic rays composition. Particularly in the energy region comprehending
 the first and second-knee, very efficient composition measurements were performed
-by KASCADE~\cite{\KASCADEPaper} and
-KASCADE-Grande~\cite{\KASCADEGrandePaper} experiments. By using an experimental setup
-that included surface detectors able to measured both number of charged particles and
+by KASCADE~\cite{\KASCADEPaper} and KASCADE-Grande~\cite{\KASCADEGrandePaper} experiments.
+By using an experimental setup
+which includes surface detectors able to measured both number of charged particles and
 number of muons in air showers, it was possible to measure the all particle spectrum
 as well as to infer the spectra of individual groups of particles.
-In~\cref{fig:uhecr:overview:spec:kascade}
-we show the results of both experiments. Althought the final spectra are
-strongly dependend on the hadronic interaction models
-(see~\cref{sec:shower:simulations:models}) used in the analysis,
+Results of both experiments are shown in~\cref{fig:uhecr:overview:spec:kascade}
+where the plots on the top show spectra measurements from KASCADE~\cite{Antoni:2005wq}
+around the first-knee energies and the ones on the bottom show
+measurements from KASCADE-Grande~\cite{Fuhrmann:2013lgx} around the second-knee energies.
+Although these results are strongly dependent on the choice
+of the hadronic interaction model due to the unfolding algorithm applied
+to estimate the individual spectra~\cite{Antoni:2005wq},
 it is still possible to conclude that: (a) the first-knee is the result
-of the suppression of the proton component of the spectrum~\cite{Antoni:2005wq},
-(b) the suppression of the heavier components is consistent with
+of the suppression of the proton spectrum~\cite{Antoni:2005wq},
+(b) the suppression of the components heavier than proton are consistent with
 a rigidity dependent suppression~\cite{Antoni:2005wq} and (c) the second-knee coincides
 with the suppression of the heaviest group of particles,
 including iron nuclei~\cite{Apel:2011mi,Apel:2013uni}. 
@@ -117,35 +143,38 @@ including iron nuclei~\cite{Apel:2011mi,Apel:2013uni}.
   \begin{overpic}[clip, rviewport=0 0 1 1,width=0.8\textwidth]{kascade_spec}
     \put(18,60){}
   \end{overpic}
-
+  
   \begin{overpic}[clip, rviewport=0 0 1 1,width=0.8\textwidth]{kascade_grande_spec}
     \put(18,60){}
   \end{overpic}
   
-  \caption{\cite{Antoni:2005wq} \cite{Fuhrmann:2013lgx}.}
+  \caption{Energy spectra of different components as measured by KASCADE~\cite{Antoni:2005wq} (top),
+    around the first-knee energies, and by KASCADE-Grande~\cite{Fuhrmann:2013lgx} (bottom), around the
+    second-knee energies. The hadronic interaction models used were \QGSJetOld and \QGSJetLong
+    for the KASCADE and KASCADE-Grande analysis, respectively.}
   \label{fig:uhecr:overview:spec:kascade}
 \end{figure}
 
 
-Although the rigidity dependent suppression as an explanation for the knee
-was a known hypothesis since it was suggested by Peters, in 1961~\cite{Peters1961},
+Although the rigidity dependent suppression as an explanation for the first-knee
+was a known hypothesis since suggested by Peters, in 1961~\cite{Peters1961},
 the actual explanation is still a matter of discussion. The most simple
-model would assume that the suppression is a consequence of a limit
-in the maximum energy reachable by the sources~\cite{Gaisser:2013bla}.  
+model would assume that the suppression is a consequence of the 
+maximum reachable energy by the sources~\cite{Gaisser:2013bla}.  
 Alternative models include explanations based on the effect of the
 drifting of cosmic rays in the galactic magnetic field~\cite{Ptuskin1993,Candia:2002qd}
 and on the escape of cosmic rays from the galaxy~\cite{Giacinti:2014xya}.
-Most of the models, however, converge on the fact that up to the second-knee
-the cosmic ray flux is dominated by a galactic component. The transition
-between this galactic and an extra-galactic component would then occur
+Most of the models, however, converge on the fact that
+the cosmic ray flux is dominated by a galactic component up to second-knee energies.
+The transition between this galactic and an extragalactic component would then occur
 at energies around the second-knee and the ankle.
-The measurements and the models concerning this energy range (above \E{17}),
-the range of interest of this thesis,
+The measurements and the models concerning UHECRs
 will be presented in~\cref{sec:uhecr:spectrum}.
 
 
 %%================================%%
 \subsection{Acceleration and sources}
+
 
 The power-law shape of the energy spectrum indicates that
 cosmic rays are not accelerated in thermal processes.
@@ -153,9 +182,10 @@ A stochastic acceleration mechanism was first proposed
 by Fermi, in 1949~\cite{Fermi:1949ee}. The main idea is that
 the multiple collisions of charged particles with moving magnetized regions
 could accelerate them up to high energies. 
-Althought a power law spectrum can be derived from this mechanism,
+Although a power-law spectrum can be derived from this mechanism,
 the overall acceleration efficiency is too low to explain the observed
-energy density of cosmic rays. The average energy gain is given by $\Delta E/E\sim \beta^2$,
+energy density of cosmic rays.
+The average energy gain is given by $\Delta E/E\sim \beta^2$,
 where $\beta = v/c$ and $v$ is the velocity of magnetic cloud.
 Because of this second power of $\beta$, this mechanism is
 called \emph{second order Fermi mechanism}.
@@ -164,37 +194,39 @@ A similar but more efficient mechanism was developed almost
 two decades later~\cite{Axford1977,Krymsky1977,Bell:1978zc,Blandford:1978ky}.
 The main idea now is that charged particles collide with multiple shock waves
 and they gain energy by interacting with irregularities in the magnetic field.
-The average energy gain is $\Delta E/E\sim \beta$ and again the power law energy
+The average energy gain is $\Delta E/E\sim \beta$ and again a power law energy
 spectrum can be derived. The obtained spectral index is $\gamma=2-2.3$, which means that
-propagation effects have to be responsible to account for the further speepning
+propagation effects have to be responsible to account for the further steepening
 of the observed spectrum.
 This mechanism is called \emph{first order Fermi mechanism} or, alternatively,
-\emph{diffusive shock acceleration}, and it is the basis of most of the models
+\emph{diffusive shock acceleration} (DSA), and it is the basis of most of the models
 that propose possible sources of cosmic rays.
-A detailed approach on the diffusive shock acceleration theory can be found
-in Ref.~\cite{Drury:1983zz} and a review on alternative acceleration
-models in Ref.\cite{}.
+A detailed approach to the DSA theory can be found
+in Ref.~\cite{Drury:1983zz}.
 
 The list of astrophysical objects usually considered as possible
-acceleraton sites for cosmic rays includes neutron stars~\cite{Fang:2012rx},
-active galactic nuclei~\cite{}, gamma ray burst~\cite{Vietri1995,Waxman:2004ez}
+acceleration sites for cosmic rays includes neutron stars,
+active galactic nuclei (AGN), gamma ray burst (GRB)
 and others. A review of the candidates
 for sources of cosmic rays can be found in Ref.~\cite{Torres:2004hk}.
-Indenpendently of the details about the acceleration mechanisms in different
-types of astrophysical enviroments, it is possible to estimate the maximum energy
-that a certain type of object is able to accelerate particles. This was first done
+Independently of the details of the acceleration mechanisms in different
+types of astrophysical environments, it is possible to estimate the maximum energy
+at which a certain type of object is able to accelerate particles. This was first done
 by Hillas~\cite{Hillas1984} and the idea is simply consider that
-the Larmos radius of the particles must be smaller than the size of the site
-in which the particles are confined to be accelerated. As a reults one obtain that
+the Larmor radius of the particles must be smaller than the size of the site
+in which they are confined to be accelerated.
+As a result one obtain 
 \begin{equation}
   \frac{E_\text{max}}{\E{18}} \approx \frac{\beta Z}{2} \frac{B}{\mu\text{G}}\frac{L}{\text{kpc}},
 \end{equation}
-where $\beta$ is the tipical velocity of the shock waves in units of $c$, $Z$ is the charge
-of the particles, $B$ is the magnectic field and $L$ is the tipical size of the site.
-The graphical illustration of this relation is usually called \emph{Hillas-plot}.
-We show one version of it, focused on the candidate sources of ultra-high energy
-cosmic rays, in~\cref{fig:uhecr:overview:hillas}.
-The diagonal lines show the cases of \E{20} proton and iron nuclei.
+where $\beta$ is the typical velocity of the shock waves in units of $c$, $Z$ is the charge
+of the particles, $B$ is the magnetic field and $L$ is the typical size of the site.
+The graphical illustration of this relation showing the astrophysical objects
+in a plane of their size \emph{vs} their magnetic field is traditionally called \emph{Hillas plot}
+We show one version of it, focused on the candidate sources of UHECRs,
+in~\cref{fig:uhecr:overview:hillas}.
+The diagonal lines show the lower limits to accelerate protons and iron nuclei
+up to \E{20}. 
 
 %%%%%%%%%%%%%% HILLAS PLOT %%%%%%%%%%%%%%%
 \begin{figure}
@@ -204,25 +236,28 @@ The diagonal lines show the cases of \E{20} proton and iron nuclei.
     \put(18,60){}
   \end{overpic}
   
-  \caption{\cite{Mollerach:2017idb}}
+  \caption{Hillas plot from Ref.~\cite{Mollerach:2017idb}. The sources shown are neutron stars (n-star),
+    gamma-ray bursts (GRB), active galactic nuclei (AGN)
+    split in radio-quiet Seyfert (Sy) and radiogalaxies(RG), supernova remnants (SNR),
+    starburst galaxies and galaxy clusters.}
   \label{fig:uhecr:overview:hillas}
 \end{figure}
 
 
-Regarding cosmic rays of ultra-high energy, a famous family of models,
+Regarding UHECRs, a famous family of models,
 generically called \emph{top-down models}, assume that
-they are not accelerated by astrophysical objects, but intead they are the products
+they are not accelerated by astrophysical objects, but instead they are the products
 of the decay of exotic super-massive particles. The origin of these exotic particles
-could be, for example, topological defects from early Universe phase transition
-of even dark matter. As a prediction of nearly all these models, a significant flux of
+could be, for example, topological defects from early Universe phase transitions
+of dark matter. As a prediction of nearly all these models, a significant flux of
 ultra-high energy photons should be observed. However, measurements
-of Pierre Auger Observatory have shown that the actual flux is much lower than
+of Pierre Auger Observatory have shown that the actual flux is significantly lower than
 the predictions~\cite{Aglietta:2007yx} and, therefore, the top-down hypothesis can be ruled out.
-A review on the top-down models can be found in Ref.\cite{Olinto2000}.  
+A review of the top-down models can be found in Ref.\cite{Olinto2000}.  
 
 
 %%================================%%
-\subsection{Propagation of ultra-high energy cosmic rays}
+\subsection{Propagation of UHECR}
 \label{sec:uhecr:overview:propagation}
 
 
@@ -230,15 +265,16 @@ At the ultra-high energy regime, cosmic rays suffer from a number
 of interaction processes during their propagation from the source to the Earth and
 the consequent energy losses have a large influence on the measured
 energy spectrum and composition.
-Four interaction proccess take place: photopion production, electron pair production,
+Four interaction processes take place: photopion production, electron pair production,
 photodisintegration and adiabatic losses due to the expanse of the universe.
-Since the latter affects equaly all types of particles with no dependence on
+Since the latter affects equally all types of particles with no dependence on
 their energy, its influence on the energy spectra is the less relevant of all.
-Concerning the other three remaining process,it is helpful to
-evaluate their effect separetly for protons and nuclei.
-In~\cref{fig:uhecr:propagation:attenuation} the protons energy losses are quantified by evaluating
-the attenuation lenght, which is defined as the distance
-over which the particle energy decreases by a factor $1/e$,
+Concerning the other three remaining processes, it is helpful to
+evaluate their effect separately for protons and nuclei.
+In~\cref{fig:uhecr:propagation:attenuation} the energy losses of protons and iron nuclei
+are quantified by evaluating the energy loss length,
+which is defined as the average distance over
+which the particle energy decreases by a factor $1/e$,
 as a function of its energy.
 
 
@@ -251,24 +287,25 @@ as a function of its energy.
   \end{overpic}
 
  
-  \caption{\cite{RafaelThesis}}
+  \caption{Energy loss lengths for protons and iron nuclei from Ref.~\cite{RafaelThesis}.}
   \label{fig:uhecr:propagation:attenuation}
 \end{figure}
 
-The photopion production for protons, indicated by a blue curve in~\cref{fig:uhecr:propagation:attenuation},
+The photopion production process (indicated by orange curves in~\cref{fig:uhecr:propagation:attenuation})
 occur because of the interaction of cosmic ray particle with photons
-from the cosmic microwave background (CMB). The processes that take place are
+from the cosmic microwave background (CMB). For protons, the processes that take place are
 $p+\gamma\rightarrow p + \pi^0$ and $p+\gamma\rightarrow n+ \pi^+$, in which
 the energy threshold is given by the condition that the center-of-mass energy 
 has to be larger than the rest mass of the pion. From~\cref{fig:uhecr:propagation:attenuation} it is clear
-that photopion production losses dominate for energies above $\approx 8\times\E{19}$,
+that photopion production processes dominate the proton energy
+losses at energies above $\approx 8\times\E{19}$,
 and, as a consequence, it is expected the proton spectrum to be strongly
 suppressed around this energies.
 This effect was proposed in 1966 by Greisen~\cite{Greisen:1966jv},
-Zatsepin and Kuzmin~\cite{Zatsepin:1966jv}, and it is known as the GZK suppression.
-It is also shown in~\cref{fig:uhecr:propagation:attenuation}
-the energy losses due to electron pair production
-during the proton propagation, which dominates at energies between $5\times\e{18}$ and
+Zatsepin and Kuzmin~\cite{Zatsepin:1966jv}, and it is known as the \emph{GZK suppression}.
+Also from~\cref{fig:uhecr:propagation:attenuation}, one can see
+that proton energy losses due to electron pair production
+dominate at energies between $5\times\e{18}$ and
 $5\times\E{19}$.
 
 It can be seen that the combined effect of these two processes,
@@ -276,21 +313,23 @@ photopion production and electron pair production,
 on the energy spectrum of cosmic rays composed purely by proton
 can generate two evident features, a dip at $E\approx 5\times\E{18}$
 and a sharp suppression above $E\approx 5\times\E{19}$, that
-can explain the two features actually observed, the \emph{ankle}
-and the \emph{suppression}~\cite{Berezinsky:2002nc,Berezinsky:2005cq}.
-The pure proton composition predicted by this scenario has
-two important consequencies. The first one is the so called
+can explain the two features actually observed at the UHECR spectrum,
+the ankle and the suppression~\cite{Berezinsky:2002nc,Berezinsky:2005cq}.
+This scenario is called \emph{dip model} (see also discussion in~\cref{sec:uhecr:spectrum})
+and the pure proton composition predicted by it has
+two very relevant consequences to the possible identification of the sources
+of UHECRs. The first one is the so-called
 \emph{particle horizon}, meaning that protons above a certain energy
 should be originated on average by sources inside a certain distance range.
 In~\cref{fig:uhecr:propagation:horizon}
 the particle horizon is quantified by curves that show the average energy
-of protons as a fucntion of the propagation distance for three cases in which the
+of protons as a function of the propagation distance for three cases in which the
 particle left the source with \e{20}, \e{21} and \E{22}. As a conclusion from this plot,
-one can see that protons that reach Earth with $E>\E{20}$ are approximately limited to
+one can see that protons reaching Earth with $E>\E{20}$ are approximately limited to
 be originated at sources within 100 Mpc of distance. The second consequence is related
-to the particle deflections by magnectic fields. It is possible to show that
+to the particle deflections by magnetic fields. It is possible to show that
 heavier nuclei are so strongly deflected that their arrival direction does not contain
-informations about the direction of the astrophysical source. On the other hand,
+information about the direction of the astrophysical source. On the other hand,
 since protons above $\approx\E{19}$ are only slightly deflected, in this pure-proton
 scenario would be possible to use the arrival directions to infer the sources distribution.
 
@@ -303,28 +342,33 @@ scenario would be possible to use the arrival directions to infer the sources di
     \put(18,60){}
   \end{overpic}
  
-  \caption{\cite{Cronin:2004ye}}
+  \caption{Average proton energy as a function of the propagation distance
+    through the CMB. The numbers above the curves indicate the proton initial energy.
+    This figure was taken from Ref.\cite{Cronin:2004ye}.}
   \label{fig:uhecr:propagation:horizon}
 \end{figure}
 
-Unlike protons, heavier nuclei also suffer photodisintegration along their propagation.
+Unlike protons, nuclei also can suffer photodisintegration along their propagation.
 This means that they can interact with photons from the extragalactic background light (EBL)
-and broke into smaller nuclei. In~\cref{fig:uhecr:propagation:attenuation} we show bla bla.
-By comparing all the energy losses contribution for nuclei, one can see that
-the energy threshold for photopion production and electron pair production
-increases with the nuclei mass and the photodisintegration losses are the dominant ones.
-The resultant effect of the propagation of a combination of different nuclei on the energy spectrum
+and be broken into lighter nuclei. In~\cref{fig:uhecr:propagation:attenuation} it is also
+shown the energy loss due to this process for iron nuclei. 
+One can see that photodisintegration dominates the energy losses over
+electron pair production or photopion production at energies at nearly all the
+energies.
+Because of photodisintegration, the resultant effect of the propagation of a
+combination of different nuclei on the energy spectrum
 turns to be more complicated to evaluate than in the proton case. However,
 it is possible to show that, for example, in the simple case of pure iron nuclei being
 originated at the sources, the energy spectrum would also suffer a suppression at the highest energies,
-mainly due to photodissintegration effects. This suppression would be very similar to
-the one expected because of the GZK effect and also to the one which is actually observed.
+mainly due to photodisintegration effects. This suppression would be very similar to
+the one expected due to the GZK effect and also to the one which is actually observed.
 Concerning the other spectrum feature, the ankle, it is not possible to reproduce it
 by considering nuclei propagation, instead of proton. The alternative explanation
 for the ankle in the non-pure proton case is the effect of the
 transition between galactic and extragalactic component. In~\cref{sec:uhecr:spectrum} we discuss
-the recent measurements of the spectrum and composition at the ultra-high energies
-and how they constrain the above mentioned explanation for the ankle and the suppression.
+the recent measurements of the UHECR spectrum and composition
+and how they constrain the above mentioned explanation for the
+ankle and the suppression.
 
 
 
@@ -341,13 +385,14 @@ at $E\approx 5\times \E{18}$ which was first observed
 in Haverah Park measurements in 1963~\cite{LinsleySpec1963}, and later confirmed
 in measurements by AGASA~\cite{AgasaSpecPaper1995}, HiRes~\cite{\HiResSpecPaper},
 Pierre Auger Observatory~\cite{Abraham:2008ru}
-and Telescope Array~\cite{}. The suppression is an abrupt softning of the flux
+and Telescope Array~\cite{AbuZayyad:2012qk}. The suppression is an abrupt softening of the flux
 at energies above $4\times \E{19}$ which was measured first by Hires~\cite{\HiResSpecPaper}
-and later confirmed by Pierre Auger Observatory~\cite{Abraham:2008ru} and Telescope Array~\cite{}.
+and later confirmed by Pierre Auger Observatory~\cite{Abraham:2008ru}
+and Telescope Array~\cite{AbuZayyad:2012qk}.
 The fact that the suppression was not observed on the AGASA spectrum~\cite{Takeda:1998ps}
 was a source of intense discussions along years. However,
 it is currently accepted that the AGASA measurements are not trustful because
-of systematical errors in the primary energy estimation~\cite{}.
+of systematic uncertainties in the primary energy estimation.
 
 %%%%%%%%%%%%%% SPEC UHECR %%%%%%%%%%%%%%%
 \begin{figure}
@@ -357,20 +402,23 @@ of systematical errors in the primary energy estimation~\cite{}.
     \put(18,60){}
   \end{overpic}
   
-  \caption{\cite{AugerSpec2017,TASpec2017}.}
+  \caption{UHECR spectrum as measured by Pierre Auger Observatory and Telescope Array.
+    The Pierre Auger Observatory measurement combines several different data sets into
+    one unique spectrum~\cite{AugerSpec2017}. The Telescope Array measurement includes
+    only the analysis of the surface detectors data~\cite{TASpec2017}.}
   \label{fig:uhecr:spectrum}
 \end{figure}
 
 
 The most precise inferences of the composition of cosmic rays
 at this energy range are based on the \xmax measurements
-performed by fluorescence telescopes in the modern experiments.
+performed by fluorescence telescopes.
 In~\cref{sec:shower:observables}, we present a detailed discussion about
 the \xmax measurements, its composition interpretation, as well as
 further measurements of air shower observables that could, in principle,
 be used to infer composition. For now, it is only important to
-point out that the cosmic rays composition
-can be infered by comparing the measured \xmax distributions to
+point out that the cosmic ray composition
+can be inferred by comparing the measured \xmax distributions to
 predictions obtained from air shower simulations. This procedure can be done
 either by comparing only the moments of the \xmax distributions, which
 gives only the average composition, or by comparing the whole distributions,
@@ -378,43 +426,43 @@ which can provide the abundances of individual groups of primaries.
 In all cases, the composition interpretation is dependent on the
 hadronic interaction model used to generate the simulation predictions.
 
-Althought the energy spectrum with its both features can be sucesfully described
+Although the energy spectrum with its both features can be successfully described
 by multiple hypothesis, the composition measurements must be used to further constrain  
 the models. Concerning the ankle, most of the models associate it to
-the transition between the galactic and extra-galactic flux, which
+the transition between the galactic and extragalactic flux, which
 can take place in energies between the second-knee and the ankle.
 The composition predictions by these models can vary substantially depending
 on the exact position of the transition and on the composition content of
-the extra-galactic component. One historically relevant hypothesis to
+the extragalactic component. One historically relevant hypothesis to
 describe the ankle without the galactic-to-extragalactic transition assumption is the
-so called \emph{dip model}~\cite{Berezinsky:2002nc,Berezinsky:2005cq},
+above mentioned dip model~\cite{Berezinsky:2002nc,Berezinsky:2005cq},
 which proposes that the energy losses due to
-pair production along the particle propagation would cause the hardening
+electron pair production along the particle propagation would cause the hardening
 of the spectrum around the ankle energies. It turns out that the success
 of the dip model actually requires a nearly pure proton composition
-around and above the ankle. Althought at the time of the model proposal
+around and above the ankle. Although at the time of the model proposal
 this composition assumption seemed to be fulfilled by the \xmax measurements
 of HiRes experiments~\cite{\HiResXmaxPaper},
 recent measurements of Pierre Auger Observatory
 have proven it wrong~\cite{\AugerXmaxPRLPaper}.
 
-Concerning the suppression, the two currently consided hypothesis
+Concerning the suppression, the two currently most considered hypothesis
 to explain it are the GZK effect (see~\cref{sec:uhecr:overview:propagation})
 and the limit of the acceleration power by the sources. While the GZK hypothesis
 require a composition dominated by protons at the highest energies, the source limit
-would imply in a rigidity dependent suppression and consequently a increasingly heavier
-composition as the energy increase. Similarly to what happened to the dip model,
-the composition measurements by HiRes supported the GZK hypothesis for many year,
-which was also changed after the Pierre Auger Observatory published its \xmax measurements
-results. 
+would imply in a rigidity dependent suppression and consequently an increasingly heavier
+composition as the energy increase. Similarly to what happened to the dip model
+interpretation of the ankle, the composition measurements by HiRes
+supported the GZK hypothesis for many year,
+which was also changed after the \xmax measurements by Pierre Auger Observatory were published. 
 
-Many scenarios which propose to explain the ultra-high energy spectrum and composition
+Many scenarios which propose to explain the UHECR spectrum and composition
 can be found in the
 literature~\cite{Allard:2005cx,Aloisio:2011fv,Biermann:2011wf,Unger:2015laa,Globus:2015xga}.
-Two features are commom to nearly all the recent models that are contrained by the
-Auger \xmax measurements: the exact energy of the galactic-extragactic transition
-(the energy in which both flux become equivalent) is around $1-4 \times \E{18}$
-and the suppression is caused by a riditity dependent cutoff due to the limit
+Two features are common to nearly all the recent models that are constrained by the
+Auger \xmax measurements: the exact energy of the galactic-to-extragalactic transition
+(the energy in which both fluxes become equivalent) is around $1-3 \times \E{18}$
+and the suppression is caused by a rigidity dependent cutoff due to the limit
 of the acceleration power of the sources. 
 The absence of the GZK effect and its negative consequences
 (e.g. the absence of correlation with nearby sources due to the deflection of
@@ -427,13 +475,13 @@ jointly fitted by using simulations which account for
 all the propagation effects~\cite{Aab:2016zth}.
 We show in~\cref{fig:uhecr:combined} the results
 of the fit by using the hadronic interaction model \EposLHCLong~\cite{\EposLHCPaper}
-to simulate the \xmax distributions. The hypothesis of the limit of the acceleration power
-by the sources as the source of the suppression is confirmed by the results of this analysis.
+to predict the \xmax distributions. The hypothesis of the limit of the acceleration power
+by the sources as the reason of the suppression is favored by the results of this analysis.
 However, the lack of information about the composition given by the \xmax measurements
-at energies above $4\times\E{19}$ is a limiting factor for this analysis, since the
+at energies above $4\times\E{19}$ is a limiting factor for this type analysis, since the
 spectrum is measured up to above \E{20}. Therefore, precise composition measurements
 at the highest energies is a requirement to refine the interpretation
-of the end of the cosmic rays spectrum. 
+of the end of the cosmic ray spectrum. 
 
 %%%%%%%%%%%%%% COMBINED FIT %%%%%%%%%%%%%%%
 \begin{figure}
@@ -443,12 +491,17 @@ of the end of the cosmic rays spectrum.
     \put(18,60){}
   \end{overpic}
   
-  \caption{\cite{Aab:2016zth}.}
+  \caption{Results of the combined fit of the spectrum and \xmax distributions
+    performed by Pierre Auger Observatory~\cite{Aab:2016zth}. On the top plot
+    the measured spectrum and the fitted contributions of different group of primaries are shown.
+    On the bottom plots the measured mean (\xmaxmean) and standard deviation (\xmaxsig)
+    of the \xmax distributions are shown together with the results of the fit. The color codes
+    for the groups of the primaries are indicated on the right side of the top plot.
+    The hadronic interaction model used to describe the \xmax distributions is
+    \EposLHCLong~\cite{\EposLHCPaper}. The results by using other models
+    can be found in Ref.~\cite{Aab:2016zth}.}
   \label{fig:uhecr:combined}
 \end{figure}
-
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The Pierre Auger Observatory}
@@ -459,11 +512,11 @@ cosmic rays at the ultra-high energy range.
 It is located near the town of Malargue, Argentina,
 and its total area is approximately 3000 km$^2$.
 The average altitude of the experiment is 1420 m, which
-corresponds to a vertival atmospheric depth of approximately 880 g/cm$^2$.
-The construct of the observatory started in 2002 and completed in 2008.
+corresponds to a vertical atmospheric depth of approximately 880 g/cm$^2$.
+The construct of the observatory started in 2002 and finished in 2008.
 Its hybrid detection system, which combines a large surface detector 
 and a set of fluorescence telescopes, is one of the most important experimental features
-of the Pierre Auger Observatory. A detailed overview of the experiment
+of the observatory. A detailed overview of the experiment
 can be found in Ref.~\cite{\AugerPaper}.
 
 %%%%%%%%%%%%%% AUGER ARRAY %%%%%%%%%%%%%%%
@@ -474,7 +527,12 @@ can be found in Ref.~\cite{\AugerPaper}.
     \put(18,60){}
   \end{overpic}
   
-  \caption{}
+  \caption{Configuration of the Pierre Auger Observatory. The black dots represent
+    stations of the standard surface detector, the gray dots represent the AMIGA stations
+    and the blue and red lines indicate the
+    field of view of each telescopes which compose the fluorescence detector.
+    The atmospheric monitoring devices (XLF, CLF and BLF) are represented by
+    red dots. The blue circle show the approximate area of the AERA setup.}
   \label{fig:uhecr:auger:array}
 \end{figure}
 
@@ -482,19 +540,20 @@ can be found in Ref.~\cite{\AugerPaper}.
 The standard surface detector (SD) is composed by a set of $\sim 1660$
 water-Cherenkov detectors (WCD) which are regularly arranged in a triangular grid.
 The nearest neighbor distance of the stations for the standard array,
-which covers the full observatory area, is 1.5 km, while a small area of YYY km$^2$
+which covers the full observatory area, is 1.5 km, while a small area of 23.5 km$^2$
 called \emph{SD infill} contains stations separated by 750 m.
-In~\cref{fig:uhecr:auger:array} the stations of the SD array
-are shown as black dots. Each WCD consists of a cylindrical tank with a diameter of 3.6 m,
+In~\cref{fig:uhecr:auger:array} we show the configuration of the Pierre Auger Observatory,
+including the stations of the SD array indicated by black dots.
+Each WCD consists of a cylindrical tank with a diameter of 3.6 m,
 filled with 12 m$^3$ of ultra-high purity water, up to a height of 1.2 m. The particle
 detection is done by collecting the Cherenkov light produced by the passage of charged
-particle throught the water. For that, three photomultiplier tube (PMT) are installed
-on the top of each station and their signal are extracted and digitalised using FADCs
+particle through the water. For that, three photomultiplier tube (PMT) are installed
+on the top of each station and their signal are extracted and digitized using
+flash analog-to-digital converters (FADC)
 with a sampling rate of 40 MHz. Since the SD operation does not
-require any special enviromental condition, its duty cicle turns to be very
+require any special environmental condition, its duty cycle turns to be very
 close to 100\%.
 More details about the SD can be found in Ref.\cite{Allekotte:2007sf}.
-
 
 The fluorescence detector (FD) is composed by 27 telescopes installed in
 4 buildings around the edge of the array. Each of these buildings contains
@@ -508,16 +567,16 @@ was later installed in one the buildings.
 This enhancement is called HEAT~\cite{Mathes:2011zz} and it is
 designed to extend the lower limit of the fluorescence measurements to approximately \E{17}.
 In~\cref{fig:uhecr:auger:array}
-blue and red lines are used to show the field of view of the standard telescopes
-and the HEAT ones, respectivelly. Because of its sensitivity, the background light has to be avoided
+blue and red lines are used to show the horizontal field of view of the standard telescopes
+and the HEAT ones, respectively. Because of its sensitivity, the background light has to be avoided
 during the FD operation. This means that moonless nights with proper atmospheric conditions
-are required, implying in a duty cicle of about 13\% for the FD measurements. 
+are required, implying in a duty cycle of about 13\% for the FD measurements. 
 More details about the FD can be found in Ref.\cite{Abraham:2009pm}.
 
-The SD and FD measurements provide complementary informations 
+The SD and FD measurements provide complementary information 
 which can be combined to achieve a precise reconstruction of the
 properties of the air shower and the primary particle.
-However, because of the limited FD duty cicle, both informations
+However, because of the limited FD duty cycle, both information
 are only available to a fraction of the events. Because of that,
 two different event reconstruction modes are defined, the SD and
 the hybrid reconstruction.
@@ -528,11 +587,12 @@ from one SD station. From the time structure of the FD signal it is
 possible to reconstruct precisely the geometry of the shower and
 from the amount of light collected it is possible to reconstruct the
 longitudinal profile of the shower. A detailed procedure has to be applied
-at this point to convert the number of photons colected into energy deposit
-in the atmosphere by taking into account the atmospheric attenutation.
+at this point to convert the number of photons collected in the telescopes
+into energy deposit in the atmosphere by
+taking into account all the attenuation effects.
 One example of longitudinal profile as measured by Auger is shown
-on the right plot of~\cref{fig:uhecr:auger:rec}.
-After obtained the energy deposit as a function of slanth depth,
+on the left plot of~\cref{fig:uhecr:auger:rec}.
+After obtained the energy deposit as a function of slant depth,
 a Gaisser-Hillas function~\cite{GaisserHillas1977} is fitted to that and the result
 is used to determine the shower maximum \xmax and the calorimetric energy,
 which is given by the integral of the fitted function. This calorimetric
@@ -550,7 +610,9 @@ muons and the final FD energy ($E_\text{FD}$) is then obtained.
     \put(18,60){}
   \end{overpic}
   
-  \caption{\cite{\AugerXmaxPRDPaper} \cite{\AugerPaper}}
+  \caption{Examples of the energy deposit longitudinal profile
+    as measured by the FD (left plot)~\cite{\AugerXmaxPRDPaper}
+    and of the lateral distribution as measured by the SD (right plot)~\cite{\AugerPaper}.}
   \label{fig:uhecr:auger:rec}
 \end{figure}
 
@@ -560,7 +622,7 @@ by the individual stations. The geometry of the shower is first determined
 by fitting the time of the signals assuming a spherical shape for the shower front.
 After obtaining the shower geometry it is possible to evaluate the lateral distribution,
 which is basically the evolution of the station signals with the distance to the
-shower axis. On the left plot of~\cref{fig:uhecr:auger:rec}
+shower axis. On the right plot of~\cref{fig:uhecr:auger:rec}
 we show one example of the lateral distribution function
 as measured by Auger. A function of the NKG type~\cite{Kamata1958,Greisen1956} is fitted
 and the evaluation of fitted function at a certain distance is defined
@@ -573,32 +635,47 @@ energy estimated by FD.
 
 
 The first step of the energy calibration is to correct the $S(1000)$ parameter
-for the atmospheric attenutaion effects. This is done by following the
-Constant Instant Cut (CIC) method~\cite{CIC1961} which, by assuming that the flux
+for the atmospheric attenuation effects. This is done by following the
+constant instant cut (CIC) method~\cite{CIC1961} which, by assuming that the flux
 of cosmic rays above a certain energy is isotropic, correct the zenith angle dependence
 of $S(1000)$ by converting it to a certain reference zenith angle. For the standard array,
 this reference value is \dg{38} and the corrected shower size is represented by $S_{38}$.
+On the left plot of~\cref{fig:uhecr:auger:cal}
+we show the evolution of $S(1000)$ with the zenith angle $\theta$
+and the fitted CIC curve $f_\text{CIC}(\theta)$. The corrected shower size is then computed
+as $S_{38} = S(1000)/f_\text{CIC}(\theta)$, where $\theta$ is the measured zenith angle of the event.
 The next step is selecting a sample of high quality hybrid events and use them
 to relate the $S_{38}$ and $E_\text{FD}$. This relation is parametrized by a power law function
 of the type $E_\text{FD} = A (S_{38})^B$ which is fitted to the data.
-In~\cref{fig:uhecr:auger:cal} we show one example of the $S_{38}$ vs $E_\text{FD}$ plot with the fitted
+On the right plot of~\cref{fig:uhecr:auger:cal}
+we show one example of the $S_{38}$ vs $E_\text{FD}$ plot with the fitted
 function. The parameters resulting from the fit are used to determine
 the SD energy from the $S_{38}$ parameter. 
 
 %%%%%%%%%%%%%% AUGER CAL %%%%%%%%%%%%%%%
-\begin{wrapfigure}{r}{0.55\textwidth}
+\begin{figure}
   \centering
-  \includegraphics[width=0.55\textwidth]{auger_calibration}
-  \caption{\cite{\AugerPaper}}
+  
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.45\textwidth]{auger_cic}
+    \put(18,60){}
+  \end{overpic}
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.45\textwidth]{auger_calibration}
+    \put(18,60){}
+  \end{overpic}
+  
+  \caption{The attenuation curve derived from the SD data in which the reference
+    zenith angle ($\theta = \dg{38}$) is indicated by a vertical dashed line (left)
+    and the $S_{38}$-$E_\text{FD}$ plot used in the standard energy calibration (right).
+    Both figures were obtained from Ref.\cite{\AugerPaper}.}
   \label{fig:uhecr:auger:cal}
-\end{wrapfigure}
+\end{figure}
 
 
 More details about the standard event reconstruction
 can be found in Ref.~\cite{\AugerPaper}. Besides the SD and hybrid
-reconstruction, a spectial procedure is applied to highly inclined
-air showers, with zenith angle larger than \dg{60}. Th details about
-this reconstruction can be found in Ref.\cite{Aab:2014gua}.
+reconstruction, a special procedure is applied to highly inclined
+air showers, with zenith angle larger than \dg{60}. The details about
+this reconstruction procedure can be found in Ref.\cite{Aab:2014gua}.
 
 Apart from the SD and FD, a number of other detectors are currently
 part of the Pierre Auger Observatory.
@@ -613,26 +690,25 @@ named MARTA~\cite{Abreu:2017vsj} will be installed in the near future.
 \subsection{AugerPrime}
 
 An example of the importance of the Auger spectrum
-and mass composition measurements at the highest energies was
+and mass composition measurements of UHECRs was
 already given in~\cref{sec:uhecr:spectrum},
 where the results of the combined fit were discussed~\cite{Aab:2016zth}. 
 Besides that, further recent analysis by Auger have provided very
 important results concerning the astrophysical origins of
-the ultra-high energy cosmic rays. Two of these results
-are worthwhile mentioning: a large scale dipolar anisotropy
+UHECRs. Two of these results are worthwhile mentioning:
+a large scale dipolar anisotropy
 of $\sim 6\%$ found for energies above $8\times \E{18}$~\cite{Aab:2017tyv}
 and evidences of anisotropy in the arrival directions
 of cosmic rays with $E>E{19}$ which indicates correlation with
-nearby extragalactic sources~\cite{Aab:2018chp}. Even though these recents results
+nearby extragalactic sources~\cite{Aab:2018chp}. Even though these recent results
 represent a great progress on the understanding of the nature and origin
-of the highest energies cosmic rays, the main questions remain still
-open.
+of UHECRs, the main questions remain still opened.
 
 An important piece of information to be provided experimentally that
 is still missing is the mass composition of cosmic rays above $3 \times \E{19}$.
-Althought the composition can be infered trustfully from \xmax measurements
+Although the composition can be inferred trustfully from \xmax measurements
 (see~\cref{sec:shower:observables:xmax}),
-the low duty cicle of the fluorescence telescopes prevents
+the low duty cycle of the fluorescence telescopes prevents
 it to be used above the suppression energy.
 Overcoming this issue is the main goal of the upgrade of the Pierre Auger Observatory,
 called AugerPrime~\cite{Aab:2016vlz,Martello:2017pch}.
@@ -648,26 +724,27 @@ The first one is the Surface Detector Electronics Upgrade (SDEU), intending to p
 a large number of improvements to the SD electronics, which includes the increasing of
 analog-to-digital converter sampling rate from 40 MHz to 120 MHz~\cite{Suomijarvi:2017ixb}.
 The second component is the changing
-on the FD operation mode intending to increase its duty cycle up to 20\%.
+of the FD operation mode intending to increase its duty cycle up to 20\%.
 The remaining two components are related to the detection of muons with surface detectors and
-they are the Scintilattors Surface Detectors (SSD) and
+they are the installations of the Scintilator Surface Detectors (SSD) and
 Underground Muon Detectors (UMD).
 
-The SSD consists of scientilattor detectors installed on the top of each existing WCD.
-Since the scintilattors and water-Cherenkov tanks respond differently to the muonic and
+The SSD consists of scintilator detectors installed on the top of each existing WCD.
+Since the scintilator and water-Cherenkov tanks respond differently to the muonic and
 electromagnetic component of the shower, the combination of both measurements
 can be used to estimate the muon content~\cite{Gonzalez:2016ora}. 
-The UMD consists of scintilattors buried 1.3 m below the ground, near the SD stations,
-which are able to detect muons isolatelly with an energy threshold around 1 \GeV. The design
+The UMD consists of scintilator buried 1.3 m below the ground, near the SD stations,
+which are able to detect muons isolately with an energy threshold around 1 \GeV. The design
 of the UMD will follow the same as the AMIGA detector~\cite{Suarez:2013ecb,Wundheiler:2011zz,Platino:2011zz}
 that has already been developed during the last years. While the SSD will cover the full
 standard array, with over 1600 stations, the UMD will be installed on the smaller area
 of the SD infill.
 
 The precise measurements of the muonic component is surely one of the most relevant
-result to be provided by AugerPrime. As a consequence it is expected a signicant
+result to be provided by AugerPrime. As a consequence, it is expected a significant
 improvement on the current understanding of the air shower physics, and in particular
-the muon production. Both analysis presented in~\cref{sec:interpretation,sec:observable}
-consider muon detectors similar to the ones of AugerPrime.
+the muon production. Both analysis in~\cref{sec:interpretation,sec:observable}
+present methods that can be used to interpret and analyze data from
+muon detectors similar to the ones of AugerPrime.
 
 

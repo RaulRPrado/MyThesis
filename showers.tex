@@ -14,9 +14,9 @@ of the air shower development, focusing on the particle production in
 both electromagnetic and hadronic component of the shower. 
 In~\cref{sec:shower:simulations} we present the most relevant aspects
 of air shower simulations, which are currently necessary to study
-the  physics and to interpret the measurements of air showers.
-Finally in~\cref{sec:shower:simulations} we present a compilation
-of air shower measurements, focused on the range of high energy cosmic rays.
+the physics and to interpret the measurements of air showers.
+Finally in~\cref{sec:shower:observables} we present a compilation
+of air shower measurements, focused on the range of UHECRs.
 At this point we approach the currently inconsistency between measurements and
 simulations of the muonic related observables, which is the main motivation
 for this thesis.
@@ -26,10 +26,10 @@ for this thesis.
 \section{Extensive air shower phenomenology}
 \label{sec:showers:phen}
 
-An air shower starts with the collision of the primary cosmic ray particle
+An air shower starts with the collision of the primary cosmic ray 
 with an atmospheric nucleus. After this first interaction, the secondary
-particle produced also interact with the atmosphere producing more
-particles and so on. This succession of interactions with particle production
+particles produced also interact with the atmosphere producing more
+particles and so on. This succession of interactions with secondary production
 creates the cascade of particles that forms the extensive air shower.
 For the sake of clarity, the description of the cascade is traditionally
 done by splitting it into different components: the \emph{electromagnetic},
@@ -40,7 +40,7 @@ while the latter refers to the distribution of particles
 in a plane perpendicular to the shower axis.
 
 
-The first interaction can produce tens or hundreds of
+The first interaction can produce tens to hundreds of
 secondary particles, which are nearly all hadrons
 with only an insignificant contribution of photons and leptons.
 Among the produced hadrons, the dominant contribution is by far from pions ($>60\%$),
@@ -56,8 +56,8 @@ are produced at similar proportions, which means that about 2/3 of them are char
 1/3 is neutral. The charged ones will be responsible to create more
 hadrons and eventually muons, while the neutral ones will decay into photons,
 feeding the electromagnetic component of the shower.
-The latter case is firstly described in~\cref{sec:showers:phen:em}
-and the former in~\cref{sec:showers:phen:had}. 
+The latter case is described in~\cref{sec:showers:phen:em}
+and the former is described later in~\cref{sec:showers:phen:had}. 
 
 %%================================%%
 \subsection[Electromagnetic component and the \xmax]{\boldmath Electromagnetic component and the \xmax}
@@ -70,8 +70,8 @@ with a very short decay length ($c\tau_0=25$ nm). Since in the atmosphere this d
 is much shorter than the interaction one, nearly all the neutral pions end up decaying into
 photons. The high energy photons produced interact electromagnetically, being the dominant
 process the pair production ($\gamma\rightarrow e^++e^-$).
-The electrons\footnote{In this text the term \emph{electrons} actually refers to electrons and positrons} 
-produced, in turn, also interact electromagnetically, mainly through bremstralung, which
+The electrons\footnote{In this text the term \emph{electrons} actually refers to electrons and positrons.} 
+produced also interact electromagnetically, mainly through bremstralung, which
 produces more photons. The succession of these two electromagnetic processes
 creates a self-sustainable cascade of photons and electrons
 that forms the electromagnetic component of the extensive air shower.
@@ -158,7 +158,7 @@ which says that an air shower initiated by a nuclei of mass $A$ of energy $E_0$
 is actually equivalent to a superposition of $A$ showers
 initiated by protons with primary energies $E_0/A$.
 Since \xmax is a longitudinal quantity, it is not affected, on average,
-by the superposition of shower and it turns out that the term $\log_{10}\left(\frac{E_0}{A}\right)$
+by the superposition of showers and it turns out that the term $\log_{10}\left(\frac{E_0}{A}\right)$
 is actually equivalent to only one proton shower with energy $E_0/A$.
 
 
@@ -183,7 +183,7 @@ is actually equivalent to only one proton shower with energy $E_0/A$.
 
 The difference between \xmaxmean for
 proton and iron initiated showers is $\sim 100 \text{g/cm}^2$, as can
-be seen on the right plot of~\cref{fig:shower:phen:xmax}. It is also clear that the elongation rate
+be seen on the left plot of~\cref{fig:shower:phen:xmax}. It is also clear that the elongation rate
 $D_{10}$ is nearly constant with energy and does not depend on the primary mass.
 For using \xmax measurements to infer the primary composition of
 cosmic rays, both the differences on \xmax for different primaries and
@@ -218,7 +218,7 @@ and their composition interpretation are approached in~\cref{sec:shower:observab
 Unlike the neutral pions, the charged ones can only decay weakly,
 with a much longer decay length ($c\tau_0=7.8$ m)
 than the electromagnetic $\pi^0$ decay.  
-At high energies, however, their interaction length
+Thus, at high energies, their interaction length
 is much smaller than the decay one. This means that most
 of the charged pions actually interact with atmospheric nuclei
 producing more particles at similar proportions as the ones produced
@@ -233,7 +233,7 @@ that they decay instead of interacting again. The dominant decay channel
 for charged pions is into muons and neutrinos
 ($\pi^+\rightarrow\mu^+\nu_\mu$ and $\pi^-\rightarrow\nu^-+\bar{\nu}_\mu$)
 and the critical energy in which the probability of decaying is
-equivalent to interacting is 85 \GeV. These decays are responsible
+equivalent to the probability of interacting is 85 \GeV. These decays are responsible
 to produce the great majority of the muons of an air shower.
 The typical number of interactions of charged pions before
 decaying into muons is 4-8~\cite{Meurer:2005dt}. 
@@ -288,14 +288,14 @@ in the context of this thesis, it is worthwhile to point out the effect of
 (anti)baryon production. Most of the (anti)baryons produced are
 nucleons (\proton, \antiproton, \neutron and \antineutron) and they
 are all produced in similar proportions. Since these particles
-can only interact again, their energy surely fed the
+are stable and can only interact again, their energy surely fed the
 hadronic component, which means that it is partially converted
 into muon production. Because of that, the increase of (anti)baryon
 production in hadron-air interactions has been considered a very important
 mechanism to increase the total number of muons in the shower~\cite{\EposPaper,Drescher:2007hc}.
 Then, in view of the muon deficit problem, which is presented in~\cref{sec:shower:observables:nmu},
-understanding the particle production in pion-air interactions turns to be
-very important. Therefore, the~\cref{sec:hadron} of this thesis is dedicated to the measure of
+understanding the particle production in pion-air interactions turns out to be
+very important. Therefore, the~\cref{sec:hadron} of this thesis is dedicated to the measurement of
 the hadron production in pion-carbon interactions.
 
 Besides increasing the number of muons, increasing the (anti)baryon
@@ -318,8 +318,9 @@ of a heavier primary produces a larger number of secondary hadrons, which
 means that more hadronic sub-showers are generated and consequently
 more muons are produced.
 Second, we can see by comparing both plots of~\cref{fig:shower:phen:prof} 
-that the muons are much weakly attenuated, after the shower reaches its maximum number of muons,
-than the electrons. The number of muons after the maximum depth decreases very slowly
+that, after reaching its maximum, the muonic component is much weakly attenuatted
+than the electromagnetic counterpart.
+Thus, the number of muons after the maximum depth decreases very slowly
 and after a certain atmospheric depth, only the muonic component survives to the attenuation.
 
 %%%%%%%%%%%%%% NMU MOMENTS %%%%%%%%%%%%%%%
@@ -337,7 +338,7 @@ and after a certain atmospheric depth, only the muonic component survives to the
 \end{wrapfigure}
 
 The number of muons (\nmu) observed
-at a given atmospheric depth is a typical quantity of the shower.
+at a given atmospheric depth is a characteristic quantity of the shower.
 A relation between \nmu and the primary energy ($E_0$) and mass ($A$)
 can also be obtained from simplified analytic models~\cite{Matthews:2005sd}
 and confirmed by full Monte Carlo simulations~\cite{AlvarezMuniz:2002ne}.
@@ -360,13 +361,14 @@ in~\cref{sec:shower:observables}.
 \section{Air shower simulations}
 \label{sec:shower:simulations}
 
-In this section we give a short overview of the air shower simulations,
-including a description of the most used simulation codes
-in~\cref{sec:shower:simulations:codes} and
-an overview of the hadronic interaction models used by them, in~\cref{sec:shower:simulations:models}. 
+In this section we give a short overview of the topic of air shower simulations,
+including a description of the most used simulation codes 
+(\cref{sec:shower:simulations:codes}) and
+an overview of the hadronic interaction models used by them (\cref{sec:shower:simulations:models}). 
 Besides the hadronic interaction models, the air shower simulation codes also
 make use of electromagnetic interaction models. The commonly used one is \EGS~\cite{Nelson:1985ec}
-Since the electromagnetic processes are properly described by quantum electrodynamics (QED),
+Since the electromagnetic processes are assumed to be
+properly described by quantum electrodynamics (QED),
 their modeling is not considered to be a significant
 source of uncertainties on the air shower simulations.
 Because of that, we will only focus here on the hadronic interaction models,
@@ -382,11 +384,11 @@ in Refs.~\cite{Knapp:2002vs,Engel:2011zzb,Allen:2013ofa}.
 To simulate an air shower taking into account all the
 relevant aspects is surely a very complex task.
 All the particles produced have to be propagated 3-dimensionally
-thought the atmosphere and their interactions with atmospheric atoms
+through the atmosphere and their interactions with atmospheric atoms
 have to be properly modeled. The effect of the
 structure of the atmosphere with changing density
 and the earth magnetic field also have to be taken into account.
-Besides that, the extremely large number of particles makes
+Furthermore, the extremely large number of particles at high energies makes
 the computational cost of an air shower simulation extremely large.
 Because of that, the full simulation turns to be
 impossible for practical purposes and, thus, special strategies
@@ -400,7 +402,7 @@ along the whole shower development.
 This class of software includes \Mooca~\cite{\MoocaPaper},
 \Aires~\cite{\AiresPaper} and \Corsika~\cite{\CorsikaPaper},
 being the latter the one used in this thesis.
-To reduce the computing time, an algorithm called \emph{thinning}
+To reduce the computing time, an algorithm called \emph{statistical thinning}
 is usually applied~\cite{HillasThinning1,HillasThinning2}.
 Instead of following all the particles, by using the
 thinning algorithm only a number of them are selected
@@ -419,11 +421,11 @@ As smaller the values of $\varepsilon_\text{th}$, more precise the simulation wi
 but with the cost of longer computing time. The maximum weight allowed is also a parameter to be set
 and its typical values lie between 100-10000. Since the thinning algorithm removes
 the important information of the geometrical spread of the particles, for some analysis
-an \emph{dethinning} algorithm has to be applied~\cite{Stokes:2011wf}.
+a \emph{dethinning} algorithm has to be applied~\cite{Stokes:2011wf}.
 
 A second class of simulation softwares, called \emph{hybrid}, makes use of Monte Carlo techniques
 to simulate only the interactions at the highest energies and, below a certain
-energy threshold, cascade equation are applied~\cite{Bossard:2000jh} to compute the
+energy threshold, cascade equations are applied~\cite{Bossard:2000jh} to compute the
 number of each type of particle as a function of the atmospheric depth.
 This means that the solution of the cascade equation gives only a 1-dimensional
 description of the shower and all the information about the lateral distributions of
@@ -448,7 +450,8 @@ The models used to describe the hadronic interactions at high energies
 are by far the most relevant source of uncertainties on the prediction of
 air shower observables by simulations. Although the strong interactions can be
 successfully described by the \emph{quantum cromodynamics} theory (QCD),
-we are still not able to compute the bulk of hadronic particle production processes. 
+we are still not able to compute the bulk of hadronic particle production processes
+from first principles. 
 
 The hadronic interactions are described by first considering hadrons as constituted
 by point-like particles called \emph{partons}. Then, the interactions between partons
@@ -457,12 +460,12 @@ processes, in which there is a large and small momentum transfer, respectively.
 While the properties of hard processes can be properly computed by means of
 perturbative QCD, the soft ones require either lattice calculations
 or phenomenological models to be described. Because of the long processing time
-required by lattice calculations, the phenomenological approach
-is applied by hadronic interaction models.
+required by lattice calculations, distinct phenomenological approaches 
+are applied by hadronic interaction models.
 
 All the currently used hadronic models for high-energy interactions
 are based on Gribov's Reggeon Field Theory~\cite{Gribov1968,Drescher:2000ha}, in which
-parton-parton scattering is described by the exchanging of particles
+hadron-hadron, hadron-nucleus and nucleus-nucleus scattering are described by the exchanging of objects
 called \emph{reggeons} and \emph{pomerons}. Another examples of common features
 of all models are the application of minijet and string fragmentation models.
 An intrinsic feature of these phenomenological models is the large number of parameters
@@ -478,16 +481,16 @@ First, the highest energy collisions studied in accelerators
 energy than the interaction of a high energy cosmic ray ($\sqrt{s}\approx 400$ for
 a \E{20} primary proton). Second, there is a lack of measurements
 of particle production at the forward region, which is the most relevant
-to understand particle production in soft interaction and also
+to understand particle production in soft interactions and also
 the most relevant for the air shower development. Finally,
 there is a lack of accelerator data concerning some colliding systems
 that are very important for air shower physics,
-e.g. pion-air and kaon-air interactions.
+e.g. hadron-nucleus interactions.
 
 As a consequence of the phenomenological nature of the models
 in combination with the problems with accelerator data listed above,
 the predictions of air shower simulations with different hadronic
-interaction models turn to be discordant. Because of that,
+interaction models turns out to be discordant. Because of that,
 it is a common approach to compare the air shower measurements to
 simulations with a number of different models and to treat
 the differences between them as a systematic uncertainty
@@ -502,7 +505,7 @@ Among these, \QGSJetLong, \EposLHCLong and \SibyllNewLong are updated
 to take into account recent LHC data.  
 
 
-Below a certain energy threshold ($\sim 100 \GeV$), the hadronic interactions
+Below a certain energy threshold ($\sim 100\;\GeV$), the hadronic interactions
 in air shower simulations are described by the so called \emph{low energy models}, which
 are much simpler than the high energy ones. The particle production, for example,
 is usually modeled by means of empirical parametrizations.
@@ -512,7 +515,7 @@ A review of these models can be found in Ref.\cite{Heck:2004rq}.
 The influence of the low energy models on the number of muons in air
 showers have been shown in Ref.\cite{Maris:2009uc}.
 We show in~\cref{sec:observable} that they are also relevant
-for the spectrum of the muons at the ground.
+for the spectrum of the muons at ground.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -649,7 +652,7 @@ by a working group formed of members of both collaboration and the most recent
 conclusion is that, taking into account the detector effects intrinsic of the Telescope Array
 measurements and all the systematic uncertainties, the results of Telescope Array
 are actually compatible with the composition inferred from Auger data up to \E{19}~\cite{VitorICRC2017}.
-Above this energy it was possible to take any conclusion
+Above this energy it was not possible to take any conclusion
 because of the lack of statistics of the Telescope Array measurements. 
 
 
@@ -668,7 +671,7 @@ which affect the most the muon measurements are the muon energy threshold,
 the lateral distance interval in which the muons are detected and the observation
 level. 
 
-To be able to detect muons isolately, the detectors are usually shielded so the
+To be able to detect isolated muons, the detectors are usually shielded so the
 electromagnetic component is absorbed before reaching being detected. This can
 be done either by placing a layer of a heavy material on the top of the detector
 or by burying it few meters below the ground level. It turns out that low energetic muons
@@ -936,7 +939,8 @@ The upper plot refers to the hadronic model \EposLHCLong, while the lower one to
   \end{overpic}
   
   \caption{$\langle\ln A\rangle$ as a function of energy for a set of
-    observables measured by Pierre Auger Observatory. The hadronic interaction
+    observables measured by Pierre Auger Observatory. Only statistical unceratinties
+    are shown. The hadronic interaction
     models \EposLHCLong (top) and \QGSJetLong (bottom) to perform the convertion
     represented by~\cref{eq:shower:lna}.}
   \label{fig:shower:observables:lna}
