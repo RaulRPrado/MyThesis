@@ -1,8 +1,11 @@
 \chapter{Cosmic rays and the Pierre Auger Observatory}
 \label{sec:uhecr}
 
+In this chapter, an overview of cosmic rays physics will be given with focus 
+on the ultra-high energy range, which is the range of interest of this thesis.
+Recent reviews about the topic can be found in Refs.~\cite{Aloisio:2017ooo,Mollerach:2017idb}.
+The Pierre Auger Observatory will also be introduced in~\cref{sec:uhecr:auger}.  
 
-\cite{Mollerach:2017idb}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Overview of cosmic rays}
@@ -12,65 +15,66 @@
 \subsection{Energy spectrum}
 
 %%%%%%%%%%%%%% SPEC SWORDY %%%%%%%%%%%%%%%
-\begin{wrapfigure}{r}{0.55\textwidth}
+\begin{figure}
   \centering
-  \includegraphics[width=0.55\textwidth]{spectrum_swordy}
-  \caption{\cite{SwordyPlot2001}}
+  
+  \begin{overpic}[clip, rviewport=0 0 1 0.98,width=0.85\textwidth]{spectrum_swordy}
+    \put(18,60){}
+  \end{overpic}
+  
+  \caption{Compilation of measurements of the cosmic ray energy spectrum~\cite{SwordyPlot2001}.}
   \label{fig:uhecr:overview:spec:swordy}
-\end{wrapfigure}
+\end{figure}
 
-The cosmic rays flux as a function of its energy, the so called \emph{energy spectrum},
-plays a central hole in the understanding of the astrophysical aspects behind these particles.
-A compilation of measurements of the cosmic rays
+The cosmic ray flux as a function of energy is the so-called \emph{energy spectrum}
+and it plays a central hole in the understanding of the astrophysical aspects behind these particles.
+A compilation of measurements of the cosmic ray
 energy spectrum over about 13 orders of magnitude
-in energy is shown in~\cref{fig:uhecr:overview:spec:swordy}
-One can see that from about \E{11} up to the highest energies
+in energy is shown in~\cref{fig:uhecr:overview:spec:swordy}.
+One can see that from \appE{11} up to the highest energies
 the spectrum can be described approximately 
-by a power law $\text{d}\phi/\text{d}E \sim E^{-\gamma}$, where
+by a power law function, $\text{d}\phi/\text{d}E \sim E^{-\gamma}$, where
 the spectral index $\gamma$ is not exactly constant over all the energy range
-but it changes only slightly between 2.5 and 3.2.
-Because the cosmic rays spectrum extends over a very large
-energy range, it is expected that different astrophysical mechanisms,
-occuring at distinct scales, contribute to the origin
-of the cosmic rays from different regions of the spectrum. As an illustration
-we can point out that most of the modern models assume that the cosmic rays flux
-is dominated by particles produced inside our galaxy up to around \e{17}-\E{18} and
-an extragalactic origin for particles above this energy. The transition between
-these two components is currently one of the most relevant topics of discussion.
+but it changes only slightly, between 2.5 and 3.2.
+Because the cosmic ray spectrum extends over a very large
+energy range, it is expected that different astrophysical mechanisms
+at distinct length scales  
+contribute to the production of these particles. An illustration
+of that comes from the fact that most of the modern models predict that the
+cosmic ray flux is dominated by particles produced inside our galaxy up to around \e{17}-\E{18} and,
+above these energies, they have extragalactic origin. The transition between
+these two components is currently one of the most active topics of discussion.
 
-
-Because of the spectrum steepness, the particle fluxes change over 27 orders of magnitude
-from \e{11} and \E{21}. As indicated in~\cref{fig:uhecr:overview:spec:swordy},
-while at \E{11} the flux is about 1 particle/m$^2$/second,
-at \E{19} it drops to only 1 particle/km$^2$/year.
-As a consequence, different experimental techniques have to be used to detect
-cosmic ray particles at different energy ranges. Up to around \E{14}, the low flux
+Because of the steepness of the spectrum, the particle flux changes over 27 orders of magnitude
+from \e{11} to \E{21}. As indicated in~\cref{fig:uhecr:overview:spec:swordy},
+while at \E{11} the flux is about one particle/m$^2$/second,
+at \E{19} it drops to only one particle/km$^2$/year.
+As a consequence, different experimental techniques have to be applied to detect
+cosmic ray particles at different energy ranges. Up to \appE{14}, the high flux
 allows us to use small area instruments installed in ballons or satellites
-to detects the particles before they interact with the earth's atmosphere.
+to detects the particles before they interact with the Earth's atmosphere.
 Above this energy, the interaction with the atmosphere turns to be
 useful since we can measure the cosmic rays indirectly through the detection of
 the extensive air showers (see~\cref{sec:showers}). For that, large arrays of detectors
 are used and their areas can vary substantially depending on the energy range they are
-intended to study. As an example, the KASCADE experiment~\cite{\KASCADEPaper}
-that is designed to measure particles from around \e{14} to \E{16}
-has an area of 4000 m$^2$, while Pierre Auger
+intended to be sensitive. As an example, the KASCADE experiment~\cite{\KASCADEPaper}
+is designed to measure particles from around \e{14} to \E{16}
+and it has an area of 4000 m$^2$, while Pierre Auger
 Observatory~\cite{\AugerPaper} has an area of 3000 km$^2$ to measure particles above \E{18}.
 
-%%================================%%
-%\subsubsection{Main features of the energy spectrum}
 
-The features of the cosmic ray spectrum are identified by the changes on the
+A few features of the cosmic ray energy spectrum can be identified by the small changes on the
 spectral index $\gamma$. To better visualize these changes, we show
 in~\cref{fig:uhecr:overview:spec:pdg} a compilation of measurements of
-the spectrum from \E{13} in which the flux is scaled by a factor $E^{2.6}$.
-As indicated in~\cref{fig:uhecr:overview:spec:pdg}, the first feature
-is the so called \emph{first-knee} and it occurs around $3\times\E{15}$. At this energy
-the index changes from $\gamma\approx 2.7$ to $3.0$. The next feature is
-the \emph{second-knee}, around \E{17}, where there is a further steepening
+the spectrum, starting at \appE{13}, in which the flux is scaled by a factor $E^{2.6}$.
+As indicated in~\cref{fig:uhecr:overview:spec:pdg}, the lowest-energy feature
+is the so-called \emph{first-knee} and it occurs around $3\times\E{15}$. At this energy
+the index changes from $\gamma\approx 2.7$ to $3.0$. Increasing the energy, the next feature is
+the so-called \emph{second-knee}, around \E{17}, where there is a further steepening
 and the index goes to $\gamma\approx 3.3$. The spectrum then becomes harder again
 at the \emph{ankle}, around $5\times\E{18}$, where the index changes to $\gamma\approx 2.6$.
 The final feature occurs at the highest energies, above $4\E{19}$, where the
-value of the spectral index becomes very high ($>4$), caracterizing the so called
+value of the spectral index becomes very high ($>4$), caracterizing the so-called
 \emph{suppression}.
 
 
@@ -85,6 +89,7 @@ value of the spectral index becomes very high ($>4$), caracterizing the so calle
   \caption{\cite{\PDGPaper}.}
   \label{fig:uhecr:overview:spec:pdg}
 \end{figure}
+
 
 The consistent interpretation of all these spectrum features requires the knowledge
 about the composition of the cosmic rays. Particularly in the energy region compreending
@@ -217,10 +222,109 @@ A review on the top-down models can be found in Ref.\cite{Olinto2000}.
 
 
 %%================================%%
-\subsection{Propagation}
+\subsection{Propagation of ultra-high energy cosmic rays}
 \label{sec:uhecr:overview:propagation}
 
 
+At the ultra-high energy regime, cosmic rays suffer from a number
+of interaction processes during their propagation from the source to the Earth and
+the consequent energy losses have a large influence on the measured
+energy spectrum and composition.
+Four interaction proccess take place: photopion production, electron pair production,
+photodisintegration and adiabatic losses due to the expanse of the universe.
+Since the latter affects equaly all types of particles with no dependence on
+their energy, its influence on the energy spectra is the less relevant of all.
+Concerning the other three remaining process,it is helpful to
+evaluate their effect separetly for protons and nuclei.
+In~\cref{fig:uhecr:propagation:attenuation} the protons energy losses are quantified by evaluating
+the attenuation lenght, which is defined as the distance
+over which the particle energy decreases by a factor $1/e$,
+as a function of its energy.
+
+
+%%%%%%%%%%%%%% ATTENUATION %%%%%%%%%%%%%%%
+\begin{figure}
+  \centering
+  
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.8\textwidth]{att_lenght}
+    \put(18,60){}
+  \end{overpic}
+
+ 
+  \caption{\cite{RafaelThesis}}
+  \label{fig:uhecr:propagation:attenuation}
+\end{figure}
+
+The photopion production for protons, indicated by a blue curve in~\cref{fig:uhecr:propagation:attenuation},
+occur because of the interaction of cosmic ray particle with photons
+from the cosmic microwave background (CMB). The processes that take place are
+$p+\gamma\rightarrow p + \pi^0$ and $p+\gamma\rightarrow n+ \pi^+$, in which
+the energy threshold is given by the condition that the center-of-mass energy 
+has to be larger than the rest mass of the pion. From~\cref{fig:uhecr:propagation:attenuation} it is clear
+that photopion production losses dominate for energies above $\approx 8\times\E{19}$,
+and, as a consequence, it is expected the proton spectrum to be strongly
+suppressed around this energies.
+This effect was proposed in 1966 by Greisen~\cite{Greisen:1966jv},
+Zatsepin and Kuzmin~\cite{Zatsepin:1966jv}, and it is known as the GZK suppression.
+It is also shown in~\cref{fig:uhecr:propagation:attenuation}
+the energy losses due to electron pair production
+during the proton propagation, which dominates at energies between $5\times\e{18}$ and
+$5\times\E{19}$.
+
+It can be seen that the combined effect of these two processes,
+photopion production and electron pair production,
+on the energy spectrum of cosmic rays composed purely by proton
+can generate two evident features, a dip at $E\approx 5\times\E{18}$
+and a sharp suppression above $E\approx 5\times\E{19}$, that
+can explain the two features actually observed, the \emph{ankle}
+and the \emph{suppression}~\cite{Berezinsky:2002nc,Berezinsky:2005cq}.
+The pure proton composition predicted by this scenario has
+two important consequencies. The first one is the so called
+\emph{particle horizon}, meaning that protons above a certain energy
+should be originated on average by sources inside a certain distance range.
+In~\cref{fig:uhecr:propagation:horizon}
+the particle horizon is quantified by curves that show the average energy
+of protons as a fucntion of the propagation distance for three cases in which the
+particle left the source with \e{20}, \e{21} and \E{22}. As a conclusion from this plot,
+one can see that protons that reach Earth with $E>\E{20}$ are approximately limited to
+be originated at sources within 100 Mpc of distance. The second consequence is related
+to the particle deflections by magnectic fields. It is possible to show that
+heavier nuclei are so strongly deflected that their arrival direction does not contain
+informations about the direction of the astrophysical source. On the other hand,
+since protons above $\approx\E{19}$ are only slightly deflected, in this pure-proton
+scenario would be possible to use the arrival directions to infer the sources distribution.
+
+
+%%%%%%%%%%%%%% GZK HORIZON %%%%%%%%%%%%%%%
+\begin{figure}
+  \centering
+  
+  \begin{overpic}[clip, rviewport=0 0 1 1,width=0.75\textwidth]{gzk_horizon}
+    \put(18,60){}
+  \end{overpic}
+ 
+  \caption{\cite{Cronin:2004ye}}
+  \label{fig:uhecr:propagation:horizon}
+\end{figure}
+
+Unlike protons, heavier nuclei also suffer photodisintegration along their propagation.
+This means that they can interact with photons from the extragalactic background light (EBL)
+and broke into smaller nuclei. In~\cref{fig:uhecr:propagation:attenuation} we show bla bla.
+By comparing all the energy losses contribution for nuclei, one can see that
+the energy threshold for photopion production and electron pair production
+increases with the nuclei mass and the photodisintegration losses are the dominant ones.
+The resultant effect of the propagation of a combination of different nuclei on the energy spectrum
+turns to be more complicated to evaluate than in the proton case. However,
+it is possible to show that, for example, in the simple case of pure iron nuclei being
+originated at the sources, the energy spectrum would also suffer a suppression at the highest energies,
+mainly due to photodissintegration effects. This suppression would be very similar to
+the one expected because of the GZK effect and also to the one which is actually observed.
+Concerning the other spectrum feature, the ankle, it is not possible to reproduce it
+by considering nuclei propagation, instead of proton. The alternative explanation
+for the ankle in the non-pure proton case is the effect of the
+transition between galactic and extragalactic component. In~\cref{sec:uhecr:spectrum} we discuss
+the recent measurements of the spectrum and composition at the ultra-high energies
+and how they constrain the above mentioned explanation for the ankle and the suppression.
 
 
 

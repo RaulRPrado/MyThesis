@@ -155,7 +155,7 @@
 \newcommand{\apendicesname}{Ap\^endices}
 \newcommand{\orientadorname}{Orientador:}
 \newcommand{\coorientadorname}{Coorientador:}
-\newcommand{\areaname}{\'Area de concentra\c{c}\~ao:}
+\newcommand{\areaname}{Concentration area:}
 \newcommand{\opcaoname}{Op\c{c}\~ao:}
 \newcommand{\folhadeaprovacaoname}{Folha de aprova\c{c}\~ao}
 \newcommand{\resumoname}{Resumo} 
@@ -182,7 +182,7 @@
 
 \addto\captionsenglish{% ingles
   %% adjusts names from abnTeX2
-  \renewcommand{\folhaderostoname}{Title page}
+  \renewcommand{\folhaderostoname}{Title Page}
   \renewcommand{\epigraphname}{Epigraph}
   \renewcommand{\dedicatorianame}{Dedication}
   \renewcommand{\errataname}{Errata sheet}
@@ -191,7 +191,7 @@
   \renewcommand{\anexosname}{Annex}
   \renewcommand{\apendicename}{APPENDIX}
   \renewcommand{\apendicesname}{Appendix}
-  \renewcommand{\orientadorname}{Supervisor:}
+  \renewcommand{\orientadorname}{Advisor:}
   \renewcommand{\coorientadorname}{Co-supervisor:}
   \renewcommand{\folhadeaprovacaoname}{Approval}
   \renewcommand{\resumoname}{Abstract} 
