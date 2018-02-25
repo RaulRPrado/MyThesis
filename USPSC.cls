@@ -796,6 +796,7 @@
 \providecommand{\imprimirtitleabstract}{}
 \newcommand{\titleabstract}[1]{\renewcommand{\imprimirtitleabstract}{#1}}
 
+
 % Comandos de dados - autor (use \and para multiplos autores)
 \newcommand{\autor}[1]{\author{#1}}
 \newcommand{\imprimirautor}{\theauthor}

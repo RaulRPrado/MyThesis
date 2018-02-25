@@ -1,8 +1,7 @@
 \chapter[Extensive air showers]{Extensive air showers}
 \label{sec:showers}
 
-In this chapter, we give an introduction to extensive air showers
-(or only \emph{air showers}, for shortening).
+In this chapter, we give an introduction to Extensive Air Showers (EAS).
 Although the physics behind these objects is very rich,
 in this text we will give more focus on the selected topics
 which are more relevant in the context of this thesis.
@@ -10,31 +9,31 @@ More detailed and extended materials about the topic can be found
 in Refs.~\cite{GaisserBook,GriederBook}.
 
 In~\cref{sec:showers:phen} we start by a phenomenological description
-of the air shower development, focusing on the particle production in
-both electromagnetic and hadronic component of the shower. 
+of the EAS development, focusing on the particle production in
+both electromagnetic and hadronic component of the cascade. 
 In~\cref{sec:shower:simulations} we present the most relevant aspects
-of air shower simulations, which are currently necessary to study
-the physics and to interpret the measurements of air showers.
+of EAS simulations, which are currently necessary to study
+its physics and to interpret the measurements.
 Finally in~\cref{sec:shower:observables} we present a compilation
-of air shower measurements, focused on the range of UHECRs.
+of measurements of EAS, focused on the UHECRs.
 At this point we approach the currently inconsistency between measurements and
 simulations of the muonic related observables, which is the main motivation
 for this thesis.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Extensive air shower phenomenology}
+\section{Phenomenology of EAS}
 \label{sec:showers:phen}
 
-An air shower starts with the collision of the primary cosmic ray 
+An EAS starts with the collision of the primary cosmic ray 
 with an atmospheric nucleus. After this first interaction, the secondary
 particles produced also interact with the atmosphere producing more
 particles and so on. This succession of interactions with secondary production
-creates the cascade of particles that forms the extensive air shower.
+creates the cascade of particles that forms the EAS.
 For the sake of clarity, the description of the cascade is traditionally
 done by splitting it into different components: the \emph{electromagnetic},
 the \emph{hadronic} and, eventually, the \emph{muonic component}. It is also traditional
-to describe the air shower development in terms of its longitudinal and lateral profiles.
+to describe the EAS development in terms of its longitudinal and lateral profiles.
 The former refers to the shower development along the direction of its axis
 while the latter refers to the distribution of particles
 in a plane perpendicular to the shower axis.
@@ -49,7 +48,7 @@ types of mesons and baryons together count typically for less than 5\% of
 the particles~\cite{Calcagni:2017tws}.
 Besides that, a very small fraction of nuclei can be produced
 by the fragmentation of the target atmospheric nucleus or the primary (in case it is also a nucleus).
-After the first interaction, the following air shower development is mostly driven
+After the first interaction, the following EAS development is mostly driven
 by the subsequent processes involving the secondary pions.
 The three types of pions ($\pi^+$, $\pi^-$ and $\pi^0$)
 are produced at similar proportions, which means that about 2/3 of them are charged and
@@ -74,7 +73,7 @@ The electrons\footnote{In this text the term \emph{electrons} actually refers to
 produced also interact electromagnetically, mainly through bremstralung, which
 produces more photons. The succession of these two electromagnetic processes
 creates a self-sustainable cascade of photons and electrons
-that forms the electromagnetic component of the extensive air shower.
+that forms the electromagnetic component of the EAS.
 Since more neutral pions are produced in hadronic interactions of secondary
 particles with atmospheric nuclei (again in the 1/3 proportion wrt the charged pions),
 the same chain of electromagnetic interactions takes place again
@@ -102,17 +101,17 @@ of the longitudinal profile of the electromagnetic component.
 
 In the left plot of~\cref{fig:shower:phen:prof}
 we show the average longitudinal profile of the number
-of photons ($N_\gamma$) and electrons ($N_e$) in air showers initiated by protons and iron nuclei.
+of photons ($N_\gamma$) and electrons ($N_e$) in EAS initiated by protons and iron nuclei.
 It is also shown for comparison the longitudinal profile of the
 deposited energy (\dEdX) in the atmosphere by all the charged particles.
 Because the number of particles in the shower is dominated
 by the electromagnetic component, one can see that the shape of the
 \dEdX profiles is basically the same as the $N_e$ one.
 The depth correspondent to the maximum of these both profiles is called
-the shower maximum and it is symbolized by \xmax. In air shower
+the shower maximum and it is symbolized by \xmax. In EAS
 experiments, the \dEdX profile can be accessed by telescopes which
-measure the fluorescence light emitted by the interaction of the air shower
-with the atmosphere. The \xmax of the shower can then be determined
+measure the fluorescence light emitted by the interaction of the EAS
+with the atmosphere. The \xmax can then be determined
 from the \dEdX profile.
 
 %%%%%%%%%%%%%% LONG PROFILES %%%%%%%%%%%%%%%
@@ -126,8 +125,8 @@ from the \dEdX profile.
     \put(18,60){}
   \end{overpic}
   
-  \caption{Average longitudinal profiles of air showers obtained
-    from air shower simulations performed with \Conex~\cite{\ConexPaper} and
+  \caption{Average longitudinal profiles of EAS obtained
+    from simulations performed with \Conex~\cite{\ConexPaper} and
     the hadronic interaction models \Fluka~\cite{\FlukaPaper} and \EposLHCLong~\cite{\EposLHCPaper}.}
   \label{fig:shower:phen:prof}
 \end{figure}
@@ -147,7 +146,7 @@ in very good approximation.
 
 On the left plot of~\cref{fig:shower:phen:xmax}
 we show the \xmaxmean as a function of the primary energy
-for a set of simulated air showers. The logarithmic energy dependence is clear,
+for a set of simulated EASs. The logarithmic energy dependence is clear,
 as well as the separation between proton and iron initiated showers.
 This dependence of \xmaxmean on the primary mass comes from both terms
 on the right side of~\cref{eq:shower:xmax}. The $\lambda_\text{I}$ term
@@ -241,7 +240,7 @@ decaying into muons is 4-8~\cite{Meurer:2005dt}.
 Apart from pion decays, a considerably fraction of the muons reaching
 the ground is produced by the decay of charged kaons.
 In~\cite{Meurer:2005dt,MeurerThesis} the muon
-production in air showers was studied in details and it was found
+production in EAS was studied in details and it was found
 by using simulations that $\sim 90\%$ of the muons come from the decay
 of charged pions and $\sim 10\%$ of charged kaons. While these particles
 are called \emph{mother}, the particles which interacted hadronically
@@ -281,7 +280,7 @@ occur at energies of order of $\sim 100 \GeV$.
 Although the interaction of the grandmother particle is very important,
 it has to be noted that the whole chain of hadronic interactions, which are
 mostly pion-air interactions, influence the muon production. This means
-that any shower observable related to the muonic component is sensitive to the
+that any EAS observable related to the muonic component is sensitive to the
 properties of hadronic interactions which occur along the shower. The particle
 production in these hadronic interactions is particularly important and,
 in the context of this thesis, it is worthwhile to point out the effect of
@@ -292,7 +291,7 @@ are stable and can only interact again, their energy surely fed the
 hadronic component, which means that it is partially converted
 into muon production. Because of that, the increase of (anti)baryon
 production in hadron-air interactions has been considered a very important
-mechanism to increase the total number of muons in the shower~\cite{\EposPaper,Drescher:2007hc}.
+mechanism to increase the total number of muons in the EAS~\cite{\EposPaper,Drescher:2007hc}.
 Then, in view of the muon deficit problem, which is presented in~\cref{sec:shower:observables:nmu},
 understanding the particle production in pion-air interactions turns out to be
 very important. Therefore, the~\cref{sec:hadron} of this thesis is dedicated to the measurement of
@@ -358,19 +357,19 @@ in~\cref{sec:shower:observables}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Air shower simulations}
+\section{Simulations of EAS}
 \label{sec:shower:simulations}
 
-In this section we give a short overview of the topic of air shower simulations,
+In this section we give a short overview of the topic of EAS simulations,
 including a description of the most used simulation codes 
 (\cref{sec:shower:simulations:codes}) and
 an overview of the hadronic interaction models used by them (\cref{sec:shower:simulations:models}). 
-Besides the hadronic interaction models, the air shower simulation codes also
+Besides the hadronic interaction models, the EAS simulation codes also
 make use of electromagnetic interaction models. The commonly used one is \EGS~\cite{Nelson:1985ec}
 Since the electromagnetic processes are assumed to be
 properly described by quantum electrodynamics (QED),
 their modeling is not considered to be a significant
-source of uncertainties on the air shower simulations.
+source of uncertainties on the EAS simulations.
 Because of that, we will only focus here on the hadronic interaction models,
 which, in turn, are the most relevant source of uncertainties.
 More detailed approaches to the topic can be found
@@ -381,7 +380,7 @@ in Refs.~\cite{Knapp:2002vs,Engel:2011zzb,Allen:2013ofa}.
 \subsection{Simulation strategies}
 \label{sec:shower:simulations:codes}
 
-To simulate an air shower taking into account all the
+To simulate an EAS taking into account all the
 relevant aspects is surely a very complex task.
 All the particles produced have to be propagated 3-dimensionally
 through the atmosphere and their interactions with atmospheric atoms
@@ -389,7 +388,7 @@ have to be properly modeled. The effect of the
 structure of the atmosphere with changing density
 and the earth magnetic field also have to be taken into account.
 Furthermore, the extremely large number of particles at high energies makes
-the computational cost of an air shower simulation extremely large.
+the computational cost of an EAS simulation extremely large.
 Because of that, the full simulation turns to be
 impossible for practical purposes and, thus, special strategies
 have to be developed by simulation softwares to reduce the complexity
@@ -448,7 +447,7 @@ similar to \Conex or \Seneca.
 
 The models used to describe the hadronic interactions at high energies 
 are by far the most relevant source of uncertainties on the prediction of
-air shower observables by simulations. Although the strong interactions can be
+EAS observables by simulations. Although the strong interactions can be
 successfully described by the \emph{quantum cromodynamics} theory (QCD),
 we are still not able to compute the bulk of hadronic particle production processes
 from first principles. 
@@ -473,7 +472,7 @@ that cannot be determined theoretically, but they have to be tuned instead.
 For that, a large number of accelerator measurements are used. The problem with this
 strategy is that the accelerator measurements cover only a small fraction
 of the energy range and particle production phase space that is relevant
-for describing air showers. 
+for describing EASs. 
 
 The problem with the model tuning can be split in three parts.
 First, the highest energy collisions studied in accelerators
@@ -482,21 +481,21 @@ energy than the interaction of a high energy cosmic ray ($\sqrt{s}\approx 400$ f
 a \E{20} primary proton). Second, there is a lack of measurements
 of particle production at the forward region, which is the most relevant
 to understand particle production in soft interactions and also
-the most relevant for the air shower development. Finally,
+the most relevant for the EAS development. Finally,
 there is a lack of accelerator data concerning some colliding systems
-that are very important for air shower physics,
+that are very important for EAS physics,
 e.g. hadron-nucleus interactions.
 
 As a consequence of the phenomenological nature of the models
 in combination with the problems with accelerator data listed above,
-the predictions of air shower simulations with different hadronic
+the predictions of EAS simulations with different hadronic
 interaction models turns out to be discordant. Because of that,
-it is a common approach to compare the air shower measurements to
+it is a common approach to compare the EAS measurements to
 simulations with a number of different models and to treat
 the differences between them as a systematic uncertainty
 of theoretical nature.
 
-For air shower studies, the most currently used models
+For EAS studies, the most currently used models
 for high energy interactions are
 \QGSJetLong~\cite{\QGSJetPaper}, \EposLong~\cite{\EposPaper},
 \EposLHCLong~\cite{\EposLHCPaper}, \SibyllLong~\cite{\SibyllPaper},
@@ -506,23 +505,23 @@ to take into account recent LHC data.
 
 
 Below a certain energy threshold ($\sim 100\;\GeV$), the hadronic interactions
-in air shower simulations are described by the so called \emph{low energy models}, which
+in EAS simulations are described by the so called \emph{low energy models}, which
 are much simpler than the high energy ones. The particle production, for example,
 is usually modeled by means of empirical parametrizations.
 The most used low energy models are \Urqmd~\cite{\UrqmdPaper},
 \Gheisha~\cite{Gheisha1985} and \Fluka~\cite{\FlukaPaper}.
 A review of these models can be found in Ref.\cite{Heck:2004rq}.
-The influence of the low energy models on the number of muons in air
-showers have been shown in Ref.\cite{Maris:2009uc}.
+The influence of the low energy models on the number of muons in EAS
+have been shown in Ref.\cite{Maris:2009uc}.
 We show in~\cref{sec:observable} that they are also relevant
 for the spectrum of the muons at ground.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Measurements of air shower observables}
+\section{Measurements of EAS observables}
 \label{sec:shower:observables}
 
-In this section, a compilation of measurements of air shower observables
+In this section, a compilation of measurements of EAS observables
 is presented. The main focus is on the high energy cosmic rays range ($E>10^{17}$ eV).
 We start in~\cref{sec:shower:observables:xmax}
 by the \xmax measurements which are the most reliable
@@ -536,12 +535,12 @@ A summary is finally presented in~\cref{sec:shower:observables:summary}.
 
 
 %%================================%%
-\subsection{Shower maximum and cosmic ray composition}
+\subsection{Shower maximum and UHECR composition}
 \label{sec:shower:observables:xmax}
 
 The \xmax (see~\cref{sec:showers:phen:em}) can be measured directly
 by fluorescence telescopes, which can measure the energy deposited
-by the air shower along the atmosphere. This technique was first successfully applied
+by the EAS along the atmosphere. This technique was first successfully applied
 by Fly's Eyes experiment~\cite{\FlysEyesPaper},
 posteriorly followed by HiRes~\cite{\HiResPaper} and recently it
 has been used by Telescope Array~\cite{\TAXmaxPaper} and
@@ -661,7 +660,7 @@ because of the lack of statistics of the Telescope Array measurements.
 \label{sec:shower:observables:nmu}
 
 In this section we present measurements of both the number of muons (\nmu)
-and the muon density ($\rho_\mu$) in air showers.
+and the muon density ($\rho_\mu$) in EAS.
 Measurements of \nmu or $\rho_\mu$ at ground can
 be done with several different types of surface detector arrays.
 However, the muon measurements are strongly affected by specific features
@@ -685,10 +684,10 @@ the observation level of the experiment affects the \nmu because of the atmosphe
 which affects much strongly the electromagnetic component, but it is still relevant for
 muon detection.
 
-Among the results of measurements of \nmu and $\rho_\mu$ in air shower experiments,
+Among the results of measurements of \nmu and $\rho_\mu$ in EAS experiments,
 we have selected three to present here. The first one are the
 measurements by HiRes/MIA experiments of the density of muons at the ground
-in air showers initiated by cosmic rays of energy approximately in the range
+in EAS initiated by cosmic rays of energy approximately in the range
 between \E{17} and \E{18}. The experimental setup consisted of a set of fluorescence
 telescopes of the HiRes experiment~\cite{\HiResPaper} combined with a detector array of
 MIA~\cite{\MIAPaper}. The surface detectors were formed by scintilator counters
@@ -762,7 +761,7 @@ were used.
 
 In conclusion, the muon deficit problem is known for almost two decades
 and at the moment it prevents us to do composition studies based on the
-measurements of the \nmu in air showers. In~\cref{sec:interpretation}
+measurements of the \nmu in EAS. In~\cref{sec:interpretation}
 we present a method to interpret the energy evolution of the moments
 of the \nmu measurements in terms of cosmic rays
 composition, taking into account the muon deficit problem.
@@ -773,13 +772,13 @@ composition, taking into account the muon deficit problem.
 \label{sec:shower:observables:further}
 
 In this section we briefly mention four further
-measurements of air shower observables, the first one
+measurements of EAS observables, the first one
 made by KASCADE-Grande experiment~\cite{\KASCADEGrandePaper}
 and the remaining three by the Pierre Auger Observatory.
 
 The KASCADE-Grande experiment can measure both
 number of charged particles and number of muons
-in air showers with primary energy between
+in EAS with primary energy between
 \E{16.0} and about \E{17.5}. In a recent analysis, the
 KASCADE-Grande collaboration has studied the evolution
 of the \nmu with the zenith angle of the shower by using
@@ -835,7 +834,7 @@ can be effectively used to constrain hadronic models.
 The third and forth observables to be mentioned are related to the quantity called
 risetime that is defined as the time difference between the water-Cherenkov detectors
 reach 10 and 50\% of their total signal. This quantity is sensitive to both the
-electromagnetic and muonic component of the shower.
+electromagnetic and muonic component of the EAS.
 In Ref.~\cite{\AugerAsymmetryPaper} an analysis of the azimutal asymmetry of the risetime
 was published where a parameter called \emph{risetime asymmetry},
 $\sec(\theta)_\text{max}$, was defined.
@@ -851,7 +850,7 @@ are not compatible with the one inferred from \xmax measurements.
 However, the inconsistency is not
 as strong as in the case of \nmu and \xmumax. This intermediate behavior can
 be understood by the fact that the risetime parameter is not sensitive to
-only the muonic content of air showers, but instead, to a combination
+only the muonic content of EASs, but instead, to a combination
 of the electromagnetic and muonic components.
 It was shown in Ref.\cite{\AugerDeltaPaper} that the $\Delta_\text{s}$
 parameter can be calibrated by using the \xmax measurements and as a result
@@ -883,12 +882,12 @@ consistent composition inferences can be done.
 \label{sec:shower:observables:summary}
 
 
-We can divide the air shower measurements presented here
+We can divide the EAS measurements presented here
 in three categories: pure electromagnetic, pure muonic and mixed.
 The only pure electromagnetic measurement discussed is
 the \xmax one, which can be used to study cosmic rays
 composition because, among other reasons,
-the predictions from air shower simulations are consistent
+the predictions from EAS simulations are consistent
 with the data.
 
 The pure muonic measurements include number (or density)

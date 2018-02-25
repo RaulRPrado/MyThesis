@@ -16,7 +16,7 @@
 \usepackage{pdfpages}
 %\usepackage{makeidx}            % para gerar índice remissimo
 
-\usepackage[num,overcite,abnt-emphasize=bf, abnt-thesis-year=both, abnt-repeated-author-omit=no, abnt-last-names=abnt, abnt-etal-cite=3,abnt-etal-list=3, abnt-etal-text=default, abnt-and-type=e, iso-abbreviation=standard]{abntex2cite}
+\usepackage[num,overcite,abnt-emphasize=bf, abnt-thesis-year=both, abnt-repeated-author-omit=no, abnt-last-names=abnt, abnt-etal-cite=3,abnt-etal-list=3, abnt-etal-text=default, abnt-and-type=e, iso-abbreviation=standard, abnt-doi=link]{abntex2cite}
 
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}  %Comando para inserção de símbolos em nota de rodapé
 \renewcommand{\footnotesize}{\small} %Comando para diminuir a fonte das notas de rodapé
@@ -47,10 +47,10 @@
 	pdfauthor={\@author},
 	pdfsubject={\imprimirpreambulo},
 	pdfcreator={LaTeX with abnTeX2},
-	pdfkeywords={cosmic rays}{extensive air showers}{muons}, 
+	pdfkeywords={ultra high energy cosmic rays}{extensive air showers}{muons}, 
 	colorlinks=true,       		% false: boxed links; true: colored links
 	linkcolor=blue,          	% color of internal links
-	citecolor=blue,        		% color of links to bibliography
+	citecolor=red,        		% color of links to bibliography
 	filecolor=magenta,      		% color of file links
 	urlcolor=blue,
 	bookmarksdepth=4
@@ -94,11 +94,12 @@
 \def\Put(#1,#2)#3{\leavevmode\makebox(0,0){\put(#1,#2){#3}}}
 
 \include{abbreviations}
-
 \include{bib_aliases}
 
 \newcommand{\warning}[1]{\textcolor{red}{\textbf{(#1)}}}
 \newcommand{\note}[1]{\textcolor{blue}{\textbf{(#1)}}}
+
+\renewcommand{\cite}[1]{(\citen{#1})}
 
 \graphicspath{{./figures/}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -278,8 +279,6 @@
 
 \include{showers}
 
-%\include{auger}
-
 \include{interpetration}
 
 \include{observable}
@@ -302,7 +301,7 @@
 \bibliography{lib}
 
 \appendix
-\chapter{Figures}
+\chapter{Additional figures}
 \include{figures_hadron}
 
 % ----------------------------------------------------------
