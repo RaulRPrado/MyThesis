@@ -1,23 +1,20 @@
 \chapter[Hadron production in pion-carbon interactions]{Hadron production in pion-carbon interactions}
 \label{sec:hadron}
 
-\warning{\dedx fit systematics}
-
 In this chapter we present the analysis of hadron production
 in $\pi^-$-C interactions measured by the \NASixtyOne experiment
 at CERN SPS. In~\cref{sec:showers:phen:had} we have stressed the
-importance of $\pi^{\pm}$-air interactions for the air
-shower development and particularly for the muon production.
+importance of $\pi^{\pm}$-air interactions for the
+EAS development and particularly for the muon production.
 The carbon target was selected here because of its similarity with
 air nuclei in terms of nuclear mass and because its experimental
 advantages with respect to nitrogen or oxygen targets.
-
 
 Our goal is to measure the production spectra of
 \pions, \kaons, \protons, \lambs and \kzeros.
 Although our measurements of the \protons spectra
 can impact directly the current understanding of the
-air shower physics, all the particle spectra measured here
+EAS physics, all the particle spectra measured here
 will be surely valuable for the testing of the hadronic
 interaction models and for the tuning of the their next generation.
 Besides that, the \lambs and \kzeros spectra have also an
@@ -32,7 +29,7 @@ the ideal detector for this kind of study. A previous
 analysis of the $\pi^-$-C data with the measurements of
 resonance mesons was published in Ref.~\cite{\RhoPaper}.
 In particular, the obtained $\rho^0$ spectra is also
-relevant for air shower physics and muon production.
+relevant for EAS physics and muon production.
 
 
 The analysis presented in this chapter can be essentially
@@ -101,7 +98,7 @@ spectra in hadron-nucleus collisions measured by \NASixtyOne are
 required to improve the neutrino flux predictions for the T2K experiment~\cite{\T2KPaper}.
 Finally, the goal of the cosmic rays physics programme is to study
 the properties of the $\pi$-C interactions, which is of highly value
-for the better understanding of the extensive air shower physics and,
+for the better understanding of the EAS physics and,
 in particular, the muon production (see~\cref{sec:showers} for more details).
 
 
@@ -141,8 +138,12 @@ in Ref.~\cite{\NASixtyOnePaper}.
   
   \includegraphics[clip, rviewport=0 0 1 1,width=0.95\textwidth]{det/Beam}
 
-  \caption{Experimental setup of the \NASixtyOne experiment~\cite{\NASixtyOnePaper}.}
+  \caption{Experimental setup of the \NASixtyOne experiment.~\cite{\NASixtyOnePaper}}
   \label{fig:hadron:na61:setup}
+  \begin{center}
+    Source: ABGRALL.~\cite{\NASixtyOnePaper} 
+  \end{center}
+
 \end{figure}
 
 %%%---------------------------------%%%
@@ -286,13 +287,13 @@ were produced by the \NASixtyOne Collaboration.
 They were created by first generating the primary interactions
 using hadronic interaction models and then by passing
 the produced particles through a detailed
-detector simulation based on \GeantThree package~\cite{Brun:1994aa}.
+detector simulation based on \GeantThree package.~\cite{Brun:1994aa}
 Three hadronic interaction models were used: \EposLong~\cite{\EposPaper},
-\DPMJetLong~\cite{\DPMJetPaper} and \QGSJetLong~\cite{\QGSJetPaper}.
+\DPMJetLong~\cite{\DPMJetPaper} and \QGSJetLong.~\cite{\QGSJetPaper}
 For each beam momentum and hadronic interaction model,
 a simulation set was produced with approximately the same number of events
 as in data. Both data and simulations were reconstructed
-by the standard \NASixtyOne reconstruction chain~\cite{Abgrall:2011ae}. 
+by the standard \NASixtyOne reconstruction chain.~\cite{Abgrall:2011ae} 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -384,6 +385,9 @@ phase space binning used for the charged hadron analysis.
   \caption{Illustration of the phase space binning used
     for the charged hadron analysis.}
   \label{fig:hadron:binning:dedx}
+  \begin{center}
+    Source: By the author. 
+  \end{center}
 \end{figure}
 
 Because the \vzero analysis is done independently for the three target particles,
@@ -405,6 +409,9 @@ binning used for the \vzero analysis.
     used for \lamb and \antilamb and the plot on the right
     show the binning used for \kzeros.}
   \label{fig:hadron:binning:vzero}
+  \begin{center}
+    Source: By the author. 
+  \end{center}
 \end{figure}
 
 
@@ -469,7 +476,7 @@ The list of selection criteria is the following.
   the measured tracks are used to define regions of the same phase space in
   which the tracks hit directly the S4 detector. The final acceptance is then defined
   by the ($\phi$, \pp, \pT) bins which do not satisfy any one of
-  these two criteria~\cite{MartinThesis}. \label{item:track:acc} 
+  these two criteria.~\cite{MartinThesis} \label{item:track:acc} 
 \item The total number of clusters on the track must be greater than or equal to 25.
 \item The sum of clusters on both VTPCs must be greater than or equal to 12, or
   the number of cluster on the GTPC must be greater than of equal to 6.
@@ -480,7 +487,7 @@ The list of selection criteria is the following.
 The acceptance selection (\cref{item:track:acc}) is important because
 it was observed that the Monte Carlo simulations cannot describe
 accurately the detector efficiency in the phase space regions
-in which this efficiency is relatively low (<90\%)~\cite{MartinThesis}.
+in which this efficiency is relatively low (<90\%).~\cite{MartinThesis}
 Since the detector acceptance is the dominant effect to be corrected at the Monte Carlo
 correction step, this discrepancy between data and simulations
 could significantly bias the resultant spectra if the acceptance selection
@@ -507,10 +514,13 @@ RST and WST definitions.
 \begin{figure}[!ht]
   \centering
   \includegraphics[clip, rviewport=0 0 1 1,width=0.95\textwidth]{track_topologies}
-  \caption{Illustration of the RST and WST definitions (see text for details)~\cite{MartinThesis}.}
+  \caption{Illustration of the RST and WST definitions (see text for details).~\cite{MartinThesis}}
   \label{fig:hadron:track:topologies}
+  \begin{center}
+    Source: RUPRECHT.~\cite{MartinThesis} 
+  \end{center}
 \end{figure}
-
+%HERE
 
 %%%---------------------------------%%%%
 \subsection[\dedx measurements]{\boldmath \dedx measurements}
@@ -525,7 +535,7 @@ detailed procedure that has been very well established by the \NAFortyNine and \
 experiment along the last decades. Since the detailed description 
 is out of the scope of this text, only the general idea and the most important aspects
 will be presented in the next paragraphs. More complete and detailed approaches
-can be found in Refs.\cite{BlumBook,LeeuwenThesis,GaborVeresThesis}.
+can be found in Refs.~\cite{BlumBook,LeeuwenThesis,GaborVeresThesis}.
 
 Several processes can contribute to the energy loss of charged particle due to
 its interaction with atoms of the gas in the TPCs, being the emission of
@@ -552,7 +562,7 @@ the method of the truncated mean is applied, in which only a subset of the clust
 is selected to compute the average. The selected clusters are defined by ordering
 the values of the charge and then selecting the ones inside a given fractional interval.
 For the \NASixtyOne experiment it was found the optimal interval being the 50\%
-of the clusters with the smallest charges~\cite{GaborVeresThesis}.
+of the clusters with the smallest charges.~\cite{GaborVeresThesis}
 
 It is important to point out that, although the \dedx associated to
 a track is proportional to the energy lost by the particle,
@@ -593,6 +603,9 @@ and the \dedx fit presented in~\cref{sec:hadron:dedx:model,sec:hadron:dedx:fit}.
     and in (c) and (d) for the 350 \GeVc one. The solid curves
     show the \meandedx parametrization for each particle type. }
   \label{fig:hadron:dedx:bb}
+  \begin{center}
+    Source: By the author. 
+  \end{center}
 \end{figure}
 
 
@@ -640,7 +653,7 @@ so it can be written as $f_{\ipart,\ich}(\eps|\pp,\ncl)$.
 
 It has been verified that $f_{\ipart,\ich}(\eps|\pp,\ncl)$
 can be well represented by an asymmetric
-Gaussian function~\cite{GaborVeresThesis}. 
+Gaussian function.~\cite{GaborVeresThesis}  
 Thus, we can write
 \begin{equation}
   f_{\ipart,\ich}(\eps|\pp,\ncl) = \frac{1}{\sqrt{2\pi}\sigma_{\ipart,\ich}} \;
@@ -798,7 +811,7 @@ to determine $l_0$.
 
 In addition to $l_0$, the final log-likelihood function, $l$,
 will also include terms of Gaussian constraints for the model
-parameters~\cite{Karbach:2012vg}. These are, by definition, Gaussian probabilities
+parameters.~\cite{Karbach:2012vg} These are, by definition, Gaussian probabilities
 functions multiplying the original likelihood function $\mathcal{L}$. 
 In terms of the log-likelihood functions, these constraints
 turn into quadratic terms of the
@@ -871,7 +884,7 @@ where $l_0$, $c_m$ and $c_d$ are given
 by~\cref{eq:hadron:dedx:fit:l0,eq:hadron:dedx:fit:cd,eq:hadron:dedx:fit:cm}.
 
 The maximization of $l$
-was performed by using the MINUIT package~\cite{James:1975dr}.
+was performed by using the MINUIT package.~\cite{James:1975dr}
 When fitting models with large number of free parameters,
 it is important to define suitable starting parameters
 to assure the convergence of the maximization and
@@ -971,6 +984,9 @@ provides a good description of the data.
     as the difference between the observed and the expected number of tracks
     from the result of the fit, divided by the uncertainty of the observed number.}
   \label{fig:hadron:dedx:fit:dist158}
+  \begin{center}
+    Source: By the author. 
+  \end{center}
 \end{figure}
 
 
@@ -988,6 +1004,9 @@ provides a good description of the data.
   \caption{\redchisq of the \dedx fit for the 158 \GeVc data set.
     The RST and WST are shown in (a) and (b), respectively.}
   \label{fig:hadron:dedx:fit:chi158}
+  \begin{center}
+    Source: By the author. 
+  \end{center}
 \end{figure}
 
 Examples of the calibration constants obtained by the fit of the
@@ -1033,6 +1052,9 @@ fit separately for both data sets.
 
   \caption{Calibration constants obtained from the \dedx fit of the RST and 158 \GeVc data set.}
   \label{fig:hadron:dedx:fit:cal158r}
+  \begin{center}
+    Source: By the author. 
+  \end{center}
 \end{figure}
 
 
@@ -1076,6 +1098,9 @@ See~\cref{sec:hadron:spec:syst} for more the details.
 
   \caption{Shape parameters obtained from the \dedx fit of the RST and 158 \GeVc data set.}
   \label{fig:hadron:dedx:fit:shape158r}
+  \begin{center}
+    Source: By the author. 
+  \end{center}
 \end{figure}
 
 Examples of the particle fractions for RST and 158 \GeVc
@@ -1134,6 +1159,9 @@ The fractions from the target removed data set are shown in~\cref{sec:hadron:ded
   
   \caption{Particle fractions obtained from the \dedx fit of the RST and 158 \GeVc data set.}
   \label{fig:hadron:dedx:fit:frac158r}
+  \begin{center}
+    Source: By the author. 
+  \end{center}
 \end{figure}
 
 
@@ -1195,6 +1223,9 @@ polynomial function.
 
   \caption{Examples of the parametrization of the particle fractions to be used to create the Simulated Data Ensembles. The plots in (a) and (b) refer to the 158 \GeVc data set and in (c) and (d) to the 350 \GeVc one. The particle type, the RST/WST subset and the $\langle\pT\rangle$ are indicated on the top of each plot. The black dots show the particle fractions obtained from the \dedx fit and the red curves show the result of the fit of the~\cref{eq:hadron:dedx:pol} to these fractions.}
   \label{fig:hadron:dedx:fit:fakeyield}
+  \begin{center}
+    Source: By the author. 
+  \end{center}
 \end{figure}
 
 After sampling a particle type, the \dedx associated to each
@@ -1252,6 +1283,9 @@ in~\cref{fig:hadron:dedx:fit:fake:reldev158w,fig:hadron:dedx:fit:fake:reldev350r
   
   \caption{Relative standard deviation ($\sigma_\text{r}$, see the definition in the text) of the particle fractions obtained with the SDEs for the RST and 158 \GeVc case. The $\pi^+$ case is shown in (a), $\pi^-$ in (b), K$^+$ in (c), K$^-$ in (d), p$^+$ in (e) and p$^-$ in (f).}
   \label{fig:hadron:dedx:fit:fake:relsig158r}
+  \begin{center}
+    Source: By the author. 
+  \end{center}
 \end{figure}
 
 
@@ -1282,6 +1316,9 @@ in~\cref{fig:hadron:dedx:fit:fake:reldev158w,fig:hadron:dedx:fit:fake:reldev350r
   
   \caption{Average relative bias ($\delta_\text{r}$, see the definition in the text) of the particle fractions obtained with the SDEs for the RST and 158 \GeVc case. The $\pi^+$ case is shown in (a), $\pi^-$ in (b), K$^+$ in (c), K$^-$ in (d), p$^+$ in (e) and p$^-$ in (f).}
   \label{fig:hadron:dedx:fit:fake:reldev158r}
+  \begin{center}
+    Source: By the author. 
+  \end{center}
 \end{figure}
 
 
@@ -1353,6 +1390,9 @@ instead of the the ones resulting from the fit procedure.
   
   \caption{Correction factors ($c$, see the definition in the text) for the RST and 158 \GeVc case. The $\pi^+$ case is shown in (a), $\pi^-$ in (b), K$^+$ in (c), K$^-$ in (d), p$^+$ in (e) and p$^-$ in (f).}
   \label{fig:hadron:dedx:fit:fake:cor158r}
+  \begin{center}
+    Source: By the author. 
+  \end{center}
 \end{figure}
 
 
@@ -1434,7 +1474,7 @@ the signal extraction results in~\cref{sec:hadron:vzero:results}.
   \begin{center}
     \caption{List of the \vzero particles of interest of this work,
       together with their masses and
-      the properties of their relevant decay channel~\cite{\PDGPaper}.}
+      the properties of their relevant decay channel.~\cite{\PDGPaper}}
     \begin{tabular}{|c|c|c|c|} \hline
       \vzero particle  & mass [\GeVcc] & decay products       & branching ratio     \\ \hline
       \lamb            & 1.1157 & \proton+$\pi^-$      & 63.9$\%$ \\ 
@@ -1459,7 +1499,7 @@ The \vzero selection criteria are the following.
 \item At least one track has to have more than 15 clusters in the VTPCs
 \end{enumerate}
 These selection criteria are standard ones
-in \NASixtyOne analyses~\cite{Aduszkiewicz:2015dmr,Abgrall:2015hmv}.
+in \NASixtyOne analyses.~\cite{Aduszkiewicz:2015dmr,Abgrall:2015hmv}
 Besides the above selection, two further \vzero cuts will be applied
 to the \vzero candidates before the signal extraction. Since
 these cuts were optimized to improve the signal extraction and they might
@@ -1485,7 +1525,7 @@ The signal extraction is done by fitting the \minv distribution
 with a model that includes the signal and the background contributions.
 Traditionally in \NASixtyOne analyses the signal
 is modeled by analytic functions like Breit-Wigner
-or Gaussian functions~\cite{Abgrall:2015hmv,Aduszkiewicz:2015dmr}. 
+or Gaussian functions.~\cite{Abgrall:2015hmv,Aduszkiewicz:2015dmr} 
 However, because of difficulties in describing properly
 the \kzeros signal, we have decided to use here
 Monte Carlo templates instead. Moreover, it was found
@@ -1590,7 +1630,7 @@ where $l_0$ and $c$ are given by~\cref{eq:hadron:vzero:fit:l}
 and~\cref{eq:hadron:vzero:fit:c}, respectively.
 
 The maximization of $l$ was done by using the
-MINUIT package~\cite{James:1975dr}. The width
+MINUIT package.~\cite{James:1975dr} The width
 of the \minv bins was 1.5 and 3.0 \MeVcc for
 \lambs and \kzeros, respectively, and the mass range
 was $[1.095\;\GeVcc, 1.160\;\GeVcc]$ and $[0.42\;\GeVcc, 0.580\;\GeVcc]$  
@@ -1676,6 +1716,9 @@ was observed to be larger than 90\% for all the phase space bins.
     at 158 \GeVc. The \lamb case is shown in (a), \antilamb in (b) and \kzeros in (c).
     The efficiency of the cut is indicated by $\varepsilon$ inside the plots.}
   \label{fig:hadron:vzero:cuts:impact}
+  \begin{center}
+    Source: By the author. 
+  \end{center}
 \end{figure}
 
 The \decaydist is defined as the distance between the position
@@ -1718,6 +1761,9 @@ and because of that, we have decided to use it to define the \decaydistmin.
     and the beam energy is 158 \GeV. The $\langle\pp\rangle$ and $\langle\pT\rangle$
     of the particular phase space bin is indicated on the plot.}
   \label{fig:hadron:vzero:cuts:decaydist:example}
+  \begin{center}
+    Source: By the author. 
+  \end{center}
 \end{figure}
 
 %%%%%%%%%%% DECAY DIST CUT %%%%%%%%%%%%%%%%%%
@@ -1735,6 +1781,9 @@ and because of that, we have decided to use it to define the \decaydistmin.
     Individual phase space bins are shown as black markers, the average over
     \pT bins is shown as red markers.}
   \label{fig:hadron:vzero:cuts:decaydist:158}
+  \begin{center}
+    Source: By the author. 
+  \end{center}
 \end{figure}
 
 The signal extraction described in~\cref{sec:hadron:vzero:signal}
@@ -1797,6 +1846,9 @@ in~\cref{fig:hadron:vzero:signal:extracted:158,fig:hadron:vzero:signal:extracted
     The $\langle\pp\rangle$ and $\langle\pT\rangle$ of the phase space bin are
     indicated on the top of each plot.}
   \label{fig:hadron:vzero:signal:dist:158:in}
+  \begin{center}
+    Source: By the author. 
+  \end{center}
 \end{figure}
 
 %%%%%%%%%%% DIST OUT %%%%%%%%%%%%%%%%%%
@@ -1820,6 +1872,9 @@ in~\cref{fig:hadron:vzero:signal:extracted:158,fig:hadron:vzero:signal:extracted
     between observed and fitted number of entries and $\sigma$ the uncertainties of the observed number.
     The $\langle\pp\rangle$ of the phase space bin is indicated on the top of each plot.}
   \label{fig:hadron:vzero:signal:dist:158:out}
+  \begin{center}
+    Source: By the author. 
+  \end{center}
 \end{figure}
 
 %%%%%%%%%%% CHI SQ %%%%%%%%%%%%%%%%%%
@@ -1845,6 +1900,9 @@ in~\cref{fig:hadron:vzero:signal:extracted:158,fig:hadron:vzero:signal:extracted
     The \lamb cases are shown in (a) and (d),
     the \antilamb in (b) and (e) and the \kzeros in (c) and (f).}
   \label{fig:hadron:vzero:signal:chi:158}
+  \begin{center}
+    Source: By the author. 
+  \end{center}
 \end{figure}
 
 
@@ -1870,6 +1928,9 @@ in~\cref{fig:hadron:vzero:signal:extracted:158,fig:hadron:vzero:signal:extracted
     The \lamb cases are shown in (a) and (d),
     the \antilamb in (b) and (e) and the \kzeros in (c) and (f).}
   \label{fig:hadron:vzero:signal:extracted:158}
+  \begin{center}
+    Source: By the author. 
+  \end{center}
 \end{figure}
 
 
@@ -1939,6 +2000,8 @@ on the systematic uncertainties in~\cref{sec:hadron:spec:syst}.
 
 \begin{table}
   \begin{center}
+    \caption{List of $\alpha$ factor (see text) computed by using different
+    hadronic interaction models and its average value.}
     \begin{tabular}{|r|c|c|} \hline
       & 158 GeV/c & 350 GeV/c \\ \hline
       \EposLong   & 0.875     & 0.744 \\
@@ -1946,7 +2009,6 @@ on the systematic uncertainties in~\cref{sec:hadron:spec:syst}.
       \QGSJetLong & 0.868     & 0.721 \\ \hline
       Average     & 0.897     & 0.771 \\ \hline
     \end{tabular}
-    \caption{}
     \label{tab:hadron:alpha}
   \end{center}
 \end{table}
@@ -1995,6 +2057,9 @@ of the \vzero cuts, presented in~\cref{sec:hadron:vzero:cuts}.
     and for the 158 \GeVc data set. The $\pi^+$ case is shown in (a),
     $\pi^-$ in (b), K$^+$ in (c), K$^-$ in (d), p$^+$ in (e) and p$^-$ in (f).}
   \label{fig:hadron:correction:beta:dedx158}
+  \begin{center}
+    Source: By the author. 
+  \end{center}
 \end{figure}
 
 %%%%%%%%%%% BETA V0 %%%%%%%%%%%%%%%%%%
@@ -2011,6 +2076,9 @@ of the \vzero cuts, presented in~\cref{sec:hadron:vzero:cuts}.
     and for the 158 \GeVc data set. The \lamb case is shown in (a),
     \antilamb in (b) and \kzeros in (c).}
   \label{fig:hadron:correction:beta:vzero158}
+  \begin{center}
+    Source: By the author. 
+  \end{center}
 \end{figure}
 
 The geometrical acceptance of the detector
@@ -2098,6 +2166,9 @@ is also shown in~\cref{fig:hadron:correction:beta:ratio}.
     by the uncertainty on the observed one.
     The \lamb case is shown in (a), the \antilamb in (b) and the \kzeros in (c).}
   \label{fig:hadron:correction:beta:ratio}
+  \begin{center}
+    Source: By the author. 
+  \end{center}
 \end{figure}
 
 The weight given for the simulated particles is then
@@ -2198,8 +2269,16 @@ First, the list of systematic uncertainties accounted for in
 the spectra of the charged hadrons is the following.
 \begin{itemize}
 
-\item \warning{\dedx fit systematics}
-
+\item The uncertainties related to the \dedx model used for the \dedx fit were
+  estimated by redoing the fit with a different configuration of the model parameters
+  and comparing the resultant spectrum to the standard one. The size of the uncertainties
+  were taken as the differencies between the extremes cases and the standard one. 
+  The new parameter configuration tested include cases in which (a) the center of the Gaussian
+  constraints of the all the calibration contants were separetely
+  moved 2 standard deviation for both directions, (b) the parameter $d$ was fixed to zero,
+  (c) the parameter $p$ was fixed to 0.7 and (d) both parameters $d$ and $\alpha$ were fixed at
+  the same time. 
+  
 \item The model dependence on the Monte Carlo correction factors due to
   the T2 event selection. Since both the number of events and tracks
   are affected by this selection, the model differences were estimated by
@@ -2349,6 +2428,9 @@ it was not possible to perform the fit.
     The $\pi^+$ case is shown in (a), the $\pi^-$ in (b), the K$^+$ in (c),
     K$^-$ in (d), the p$^+$ in (e) and p$^-$ in (f).}
   \label{fig:hadron:spec:dedx:example}
+  \begin{center}
+    Source: By the author. 
+  \end{center}
 \end{figure}
 
 %%%%%%%%%% SPEC PT V0 EXAMPLE %%%%%%%%%%%%%%%%
@@ -2371,6 +2453,9 @@ it was not possible to perform the fit.
     uncertainties, while the gray bands show the systematic ones.
     The \lamb case is shown in (a), the \antilamb in (b) and the \kzeros in (c)}
   \label{fig:hadron:spec:vzero:example}
+  \begin{center}
+    Source: By the author. 
+  \end{center}
 \end{figure}
 
 
@@ -2384,10 +2469,10 @@ are shown separately as black lines and gray bands, respectively.
 In colored curves, the predicted spectra by the most
 currently used hadronic interaction models are also shown for comparison. 
 The simulated spectra were computed by using the \CRMC software~\cite{CRMC} and
-the models shown are \EposLong\cite{\EposPaper},
-\DPMJetLong\cite{\DPMJetPaper}, \SibyllLong\cite{\SibyllPaper},
-\SibyllNewLong\cite{\NewSibyllPaper},
-\QGSJetLong\cite{\QGSJetPaper} and \EposLHCLong\cite{\EposLHCPaper}.
+the models shown are \EposLong~\cite{\EposPaper},
+\DPMJetLong~\cite{\DPMJetPaper}, \SibyllLong~\cite{\SibyllPaper},
+\SibyllNewLong~\cite{\NewSibyllPaper},
+\QGSJetLong~\cite{\QGSJetPaper} and \EposLHCLong.~\cite{\EposLHCPaper}
 
 One can clearly see in the \pT integrated spectra
 that the \pp region covered by the measurements
@@ -2444,6 +2529,9 @@ for the \vzero particles.
     The $\pi^+$ case is shown in (a), the $\pi^-$ in (b), the K$^+$ in (c),
     K$^-$ in (d), the p$^+$ in (e) and p$^-$ in (f).}
   \label{fig:hadron:spec:dedx:int158}
+  \begin{center}
+    Source: By the author. 
+  \end{center}
 \end{figure}
 
 %%%%%%%%%% SPEC INT DEDX 350 %%%%%%%%%%%%%%%%
@@ -2478,6 +2566,9 @@ for the \vzero particles.
     The $\pi^+$ case is shown in (a), the $\pi^-$ in (b), the K$^+$ in (c),
     K$^-$ in (d), the p$^+$ in (e) and p$^-$ in (f).}
   \label{fig:hadron:spec:dedx:int350}
+  \begin{center}
+    Source: By the author. 
+  \end{center}
 \end{figure}
 
 %%%%%%%%%% SPEC INT V0 158 %%%%%%%%%%%%%%%%
@@ -2500,6 +2591,9 @@ for the \vzero particles.
     The colored curves show the predictions of the hadronic interaction models.
     The \lamb case is shown in (a), the \antilamb in (b) and \kzeros in (c).}
   \label{fig:hadron:spec:vzero:int158}
+  \begin{center}
+    Source: By the author. 
+  \end{center}
 \end{figure}
 
 %%%%%%%%%% SPEC INT V0 350 %%%%%%%%%%%%%%%%
@@ -2522,6 +2616,9 @@ for the \vzero particles.
     The colored curves show the predictions of the hadronic interaction models.
     The \lamb case is shown in (a), the \antilamb in (b) and \kzeros in (c).}
   \label{fig:hadron:spec:vzero:int350}
+  \begin{center}
+    Source: By the author. 
+  \end{center}
 \end{figure}
 
 
@@ -2557,6 +2654,9 @@ for the \vzero particles.
     The $\pi^+$ case is shown in (a), the $\pi^-$ in (b), the K$^+$ in (c),
     K$^-$ in (d), the p$^+$ in (e) and p$^-$ in (f).}
   \label{fig:hadron:spec:dedx:syst158}
+  \begin{center}
+    Source: By the author. 
+  \end{center}
 \end{figure}
 
 %%%%%%%%%% SPEC SYST DEDX 350 %%%%%%%%%%%%%%%%
@@ -2591,6 +2691,9 @@ for the \vzero particles.
     The $\pi^+$ case is shown in (a), the $\pi^-$ in (b), the K$^+$ in (c),
     K$^-$ in (d), the p$^+$ in (e) and p$^-$ in (f).}
   \label{fig:hadron:spec:dedx:syst350}
+  \begin{center}
+    Source: By the author. 
+  \end{center}
 \end{figure}
 
 
@@ -2614,6 +2717,9 @@ for the \vzero particles.
     and the colored symbols show the contributions of each source separately.
     The \lamb case is shown in (a), the \antilamb in (b), and the \kzeros in (c).}
   \label{fig:hadron:spec:vzero:syst158}
+  \begin{center}
+    Source: By the author. 
+  \end{center}
 \end{figure}
 
 %%%%%%%%%% SPEC SYST V0 350 %%%%%%%%%%%%%%%%
@@ -2636,6 +2742,9 @@ for the \vzero particles.
     and the colored symbols show the contributions of each source separately.
     The \lamb case is shown in (a), the \antilamb in (b), and the \kzeros in (c).}
   \label{fig:hadron:spec:vzero:syst350}
+  \begin{center}
+    Source: By the author. 
+  \end{center}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2664,10 +2773,10 @@ contribution of this work is to provide unprecedented
 measurements that will be of great importance
 for the tuning of the next generation of models.
 As a consequence, the model predictions of the muon related
-air shower observables will surely become more precise.
+EAS observables will surely become more precise.
 
 For now, the implications of our results on the muon
-production in air showers can be roughly estimated.
+production in EAS can be roughly estimated.
 To do that, we can start by analyzing the \pions production
 in $\pi^{-}$-C interactions. Although most of muons are
 produced by the decay of \pions, we can see in plots
@@ -2678,19 +2787,18 @@ production simulations is expected due to our \pions spectra.
 The only model that shows not to be consistent
 with the \pions spectra is \DPMJetLong, which overproduce
 \pions at low momenta regions.
-\warning{complement} \warning{why the agreement on pions?}
 
 Concerning the \kaons production, the observed data-model
 discrepancies are very significant. However,
 since only a small fraction ($<10\%$) of the muons in
-air showers are produced by the decay of \kaons,
+EASs are produced by the decay of \kaons,
 no strong effect on the number of muons is expected
 after the models are tuned by using our \kaons spectra.
 
 The most relevant case to be discussed is surely the \protons
 spectra, since one of the hypothesis considered to explain
 the muon deficit in simulations is the potential underproduction
-of (anti)baryons in $\pi$-air interactions by the models~\cite{\EposPaper}.
+of (anti)baryons in $\pi$-air interactions by the models.~\cite{\EposPaper}
 From the plots (e) and (f)
 in~\cref{fig:hadron:spec:dedx:int158,fig:hadron:spec:dedx:int350} 
 one can see that the shape of the \proton and \antiproton spectra is very different.
@@ -2706,12 +2814,12 @@ an underestimation of the \antiproton production
 by \SibyllLong, \SibyllNewLong and \QGSJetLong, and
 an overestimation by \EposLHCLong and \DPMJetLong.
 
-Because there are models which agrees very well with
+Because there are models which agree very well with
 our measured \antiproton spectra, and also
-models which overestimated the \antiproton production,
+models which overestimate the \antiproton production,
 we can conclude that the simple hypothesis of the
 underproduction of (anti)baryons is very unlikely to explain
-the problem of the deficit of muons in air shower
+the problem of the deficit of muons in EAS
 simulations.
 
 Concerning our measured spectra of \lambs and \kzeros,
