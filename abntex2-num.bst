@@ -46,7 +46,12 @@ ENTRY
     abnt-title-command
     abnt-verbatim-entry
     iso-abbreviation iso-author-punctuation iso-date-place
-    }{}{ label extra.label year.label}
+    eprint
+    archive
+    primaryClass
+    archivePrefix
+    doi
+  }{}{ label extra.label year.label}
 
 %revision string
 STRINGS { abnt.bst.revision }
@@ -101,6 +106,38 @@ FUNCTION {init.state.consts}
   #3 'after.block :=
 }
 
+
+%RAUL
+FUNCTION {format.doi}
+{doi empty$
+   { ""}
+   {"\href{http://dx.doi.org/" doi * "}{doi:" * doi * "}" *}
+ if$
+}
+
+FUNCTION {format.archive}
+{
+  archivePrefix empty$
+      { "" }
+      { archivePrefix ":" *}
+  if$            
+}
+
+FUNCTION {format.primaryClass}
+{
+  primaryClass empty$
+      { "" }
+      { " [" primaryClass * "]" *}
+  if$            
+}
+
+FUNCTION {format.eprint}
+{ eprint empty$
+    { ""}
+    {"\href{http://arxiv.org/abs/" eprint * "}" * 
+     "{{\ttfamily [" * format.archive * eprint * "]}}" *}
+  if$
+}
 
 %output.nonnull decides what is written before the argument s, if a comma, period etc.
 FUNCTION {output.nonnull}
@@ -1630,7 +1667,8 @@ FUNCTION { iso.date }
     'skip$ if$}
 
 FUNCTION { non.iso.date }
-  {iso.date.place  'skip$ {format.date output} if$}
+{iso.date.place 'skip$ {format.date output}
+ if$}
 
 FUNCTION {article}
 { output.bibitem
@@ -1648,10 +1686,12 @@ FUNCTION {article}
   format.volume output
   format.number output
   format.pages output
-  non.iso.date
-  format.issn output new.block
-  format.note output new.block
-  format.url
+  non.iso.date output new.sentence
+  format.issn output 
+  format.note output 
+  format.url output new.sentence
+  format.doi output new.sentence
+  format.eprint output
   fin.entry
 }
 FUNCTION {book}
@@ -1757,6 +1797,8 @@ FUNCTION {inproceedings}
   format.isbn output
   format.issn output new.sentence
   format.note output new.sentence
+  format.doi output new.sentence
+  format.eprint output
   format.url
   fin.entry
 }
