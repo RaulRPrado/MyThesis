@@ -205,6 +205,7 @@
   \renewcommand{\subsectionautorefname}{subsection}
   \renewcommand{\subsubsectionautorefname}{subsubsection}
   \renewcommand{\paragraphautorefname}{subsubsubsection}
+  \renewcommand{\bibname}{References}
 }
 % ---
 
