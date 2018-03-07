@@ -827,6 +827,11 @@
   {\renewcommand{\imprimirareaRotulo}{#1}%
    \renewcommand{\imprimirarea}{#2}}
 
+\providecommand{\imprimirareapt}{}
+\newcommand{\areapt}[2][\areaname]%
+  {\renewcommand{\imprimirareaRotulo}{#1}%
+   \renewcommand{\imprimirareapt}{#2}}
+
 % Comandos de dados - opção
 \providecommand{\imprimiropcaoRotulo}{}
 \providecommand{\imprimiropcao}{}
@@ -874,6 +879,9 @@
 % Comandos de dados - tipo de trabalho
 \providecommand{\imprimirtipotrabalho}{}
 \newcommand{\tipotrabalho}[1]{\renewcommand{\imprimirtipotrabalho}{#1}}
+
+\providecommand{\imprimirtipotrabalhopt}{}
+\newcommand{\tipotrabalhopt}[1]{\renewcommand{\imprimirtipotrabalhopt}{#1}}
 
 % ------------------------------------------------------------------------
 % ------------------------------------------------------------------------
