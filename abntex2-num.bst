@@ -131,11 +131,19 @@ FUNCTION {format.primaryClass}
   if$            
 }
 
+%FUNCTION {format.eprint}
+%{ eprint empty$
+%    { ""}
+%    {"\href{http://arxiv.org/abs/" eprint * "}" * 
+%     "{{\ttfamily [" * format.archive * eprint * "]}}" *}
+%  if$
+%}
+
 FUNCTION {format.eprint}
 { eprint empty$
     { ""}
-    {"\href{http://arxiv.org/abs/" eprint * "}" * 
-     "{{\ttfamily [" * format.archive * eprint * "]}}" *}
+    {" Available from: \href{http://arxiv.org/pdf/" * eprint * ".pdf}" * 
+     "{http://arxiv.org/pdf/" * eprint * ".pdf}. Accessed in: 7 Mar. 2018." *}
   if$
 }
 
@@ -1691,7 +1699,7 @@ FUNCTION {article}
   format.note output 
   format.url output new.sentence
   format.doi output new.sentence
-  format.eprint output
+  format.eprint output new.sentence
   fin.entry
 }
 FUNCTION {book}

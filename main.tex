@@ -147,28 +147,13 @@
 \imprimirfolhaderosto*
 %\imprimirfolhaderosto
 % ---
-% ---
-% Inserir a ficha catalográfica em pdf
-% ---
-% A biblioteca da sua Unidade lhe fornecerá um PDF com a ficha
-% catalográfica definitiva. 
-% Quando estiver com o documento, salve-o como PDF no diretório
-% do seu projeto como fichacatalografica.pdf e iclua o arquivo
-% utilizando o comando abaixo:
-%\includepdf{fichacatalografica.pdf} 
-% Se você optar por elaborar a ficha catalográfica, deverá 
-% incluir uma % antes da linha % antes
-% do comando \include{USPSC-Tese-pre-textual/USPSC-fichacatalografica} 
-% e retirar o % do comando abaixo
-%\include{USPSC-Tese-pre-textual/USPSC-fichacatalografica}
-% As informações que compõem a ficha catalográfica estão 
-% definidos no arquivo USPSC-pre-textual-UUUU.tex
-% ---
-
 
 % ---
 % Inserir folha de aprovação
 % ---
+
+\includepdf{fichacatalografica.pdf} 
+
 \includepdf{folhadeaprovacao.pdf}
 
 \includepdf{PaginaEmBranco.pdf}
@@ -303,7 +288,7 @@
 % ----------------------------------------------------------
 \bibliography{lib}
 
-\addcontentsline{toc}{chapter}{APPENDIX}
+\addcontentsline{toc}{chapter}{Appendix}
 \appendix
 %\begin{appendices}
 \chapter{Additional figures}
