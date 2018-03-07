@@ -1,5 +1,6 @@
 %\documentclass[12pt,openright,twoside,a4paper,chapter=TITLE,english]{USPSC}
-\documentclass[12pt,openright,twoside,a4paper,english,sumario=tradicional]{USPSC}
+%\documentclass[12pt,openright,twoside,a4paper,english,sumario=tradicional]{USPSC}
+\documentclass[12pt,openright,twoside,a4paper,english]{USPSC}
 
 % ---
 % Pacotes básicos - Fundamentais 
@@ -92,6 +93,7 @@
 \crefname{figure}{Fig.}{Figs.}
 \crefname{equation}{Eq.}{Eqs.}
 \crefname{item}{item}{items}
+\usepackage[font=small]{caption}
 
 \def\Put(#1,#2)#3{\leavevmode\makebox(0,0){\put(#1,#2){#3}}}
 
@@ -153,7 +155,7 @@
 % Quando estiver com o documento, salve-o como PDF no diretório
 % do seu projeto como fichacatalografica.pdf e iclua o arquivo
 % utilizando o comando abaixo:
-%\includepdf{USPSC-Tese-pre-textual/fichacatalografica.pdf} 
+%\includepdf{fichacatalografica.pdf} 
 % Se você optar por elaborar a ficha catalográfica, deverá 
 % incluir uma % antes da linha % antes
 % do comando \include{USPSC-Tese-pre-textual/USPSC-fichacatalografica} 
@@ -301,10 +303,12 @@
 % ----------------------------------------------------------
 \bibliography{lib}
 
+\addcontentsline{toc}{chapter}{APPENDIX}
 \appendix
+%\begin{appendices}
 \chapter{Additional figures}
 \include{figures_hadron}
-
+%\end{appendices}
 % ----------------------------------------------------------
 % Glossário
 % ----------------------------------------------------------
