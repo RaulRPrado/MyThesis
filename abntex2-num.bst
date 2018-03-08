@@ -143,7 +143,7 @@ FUNCTION {format.eprint}
 { eprint empty$
     { ""}
     {" Available from: \href{http://arxiv.org/pdf/" * eprint * ".pdf}" * 
-     "{http://arxiv.org/pdf/" * eprint * ".pdf}. Accessed in: 7 Mar. 2018." *}
+     "{<http://arxiv.org/pdf/" * eprint * ".pdf>}. Accessible at: 7 Mar. 2018." *}
   if$
 }
 

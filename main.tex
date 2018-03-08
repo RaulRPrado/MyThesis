@@ -105,6 +105,10 @@
 
 \renewcommand{\cite}[1]{(\citen{#1})}
 
+\renewcommand\appendixname{APPENDIX}
+\renewcommand\appendixpagename{\huge Appendix}
+\renewcommand\appendixtocname{APPENDIX}
+
 \graphicspath{{./figures/}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -154,7 +158,9 @@
 
 \includepdf{fichacatalografica.pdf} 
 
-\includepdf{folhadeaprovacao.pdf}
+%\includepdf{folhadeaprovacao.pdf}
+
+\includepdf{PaginaEmBranco.pdf}
 
 \includepdf{PaginaEmBranco.pdf}
 
@@ -173,13 +179,13 @@
 % ---
 % Epígrafe
 % ---
-\begin{epigrafe}
-    \vspace*{\fill}
-	\begin{flushright}
-		\textit{``Frogs are falling from the sky.''\\
-		Albert Einstein}
-	\end{flushright}
-\end{epigrafe}
+%\begin{epigrafe}
+%    \vspace*{\fill}
+%	\begin{flushright}
+%		\textit{``Frogs are falling from the sky.''\\
+%		Albert Einstein}
+%	\end{flushright}
+%\end{epigrafe}
 % ---
 
 % A T E N Ç Ã O
@@ -288,8 +294,9 @@
 % ----------------------------------------------------------
 \bibliography{lib}
 
-\addcontentsline{toc}{chapter}{Appendix}
+%\addcontentsline{toc}{chapter}{APPENDIX}
 \appendix
+\appendixpage
 %\begin{appendices}
 \chapter{Additional figures}
 \include{figures_hadron}
